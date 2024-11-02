@@ -61,8 +61,11 @@ function RecentUpdates() {
   return (
     <section className="my-[50px] lg:mb-[200px] lg:mt-[100px]">
       <div className="container">
-        <div className="mb-[30px] flex items-center justify-between">
-          <h2 className="font-onest text-[30px] font-medium text-dark">
+        <div className="mb-[30px] flex items-center justify-between md:mb-10">
+          <h2
+            className="font-onest text-[30px] font-medium text-dark"
+            data-aos="fade-right"
+          >
             Recent Updates
           </h2>
           <div className="hidden items-center justify-end gap-[10px] md:flex">
@@ -79,6 +82,7 @@ function RecentUpdates() {
       <div className="container">
         <Swiper
           className="mb-[30px] h-full cursor-grabbing md:mb-10"
+          data-aos="fade-left"
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
@@ -113,14 +117,16 @@ function RecentUpdates() {
         >
           {updates.map((update) => (
             <SwiperSlide key={update.id}>
-              <div className="flex flex-col overflow-hidden rounded-md">
-                <Image
-                  src={`/recent-updates/${update.image}.png`}
-                  alt={update.title}
-                  width={800}
-                  height={750}
-                  className="mb-5 h-[175px] w-full rounded-md object-cover md:h-[240px]"
-                />
+              <div className="group flex flex-col overflow-hidden rounded-md">
+                <div className="mb-5 h-[175px] w-full overflow-hidden rounded-md md:h-[240px]">
+                  <Image
+                    src={`/recent-updates/${update.image}.png`}
+                    alt={update.title}
+                    width={800}
+                    height={750}
+                    className="h-full w-full object-cover transition-all duration-300 group-hover:scale-110"
+                  />
+                </div>
                 <p className="mb-[10px] font-inter text-sm font-normal uppercase text-dark/80">
                   {update.date}
                 </p>

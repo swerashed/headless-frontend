@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 
 const AOSWrapper = ({ children }) => {
   useEffect(() => {
-    AOS.init();
+    AOS.init({ duration: 1000 });
   }, []);
 
   return <div className="aos-wrapper">{children}</div>;

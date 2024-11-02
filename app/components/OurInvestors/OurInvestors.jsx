@@ -29,10 +29,13 @@ function OurInvestors() {
   const swiperRef = useRef(null);
 
   return (
-    <section className="bg-[#F0F7FF] py-[100px]">
+    <section className="bg-[#F0F7FF] py-[50px] md:py-[100px]">
       <div className="container">
-        <div className="mb-[30px] flex items-center justify-between">
-          <h2 className="font-onest text-[30px] font-medium text-dark">
+        <div className="mb-[30px] flex items-center justify-between md:mb-10">
+          <h2
+            className="font-onest text-[30px] font-medium text-dark"
+            data-aos="fade-right"
+          >
             Our Investors
           </h2>
           <div className="hidden items-center justify-end gap-[10px] md:flex">
@@ -79,8 +82,8 @@ function OurInvestors() {
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
           {investors.map((investor) => (
-            <SwiperSlide key={investor.id}>
-              <div className="flex items-center justify-center rounded-2xl bg-white p-[22px]">
+            <SwiperSlide key={investor.id} className="rounded-2xl">
+              <div className="flex items-center justify-center rounded-2xl bg-white p-[22px] transition-all duration-300 hover:border hover:border-border-light hover:shadow-sm">
                 <Image
                   src={`/our-investors/${investor.logoTitle}.png`}
                   alt="Investor logo"
@@ -100,7 +103,7 @@ function OurInvestors() {
         {investors.map((investor) => (
           <div
             key={investor.id}
-            className="flex items-center justify-center rounded-2xl bg-white p-[22px]"
+            className="flex items-center justify-center rounded-2xl bg-white p-[22px] shadow-sm hover:shadow-md"
           >
             <Image
               src={`/our-investors/${investor.logoTitle}.png`}

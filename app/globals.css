@@ -59,3 +59,7 @@ html.lenis body {
   width: 100%;
   transition: width 3s linear;
 }
+
+.container {
+  @apply mx-auto max-w-[1290px] px-[15px] xl:px-0;
+}

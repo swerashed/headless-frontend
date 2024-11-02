@@ -33,7 +33,7 @@ function HeroSlider() {
   return (
     <section className="relative flex h-[90vh] items-end justify-center">
       <Swiper
-        className="h-full"
+        className="h-full cursor-grabbing"
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
@@ -105,7 +105,7 @@ function HeroSlider() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               >
-                <circle cx={12} cy={12} r={10} stroke="#fff" />
+                <circle cx={12} cy={12} r={10} stroke="current" />
                 <line x1={10} y1={15} x2={10} y2={9} />
                 <line x1={14} y1={15} x2={14} y2={9} />
               </svg>
@@ -122,7 +122,7 @@ function HeroSlider() {
                 strokeLinejoin="round"
                 className="feather feather-play-circle"
               >
-                <circle cx={12} cy={12} r={10} stroke="#fff" />
+                <circle cx={12} cy={12} r={10} stroke="current" />
                 <polygon points="10 8 16 12 10 16 10 8" />
               </svg>
             )}
@@ -167,7 +167,7 @@ function HeroSlider() {
                   width={31}
                   height={31}
                   rx="15.5"
-                  stroke="#fff"
+                  stroke="current"
                 />
                 <path
                   d="M18 20L14 16L18 12"
@@ -195,7 +195,7 @@ function HeroSlider() {
                   width={31}
                   height={31}
                   rx="15.5"
-                  stroke="#fff"
+                  stroke="current"
                 />
                 <path
                   d="M14 20L18 16L14 12"

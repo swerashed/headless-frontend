@@ -29,7 +29,7 @@ function OurInvestors() {
   const swiperRef = useRef(null);
 
   return (
-    <section className="bg-[#F0F7FF] py-[50px] md:py-[100px]">
+    <section className="overflow-hidden bg-[#F0F7FF] py-[50px] md:py-[100px]">
       <div className="container">
         <div className="mb-[30px] flex items-center justify-between md:mb-10">
           <h2
@@ -41,8 +41,6 @@ function OurInvestors() {
           <div className="hidden items-center justify-end gap-[10px] md:flex">
             <div className="investors-pagination mr-5 !flex !w-auto !min-w-10 !items-center !gap-1 font-onest text-xl font-medium !leading-none !text-red-900"></div>
             <SliderNavigationButton
-              primaryColor="blue"
-              secondaryColor="white"
               onPrev={() => swiperRef.current?.slidePrev()}
               onNext={() => swiperRef.current?.slideNext()}
             />
@@ -96,14 +94,12 @@ function OurInvestors() {
           ))}
         </Swiper>
       </div>
-      <div
-        className="container grid grid-cols-2 gap-5 md:hidden"
-        data-aos="fade-up"
-      >
-        {investors.map((investor) => (
+      <div className="container grid grid-cols-2 gap-5 md:hidden">
+        {investors.map((investor, i) => (
           <div
             key={investor.id}
             className="flex items-center justify-center rounded-2xl bg-white p-[22px] shadow-sm hover:shadow-md"
+            data-aos={i % 2 === 0 ? "fade-right" : "fade-left"}
           >
             <Image
               src={`/our-investors/${investor.logoTitle}.png`}

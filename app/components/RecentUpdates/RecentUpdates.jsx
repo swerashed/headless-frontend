@@ -59,7 +59,7 @@ function RecentUpdates() {
   const swiperRef = useRef(null);
 
   return (
-    <section className="my-[50px] lg:mb-[200px] lg:mt-[100px]">
+    <section className="lg:p=[100px] overflow-hidden py-[50px]">
       <div className="container">
         <div className="mb-[30px] flex items-center justify-between md:mb-10">
           <h2
@@ -71,8 +71,6 @@ function RecentUpdates() {
           <div className="hidden items-center justify-end gap-[10px] md:flex">
             <div className="updates-pagination mr-5 !flex !w-auto !min-w-10 !items-center !gap-1 font-onest text-xl font-medium !leading-none !text-red-900"></div>
             <SliderNavigationButton
-              primaryColor="blue"
-              secondaryColor="white"
               onPrev={() => swiperRef.current?.slidePrev()}
               onNext={() => swiperRef.current?.slideNext()}
             />

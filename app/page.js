@@ -1,5 +1,9 @@
+import HeroSlider from "./components/heroSlider/HeroSlider";
+
 export default function Home() {
   return (
-    <h1 className="text-3xl font-bold underline">pharmaciticals-aks-khan</h1>
+    <>
+      <HeroSlider />
+    </>
   );
 }

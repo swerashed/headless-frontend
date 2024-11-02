@@ -7,7 +7,7 @@ function SliderNavigationButton({
   return (
     <div className="flex items-center gap-[10px]">
       <button
-        onClick={onNext}
+        onClick={onPrev}
         className={`flex h-8 w-8 items-center justify-center rounded-full fill-transparent stroke-${primaryColor} transition-all duration-300 hover:fill-${primaryColor} hover:stroke-${secondaryColor} focus:fill-${primaryColor} focus:stroke-${secondaryColor} focus:outline-none`}
       >
         <svg

@@ -9,6 +9,7 @@ export default function Home() {
   return (
     <>
       <HeroSlider />
+
       <OurPartners />
       <OurInvestors />
       <RecentUpdates />

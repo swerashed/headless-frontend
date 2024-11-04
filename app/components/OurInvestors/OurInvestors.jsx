@@ -29,7 +29,7 @@ function OurInvestors() {
   const swiperRef = useRef(null);
 
   return (
-    <section className="bg-light-blue overflow-hidden py-[50px] md:py-[100px]">
+    <section className="overflow-hidden bg-light-blue py-[50px] md:py-[100px]">
       <div className="container">
         <div className="mb-[30px] flex items-center justify-between md:mb-10">
           <h2
@@ -94,12 +94,14 @@ function OurInvestors() {
           ))}
         </Swiper>
       </div>
-      <div className="container grid grid-cols-2 gap-5 md:hidden">
+      <div
+        className="container grid grid-cols-2 gap-5 md:hidden"
+        data-aos="fade-up"
+      >
         {investors.map((investor, i) => (
           <div
             key={investor.id}
             className="flex items-center justify-center rounded-2xl bg-white p-[22px] shadow-sm hover:shadow-md"
-            data-aos={i % 2 === 0 ? "fade-right" : "fade-left"}
           >
             <Image
               src={`/our-investors/${investor.logoTitle}.png`}

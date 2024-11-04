@@ -29,7 +29,7 @@ function OurInvestors() {
   const swiperRef = useRef(null);
 
   return (
-    <section className="overflow-hidden bg-[#F0F7FF] py-[50px] md:py-[100px]">
+    <section className="bg-light-blue overflow-hidden py-[50px] md:py-[100px]">
       <div className="container">
         <div className="mb-[30px] flex items-center justify-between md:mb-10">
           <h2
@@ -49,7 +49,7 @@ function OurInvestors() {
       </div>
       <div className="container hidden md:block">
         <Swiper
-          className="mb-[30px] h-full cursor-grabbing md:mb-10"
+          className="h-full cursor-grabbing"
           data-aos="fade-up"
           autoplay={{
             delay: 3000,

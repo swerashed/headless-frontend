@@ -36,6 +36,7 @@ function OurPartners() {
         <Swiper
           className="h-full cursor-grabbing"
           data-aos="fade-up"
+          watchOverflow={true}
           autoplay={{
             delay: 0,
             disableOnInteraction: false,
@@ -57,7 +58,7 @@ function OurPartners() {
           navigation={false}
           modules={[Autoplay]}
           spaceBetween={30}
-          speed={2000}
+          speed={4000}
         >
           {investors.map((investor) => (
             <SwiperSlide key={investor.id} className="rounded-2xl">

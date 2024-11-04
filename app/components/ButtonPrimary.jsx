@@ -4,9 +4,9 @@ function ButtonPrimary({ border = true, children }) {
   return (
     <Link
       href="/"
-      className={`text-dark stroke-dark hover:bg-dark focus:bg-dark flex w-fit items-center justify-center gap-2 rounded-full bg-white py-3 pl-8 pr-5 font-inter font-semibold capitalize transition-all duration-300 hover:stroke-white hover:text-white focus:stroke-white focus:text-white focus:outline-none ${border ? "border-blue border" : ""}`}
+      className={`flex w-fit items-center justify-center gap-2 rounded-full bg-white stroke-dark py-3 pl-8 pr-5 font-inter font-semibold capitalize text-dark transition-all duration-300 hover:bg-dark hover:stroke-white hover:text-white focus:bg-dark focus:stroke-white focus:text-white focus:outline-none ${border ? "border border-blue" : ""}`}
     >
-      <p>{children}</p>
+      <span>{children}</span>
       <svg
         width={24}
         height={24}

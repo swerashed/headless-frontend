@@ -57,7 +57,7 @@ html.lenis body {
 
 .animate-progress {
   width: 100%;
-  transition: width 3s linear;
+  transition: width 8s linear;
 }
 
 .container {

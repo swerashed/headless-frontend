@@ -35,7 +35,7 @@ function HeroSlider() {
       <Swiper
         className="h-full cursor-grabbing"
         autoplay={{
-          delay: 3000,
+          delay: 8000,
           disableOnInteraction: false,
         }}
         slidesPerView={1}
@@ -137,14 +137,7 @@ function HeroSlider() {
                 <div
                   className={`h-full rounded-md bg-white ${
                     isPlaying && index === activeIndex ? "animate-progress" : ""
-                  }`}
-                  style={{
-                    width: index === activeIndex ? "100%" : "0%",
-                    transition:
-                      isPlaying && index === activeIndex
-                        ? "width 2.5s linear"
-                        : "none",
-                  }}
+                  } ${index === activeIndex ? "w-full" : "w-0"}`}
                 ></div>
               </div>
             ))}

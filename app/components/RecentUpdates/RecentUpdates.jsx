@@ -59,7 +59,7 @@ function RecentUpdates() {
   const swiperRef = useRef(null);
 
   return (
-    <section className="lg:p=[100px] overflow-hidden py-[50px]">
+    <section className="overflow-hidden py-[50px] lg:py-[100px]">
       <div className="container">
         <div className="mb-[30px] flex items-center justify-between md:mb-10">
           <h2
@@ -79,7 +79,7 @@ function RecentUpdates() {
       </div>
       <div className="container">
         <Swiper
-          className="mb-[30px] h-full cursor-grabbing md:mb-10"
+          className="mb-[30px] h-full md:mb-10"
           data-aos="fade-left"
           autoplay={{
             delay: 3000,
@@ -115,14 +115,14 @@ function RecentUpdates() {
         >
           {updates.map((update) => (
             <SwiperSlide key={update.id}>
-              <div className="group flex flex-col overflow-hidden rounded-md">
+              <div className="group flex cursor-pointer flex-col overflow-hidden rounded-md">
                 <div className="mb-5 h-[175px] w-full overflow-hidden rounded-md md:h-[240px]">
                   <Image
                     src={`/recent-updates/${update.image}.png`}
                     alt={update.title}
                     width={800}
                     height={750}
-                    className="h-full w-full object-cover transition-all duration-300 group-hover:scale-110"
+                    className="h-full w-full object-cover transition-all duration-1000 group-hover:scale-110"
                   />
                 </div>
                 <p className="mb-[10px] font-inter text-sm font-normal uppercase text-dark/80">

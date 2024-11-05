@@ -95,7 +95,7 @@ function HowWeHelp() {
                   <h4 className="pb-[10px] font-onest text-2xl font-medium">
                     {howWeHelp.title}
                   </h4>
-                  <p className="mb-10 min-h-32 font-inter text-base font-normal text-dark/80">
+                  <p className="mb-4 min-h-32 font-inter text-base font-normal text-dark/80">
                     {howWeHelp.details}
                   </p>
                   <Link
@@ -148,7 +148,7 @@ function HowWeHelp() {
                 <h4 className="pb-[10px] font-onest text-2xl font-medium">
                   {howWeHelp.title}
                 </h4>
-                <p className="mb-10 min-h-32 font-inter text-base font-normal text-dark/80">
+                <p className="mb-2 min-h-32 font-inter text-base font-normal text-dark/80">
                   {howWeHelp.details}
                 </p>
                 <Link

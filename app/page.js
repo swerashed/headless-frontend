@@ -1,3 +1,4 @@
+import AtAGlance from "./components/atAGlance/AtAGlance";
 import ContactUsBanner from "./components/ContactUsBanner";
 import Footer from "./components/footer/Footer";
 import HeroSlider from "./components/heroSlider/HeroSlider";
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <>
       <HeroSlider />
+      <AtAGlance />
       <HowWeHelp />
       <OurPartners />
       <OurInvestors />

@@ -1,16 +1,10 @@
-import localFont from "next/font/local";
+import { Inter, Onest } from "next/font/google";
 import "./globals.css";
+import { ReactLenis } from "@/utils/lenis";
+import AOSWrapper from "./components/AOSWrapper";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const onest = Onest({ subsets: ["latin"], variable: "--font-onest" });
 
 export const metadata = {
   title: "Create Next App",
@@ -20,11 +14,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <ReactLenis root>
+        <body
+          className={`${inter.variable} ${onest.variable} font-inter antialiased`}
+        >
+          <AOSWrapper>{children}</AOSWrapper>
+        </body>
+      </ReactLenis>
     </html>
   );
 }

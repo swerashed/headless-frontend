@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Image from "next/image";
 import { useRef } from "react";
+
 import SliderNavigationButton from "../SliderNavigationButton";
 
 const investors = [
@@ -25,7 +26,7 @@ const investors = [
   { id: crypto.randomUUID(), logoTitle: "investor-5" },
 ];
 
-function OurInvestors() {
+function TempComponent() {
   const swiperRef = useRef(null);
 
   return (
@@ -97,7 +98,7 @@ function OurInvestors() {
         className="container grid grid-cols-2 gap-5 md:hidden"
         data-aos="fade-up"
       >
-        {investors.map((investor, i) => (
+        {investors.map((investor) => (
           <div
             key={investor.id}
             className="flex items-center justify-center rounded-2xl bg-white p-[22px] shadow-sm hover:shadow-md"
@@ -116,4 +117,4 @@ function OurInvestors() {
   );
 }
 
-export default OurInvestors;
+export default TempComponent;

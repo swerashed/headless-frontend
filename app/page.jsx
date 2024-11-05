@@ -5,9 +5,9 @@ import CoverageArea from "./components/coverageArea/CoverageArea";
 import Footer from "./components/footer/Footer";
 import HeroSlider from "./components/heroSlider/HeroSlider";
 import HowWeHelp from "./components/howWeHelp/HowWeHelp";
-import OurInvestors from "./components/ourInvestors/OurInvestors";
 import OurPartners from "./components/ourPartners/OurPartners";
-import RecentUpdates from "./components/recentUpdates/RecentUpdates";
+import TempComponent from "./components/tempComponent/TempComponent";
+import TempComponent2 from "./components/tempComponent2/TempComponent2";
 
 export default function Home() {
   return (
@@ -18,8 +18,8 @@ export default function Home() {
       <HowWeHelp />
       <CoverageArea />
       <OurPartners />
-      <OurInvestors />
-      <RecentUpdates />
+      <TempComponent />
+      <TempComponent2 />
       <ContactUsBanner />
       <Footer />
     </>

@@ -55,7 +55,7 @@ const updates = [
   },
 ];
 
-function RecentUpdates() {
+function TempComponent2() {
   const swiperRef = useRef(null);
 
   return (
@@ -147,4 +147,4 @@ function RecentUpdates() {
   );
 }
 
-export default RecentUpdates;
+export default TempComponent2;

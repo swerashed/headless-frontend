@@ -21,7 +21,6 @@ export default function Home() {
       <OurInvestors />
       <RecentUpdates />
       <ContactUsBanner />
-      {/* checking */}
       <Footer />
     </>
   );

@@ -77,10 +77,9 @@ function RecentUpdates() {
           </div>
         </div>
       </div>
-      <div className="container">
+      <div className="container" data-aos="fade-left">
         <Swiper
           className="mb-[30px] h-full md:mb-10"
-          data-aos="fade-left"
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
@@ -137,9 +136,12 @@ function RecentUpdates() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="flex items-center justify-center" data-aos="fade-up">
-          <ButtonPrimary border={true}>View all</ButtonPrimary>
-        </div>
+      </div>
+      <div
+        className="container flex items-center justify-center"
+        data-aos="fade-up"
+      >
+        <ButtonPrimary border={true}>View all</ButtonPrimary>
       </div>
     </section>
   );

@@ -49,7 +49,7 @@ function AtAGlance() {
   const swiperRef = useRef(null);
 
   return (
-    <section className="overflow-hidden py-[50px] lg:py-[120px]">
+    <section className="my-[50px] overflow-hidden lg:my-[120px]">
       <div className="container">
         <div className="mb-[30px] flex items-center justify-between md:mb-10">
           <h2
@@ -67,9 +67,8 @@ function AtAGlance() {
           </div>
         </div>
       </div>
-      <div className="container hidden md:block">
+      <div className="container hidden md:block" data-aos="fade-left">
         <Swiper
-          data-aos="fade-left"
           className="h-full"
           autoplay={{
             delay: 3000,

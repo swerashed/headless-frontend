@@ -32,10 +32,9 @@ function OurPartners() {
           </h2>
         </div>
       </div>
-      <div className="container hidden md:block">
+      <div className="container hidden md:block" data-aos="fade-up">
         <Swiper
           className="h-full cursor-grabbing"
-          data-aos="fade-up"
           watchOverflow={true}
           autoplay={{
             delay: 0,

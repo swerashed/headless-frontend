@@ -58,10 +58,9 @@ function HowWeHelp() {
           </div>
         </div>
       </div>
-      <div className="container md:hidden">
+      <div className="container md:hidden" data-aos="fade-left">
         <Swiper
           className="mb-[30px] h-full md:mb-10"
-          data-aos="fade-left"
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,

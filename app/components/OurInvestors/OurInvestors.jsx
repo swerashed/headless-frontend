@@ -47,10 +47,9 @@ function OurInvestors() {
           </div>
         </div>
       </div>
-      <div className="container hidden md:block">
+      <div className="container hidden md:block" data-aos="fade-up">
         <Swiper
           className="h-full cursor-grabbing"
-          data-aos="fade-up"
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,

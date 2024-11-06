@@ -9,6 +9,7 @@ import HowWeHelp from "./components/howWeHelp/HowWeHelp";
 import OurInvestors from "./components/ourInvestors/OurInvestors";
 import OurPartners from "./components/ourPartners/OurPartners";
 import RecentUpdates from "./components/recentUpdates/RecentUpdates";
+import VideoShowcase from "./components/videoShowcase/VideoShowcase";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <AboutBanner />
       <Counter />
       <AtAGlance />
+      <VideoShowcase />
       <HowWeHelp />
       <CoverageArea />
       <OurPartners />

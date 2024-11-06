@@ -2,7 +2,7 @@ import Map from "./Map";
 
 function CoverageMapContainer() {
   return (
-    <div className="md:col-span-1 md:row-span-2">
+    <div className="md:col-span-1 md:row-span-2" data-aos="fade-left">
       <div className="col-start-2 flex items-center justify-center p-2 sm:p-8 md:row-end-7 md:max-h-[550px] lg:max-h-[650px]">
         <Map />
       </div>

@@ -46,8 +46,13 @@ function VideoShowcase() {
                 alt="Pharmaceutical Showcase video thumbnail"
                 className="absolute inset-0 h-full w-full object-cover"
               />
-              <div className="absolute flex items-center justify-center rounded-full bg-black p-4 text-7xl text-white">
-                ▶
+              <div className="lg:w- absolute flex h-[42px] w-[42px] items-center justify-center rounded-full bg-white fill-green shadow-md shadow-white md:h-20 md:w-20 md:shadow-2xl lg:h-[120px] lg:w-[120px]">
+                <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M24.3187 17.3271C24.634 17.5226 24.634 17.9814 24.3187 18.177L15.6398 23.5589C15.3067 23.7655 14.8763 23.5259 14.8763 23.134L14.8763 12.3701C14.8763 11.9782 15.3067 11.7386 15.6398 11.9452L24.3187 17.3271Z"
+                    fill="current"
+                  />
+                </svg>
               </div>
             </div>
           )}

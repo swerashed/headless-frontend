@@ -26,7 +26,7 @@ const investors = [
   { id: crypto.randomUUID(), logoTitle: "investor-5" },
 ];
 
-function TempComponent() {
+function OurInvestors() {
   const swiperRef = useRef(null);
 
   return (
@@ -51,6 +51,7 @@ function TempComponent() {
       <div className="container hidden md:block" data-aos="fade-up">
         <Swiper
           className="h-full cursor-grabbing"
+          slidesPerGroup={1}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
@@ -64,7 +65,7 @@ function TempComponent() {
               slidesPerView: 4.3,
             },
             1440: {
-              slidesPerView: 5.3,
+              slidesPerView: 5,
             },
           }}
           loop={true}
@@ -117,4 +118,4 @@ function TempComponent() {
   );
 }
 
-export default TempComponent;
+export default OurInvestors;

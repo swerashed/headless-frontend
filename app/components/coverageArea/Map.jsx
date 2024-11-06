@@ -1,12 +1,6 @@
 function Map() {
   return (
-    <svg
-      width={"auto"}
-      height={"auto"}
-      viewBox="0 0 330 457"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 330 457" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g id="Group 1171275641">
         <g id="Bangladesh_districts_in_grey 3">
           <g id="layer1">

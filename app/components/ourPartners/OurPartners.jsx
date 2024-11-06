@@ -17,6 +17,11 @@ const investors = [
   { id: crypto.randomUUID(), logoTitle: "partner-5" },
   { id: crypto.randomUUID(), logoTitle: "partner-6" },
   { id: crypto.randomUUID(), logoTitle: "partner-1" },
+  { id: crypto.randomUUID(), logoTitle: "partner-1" },
+  { id: crypto.randomUUID(), logoTitle: "partner-2" },
+  { id: crypto.randomUUID(), logoTitle: "partner-3" },
+  { id: crypto.randomUUID(), logoTitle: "partner-4" },
+  { id: crypto.randomUUID(), logoTitle: "partner-5" },
 ];
 
 function OurPartners() {
@@ -36,6 +41,7 @@ function OurPartners() {
         <Swiper
           className="h-full cursor-grabbing"
           watchOverflow={true}
+          slidesPerGroup={1}
           autoplay={{
             delay: 0,
             disableOnInteraction: false,
@@ -68,9 +74,9 @@ function OurPartners() {
                 <Image
                   src={`/partners/${investor.logoTitle}.png`}
                   alt="Partner logo"
-                  width={145}
+                  width={143}
                   height={76}
-                  className="object-contain"
+                  className="h-auto w-auto object-contain"
                 />
               </div>
             </SwiperSlide>
@@ -89,9 +95,9 @@ function OurPartners() {
             <Image
               src={`/partners/${investor.logoTitle}.png`}
               alt="Partner logo"
-              width={145}
+              width={143}
               height={76}
-              className="object-contain"
+              className="h-auto w-auto object-contain"
             />
           </div>
         ))}

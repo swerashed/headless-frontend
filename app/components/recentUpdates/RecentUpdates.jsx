@@ -55,7 +55,7 @@ const updates = [
   },
 ];
 
-function TempComponent2() {
+function RecentUpdates() {
   const swiperRef = useRef(null);
 
   return (
@@ -80,11 +80,12 @@ function TempComponent2() {
       <div className="container" data-aos="fade-left">
         <Swiper
           className="mb-[30px] h-full md:mb-10"
+          slidesPerGroup={1}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
           }}
-          slidesPerView={1.1}
+          slidesPerView={1.16}
           breakpoints={{
             425: {
               slidesPerView: 1.2,
@@ -147,4 +148,4 @@ function TempComponent2() {
   );
 }
 
-export default TempComponent2;
+export default RecentUpdates;

@@ -43,6 +43,16 @@ const atAGlances = [
     details: "Special discount for AKS Pharmacy cardholders",
     iconName: "discount-offer",
   },
+  {
+    id: crypto.randomUUID(),
+    details: "Special discount for AKS Pharmacy cardholders",
+    iconName: "discount-offer",
+  },
+  {
+    id: crypto.randomUUID(),
+    details: "Special discount for AKS Pharmacy cardholders",
+    iconName: "discount-offer",
+  },
 ];
 
 function AtAGlance() {
@@ -70,6 +80,7 @@ function AtAGlance() {
       <div className="container hidden md:block" data-aos="fade-left">
         <Swiper
           className="h-full"
+          slidesPerGroup={1}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,

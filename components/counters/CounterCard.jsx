@@ -3,6 +3,7 @@ import Image from "next/image";
 function CounterCard({ counter }) {
   return (
     <div
+      data-aos="fade-up"
       className={`group relative flex flex-col justify-between gap-5 rounded-xl border border-dark/10 p-[15px] shadow-sm shadow-dark/10 transition-all duration-300 hover:shadow-md md:gap-[66px] md:p-[30px] ${counter.size === "single" ? "md:col-span-2" : "md:col-span-3"}`}
     >
       <h4 className="font-onest text-[30px] font-medium text-blue md:text-[68px]">

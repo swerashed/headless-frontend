@@ -40,7 +40,7 @@ const CounterDetails = [
 
 function CountersFiveSection() {
   return (
-    <section className="my-10 md:my-20">
+    <section className="my-10 overflow-hidden md:my-20">
       <div className="container">
         <div className="grid grid-cols-2 gap-[15px] md:grid-cols-6 md:gap-5">
           {CounterDetails.map((counter) => (

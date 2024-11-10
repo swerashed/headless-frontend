@@ -19,7 +19,7 @@ function VideoShowcaseSection() {
   if (!isClient) return null;
 
   return (
-    <section className="mb-[50px] mt-[35px] md:mb-[100px] md:mt-20">
+    <section className="mb-[50px] mt-[35px] overflow-hidden md:mb-[100px] md:mt-20">
       <div className="container">
         <div
           className="relative aspect-[16/9] w-full overflow-hidden rounded-lg border-none shadow-md shadow-dark/10 md:rounded-[20px] md:shadow-xl lg:shadow-2xl"
@@ -37,7 +37,7 @@ function VideoShowcaseSection() {
                 height={712}
                 src="/videos/thumbnails/video-thumbnail-2.png"
                 alt="Pharmaceutical Showcase video thumbnail"
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full rounded-lg object-cover md:rounded-[20px]"
               />
               <div className="absolute flex h-10 w-10 items-center justify-center rounded-full bg-white fill-green shadow-md shadow-dark/10 md:h-20 md:w-20 md:shadow-xl lg:h-[120px] lg:w-[120px] lg:shadow-2xl">
                 <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">

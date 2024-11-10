@@ -1,7 +1,7 @@
 import { Inter, Onest } from "next/font/google";
 import "./globals.css";
 import { ReactLenis } from "@/utils/lenis";
-import AOSWrapper from "./components/AOSWrapper";
+import AOSWrapper from "@/utils/AOSWrapper";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const onest = Onest({ subsets: ["latin"], variable: "--font-onest" });

@@ -37,9 +37,11 @@ const atAGlanceCardsDetails = [
 
 function AtAGlanceGridSection() {
   return (
-    <section className="my-[50px] lg:my-[100px]">
+    <section className="my-[50px] overflow-hidden lg:my-[100px]">
       <div className="container">
-        <SectionHeading>At a glance</SectionHeading>
+        <div data-aos="fade-right">
+          <SectionHeading>At a glance</SectionHeading>
+        </div>
         <div className="mt-[30px] grid grid-cols-2 gap-[15px] md:mt-10 md:gap-[30px] lg:grid-cols-3">
           {atAGlanceCardsDetails.map((card) => (
             <AtAGlanceCard card={card} key={card.id} />

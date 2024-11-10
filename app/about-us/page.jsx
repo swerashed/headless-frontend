@@ -1,3 +1,4 @@
+import CountersFiveSection from "@/components/counters/CountersFiveSection";
 import HeroSecondaryBanner from "../components/heroSecondaryBanner/HeroSecondaryBanner";
 import StorySection from "../components/storySection/StorySection";
 
@@ -6,6 +7,7 @@ export default function AboutUsPage() {
     <>
       <HeroSecondaryBanner />
       <StorySection />
+      <CountersFiveSection />
     </>
   );
 }

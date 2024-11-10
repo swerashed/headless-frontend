@@ -61,5 +61,5 @@ html.lenis body {
 }
 
 .container {
-  @apply mx-auto max-w-[1290px] px-[15px] xl:px-0;
+  @apply mx-auto max-w-[1320px] px-[15px];
 }

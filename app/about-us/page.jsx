@@ -1,13 +1,15 @@
+import HeroBannerSecondary from "@/components/heroBanners/HeroBannerSecondary";
+import StorySection from "@/components/storySection/StorySection";
 import CountersFiveSection from "@/components/counters/CountersFiveSection";
-import HeroSecondaryBanner from "../components/heroSecondaryBanner/HeroSecondaryBanner";
-import StorySection from "../components/storySection/StorySection";
+import VideoShowcaseSection from "@/components/videoShowcase/VideoShowcaseSection";
 
 export default function AboutUsPage() {
   return (
     <>
-      <HeroSecondaryBanner />
+      <HeroBannerSecondary />
       <StorySection />
       <CountersFiveSection />
+      <VideoShowcaseSection />
     </>
   );
 }

@@ -7,11 +7,11 @@ function StorySection() {
         </h3>
 
         <div className="flex max-w-[782px] flex-col md:ml-auto">
-          <h3 className="mb-[30px] font-onest text-2xl font-medium leading-snug text-dark md:mb-10 md:text-[32px]">
+          <h2 className="mb-[30px] font-onest text-2xl font-medium leading-snug text-dark md:mb-10 md:text-[32px]">
             Through AKS Khan Pharmacy and Diagnostics, we provide expert
             consultation, advanced technology, and inclusive care for a
             healthier life.
-          </h3>
+          </h2>
           <p className="font-inter text-base font-normal text-dark/80">
             Innovative solutions are key to addressing the world’s toughest
             health challenges, from chronic diseases and pandemics to mental

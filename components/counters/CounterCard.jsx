@@ -5,9 +5,9 @@ function CounterCard({ counter }) {
     <div
       className={`group relative flex flex-col justify-between gap-5 rounded-xl border border-dark/10 p-[15px] shadow-sm shadow-dark/10 transition-all duration-300 hover:shadow-md md:gap-[66px] md:p-[30px] ${counter.size === "single" ? "md:col-span-2" : "md:col-span-3"}`}
     >
-      <h5 className="font-onest text-[30px] font-medium text-blue md:text-[68px]">
+      <h4 className="font-onest text-[30px] font-medium text-blue md:text-[68px]">
         {counter.count}
-      </h5>
+      </h4>
       <p className="font-inter text-sm font-normal text-dark md:text-base">
         {counter.details}
       </p>

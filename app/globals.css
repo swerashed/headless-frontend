@@ -60,6 +60,10 @@ html.lenis body {
   transition: width 8s linear;
 }
 
+/* ------------------------------------- */
+/* Container class */
+/* ------------------------------------- */
+
 .container {
-  @apply mx-auto max-w-[1320px] px-[15px];
+  @apply mx-auto max-w-[1320px] px-[15px] md:max-w-[1380px] md:px-[30px] lg:max-w-[1350px] lg:px-[45px];
 }

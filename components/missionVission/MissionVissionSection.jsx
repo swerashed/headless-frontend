@@ -4,7 +4,7 @@ function MissionVissionSection() {
   return (
     <section className="bg-light-blue py-[50px] lg:py-[100px]">
       <div className="container">
-        <div className="flex flex-col gap-10 lg:flex-row-reverse lg:items-center">
+        <div className="flex flex-col gap-10 md:gap-20 lg:flex-row-reverse lg:items-center lg:gap-10">
           <Image
             src="/section-banners/mission-vission.png"
             width={625}

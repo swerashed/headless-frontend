@@ -6,16 +6,16 @@ function SideBySideWithButton({ bannerImage, heading, details, button }) {
   return (
     <section className="overflow-hidden border-t border-dark/10 py-[50px] lg:py-[100px]">
       <div className="container">
-        <div className="flex flex-col gap-10 md:gap-20 lg:flex-row-reverse lg:items-center lg:gap-10">
+        <div className="flex flex-col gap-10 md:flex-row-reverse md:items-center md:gap-10 lg:items-center lg:gap-10">
           <Image
             src={bannerImage}
             alt="Section banner"
             width={625}
             height={625}
-            className="h-auto w-full rounded-[20px] object-cover shadow-md shadow-dark/10 lg:w-1/2"
+            className="h-auto w-full rounded-[20px] object-cover shadow-md shadow-dark/10 md:w-1/2 lg:w-1/2"
             data-aos="fade-left"
           />
-          <div className="flex flex-col lg:w-1/2">
+          <div className="flex flex-col md:w-1/2 lg:w-1/2">
             <div data-aos="fade-right">
               <SectionHeading className="mb-5 xl:mb-10 xl:text-[40px]">
                 {heading}

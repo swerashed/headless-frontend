@@ -1,6 +1,6 @@
-import DirectorCard from "./DirectorCard";
+import PeopleCard from "./PeopleCard";
 
-const DirectorCardContainer = () => {
+const PeopleCardContainer = ({variant}) => {
   const directorCards = [
     {
       id: crypto.randomUUID(),
@@ -54,9 +54,9 @@ const DirectorCardContainer = () => {
     <section className="my-[50px] lg:my-[100px]">
 
     <div className="container">
-      <div className="card-container grid md:grid-cols-2  lg:grid-cols-3 gap-x-[30px] gap-y-[30px] lg:gap-y-[94px]">
+      <div className={`card-container grid md:grid-cols-2  ${variant == "3-col" ? "lg:grid-cols-3" : "lg:grid-cols-4"} gap-x-[30px] gap-y-[30px] lg:gap-y-[94px]`}>
       {directorCards.map((director) =>( 
-        <DirectorCard director={director} key={director.id} />
+        <PeopleCard director={director} key={director.id} variant={variant}/>
       ))}
       </div>
     </div>
@@ -64,4 +64,4 @@ const DirectorCardContainer = () => {
   )
 }
 
-export default DirectorCardContainer
+export default PeopleCardContainer

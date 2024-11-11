@@ -1,4 +1,4 @@
-import DirectorCardContainer from "@/components/boardOfDirectors/DirectorCardContainer"
+import DirectorCardContainer from "@/components/shared/PeopleCards/PeopleCardContainer"
 import HeroBannerSecondary from "@/components/heroBanners/HeroBannerSecondary"
 
 

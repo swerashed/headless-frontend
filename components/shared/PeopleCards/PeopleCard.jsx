@@ -8,7 +8,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-const DirectorCard = ({ director }) => {
+const DirectorCard = ({ director, variant }) => {
   return (
     <div>
       <Dialog>
@@ -23,7 +23,7 @@ const DirectorCard = ({ director }) => {
                 alt={director.name}
                 width={410}
                 height={450}
-                className="h-full min-h-[450px] w-full object-cover transition-all duration-300 group-hover:scale-105"
+                className={`h-full ${variant == "3-col" ? "min-h-[450px]" : "min-h-[330px]"}  w-full object-cover transition-all duration-300 group-hover:scale-105 `}
               />
             </div>
             <div className="card-footer mt-5 space-y-[5px]">

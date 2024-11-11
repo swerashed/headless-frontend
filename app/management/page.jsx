@@ -1,14 +1,15 @@
-import PeopleCardContainer from "@/components/shared/PeopleCards/PeopleCardContainer";
+import PeopleCardContainer from "@/components/peopleCards/PeopleCards/PeopleCardContainer";
 import HeroBannerSecondary from "@/components/heroBanners/HeroBannerSecondary";
 
 const ManagementTeamPage = () => {
   return (
     <div>
-        <HeroBannerSecondary    bannerImage="/hero-banners/about.png"
+      <HeroBannerSecondary
+        bannerImage="/hero-banners/about.png"
         pagetitle="About Us"
-        heading="Innovative Solutions for Critical Health Challenges"/>
-        <PeopleCardContainer variant="4-col"/>
-
+        heading="Innovative Solutions for Critical Health Challenges"
+      />
+      <PeopleCardContainer variant="4-col" />
     </div>
   );
 };

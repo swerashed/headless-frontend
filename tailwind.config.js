@@ -19,7 +19,7 @@ module.exports = {
         "hero-gradient": "linear-gradient(0deg, #162340 5%, #16234000 70%)",
       },
       colors: {
-        dark: { DEFAULT: "#162340", 80: "#162340CC" },
+        dark: "#162340",
         blue: "#357690",
         green: "#2E8168",
         surface: "#F0F7FF",

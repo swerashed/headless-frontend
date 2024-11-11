@@ -12,10 +12,9 @@ const DialogTrigger = DialogPrimitive.Trigger;
 
 const DialogPortal = DialogPrimitive.Portal;
 
-
 const DialogClose = DialogPrimitive.Close;
+
 const DialogOverlay = React.forwardRef(({ className, ...props }, ref) => (
- 
   <DialogPrimitive.Overlay
     ref={ref}
     className={cn(
@@ -34,38 +33,15 @@ const DialogContent = React.forwardRef(
       <DialogPrimitive.Content
         ref={ref}
         className={cn(
-          "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] lg:gap-4 border bg-background p-[5px] lg:p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg",
+          "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg",
           className,
         )}
         {...props}
       >
         {children}
-        <DialogPrimitive.Close className="absolute lg:right-[30px] -top-[15px] lg:top-5 -right-[10px] h-[42px] w-[42px] rounded-sm outline-none focus:outline-none">
-          <svg
-            width="42"
-            height="42"
-            viewBox="0 0 42 42"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect width="42" height="42" rx="21" fill="#357691" />
-            <line
-              x1="14.9678"
-              y1="13.9072"
-              x2="28.0928"
-              y2="27.0322"
-              stroke="white"
-              strokeWidth="1.5"
-            />
-            <line
-              y1="-0.75"
-              x2="18.5616"
-              y2="-0.75"
-              transform="matrix(-0.707107 0.707107 0.707107 0.707107 28.7803 14.4375)"
-              stroke="white"
-              strokeWidth="1.5"
-            />
-          </svg>
+        <DialogPrimitive.Close className="absolute right-4 top-4 rounded-full bg-blue p-1 text-white opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+          <X className="h-4 w-4" />
+          <span className="sr-only">Close</span>
         </DialogPrimitive.Close>
       </DialogPrimitive.Content>
     </DialogPortal>

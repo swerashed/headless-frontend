@@ -19,7 +19,7 @@ function HeroBannerSecondary({ bannerImage, pagetitle, heading }) {
           <h3 className="font-inter text-sm font-medium uppercase text-white md:text-base">
             {pagetitle}
           </h3>
-          <h1 className="max-w-3xl font-onest text-[34px] font-medium leading-[1.2em] text-white md:text-5xl">
+          <h1 className="max-w-4xl font-onest text-[34px] font-medium leading-[1.2em] text-white md:text-5xl">
             {heading}
           </h1>
         </div>

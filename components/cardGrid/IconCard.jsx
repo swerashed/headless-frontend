@@ -1,13 +1,13 @@
 import Image from "next/image";
 
-function AtAGlanceCard({ card }) {
+function IconCard({ card }) {
   return (
     <div
       data-aos="fade-up"
       className="group flex flex-col items-center justify-center gap-5 rounded-[10px] border border-dark/10 px-3 py-5 shadow-sm shadow-dark/10 transition-all duration-300 hover:shadow-md md:gap-10 md:px-[30px] md:py-[60px]"
     >
       <Image
-        src={`/at-a-glance-icons/${card.iconName}.svg`}
+        src={card.imagePath}
         alt=""
         width={100}
         height={100}
@@ -20,4 +20,4 @@ function AtAGlanceCard({ card }) {
   );
 }
 
-export default AtAGlanceCard;
+export default IconCard;

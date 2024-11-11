@@ -2,6 +2,7 @@ import { Inter, Onest } from "next/font/google";
 import "./globals.css";
 import { ReactLenis } from "@/utils/lenis";
 import AOSWrapper from "@/utils/AOSWrapper";
+import Footer from "@/components/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const onest = Onest({ subsets: ["latin"], variable: "--font-onest" });
@@ -18,7 +19,10 @@ export default function RootLayout({ children }) {
         <body
           className={`${inter.variable} ${onest.variable} font-inter antialiased`}
         >
-          <AOSWrapper>{children}</AOSWrapper>
+          <AOSWrapper>
+            {children}
+            <Footer />
+          </AOSWrapper>
         </body>
       </ReactLenis>
     </html>

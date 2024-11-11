@@ -1,6 +1,7 @@
+import PrimaryButton from "../buttons/PrimaryButton";
 import SectionHeading from "../headings/SectionHeading";
 
-function StorySection() {
+function StorySection({ sectionTitle, heading, details, buttonDetails }) {
   return (
     <section className="mb-10 mt-[60px] overflow-hidden md:mb-[80px] md:mt-[100px]">
       <div className="container">
@@ -8,29 +9,28 @@ function StorySection() {
           className="mb-5 border-b border-b-dark/10 pb-5 font-inter text-sm font-medium uppercase leading-none text-dark md:mb-10 md:pb-6 md:text-base"
           data-aos="fade-right"
         >
-          story of AKS Khan Pharmaceuticals
+          {sectionTitle}
         </h3>
 
         <div className="flex max-w-[782px] flex-col md:ml-auto">
           <div data-aos="fade-up">
             <SectionHeading className="mb-[30px] text-2xl font-medium md:mb-10 md:text-[32px]">
-              Through AKS Khan Pharmacy and Diagnostics, we provide expert
-              consultation, advanced technology, and inclusive care for a
-              healthier life.
+              {heading}
             </SectionHeading>
           </div>
           <p
             data-aos="fade-up"
             className="font-inter text-base font-normal text-dark/80"
           >
-            Innovative solutions are key to addressing the world’s toughest
-            health challenges, from chronic diseases and pandemics to mental
-            health crises. By leveraging advancements in technology, research,
-            and collaboration, we can tackle complex problems and improve global
-            health outcomes. These efforts aim to not only treat illnesses but
-            also prevent them, ensuring healthier futures for communities
-            worldwide.
+            {details}
           </p>
+          {buttonDetails && (
+            <div data-aos="fade-up">
+              <PrimaryButton className="mt-[30px] md:mt-10">
+                {buttonDetails.title}
+              </PrimaryButton>
+            </div>
+          )}
         </div>
       </div>
     </section>

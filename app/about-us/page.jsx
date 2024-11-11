@@ -1,6 +1,6 @@
 import HeroBannerSecondary from "@/components/heroBanners/HeroBannerSecondary";
 import StorySection from "@/components/storySection/StorySection";
-import CountersFiveSection from "@/components/counters/CountersFiveSection";
+import CountersSection from "@/components/counters/CountersSection";
 import VideoShowcaseSection from "@/components/videoShowcase/VideoShowcaseSection";
 import MissionVissionSection from "@/components/missionVission/MissionVissionSection";
 import AtAGlanceGridSection from "@/components/atAGlance/AtAGlanceGridSection";
@@ -11,9 +11,52 @@ import WhyChooseUsSection from "@/components/whyChooseUs/WhyChooseUsSection";
 export default function AboutUsPage() {
   return (
     <>
-      <HeroBannerSecondary />
-      <StorySection />
-      <CountersFiveSection />
+      <HeroBannerSecondary
+        bannerImage="/hero-banners/about.png"
+        pagetitle="About Us"
+        heading="Innovative Solutions for Critical Health Challenges"
+      />
+      <StorySection
+        sectionTitle="story of AKS Khan Pharmaceuticals"
+        heading="Through AKS Khan Pharmacy and Diagnostics, we provide expert consultation, advanced technology, and inclusive care for a healthier life."
+        details="Innovative solutions are key to addressing the world’s toughest health challenges, from chronic diseases and pandemics to mental health crises. By leveraging advancements in technology, research, and collaboration, we can tackle complex problems and improve global health outcomes. These efforts aim to not only treat illnesses but also prevent them, ensuring healthier futures for communities worldwide."
+      />
+      <CountersSection
+        className="md:grid-cols-6"
+        counterDetails={[
+          {
+            id: crypto.randomUUID(),
+            count: "99%",
+            details: "Clients satisfaction score",
+            imageName: "client-happy",
+          },
+          {
+            id: crypto.randomUUID(),
+            count: "12",
+            details: "Number of pharmacy locations or areas served",
+            imageName: "map-pointer",
+          },
+          {
+            id: crypto.randomUUID(),
+            count: "10+",
+            details: "Years in Operation",
+            imageName: "building",
+          },
+          {
+            id: crypto.randomUUID(),
+            count: "100+",
+            details: "Types or number of specialty medications available",
+            imageName: "medicine-available",
+          },
+          {
+            id: crypto.randomUUID(),
+            count: "10+",
+            details: "Number of health screenings or events held annually",
+            imageName: "cells",
+          },
+        ]}
+        type="counter-3-and-2"
+      />
       <VideoShowcaseSection />
       <MissionVissionSection />
       <AtAGlanceGridSection />

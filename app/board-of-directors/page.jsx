@@ -1,12 +1,12 @@
-import DirectorCardContainer from "@/components/shared/PeopleCards/PeopleCardContainer"
 import HeroBannerSecondary from "@/components/heroBanners/HeroBannerSecondary"
+import PeopleCardContainer from "@/components/shared/PeopleCards/PeopleCardContainer"
 
 
 const BoardOfDirectorsPage = () => {
   return (
     <div>
           <HeroBannerSecondary />
-          <DirectorCardContainer/>
+          <PeopleCardContainer variant="3-col"/>
     </div>
   )
 }

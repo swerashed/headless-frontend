@@ -130,12 +130,16 @@ html.lenis body {
 }
 
 /* ------------------------------------- */
-/* Container class */
+/* Container styles */
 /* ------------------------------------- */
 
 .container {
   @apply mx-auto max-w-[1320px] px-[15px] md:max-w-[1380px] md:px-[30px] lg:max-w-[1350px] lg:px-[45px];
 }
+
+/* ------------------------------------- */
+/* Counter styles */
+/* ------------------------------------- */
 
 .counter-3-and-2 div:nth-child(-n + 3) {
   @apply md:col-span-2;

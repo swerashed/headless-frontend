@@ -1,6 +1,7 @@
 import CountersSection from "@/components/counters/CountersSection";
 import HeroBannerSecondary from "@/components/heroBanners/HeroBannerSecondary";
 import StorySection from "@/components/storySection/StorySection";
+import VideoFullWidthSection from "@/components/videoShowcase/VideoFullWidthSection";
 
 export default function ServicesPage() {
   return (
@@ -42,10 +43,11 @@ export default function ServicesPage() {
             id: crypto.randomUUID(),
             count: "22,357",
             details: "Loyalty Card Users",
-            imageName: "cells",
+            imageName: "loyalty-card",
           },
         ]}
       />
+      <VideoFullWidthSection />
     </>
   );
 }

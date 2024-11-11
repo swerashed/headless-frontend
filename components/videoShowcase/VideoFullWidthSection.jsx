@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import VideoPlayer from "./VideoPlayer";
+import { cn } from "@/lib/utils";
 
-function VideoShowcaseSection() {
+function VideoFullWidthSection() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isClient, setIsClient] = useState(false);
 
@@ -19,25 +20,22 @@ function VideoShowcaseSection() {
   if (!isClient) return null;
 
   return (
-    <section className="mb-[50px] mt-[35px] overflow-hidden md:mb-[100px] md:mt-20">
-      <div className="container">
-        <div
-          className="relative aspect-[16/9] w-full overflow-hidden rounded-lg border-none shadow-md shadow-dark/10 md:rounded-[20px] md:shadow-xl lg:shadow-2xl"
-          data-aos="zoom-in-up"
-        >
+    <section className="my-20">
+      <div className={cn("container", "md:mx-0 md:max-w-full md:px-0")}>
+        <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[20px] border-none shadow-md shadow-dark/10 md:rounded-none md:shadow-lg lg:h-[712px] lg:shadow-xl">
           {isPlaying ? (
             <VideoPlayer />
           ) : (
             <div
-              className="relative flex h-full w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg border-none bg-black md:rounded-[20px]"
+              className="relative flex h-full w-full cursor-pointer items-center justify-center overflow-hidden border-none bg-black"
               onClick={handlePlayClick}
             >
               <Image
                 width={1290}
                 height={712}
-                src="/videos/thumbnails/about-us-video-thumnail.png"
+                src="/videos/thumbnails/services-video-thumnail.jpg"
                 alt="Pharmaceutical Showcase video thumbnail"
-                className="absolute inset-0 h-full w-full rounded-lg object-cover md:rounded-[20px]"
+                className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="group absolute flex h-10 w-10 items-center justify-center rounded-full bg-white fill-green shadow-md shadow-dark/10 md:h-20 md:w-20 md:shadow-xl lg:h-[120px] lg:w-[120px] lg:shadow-2xl">
                 <svg
@@ -59,4 +57,4 @@ function VideoShowcaseSection() {
   );
 }
 
-export default VideoShowcaseSection;
+export default VideoFullWidthSection;

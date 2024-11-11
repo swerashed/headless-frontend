@@ -40,7 +40,7 @@ const DialogContent = React.forwardRef(
         {...props}
       >
         {children}
-        <DialogPrimitive.Close className="absolute right-[30px] top-5 h-[42px] w-[42px] rounded-sm outline-none focus:outline-none">
+        <DialogPrimitive.Close className="absolute lg:right-[30px] -top-[15px] lg:top-5 -right-[10px] h-[42px] w-[42px] rounded-sm outline-none focus:outline-none">
           <svg
             width="42"
             height="42"

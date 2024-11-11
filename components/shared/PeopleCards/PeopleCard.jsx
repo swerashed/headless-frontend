@@ -8,13 +8,11 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import React from "react";
 
 const PeopleCard = ({ director, variant }) => {
-
   return (
     <div>
-      <Dialog >
+      <Dialog>
         <DialogTrigger asChild>
           <div
             data-aos="fade-up"
@@ -40,12 +38,13 @@ const PeopleCard = ({ director, variant }) => {
           </div>
         </DialogTrigger>
 
-        <DialogContent className="min-h-[662px] max-h-[90vh] w-full max-w-[95%] lg:max-w-[80%] rounded-lg">
+        <DialogContent className="max-h-[90vh] min-h-[662px] w-full max-w-[95%] rounded-lg lg:max-w-[80%]">
           <DialogHeader></DialogHeader>
           <DialogTitle className="hidden"></DialogTitle>
-  <DialogDescription className="hidden">Description of the dialog content</DialogDescription>
-          <div className="modal-content grid lg:grid-cols-2 gap-[30px] lg:gap-[60px] p-[5px] lg:pt-[57px] overflow-hidden">
-            <div className="left-part min-h-[360px] max-h-[360px] lg:min-h-[550px] lg:max-w-[470px] overflow-hidden rounded-[10px]">
+          <DialogDescription className="hidden">
+          </DialogDescription>
+          <div className="modal-content grid gap-[30px] overflow-hidden p-[5px] lg:grid-cols-2 lg:gap-[60px] lg:pt-[57px]">
+            <div className="left-part max-h-[360px] min-h-[360px] overflow-hidden rounded-[10px] lg:min-h-[550px] lg:max-w-[470px]">
               <Image
                 src={`/board-of-directors/${director.image}`}
                 alt={director.name}
@@ -55,7 +54,7 @@ const PeopleCard = ({ director, variant }) => {
               />
             </div>
             <div className="right-part">
-              <div className="head space-y-[5px] pb-5 border-b border-dark/10 mb-5">
+              <div className="head mb-5 space-y-[5px] border-b border-dark/10 pb-5">
                 <p className="font-onest text-[36px] font-medium leading-[48px] text-dark">
                   {director.name}
                 </p>
@@ -63,7 +62,7 @@ const PeopleCard = ({ director, variant }) => {
                   {director.title}
                 </p>
               </div>
-              <div className="body">
+              <div className="body overflow-y-auto max-h-[150px] lg:max-h-[380px]">
                 <p className="font-inter text-[16px] leading-[26px] text-dark-80">
                   Lorem ipsum dolor sit amet consectetur. Turpis suspendisse
                   justo imperdiet nibh ultrices tortor nibh. Tortor ultrices

@@ -20,7 +20,7 @@ function VideoFullWidthSection() {
   if (!isClient) return null;
 
   return (
-    <section className="my-20">
+    <section className="my-10 md:my-20">
       <div className={cn("container", "md:mx-0 md:max-w-full md:px-0")}>
         <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[20px] border-none shadow-md shadow-dark/10 md:rounded-none md:shadow-lg lg:h-[712px] lg:shadow-xl">
           {isPlaying ? (

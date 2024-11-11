@@ -1,3 +1,4 @@
+import CardGridSection from "@/components/cardGrid/CardGridSection";
 import CountersSection from "@/components/counters/CountersSection";
 import HeroBannerSecondary from "@/components/heroBanners/HeroBannerSecondary";
 import StorySection from "@/components/storySection/StorySection";
@@ -48,6 +49,33 @@ export default function ServicesPage() {
         ]}
       />
       <VideoFullWidthSection />
+      <CardGridSection
+        className="lg:grid-cols-4"
+        sectionHeading="What do we offer?"
+        cardDetails={[
+          {
+            id: crypto.randomUUID(),
+            details: "Prescription, over-the-counter, complementary medicines",
+            imagePath: "/what-we-offer/prescription.svg",
+          },
+          {
+            id: crypto.randomUUID(),
+            details:
+              "Trusted store for 100% authentic vitamins and supplements",
+            imagePath: "/what-we-offer/vitamins.svg",
+          },
+          {
+            id: crypto.randomUUID(),
+            details: "Discover safe personal care products for all skin types",
+            imagePath: "/what-we-offer/skin-product.svg",
+          },
+          {
+            id: crypto.randomUUID(),
+            details: "Convenient home delivery service",
+            imagePath: "/what-we-offer/home-delivery.svg",
+          },
+        ]}
+      />
     </>
   );
 }

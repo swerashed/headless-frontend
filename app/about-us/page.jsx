@@ -3,7 +3,7 @@ import StorySection from "@/components/storySection/StorySection";
 import CountersSection from "@/components/counters/CountersSection";
 import VideoShowcaseSection from "@/components/videoShowcase/VideoShowcaseSection";
 import MissionVissionSection from "@/components/missionVission/MissionVissionSection";
-import AtAGlanceGridSection from "@/components/atAGlance/AtAGlanceGridSection";
+import CardGridSection from "@/components/cardGrid/CardGridSection";
 import SideBySideWithButton from "@/components/sideBySide/SideBySideWithButtonSection";
 import CallToActionSection from "@/components/callToAction/CallToActionSection";
 import WhyChooseUsSection from "@/components/whyChooseUs/WhyChooseUsSection";
@@ -59,7 +59,42 @@ export default function AboutUsPage() {
       />
       <VideoShowcaseSection />
       <MissionVissionSection />
-      <AtAGlanceGridSection />
+      <CardGridSection
+        className="lg:grid-cols-3"
+        sectionHeading="At a glance"
+        cardDetails={[
+          {
+            id: crypto.randomUUID(),
+            details: "Directly sourcing authentic medicines",
+            imagePath: "/at-a-glance-icons/authentic-medicine.svg",
+          },
+          {
+            id: crypto.randomUUID(),
+            details: "Temperature control ensures efficacy",
+            imagePath: "/at-a-glance-icons/temp-controled.svg",
+          },
+          {
+            id: crypto.randomUUID(),
+            details: "Convenient home delivery service",
+            imagePath: "/at-a-glance-icons/home-delivery.svg",
+          },
+          {
+            id: crypto.randomUUID(),
+            details: "General and specialized healthcare service",
+            imagePath: "/at-a-glance-icons/health-care.svg",
+          },
+          {
+            id: crypto.randomUUID(),
+            details: "Reliable and convenient home doctor service",
+            imagePath: "/at-a-glance-icons/reliable-doctor.svg",
+          },
+          {
+            id: crypto.randomUUID(),
+            details: "Special discount for AKS Pharmacy cardholders",
+            imagePath: "/at-a-glance-icons/discount-offer.svg",
+          },
+        ]}
+      />
       <SideBySideWithButton
         heading="Pioneering Healthcare with Diagnostic Excellence"
         details="Aks Khan Pharmaceuticals Diagnostics is a leading company specializing in innovative diagnostic solutions and healthcare products. They focus on cutting-edge research, developing reliable medical tests, and improving patient outcomes through advanced diagnostics for better healthcare management and personalized treatments."

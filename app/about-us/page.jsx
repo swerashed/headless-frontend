@@ -52,7 +52,7 @@ export default function AboutUsPage() {
             id: crypto.randomUUID(),
             count: "10+",
             details: "Number of health screenings or events held annually",
-            imageName: "cells",
+            imageName: "loyalty-card",
           },
         ]}
         type="counter-3-and-2"

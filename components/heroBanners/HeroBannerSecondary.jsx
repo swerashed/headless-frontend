@@ -8,6 +8,7 @@ function HeroBannerSecondary({ bannerImage, pagetitle, heading }) {
         alt="Hero banner"
         className="h-full w-full object-cover"
         priority
+        as="image"
         width={1331}
         height={438}
       />

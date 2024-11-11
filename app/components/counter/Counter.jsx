@@ -38,7 +38,7 @@ function Counter() {
           {countersDetails.map((counterCard) => (
             <div
               key={counterCard.id}
-              className="relative flex flex-col justify-between gap-5 rounded-xl border border-border-light p-[15px] shadow-sm shadow-white lg:gap-10 lg:p-[30px]"
+              className="relative flex flex-col justify-between gap-5 rounded-xl border border-dark/10 p-[15px] shadow-sm shadow-white lg:gap-10 lg:p-[30px]"
             >
               <h5 className="font-onest text-[30px] font-medium text-blue lg:text-[64px]">
                 {counterCard.count}

@@ -3,11 +3,11 @@ import SectionHeading from "../headings/SectionHeading";
 
 function MissionVissionSection() {
   return (
-    <section className="overflow-hidden bg-light-blue py-[50px] lg:py-[100px]">
+    <section className="bg-surface overflow-hidden py-[50px] lg:py-[100px]">
       <div className="container">
         <div className="flex flex-col gap-10 md:gap-20 lg:flex-row-reverse lg:items-center lg:gap-10">
           <Image
-            src="/section-banners/mission-vission.png"
+            src="/section-banners/about-us/mission-vission-banner.png"
             width={625}
             height={625}
             alt="Mission and vission banner"

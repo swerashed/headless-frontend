@@ -6,6 +6,7 @@ import MissionVissionSection from "@/components/missionVission/MissionVissionSec
 import AtAGlanceGridSection from "@/components/atAGlance/AtAGlanceGridSection";
 import SideBySideWithButton from "@/components/sideBySide/SideBySideWithButtonSection";
 import CallToActionSection from "@/components/callToAction/CallToActionSection";
+import WhyChooseUsSection from "@/components/whyChooseUs/WhyChooseUsSection";
 
 export default function AboutUsPage() {
   return (
@@ -22,6 +23,7 @@ export default function AboutUsPage() {
         button={{ title: "Learn more" }}
         bannerImage="/section-banners/about-us/Pioneering-healthcare-banner.png"
       />
+      <WhyChooseUsSection />
       <SideBySideWithButton
         heading="AKPL is a concern of AKS Khan Holdings and IFU (Investment Fund for Developing countries), Denmark"
         details="AKS Khan Holdings is a trading, investment and operating company that aggressively identifies and acquires companies in which it can leverage our strengths to generate superior earnings or market value. Consistent with this, we continuously review our current businesses and investments to ensure that our strategies are providing the highest return and value relative to the risk."

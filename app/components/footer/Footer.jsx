@@ -45,7 +45,7 @@ function Footer() {
                 <Image
                   src={locationIcon}
                   alt="icon"
-                  className="h-10 w-10 rounded-full border border-border-light p-2 transition-all duration-300 group-hover:border-dark"
+                  className="h-10 w-10 rounded-full border border-dark/10 p-2 transition-all duration-300 group-hover:border-dark"
                 />
                 <p className="font-inter font-normal text-dark/80">
                   Rupayan Prime, Plot 02, Road 07, Dhanmondi, Dhaka – 1205
@@ -55,7 +55,7 @@ function Footer() {
                 <Image
                   src={mailIcon}
                   alt="icon"
-                  className="h-10 w-10 rounded-full border border-border-light p-2 transition-all duration-300 group-hover:border-dark"
+                  className="h-10 w-10 rounded-full border border-dark/10 p-2 transition-all duration-300 group-hover:border-dark"
                 />
                 <p className="font-inter font-normal text-dark/80">
                   info@akskhanpharma.com
@@ -65,7 +65,7 @@ function Footer() {
                 <Image
                   src={telephoneIcon}
                   alt="icon"
-                  className="h-10 w-10 rounded-full border border-border-light p-2 transition-all duration-300 group-hover:border-dark"
+                  className="h-10 w-10 rounded-full border border-dark/10 p-2 transition-all duration-300 group-hover:border-dark"
                 />
                 <p className="font-inter font-normal text-dark/80">
                   Tel:- +8801847360360

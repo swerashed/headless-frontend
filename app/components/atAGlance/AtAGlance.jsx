@@ -111,7 +111,7 @@ function AtAGlance() {
         >
           {atAGlances.map((card) => (
             <SwiperSlide key={card.id}>
-              <div className="flex flex-col items-center justify-center gap-5 rounded-[10px] border border-border-light px-3 py-5 shadow-sm shadow-white md:gap-10 md:px-[30px] md:py-[60px]">
+              <div className="flex flex-col items-center justify-center gap-5 rounded-[10px] border border-dark/10 px-3 py-5 shadow-sm shadow-white md:gap-10 md:px-[30px] md:py-[60px]">
                 <Image
                   src={`/at-a-glance/${card.iconName}.svg`}
                   alt=""
@@ -132,7 +132,7 @@ function AtAGlance() {
           {atAGlances.map((card) => (
             <div
               key={card.id}
-              className="flex flex-col items-center justify-center gap-5 rounded-[10px] border border-border-light px-3 py-5 shadow-sm shadow-white md:gap-10 md:px-[30px] md:py-[60px]"
+              className="flex flex-col items-center justify-center gap-5 rounded-[10px] border border-dark/10 px-3 py-5 shadow-sm shadow-white md:gap-10 md:px-[30px] md:py-[60px]"
             >
               <Image
                 src={`/at-a-glance/${card.iconName}.svg`}

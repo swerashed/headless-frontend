@@ -3,7 +3,6 @@ import SectionHeading from "../headings/SectionHeading";
 import PrimaryButton from "../buttons/PrimaryButton";
 
 function SideBySideWithButton({ bannerImage, heading, details, button }) {
-  console.log(details);
   return (
     <section className="overflow-hidden border-t border-dark/10 py-[50px] lg:py-[100px]">
       <div className="container">

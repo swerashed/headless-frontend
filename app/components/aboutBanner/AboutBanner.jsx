@@ -13,7 +13,7 @@ function AboutBanner() {
         >
           About Us
         </h3>
-        <div className="mb-[60px] flex flex-col gap-[60px] border-t border-border-light pt-[30px] md:flex-row md:justify-between md:gap-[30px]">
+        <div className="mb-[60px] flex flex-col gap-[60px] border-t border-dark/10 pt-[30px] md:flex-row md:justify-between md:gap-[30px]">
           <div
             className="flex items-center gap-[30px] md:min-w-[301px]"
             data-aos="fade-right"
@@ -24,7 +24,7 @@ function AboutBanner() {
               className="h-[100px] w-[100px] md:h-[120px] md:w-[120px]"
             />
             <div className="flex flex-col justify-center gap-[10px]">
-              <h5 className="text-green font-onest text-[60px] font-light leading-[1.16em] md:text-[90px]">
+              <h5 className="font-onest text-[60px] font-light leading-[1.16em] text-green md:text-[90px]">
                 10+
               </h5>
               <p className="font-inter text-base font-normal text-dark/80">

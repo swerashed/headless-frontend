@@ -41,7 +41,7 @@ function HowWeHelp() {
   const swiperRef = useRef(null);
 
   return (
-    <section className="overflow-hidden bg-light-blue py-[50px] lg:py-[100px]">
+    <section className="bg-surface overflow-hidden py-[50px] lg:py-[100px]">
       <div className="container">
         <div className="mb-[30px] flex items-center justify-between md:mb-10">
           <h2
@@ -80,7 +80,7 @@ function HowWeHelp() {
         >
           {howWeHelps.map((howWeHelp) => (
             <SwiperSlide key={howWeHelp.id}>
-              <div className="group flex cursor-pointer flex-col overflow-hidden rounded-xl border border-border-light shadow-sm shadow-white">
+              <div className="group flex cursor-pointer flex-col overflow-hidden rounded-xl border border-dark/10 shadow-sm shadow-white">
                 <div className="h-[240px] w-full overflow-hidden">
                   <Image
                     src={`/how-we-help/${howWeHelp.imageTitle}.jpg`}
@@ -99,7 +99,7 @@ function HowWeHelp() {
                   </p>
                   <Link
                     href="/"
-                    className="flex items-center justify-between border-t border-border-light stroke-dark pb-2 pt-4 font-inter font-semibold text-dark transition-all duration-300 hover:stroke-blue/90 hover:text-blue/90 focus:stroke-blue/90 focus:text-blue/90 focus:outline-none"
+                    className="flex items-center justify-between border-t border-dark/10 stroke-dark pb-2 pt-4 font-inter font-semibold text-dark transition-all duration-300 hover:stroke-blue/90 hover:text-blue/90 focus:stroke-blue/90 focus:text-blue/90 focus:outline-none"
                   >
                     <span>View Details</span>
                     <svg
@@ -132,7 +132,7 @@ function HowWeHelp() {
           {howWeHelps.map((howWeHelp) => (
             <div
               key={howWeHelp.id}
-              className="group flex cursor-pointer flex-col overflow-hidden rounded-xl border border-border-light shadow-sm shadow-white"
+              className="group flex cursor-pointer flex-col overflow-hidden rounded-xl border border-dark/10 shadow-sm shadow-white"
             >
               <div className="h-[270px] w-full overflow-hidden">
                 <Image
@@ -152,7 +152,7 @@ function HowWeHelp() {
                 </p>
                 <Link
                   href="/"
-                  className="flex items-center justify-between border-t border-border-light stroke-dark pb-2 pt-4 font-inter font-semibold text-dark transition-all duration-300 hover:stroke-blue/90 hover:text-blue/90 focus:stroke-blue/90 focus:text-blue/90 focus:outline-none"
+                  className="flex items-center justify-between border-t border-dark/10 stroke-dark pb-2 pt-4 font-inter font-semibold text-dark transition-all duration-300 hover:stroke-blue/90 hover:text-blue/90 focus:stroke-blue/90 focus:text-blue/90 focus:outline-none"
                 >
                   <span>View Details</span>
                   <svg

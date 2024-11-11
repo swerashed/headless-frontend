@@ -30,7 +30,7 @@ function OurInvestors() {
   const swiperRef = useRef(null);
 
   return (
-    <section className="overflow-hidden bg-light-blue py-[50px] md:py-[100px]">
+    <section className="bg-surface overflow-hidden py-[50px] md:py-[100px]">
       <div className="container">
         <div className="mb-[30px] flex items-center justify-between md:mb-10">
           <h2
@@ -82,7 +82,7 @@ function OurInvestors() {
         >
           {investors.map((investor) => (
             <SwiperSlide key={investor.id} className="rounded-2xl">
-              <div className="flex items-center justify-center rounded-2xl bg-white p-[22px] transition-all duration-300 hover:border hover:border-border-light hover:shadow-sm">
+              <div className="flex items-center justify-center rounded-2xl bg-white p-[22px] transition-all duration-300 hover:border hover:border-dark/10 hover:shadow-sm">
                 <Image
                   src={`/our-investors/${investor.logoTitle}.png`}
                   alt="Investor logo"

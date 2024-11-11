@@ -5,7 +5,9 @@ import PeopleCardContainer from "@/components/shared/PeopleCards/PeopleCardConta
 const BoardOfDirectorsPage = () => {
   return (
     <div>
-          <HeroBannerSecondary />
+          <HeroBannerSecondary   bannerImage="/hero-banners/about.png"
+        pagetitle="About Us"
+        heading="Innovative Solutions for Critical Health Challenges"/>
           <PeopleCardContainer variant="3-col"/>
     </div>
   )

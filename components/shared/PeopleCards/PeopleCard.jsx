@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import {
   Dialog,
@@ -7,11 +8,13 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import React from "react";
 
-const DirectorCard = ({ director, variant }) => {
+const PeopleCard = ({ director, variant }) => {
+
   return (
     <div>
-      <Dialog>
+      <Dialog >
         <DialogTrigger asChild>
           <div
             data-aos="fade-up"
@@ -23,7 +26,7 @@ const DirectorCard = ({ director, variant }) => {
                 alt={director.name}
                 width={410}
                 height={450}
-                className={`h-full ${variant == "3-col" ? "min-h-[450px]" : "min-h-[330px]"}  w-full object-cover transition-all duration-300 group-hover:scale-105 `}
+                className={`h-full ${variant === "3-col" ? "min-h-[450px]" : "min-h-[330px]"} w-full object-cover transition-all duration-300 group-hover:scale-105`}
               />
             </div>
             <div className="card-footer mt-5 space-y-[5px]">
@@ -36,11 +39,11 @@ const DirectorCard = ({ director, variant }) => {
             </div>
           </div>
         </DialogTrigger>
-       
+
         <DialogContent className="min-h-[662px] max-h-[90vh] w-full max-w-[95%] lg:max-w-[80%] rounded-lg">
-        <DialogHeader></DialogHeader>
-        <DialogTitle className="hidden"></DialogTitle>
-     
+          <DialogHeader></DialogHeader>
+          <DialogTitle className="hidden"></DialogTitle>
+  <DialogDescription className="hidden">Description of the dialog content</DialogDescription>
           <div className="modal-content grid lg:grid-cols-2 gap-[30px] lg:gap-[60px] p-[5px] lg:pt-[57px] overflow-hidden">
             <div className="left-part min-h-[360px] max-h-[360px] lg:min-h-[550px] lg:max-w-[470px] overflow-hidden rounded-[10px]">
               <Image
@@ -48,7 +51,7 @@ const DirectorCard = ({ director, variant }) => {
                 alt={director.name}
                 width={410}
                 height={450}
-                className="h-full w-full object-cover "
+                className="h-full w-full object-cover"
               />
             </div>
             <div className="right-part">
@@ -82,9 +85,8 @@ const DirectorCard = ({ director, variant }) => {
           </div>
         </DialogContent>
       </Dialog>
- 
     </div>
   );
 };
 
-export default DirectorCard;
+export default PeopleCard;

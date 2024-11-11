@@ -13,7 +13,10 @@ function PeopleCard({ people }) {
   return (
     <Dialog>
       <DialogTrigger>
-        <div className="group flex cursor-pointer flex-col gap-5">
+        <div
+          data-aos="fade-up"
+          className="group flex cursor-pointer flex-col gap-5"
+        >
           <div className="w-full overflow-hidden rounded-[10px] shadow-md shadow-dark/10">
             <Image
               src={`/board-of-directors/${people.image}`}

@@ -3,13 +3,14 @@ import PeopleCardSection from "@/components/peopleCards/PeopleCardSection";
 
 const BoardOfDirectorsPage = () => {
   return (
-    <div>
+    <>
       <HeroBannerSecondary
         bannerImage="/hero-banners/board-of-directors.jpg"
         pagetitle="Board of directors"
         heading="Meet the visionary Leaders of our Board"
       />
       <PeopleCardSection
+        className="md:grid-cols-3"
         peoples={[
           {
             id: crypto.randomUUID(),
@@ -61,7 +62,7 @@ const BoardOfDirectorsPage = () => {
           },
         ]}
       />
-    </div>
+    </>
   );
 };
 

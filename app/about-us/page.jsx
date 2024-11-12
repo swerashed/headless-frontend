@@ -13,7 +13,7 @@ export default function AboutUsPage() {
     <>
       <HeroBannerSecondary
         bannerImage="/hero-banners/about.png"
-        pagetitle="About Us"
+        pageTitle="About Us"
         heading="Innovative Solutions for Critical Health Challenges"
       />
       <StorySection

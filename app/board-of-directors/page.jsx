@@ -6,7 +6,7 @@ const BoardOfDirectorsPage = () => {
     <>
       <HeroBannerSecondary
         bannerImage="/hero-banners/board-of-directors.jpg"
-        pagetitle="Board of directors"
+        pageTitle="Board of directors"
         heading="Meet the visionary Leaders of our Board"
       />
       <PeopleCardSection

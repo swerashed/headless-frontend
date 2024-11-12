@@ -59,7 +59,7 @@ const NewsCardContainer = () => {
       ))}
      </div>
 
-     <PrimaryButton className="mt-[30px] mx-auto">Load More</PrimaryButton>
+     <PrimaryButton className="mt-[30px] lg:mt-[60px] mx-auto">Load More</PrimaryButton>
     </div>
   );
 };

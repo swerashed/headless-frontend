@@ -9,7 +9,7 @@ export default function ServicesPage() {
     <>
       <HeroBannerSecondary
         bannerImage="/hero-banners/services.png"
-        pagetitle="AKS Pharmacy"
+        pageTitle="AKS Pharmacy"
         heading="Your trusted partner for health, care, and wellness."
       />
       <StorySection

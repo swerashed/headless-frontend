@@ -6,7 +6,7 @@ function ManagementTeamPage() {
     <>
       <HeroBannerSecondary
         bannerImage="/hero-banners/board-of-directors.jpg"
-        pagetitle="Management team"
+        pageTitle="Management team"
         heading="Meet the visionary Leaders of our Board"
       />
       <PeopleCardSection

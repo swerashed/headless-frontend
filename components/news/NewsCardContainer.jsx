@@ -1,6 +1,7 @@
 import React from "react";
 import NewsCard from "./NewsCard";
 import SectionHeading from "../headings/SectionHeading";
+import PrimaryButton from "../buttons/PrimaryButton";
 
 const NewsCardContainer = () => {
     const news = [
@@ -57,6 +58,8 @@ const NewsCardContainer = () => {
         <NewsCard news={singleNews} key={index} />
       ))}
      </div>
+
+     <PrimaryButton className="mt-[30px] mx-auto">Load More</PrimaryButton>
     </div>
   );
 };

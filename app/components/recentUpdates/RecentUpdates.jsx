@@ -77,7 +77,7 @@ function RecentUpdates() {
           </div>
         </div>
       </div>
-      <div className="container" data-aos="fade-left">
+      <div className="container !pr-0" data-aos="fade-left">
         <Swiper
           className="mb-[30px] h-full md:mb-10"
           slidesPerGroup={1}

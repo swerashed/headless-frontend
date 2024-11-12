@@ -23,7 +23,6 @@ function PeopleCard({ people }) {
               alt={people.name}
               width={400}
               height={439}
-              style={{ width: "auto", height: "auto" }}
               className="aspect-[11/12] w-full object-cover transition-all duration-300 group-hover:scale-105 md:aspect-[41/45]"
             />
           </div>

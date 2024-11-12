@@ -1,4 +1,5 @@
 import HeroBannerSecondary from "@/components/heroBanners/HeroBannerSecondary";
+import RichTextContainer from "@/components/shared/RichTextContainer";
 import React from "react";
 
 const NewsDetailsPage = () => {
@@ -8,9 +9,10 @@ const NewsDetailsPage = () => {
         bannerImage="/hero-banners/board-of-directors.jpg"
         pageTitle="March 12, 2020"
         heading="AKS Healthcare launches state-of-the-Art
-Diagnostic center in Sylhet"
+        Diagnostic center in Sylhet"
         social={true}
       />
+      <RichTextContainer/>
     </>
   );
 };

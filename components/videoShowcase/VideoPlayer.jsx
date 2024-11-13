@@ -4,7 +4,7 @@ function VideoPlayer({ link }) {
       className="block border-none"
       width="100%"
       height="100%"
-      src={link}
+      src="/videos/pharmaceutical-showcase.mp4"
       title="Pharmaceutical Showcase video"
       controls={false}
       autoPlay

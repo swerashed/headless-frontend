@@ -7,17 +7,10 @@ import { cn } from "@/lib/utils";
 
 function VideoFullWidthSection({ videoDetails }) {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   const handlePlayClick = () => {
     setIsPlaying(true);
   };
-
-  if (!isClient) return null;
 
   return (
     <section className="pb-10 pt-[60px] md:p-0">

@@ -1,10 +1,12 @@
+import CallToActionSection from "@/components/callToAction/CallToActionSection";
 import CardGridSection from "@/components/cardGrid/CardGridSection";
 import CountersSection from "@/components/counters/CountersSection";
 import CustomerReviewSection from "@/components/customerReview/CustomerReviewSection";
-import CutomerCareAboutSection from "@/components/cutomerCareAbout/CutomerCareAboutSection";
 import HeroBannerSecondary from "@/components/heroBanners/HeroBannerSecondary";
 import StorySection from "@/components/storySection/StorySection";
 import VideoFullWidthSection from "@/components/videoShowcase/VideoFullWidthSection";
+import CustomerCareAboutSection from "@/components/customerCareAbout/CustomerCareAboutSection";
+import ProductCategoriesSection from "@/components/productCategories/ProductCategoriesSection";
 
 export default function ServicesPage() {
   return (
@@ -95,6 +97,91 @@ export default function ServicesPage() {
           videoPath: "/videos/pharmaceutical-showcase.mp4",
         }}
       />
+      <ProductCategoriesSection
+        sectionTitle="Product categories"
+        productList={[
+          {
+            productCategoryName: "Health and Wealth",
+            id: crypto.randomUUID(),
+            image: "/product-categories/product-1.jpg",
+          },
+          {
+            productCategoryName: "Fitness and Wellness",
+            id: crypto.randomUUID(),
+            image: "/product-categories/product-1.jpg",
+          },
+          {
+            productCategoryName: "Technology and Gadgets",
+            id: crypto.randomUUID(),
+            image: "/product-categories/product-1.jpg",
+          },
+          {
+            productCategoryName: "Home and Kitchen",
+            id: crypto.randomUUID(),
+            image: "/product-categories/product-1.jpg",
+          },
+          {
+            productCategoryName: "Books and Literature",
+            id: crypto.randomUUID(),
+            image: "/product-categories/product-1.jpg",
+          },
+          {
+            productCategoryName: "Fashion and Apparel",
+            id: crypto.randomUUID(),
+            image: "/product-categories/product-1.jpg",
+          },
+          {
+            productCategoryName: "Beauty and Skincare",
+            id: crypto.randomUUID(),
+            image: "/product-categories/product-1.jpg",
+          },
+          {
+            productCategoryName: "Toys and Games",
+            id: crypto.randomUUID(),
+            image: "/product-categories/product-1.jpg",
+          },
+          {
+            productCategoryName: "Sports and Outdoors",
+            id: crypto.randomUUID(),
+            image: "/product-categories/product-1.jpg",
+          },
+          {
+            productCategoryName: "Travel and Leisure",
+            id: crypto.randomUUID(),
+            image: "/product-categories/product-1.jpg",
+          },
+          {
+            productCategoryName: "Pet Supplies",
+            id: crypto.randomUUID(),
+            image: "/product-categories/product-1.jpg",
+          },
+          {
+            productCategoryName: "Automotive and Accessories",
+            id: crypto.randomUUID(),
+            image: "/product-categories/product-1.jpg",
+          },
+          {
+            productCategoryName: "Garden and Outdoor",
+            id: crypto.randomUUID(),
+            image: "/product-categories/product-1.jpg",
+          },
+          {
+            productCategoryName: "Office Supplies",
+            id: crypto.randomUUID(),
+            image: "/product-categories/product-1.jpg",
+          },
+          {
+            productCategoryName: "Groceries and Gourmet Food",
+            id: crypto.randomUUID(),
+            image: "/product-categories/product-1.jpg",
+          },
+          {
+            productCategoryName: "Groceries and Gourmet Food",
+            id: crypto.randomUUID(),
+            image: "/product-categories/product-1.jpg",
+          },
+        ]}
+      />
       <CardGridSection
         sectionClassName="bg-surface"
         className="bg-surface lg:grid-cols-4"
@@ -123,7 +210,8 @@ export default function ServicesPage() {
           },
         ]}
       />
-      <CutomerCareAboutSection />
+      <CustomerCareAboutSection />
+      <CallToActionSection />
     </>
   );
 }

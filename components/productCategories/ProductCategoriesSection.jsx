@@ -11,11 +11,12 @@ import "swiper/css/navigation";
 import SectionHeading from "../headings/SectionHeading";
 import { cn } from "@/lib/utils";
 import ProductCategoryCard from "./ProductCategoryCard";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import SliderNavigationButton from "../buttons/SliderNavigationButton";
 
 function ProductCategoriesSection({ sectionTitle, productList }) {
   const swiperRef = useRef(null);
+
   return (
     <section
       className={cn(
@@ -36,7 +37,7 @@ function ProductCategoriesSection({ sectionTitle, productList }) {
         </div>
       </div>
       <div className="container">
-        <div className="mt-10 hidden md:block">
+        <div className="mt-10 hidden md:block" data-aos="fade-up">
           <Swiper
             className="h-full cursor-grabbing"
             slidesPerView={6}
@@ -48,9 +49,8 @@ function ProductCategoriesSection({ sectionTitle, productList }) {
               delay: 3000,
               disableOnInteraction: false,
             }}
-            loop={true}
             navigation={false}
-            modules={[Autoplay, Grid]}
+            modules={[Grid]}
             spaceBetween={15}
             breakpoints={{
               768: {
@@ -74,7 +74,10 @@ function ProductCategoriesSection({ sectionTitle, productList }) {
         </div>
       </div>
       <div className="container">
-        <div className="mt-[30px] grid grid-cols-2 gap-[15px] sm:grid-cols-3 sm:gap-5 md:hidden">
+        <div
+          className="mt-[30px] grid grid-cols-2 gap-[15px] sm:grid-cols-3 sm:gap-5 md:hidden"
+          data-aos="fade-up"
+        >
           {productList.map((product) => (
             <ProductCategoryCard key={product.id} product={product} />
           ))}

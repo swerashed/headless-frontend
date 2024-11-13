@@ -7,7 +7,7 @@ function CustomerCareAboutSection() {
       <div className="container">
         <div
           className="mb-10 flex flex-col items-center justify-center gap-5 text-center"
-          data-aos="fade-down"
+          data-aos="fade-up"
         >
           <SectionHeading>We care about our customers</SectionHeading>
           <p className="max-w-[872px] font-inter text-base font-normal leading-[26px] text-dark/80">

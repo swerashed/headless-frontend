@@ -7,6 +7,7 @@ import StorySection from "@/components/storySection/StorySection";
 import VideoFullWidthSection from "@/components/videoShowcase/VideoFullWidthSection";
 import CustomerCareAboutSection from "@/components/customerCareAbout/CustomerCareAboutSection";
 import ProductCategoriesSection from "@/components/productCategories/ProductCategoriesSection";
+import AppDownloadSection from "@/components/callToAction/AppDownloadSection";
 
 export default function ServicesPage() {
   return (
@@ -90,12 +91,6 @@ export default function ServicesPage() {
             image: "/customers-reviews/customer-1.png",
           },
         ]}
-      />
-      <VideoFullWidthSection
-        videoDetails={{
-          thumbnail: "/videos/thumbnails/services-video-thumnail.jpg",
-          videoPath: "/videos/pharmaceutical-showcase.mp4",
-        }}
       />
       <ProductCategoriesSection
         sectionTitle="Product categories"
@@ -182,6 +177,13 @@ export default function ServicesPage() {
           },
         ]}
       />
+      <VideoFullWidthSection
+        videoDetails={{
+          thumbnail: "/videos/thumbnails/services-video-thumnail.jpg",
+          videoPath: "/videos/pharmaceutical-showcase.mp4",
+        }}
+      />
+
       <CardGridSection
         sectionClassName="bg-surface"
         className="bg-surface lg:grid-cols-4"
@@ -210,6 +212,7 @@ export default function ServicesPage() {
           },
         ]}
       />
+      <AppDownloadSection />
       <CustomerCareAboutSection />
       <CallToActionSection />
     </>

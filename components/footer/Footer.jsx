@@ -28,7 +28,7 @@ const groupLinksThree = [
 
 function Footer() {
   return (
-    <footer className="pb-5 pt-10">
+    <footer className="bg-surface pb-5 pt-10">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-12">
           <div className="flex max-w-80 flex-col px-3 md:col-span-5 lg:col-span-4">
@@ -40,33 +40,33 @@ function Footer() {
               className="mb-8 object-contain"
             />
             <div className="mb-8 flex flex-col gap-4">
-              <div className="group flex items-center gap-2">
+              <div className="flex items-center gap-2">
                 <Image
                   src={locationIcon}
                   alt="icon"
-                  className="h-10 w-10 rounded-full border border-dark/10 p-2 transition-all duration-300 group-hover:border-dark"
+                  className="\\ h-8 w-8 rounded-full border border-dark/10 p-2"
                 />
-                <p className="font-inter font-normal text-dark/80">
+                <p className="font-inter font-normal leading-[26px] text-dark/80">
                   Rupayan Prime, Plot 02, Road 07, Dhanmondi, Dhaka – 1205
                 </p>
               </div>
-              <div className="group flex items-center gap-2">
+              <div className="flex items-center gap-2">
                 <Image
                   src={mailIcon}
                   alt="icon"
-                  className="h-10 w-10 rounded-full border border-dark/10 p-2 transition-all duration-300 group-hover:border-dark"
+                  className="h-8 w-8 rounded-full border border-dark/10 p-2"
                 />
-                <p className="font-inter font-normal text-dark/80">
+                <p className="font-inter font-normal leading-[26px] text-dark/80">
                   info@akskhanpharma.com
                 </p>
               </div>
-              <div className="group flex items-center gap-2">
+              <div className="flex items-center gap-2">
                 <Image
                   src={telephoneIcon}
                   alt="icon"
-                  className="h-10 w-10 rounded-full border border-dark/10 p-2 transition-all duration-300 group-hover:border-dark"
+                  className="h-8 w-8 rounded-full border border-dark/10 p-2"
                 />
-                <p className="font-inter font-normal text-dark/80">
+                <p className="font-inter font-normal leading-[26px] text-dark/80">
                   Tel:- +8801847360360
                 </p>
               </div>

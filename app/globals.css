@@ -137,6 +137,64 @@ html.lenis body {
   @apply mx-auto max-w-[1440px] px-[15px] md:px-[30px] lg:px-[75px];
 }
 
+/* ------------------------------------- */
+/* App download section styles */
+/* ------------------------------------- */
+
+@media (min-width: 450px) {
+  .app-container {
+    @apply min-h-[520px];
+  }
+
+  .phone-mockup {
+    @apply scale-100;
+  }
+}
+
+@media (min-width: 480px) {
+  .app-container {
+    @apply min-h-[520px] px-[30px];
+  }
+
+  .phone-mockup {
+    @apply mx-auto w-[80%];
+  }
+}
+
+@media (min-width: 600px) {
+  .app-container {
+    @apply min-h-[400px] px-[30px];
+  }
+
+  .phone-mockup {
+    @apply mx-0 ml-auto w-[60%];
+  }
+}
+
+@media (min-width: 900px) {
+  .app-container {
+    @apply min-h-[400px] px-[30px];
+  }
+
+  .phone-mockup {
+    @apply mx-0 ml-auto w-[50%];
+  }
+}
+
+@media (min-width: 1200px) {
+  .app-container {
+    @apply min-h-[283px] px-[30px];
+  }
+
+  .phone-mockup {
+    @apply right-[66px] mx-0 ml-auto w-[467px];
+  }
+}
+
+/* ------------------------------------- */
+/* App download section styles */
+/* ------------------------------------- */
+
 .rich-text-container {
   max-width: 910px;
   width: 100%;

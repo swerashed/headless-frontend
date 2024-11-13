@@ -94,7 +94,7 @@ const NewsSlider = ({designType, sectionTitle}) => {
             </div>
           </div>
         </div>
-        <div className="container !pr-0 lg:!pr-[45px]" data-aos="fade-left">
+        <div className="container !pr-0 sm:!pr-[15px] md:!pr-[30px] lg:!pr-[45px]" data-aos="fade-left">
           <Swiper
             className="mb-[30px] h-full md:mb-10"
             slidesPerGroup={1}
@@ -110,7 +110,7 @@ const NewsSlider = ({designType, sectionTitle}) => {
               500: {
                 slidesPerView: 1.3,
               },
-              580: {
+              640: {
                 slidesPerView: 2,
               },
               1024: {

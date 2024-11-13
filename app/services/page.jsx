@@ -1,5 +1,6 @@
 import CardGridSection from "@/components/cardGrid/CardGridSection";
 import CountersSection from "@/components/counters/CountersSection";
+import CustomerReviewSection from "@/components/customerReview/CustomerReviewSection";
 import HeroBannerSecondary from "@/components/heroBanners/HeroBannerSecondary";
 import StorySection from "@/components/storySection/StorySection";
 import VideoFullWidthSection from "@/components/videoShowcase/VideoFullWidthSection";
@@ -19,7 +20,6 @@ export default function ServicesPage() {
         buttonDetails={{ title: "Contact us" }}
       />
       <CountersSection
-        className=""
         counterDetails={[
           {
             id: crypto.randomUUID(),
@@ -36,7 +36,7 @@ export default function ServicesPage() {
 
           {
             id: crypto.randomUUID(),
-            count: "5,688",
+            count: "100+",
             details: "Orders Per Day",
             imageName: "medicine-available",
           },
@@ -45,6 +45,46 @@ export default function ServicesPage() {
             count: "22,357",
             details: "Loyalty Card Users",
             imageName: "loyalty-card",
+          },
+        ]}
+      />
+      <CustomerReviewSection
+        className="border-b border-b-dark/10 bg-surface"
+        reviews={[
+          {
+            id: crypto.randomUUID(),
+            customerName: "John Doe",
+            customerReview:
+              "I had a great experience at AKS Pharmacy! The staff was friendly and knowledgeable, providing excellent service. They offered a wide range of products, making my health journey easier.",
+            image: "/customers-reviews/customer-1.png",
+          },
+          {
+            id: crypto.randomUUID(),
+            customerName: "Jane Smith",
+            customerReview:
+              "I had a great experience at AKS Pharmacy! The staff was friendly and knowledgeable, providing excellent service. They offered a wide range of products, making my health journey easier.",
+            image: "/customers-reviews/customer-1.png",
+          },
+          {
+            id: crypto.randomUUID(),
+            customerName: "Alex Johnson",
+            customerReview:
+              "I had a great experience at AKS Pharmacy! The staff was friendly and knowledgeable, providing excellent service. They offered a wide range of products, making my health journey easier.",
+            image: "/customers-reviews/customer-1.png",
+          },
+          {
+            id: crypto.randomUUID(),
+            customerName: "Chris Lee",
+            customerReview:
+              "I had a great experience at AKS Pharmacy! The staff was friendly and knowledgeable, providing excellent service. They offered a wide range of products, making my health journey easier.",
+            image: "/customers-reviews/customer-1.png",
+          },
+          {
+            id: crypto.randomUUID(),
+            customerName: "Patricia Brown",
+            customerReview:
+              "I had a great experience at AKS Pharmacy! The staff was friendly and knowledgeable, providing excellent service. They offered a wide range of products, making my health journey easier.",
+            image: "/customers-reviews/customer-1.png",
           },
         ]}
       />

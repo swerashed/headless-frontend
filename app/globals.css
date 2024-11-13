@@ -134,35 +134,52 @@ html.lenis body {
 /* ------------------------------------- */
 
 .container {
-  @apply mx-auto max-w-[1320px] px-[15px] md:max-w-[1380px] md:px-[30px] lg:max-w-[1350px] lg:px-[45px];
+  @apply mx-auto max-w-[1440px] px-[15px] md:px-[30px] lg:px-[75px];
 }
 
-.rich-text-container{
+.rich-text-container {
   max-width: 910px;
   width: 100%;
   margin: 0 auto;
-  padding-inline: clamp(15px, calc(0.016304347826086956 * (100vw - 360px) + 15px), 30px);
-  padding-top: clamp(50px, calc(0.03260869565217391 * (100vw - 360px) + 50px), 80px);
+  padding-inline: clamp(
+    15px,
+    calc(0.016304347826086956 * (100vw - 360px) + 15px),
+    30px
+  );
+  padding-top: clamp(
+    50px,
+    calc(0.03260869565217391 * (100vw - 360px) + 50px),
+    80px
+  );
 }
-.social-share-container{
+.social-share-container {
   max-width: 910px;
   width: 100%;
   margin: 0 auto;
-  padding-inline: clamp(15px, calc(0.016304347826086956 * (100vw - 360px) + 15px), 30px);
-  padding-bottom:clamp(50px, calc(0.03260869565217391 * (100vw - 360px) + 50px), 80px);
-  margin-top: clamp(20px, calc(0.021739130434782608 * (100vw - 360px) + 20px), 40px);
+  padding-inline: clamp(
+    15px,
+    calc(0.016304347826086956 * (100vw - 360px) + 15px),
+    30px
+  );
+  padding-bottom: clamp(
+    50px,
+    calc(0.03260869565217391 * (100vw - 360px) + 50px),
+    80px
+  );
+  margin-top: clamp(
+    20px,
+    calc(0.021739130434782608 * (100vw - 360px) + 20px),
+    40px
+  );
 }
-.rich-text-container h1{
-  @apply font-onest mb-[20px] text-dark font-medium text-[32px] leading-[44px]
-
+.rich-text-container h1 {
+  @apply mb-[20px] font-onest text-[32px] font-medium leading-[44px] text-dark;
 }
-.rich-text-container p{
-  @apply font-inter mb-[40px] text-dark/80 font-normal text-[16px] leading-[26px]
-
+.rich-text-container p {
+  @apply mb-[40px] font-inter text-[16px] font-normal leading-[26px] text-dark/80;
 }
-.rich-text-container img{
-  @apply rounded-[20px] my-10
-
+.rich-text-container img {
+  @apply my-10 rounded-[20px];
 }
 .rich-text-container > *:last-child {
   margin-bottom: 0;

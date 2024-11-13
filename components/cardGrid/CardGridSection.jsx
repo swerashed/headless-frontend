@@ -2,9 +2,19 @@ import { cn } from "@/lib/utils";
 import SectionHeading from "../headings/SectionHeading";
 import IconCard from "./IconCard";
 
-function CardGridSection({ sectionHeading, cardDetails, className }) {
+function CardGridSection({
+  sectionHeading,
+  cardDetails,
+  sectionClassName,
+  className,
+}) {
   return (
-    <section className="my-[50px] overflow-hidden lg:my-[100px]">
+    <section
+      className={cn(
+        "overflow-hidden py-[50px] lg:py-[100px]",
+        sectionClassName,
+      )}
+    >
       <div className="container">
         <div data-aos="fade-right">
           <SectionHeading>{sectionHeading}</SectionHeading>

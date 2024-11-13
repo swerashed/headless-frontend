@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function CustomerReviewCard({ review }) {
   return (
-    <div className="flex flex-col gap-10 rounded-[10px] border border-dark/10 bg-white from-[#36F1B91A]/10 to-[#3484A41A]/10 p-5 shadow-md shadow-dark/10 transition-[bg-gradient-to-t] duration-300 hover:bg-gradient-to-t md:p-10 lg:gap-[60px]">
+    <div className="flex flex-col gap-10 rounded-[10px] border border-dark/10 bg-white from-[#36F1B91A]/10 to-[#3484A41A]/10 p-5 shadow-md shadow-dark/10 transition-[bg-gradient-to-t] duration-300 hover:bg-gradient-to-tr md:p-10 lg:gap-[60px]">
       <p className="font-onest text-lg font-medium leading-[26px] text-dark lg:text-2xl lg:leading-[34px]">
         "{review.customerReview}"
       </p>

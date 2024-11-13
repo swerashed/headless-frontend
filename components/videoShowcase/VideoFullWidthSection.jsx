@@ -5,7 +5,7 @@ import Image from "next/image";
 import VideoPlayer from "./VideoPlayer";
 import { cn } from "@/lib/utils";
 
-function VideoFullWidthSection() {
+function VideoFullWidthSection({ videoDetails }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isClient, setIsClient] = useState(false);
 
@@ -20,24 +20,24 @@ function VideoFullWidthSection() {
   if (!isClient) return null;
 
   return (
-    <section className="my-10 md:my-20">
+    <section className="pb-10 pt-[60px] md:p-0">
       <div className={cn("container", "md:mx-0 md:max-w-full md:px-0")}>
         <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[20px] border-none shadow-md shadow-dark/10 md:rounded-none md:shadow-lg lg:h-[712px] lg:shadow-xl">
           {isPlaying ? (
-            <VideoPlayer />
+            <VideoPlayer link={videoDetails.videoPath} />
           ) : (
             <div
               className="relative flex h-full w-full cursor-pointer items-center justify-center overflow-hidden border-none bg-black"
               onClick={handlePlayClick}
             >
               <Image
-                width={1290}
+                width={1440}
                 height={712}
-                src="/videos/thumbnails/services-video-thumnail.jpg"
+                src={videoDetails.thumbnail}
                 alt="Pharmaceutical Showcase video thumbnail"
                 className="absolute inset-0 h-full w-full object-cover"
               />
-              <div className="group absolute flex h-10 w-10 items-center justify-center rounded-full bg-white fill-green shadow-md shadow-dark/10 md:h-20 md:w-20 md:shadow-xl lg:h-[120px] lg:w-[120px] lg:shadow-2xl">
+              <div className="group absolute flex h-[42px] w-[42px] items-center justify-center rounded-full bg-white fill-green shadow-md shadow-dark/10 md:h-20 md:w-20 md:shadow-xl lg:h-[120px] lg:w-[120px] lg:shadow-2xl">
                 <svg
                   viewBox="0 0 36 36"
                   xmlns="http://www.w3.org/2000/svg"

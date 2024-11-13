@@ -1,10 +1,10 @@
-function VideoPlayer() {
+function VideoPlayer({ link }) {
   return (
     <video
       className="block border-none"
       width="100%"
       height="100%"
-      src="/videos/pharmaceutical-showcase.mp4"
+      src={link}
       title="Pharmaceutical Showcase video"
       controls={false}
       autoPlay

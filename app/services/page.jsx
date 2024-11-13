@@ -1,6 +1,7 @@
 import CardGridSection from "@/components/cardGrid/CardGridSection";
 import CountersSection from "@/components/counters/CountersSection";
 import CustomerReviewSection from "@/components/customerReview/CustomerReviewSection";
+import CutomerCareAboutSection from "@/components/cutomerCareAbout/CutomerCareAboutSection";
 import HeroBannerSecondary from "@/components/heroBanners/HeroBannerSecondary";
 import StorySection from "@/components/storySection/StorySection";
 import VideoFullWidthSection from "@/components/videoShowcase/VideoFullWidthSection";
@@ -88,9 +89,15 @@ export default function ServicesPage() {
           },
         ]}
       />
-      <VideoFullWidthSection />
+      <VideoFullWidthSection
+        videoDetails={{
+          thumbnail: "/videos/thumbnails/services-video-thumnail.jpg",
+          videoPath: "/videos/pharmaceutical-showcase.mp4",
+        }}
+      />
       <CardGridSection
-        className="lg:grid-cols-4"
+        sectionClassName="bg-surface"
+        className="bg-surface lg:grid-cols-4"
         sectionHeading="What do we offer?"
         cardDetails={[
           {
@@ -116,6 +123,7 @@ export default function ServicesPage() {
           },
         ]}
       />
+      <CutomerCareAboutSection />
     </>
   );
 }

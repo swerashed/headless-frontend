@@ -31,7 +31,12 @@ function CustomerReviewSection({ className, reviews }) {
           />
         </div>
       </div>
-      <div className="container !pr-0 pt-10 sm:!pr-[15px] md:!pr-0 lg:!pr-0 xl:!pr-[75px]">
+      <div
+        className={cn(
+          "container",
+          "pr-0 pt-10 sm:pr-[15px] md:pr-0 xl:pr-[75px]",
+        )}
+      >
         <div data-aos="fade-left">
           <Swiper
             className="cursor-grab"

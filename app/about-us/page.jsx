@@ -4,9 +4,9 @@ import CountersSection from "@/components/counters/CountersSection";
 import VideoShowcaseSection from "@/components/videoShowcase/VideoShowcaseSection";
 import MissionVissionSection from "@/components/missionVission/MissionVissionSection";
 import CardGridSection from "@/components/cardGrid/CardGridSection";
-import SideBySideWithButton from "@/components/sideBySide/SideBySide";
 import CallToActionSection from "@/components/callToAction/CallToActionSection";
 import WhyChooseUsSection from "@/components/whyChooseUs/WhyChooseUsSection";
+import SideBySideWithButton from "@/components/sideBySide/SideBySideWithButtonSection";
 
 export default function AboutUsPage() {
   return (

@@ -1,8 +1,9 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
-function AppDownloadSection() {
+function AppDownloadSection({ className }) {
   return (
-    <section className="my-[50px] md:my-[100px]">
+    <section className={cn("py-[50px] md:py-[100px]", className)}>
       <div className="container">
         <div
           className="app-container relative flex min-h-[500px] flex-col overflow-hidden rounded-[20px] px-[15px] py-[30px] text-white shadow-md shadow-dark/10 md:shadow-2xl"

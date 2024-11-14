@@ -20,7 +20,7 @@ const FeatureNewsCard = ({ singleNews, index }) => {
       >
         <div className="image-content min-h-[135px] min-w-[150.43px] overflow-hidden rounded-t-[8px] rounded-bl-[8px]">
           <Image
-            src={`/${singleNews.image}`}
+            src={`/recent-updates/${singleNews.image}.png`}
             alt=""
             width={150}
             height={135}
@@ -81,18 +81,16 @@ const NewsHero = () => {
 
   return (
     <section className="bg-surface">
-
-
-         {/* NEWS HERO SECTION - WILL BE HIDDEN ON MOBILE DEVICE  */}
-      <div className="container lg:flex gap-[30px] py-[100px] hidden">
+      {/* NEWS HERO SECTION - WILL BE HIDDEN ON MOBILE DEVICE  */}
+      <div className="container hidden gap-[30px] py-[100px] lg:flex">
         <Link href={topNews.link}>
           <div
-           className="left-part flex min-h-[505px] max-w-[850px] flex-col items-end justify-end overflow-hidden rounded-[20px] p-[40px]"
-           style={{
-             background: `linear-gradient(357.65deg, rgba(0, 5, 17, 0.8) 1.97%, rgba(0, 32, 104, 0) 75.74%), url('${topNews.image}')`,
-             backgroundSize: "cover",
-             backgroundPosition: "center",
-           }}
+            className="left-part flex min-h-[505px] max-w-[850px] flex-col items-end justify-end overflow-hidden rounded-[20px] p-[40px]"
+            style={{
+              background: `linear-gradient(357.65deg, rgba(0, 5, 17, 0.8) 1.97%, rgba(0, 32, 104, 0) 75.74%), url('${topNews.image}')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
           >
             <div className="items space-y-[5px]">
               <p className="font-inter text-[14px] leading-[22px] text-white">
@@ -115,7 +113,7 @@ const NewsHero = () => {
         </div>
       </div>
 
-          {/* NEWS SECTION - WILL BE HIDDEN ON LARGE DEVICE  */}
+      {/* NEWS SECTION - WILL BE HIDDEN ON LARGE DEVICE  */}
       <div className="slider-section lg:hidden">
         <NewsSlider featureNews={featureNews} />
       </div>

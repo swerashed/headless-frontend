@@ -23,7 +23,7 @@ function HeroBannerSecondary({ bannerImage, pageTitle, heading, social }) {
             <h3
               className={cn(
                 "font-inter text-[14px] font-medium uppercase leading-[20px] text-white md:text-[16px] md:leading-[22px]",
-                { social: "font-normal" },
+                { social: "font-normal leading-[26px]" },
               )}
             >
               {pageTitle}

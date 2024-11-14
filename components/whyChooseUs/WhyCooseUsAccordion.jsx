@@ -12,12 +12,12 @@ function WhyCooseUsAccordion({ qsnAndAns }) {
         <AccordionItem
           key={item.id}
           value={`item-${index + 1}`}
-          className="border-b border-dark/10"
+          className="border-none"
         >
-          <AccordionTrigger className="py-5 font-onest text-lg font-medium text-dark hover:no-underline">
+          <AccordionTrigger className="gap-2 border-b border-dark/10 py-5 font-onest text-lg font-medium leading-[26px] text-dark hover:no-underline">
             {item.question}
           </AccordionTrigger>
-          <AccordionContent className="pb-5 font-inter text-base font-normal text-dark/80">
+          <AccordionContent className="py-5 font-inter text-base font-normal leading-[26px] text-dark/80">
             {item.answer}
           </AccordionContent>
         </AccordionItem>

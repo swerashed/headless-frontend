@@ -7,7 +7,7 @@ const SocialShareBottom = () => {
         Share:
       </span>
       <div className="icon-groups flex gap-4">
-        <Link className="group" href="#">
+        <Link className="transition-all duration-300 hover:scale-105" href="#">
           <svg
             width="32"
             height="32"
@@ -31,7 +31,7 @@ const SocialShareBottom = () => {
           </svg>
         </Link>
 
-        <Link className="group" href="#">
+        <Link className="transition-all duration-300 hover:scale-105" href="#">
           <svg
             width="32"
             height="32"
@@ -55,7 +55,7 @@ const SocialShareBottom = () => {
           </svg>
         </Link>
 
-        <Link className="group" href="#">
+        <Link className="transition-all duration-300 hover:scale-105" href="#">
           <svg
             width="32"
             height="32"

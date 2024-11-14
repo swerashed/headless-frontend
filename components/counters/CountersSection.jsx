@@ -10,7 +10,7 @@ function CountersSection({
   return (
     <section
       className={cn(
-        "overflow-hidden pb-[50px] pt-10 md:pb-[100px] md:pt-20",
+        "overflow-hidden pb-[50px] md:pb-[100px]",
         SectionClassName,
       )}
     >

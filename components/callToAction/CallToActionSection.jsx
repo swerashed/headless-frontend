@@ -16,7 +16,9 @@ function CallToActionSection() {
           <h2 className="mb-[30px] max-w-[550px] text-center font-onest text-[28px] font-medium leading-[38px] text-white lg:mb-10 lg:max-w-[850px] lg:text-[40px] lg:leading-[50px]">
             If you need any additional information, please contact us.
           </h2>
-          <PrimaryButton border={false}>Let&lsquo;s get started</PrimaryButton>
+          <PrimaryButton className="bg-white" border={false}>
+            Let&lsquo;s get started
+          </PrimaryButton>
         </div>
       </div>
     </section>

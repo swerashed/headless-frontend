@@ -192,7 +192,7 @@ html.lenis body {
 }
 
 /* ------------------------------------- */
-/* App download section styles */
+/* Rich text container styles */
 /* ------------------------------------- */
 
 .rich-text-container {
@@ -237,14 +237,23 @@ html.lenis body {
   @apply mb-[40px] font-inter text-[16px] font-normal leading-[26px] text-dark/80;
 }
 .rich-text-container img {
-  @apply my-10 rounded-[20px];
+  @apply my-10 max-h-[450px] w-full rounded-[20px];
 }
 .rich-text-container > *:last-child {
   margin-bottom: 0;
 }
+
 /* ------------------------------------- */
 /* Counter styles */
 /* ------------------------------------- */
+
+.counter-of-3 div:nth-child(-n + 2) {
+  @apply col-span-1;
+}
+
+.counter-of-3 div:nth-last-child(1) {
+  @apply col-span-2 lg:col-span-1;
+}
 
 .counter-3-and-2 div:nth-child(-n + 3) {
   @apply md:col-span-2;

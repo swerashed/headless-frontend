@@ -1,10 +1,13 @@
 import Link from "next/link";
 import React from "react";
 
-const SocialIcons = ({facebookLink, LinkedinLink}) => {
+const SocialIcons = ({ facebookLink, LinkedinLink }) => {
   return (
-    <div className="flex gap-[16px] mt-2.5 lg:mt-[30px]">
-      <Link href={facebookLink}>
+    <div className="mt-2.5 flex gap-[16px] lg:mt-[30px]">
+      <Link
+        className="transition-all duration-300 hover:scale-105"
+        href={facebookLink}
+      >
         <svg
           width="32"
           height="32"
@@ -28,7 +31,10 @@ const SocialIcons = ({facebookLink, LinkedinLink}) => {
         </svg>
       </Link>
 
-      <Link href={LinkedinLink}>
+      <Link
+        className="transition-all duration-300 hover:scale-105"
+        href={LinkedinLink}
+      >
         <svg
           width="32"
           height="32"

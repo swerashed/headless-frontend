@@ -1,4 +1,5 @@
 "use client";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay, A11y } from "swiper/modules";
 import "swiper/css";
@@ -9,13 +10,13 @@ import { useRef } from "react";
 import Link from "next/link";
 import PrimaryButton from "../buttons/PrimaryButton";
 import SliderNavigationButton from "@/app/components/SliderNavigationButton";
+import { cn } from "@/lib/utils";
 
-
-const SliderCard = ({singleNews}) => {
+const SliderCard = ({ singleNews }) => {
   return (
     <Link href={singleNews.link}>
       <div
-        className="left-part flex min-h-[375px] max-w-[850px] flex-col items-start justify-end overflow-hidden rounded-[20px] p-[15px]"
+        className="left-part flex min-h-[375px] max-w-[850px] flex-col items-start justify-end overflow-hidden rounded-[20px] p-[15px] transition-all duration-300 hover:scale-105"
         style={{
           background: `linear-gradient(357.65deg, rgba(0, 5, 17, 0.8) 1.97%, rgba(0, 32, 104, 0) 75.74%), url('${singleNews.image}')`,
           backgroundSize: "cover",
@@ -35,8 +36,7 @@ const SliderCard = ({singleNews}) => {
   );
 };
 
-
-const NewsSlider = ({designType, sectionTitle}) => {
+const NewsSlider = ({ designType, sectionTitle }) => {
   const swiperRef = useRef(null);
   const featureNews = [
     {
@@ -72,21 +72,21 @@ const NewsSlider = ({designType, sectionTitle}) => {
     },
   ];
 
-   {/* Main Default Design  */}
-    if(designType=="Main"){
-      return (
-        <section className="overflow-hidden py-[50px] lg:py-[100px]">
+  {
+    /* Main Default Design  */
+  }
+  if (designType == "main") {
+    return (
+      <section className="overflow-hidden py-[50px] lg:py-[100px]">
         <div className="container">
           <div className="mb-[30px] flex items-center justify-between md:mb-10">
             <h2
-              className="font-onest text-[30px] leading-[40px] md:text-[40px] md:leading-[50px] font-medium text-dark"
+              className="font-onest text-[30px] font-medium leading-[40px] text-dark md:text-[40px] md:leading-[50px]"
               data-aos="fade-right"
             >
               {sectionTitle ? sectionTitle : "Recent Updates"}
-             
             </h2>
             <div className="hidden items-center justify-end gap-[10px] md:flex">
-              <div className="updates-pagination mr-5 !flex !w-auto !min-w-10 !items-center !gap-1 font-onest text-[20px] font-medium !leading-[30px] !text-dark/60"></div>
               <SliderNavigationButton
                 onPrev={() => swiperRef.current?.slidePrev()}
                 onNext={() => swiperRef.current?.slideNext()}
@@ -94,7 +94,13 @@ const NewsSlider = ({designType, sectionTitle}) => {
             </div>
           </div>
         </div>
-        <div className="container !pr-0 sm:!pr-[15px] md:!pr-[30px] lg:!pr-[45px]" data-aos="fade-left">
+        <div
+          className={cn(
+            "container",
+            "!pr-0 !pt-10 sm:!pr-[15px] md:!pr-0 xl:!pr-[75px]",
+          )}
+          data-aos="fade-left"
+        >
           <Swiper
             className="mb-[30px] h-full md:mb-10"
             slidesPerGroup={1}
@@ -102,20 +108,19 @@ const NewsSlider = ({designType, sectionTitle}) => {
               delay: 3000,
               disableOnInteraction: false,
             }}
-            slidesPerView={1.16}
+            slidesPerView={1.14}
             breakpoints={{
-              425: {
-                slidesPerView: 1.2,
-              },
-              500: {
-                slidesPerView: 1.3,
-              },
               640: {
                 slidesPerView: 2,
               },
+              768: {
+                slidesPerView: 2.14,
+              },
               1024: {
+                slidesPerView: 2.14,
+              },
+              1280: {
                 slidesPerView: 3,
-                spaceBetween: 30,
               },
             }}
             loop={true}
@@ -142,10 +147,10 @@ const NewsSlider = ({designType, sectionTitle}) => {
                       className="h-full w-full object-cover transition-all duration-1000 group-hover:scale-110"
                     />
                   </div>
-                  <p className="mb-[10px] font-inter text-[14px] leading-[22px] font-normal uppercase text-dark/80">
+                  <p className="mb-[10px] font-inter text-[14px] font-normal uppercase leading-[22px] text-dark/80">
                     {singleNews.date}
                   </p>
-                  <h4 className="font-onest text-[20px] font-medium leading-[30px] text-dark md:text-[24px] md:leading-[34px] line-clamp-2">
+                  <h4 className="line-clamp-2 font-onest text-[20px] font-medium leading-[30px] text-dark md:text-[24px] md:leading-[34px]">
                     {singleNews.title}
                   </h4>
                 </div>
@@ -160,15 +165,17 @@ const NewsSlider = ({designType, sectionTitle}) => {
           <PrimaryButton border={true}>View all</PrimaryButton>
         </div>
       </section>
-      )
-    }
+    );
+  }
 
- {/* For News Landing Page Banner Design  */}
+  {
+    /* For News Landing Page Banner Design  */
+  }
   return (
-    <section className="overflow-hidden ">
+    <section className="overflow-hidden">
       <div className="container !pr-0 md:!pr-[30px]" data-aos="fade-left">
         <Swiper
-          className="h-full my-[30px]"
+          className="my-[30px] h-full"
           slidesPerGroup={1}
           autoplay={{
             delay: 3000,
@@ -212,7 +219,6 @@ const NewsSlider = ({designType, sectionTitle}) => {
           ))}
         </Swiper>
       </div>
-
     </section>
   );
 };

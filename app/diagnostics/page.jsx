@@ -2,7 +2,9 @@ import AppDownloadSection from "@/components/callToAction/AppDownloadSection";
 import CallToActionSection from "@/components/callToAction/CallToActionSection";
 import CountersSection from "@/components/counters/CountersSection";
 import CustomerReviewSection from "@/components/customerReview/CustomerReviewSection";
+import DepartmentSection from "@/components/departments/DepartmentSection";
 import HeroBannerSecondary from "@/components/heroBanners/HeroBannerSecondary";
+import NewsSliderSection from "@/components/newsSlider/NewsSliderSection";
 import StorySection from "@/components/storySection/StorySection";
 import WhyChooseUsSection from "@/components/whyChooseUs/WhyChooseUsSection";
 
@@ -86,6 +88,53 @@ function DiagnosticsPage() {
           },
         ]}
       />
+      <DepartmentSection
+        sectionTitle="Departments"
+        items={[
+          {
+            id: crypto.randomUUID(),
+            title: "Cardiology",
+            details:
+              "Cardiology is a branch of medicine that deals with disorders of the heart and the cardiovascular system",
+            icon: "/departments/cardiology.svg",
+          },
+          {
+            id: crypto.randomUUID(),
+            title: "Pulmonary",
+            details:
+              "The word pulmonary is used to describe issues about the lungs. It is derived from the Latin root word Pulmo, which means lung.",
+            icon: "/departments/pulmonary.svg",
+          },
+          {
+            id: crypto.randomUUID(),
+            title: "Neurology",
+            details:
+              "Neurology is a branch of medical science that is concerned with disorders and diseases of the nervous system.",
+            icon: "/departments/neurology.svg",
+          },
+          {
+            id: crypto.randomUUID(),
+            title: "Orthopedics",
+            details:
+              "Orthopedic surgery, or orthopedics, deals with conditions involving the musculoskeletal system.",
+            icon: "/departments/orthopedics.svg",
+          },
+          {
+            id: crypto.randomUUID(),
+            title: "Gastroenterology",
+            details:
+              "A gastroenterologist is a medical professional who specializes in diseases of the digestive system and digestive tract.",
+            icon: "/departments/gastroenterology.svg",
+          },
+          {
+            id: crypto.randomUUID(),
+            title: "Laboratory",
+            details:
+              "Laboratory, a Place where scientific research and development is conducted and analyses performed.",
+            icon: "/departments/laboratory.svg",
+          },
+        ]}
+      />
       <WhyChooseUsSection
         image="/section-banners/diagnostics/why-chhose-us.jpg"
         heading="Why Choose AKS Diagnostics for Your Health Needs"
@@ -118,6 +167,46 @@ function DiagnosticsPage() {
         ]}
       />
       <AppDownloadSection className="bg-surface" />
+      <NewsSliderSection
+        sectionHeading="Recent updates"
+        newsItems={[
+          {
+            id: crypto.randomUUID(),
+            title:
+              "AKS Healthcare launches state-of-the-Art Diagnostic center in Sylhet",
+            date: "March 12, 2020",
+            image: "/recent-updates/recent-updates-1.png",
+          },
+          {
+            id: crypto.randomUUID(),
+            title:
+              "AKS Khan Pharmaceuticals crosses major milestone with 500,000 patients Served",
+            date: "March 12, 2020",
+            image: "/recent-updates/recent-updates-2.png",
+          },
+          {
+            id: crypto.randomUUID(),
+            title: "Three new locations in Khulna Division",
+            date: "March 12, 2020",
+            image: "/recent-updates/recent-updates-3.png",
+          },
+          {
+            id: crypto.randomUUID(),
+            title:
+              "AKS Healthcare launches state-of-the-Art Diagnostic center in Sylhet",
+            date: "March 12, 2020",
+            image: "/recent-updates/recent-updates-1.png",
+          },
+          {
+            id: crypto.randomUUID(),
+            title:
+              "AKS Healthcare launches state-of-the-Art Diagnostic center in Sylhet",
+            date: "March 12, 2020",
+            image: "/recent-updates/recent-updates-2.png",
+          },
+        ]}
+        buttonDetails={{ title: "View all" }}
+      />
       <CallToActionSection />
     </>
   );

@@ -13,8 +13,8 @@ const NewsDetailsPage = () => {
         Diagnostic center in Sylhet"
         social={true}
       />
-      <RichTextContainer/>
-      <NewsSlider designType="Main" sectionTitle="You may also like"/>
+      <RichTextContainer />
+      <NewsSlider designType="main" sectionTitle="You may also like" />
     </>
   );
 };

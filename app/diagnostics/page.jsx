@@ -166,6 +166,53 @@ function DiagnosticsPage() {
           },
         ]}
       />
+      <DepartmentSection
+        sectionTitle="Diagnostics Solutions"
+        items={[
+          {
+            id: crypto.randomUUID(),
+            title: "Magnetic Resonance Imaging (MRI)",
+            details:
+              "Used for detailed imaging of soft tissues, organs, and the central nervous system to diagnose conditions like tumors, spinal cord injuries, and brain disorders.",
+            icon: "/dignostics-solutions/mri.svg",
+          },
+          {
+            id: crypto.randomUUID(),
+            title: "Computed Tomography (CT Scan)",
+            details:
+              "Combines X-ray images to create detailed cross-sectional views of bones, blood vessels, and soft tissues, often used in trauma or cancer diagnosis.",
+            icon: "/dignostics-solutions/ct-scan.svg",
+          },
+          {
+            id: crypto.randomUUID(),
+            title: "Ultrasound Imaging",
+            details:
+              "Utilizes sound waves to produce images of organs and tissues, commonly used in prenatal care, abdominal issues, and heart disease evaluation.",
+            icon: "/dignostics-solutions/ultrasound-imaging.svg",
+          },
+          {
+            id: crypto.randomUUID(),
+            title: "Blood Testing Panels",
+            details:
+              "Includes tests such as Complete Blood Count (CBC), lipid panels, and liver function tests, essential for diagnosing infections, anemia, cholesterol issues, and more.",
+            icon: "/dignostics-solutions/blood-testing-panels.svg",
+          },
+          {
+            id: crypto.randomUUID(),
+            title: "Molecular Diagnostics (PCR Tests)",
+            details:
+              "Detects specific genetic material or proteins, crucial in diagnosing infectious diseases, cancers, and genetic disorders. Widely used for COVID-19 and other viral diseases.",
+            icon: "/dignostics-solutions/pcr.svg",
+          },
+          {
+            id: crypto.randomUUID(),
+            title: "Electrocardiogram (ECG/EKG)",
+            details:
+              "Measures the electrical activity of the heart, helping to diagnose heart conditions like arrhythmias, heart attacks, and other cardiovascular diseases.",
+            icon: "/dignostics-solutions/ecg.svg",
+          },
+        ]}
+      />
       <AppDownloadSection className="bg-surface" />
       <NewsSliderSection
         sectionHeading="Recent updates"

@@ -7,6 +7,8 @@ import "swiper/css/navigation";
 import Image from "next/image";
 import { useRef } from "react";
 import Link from "next/link";
+import PrimaryButton from "../buttons/PrimaryButton";
+import SliderNavigationButton from "@/app/components/SliderNavigationButton";
 
 
 const SliderCard = ({singleNews}) => {
@@ -34,7 +36,7 @@ const SliderCard = ({singleNews}) => {
 };
 
 
-const NewsSlider = () => {
+const NewsSlider = ({designType, sectionTitle}) => {
   const swiperRef = useRef(null);
   const featureNews = [
     {
@@ -69,6 +71,99 @@ const NewsSlider = () => {
       link: "/healthcare-launches-state-of-the-Art",
     },
   ];
+
+   {/* Main Default Design  */}
+    if(designType=="Main"){
+      return (
+        <section className="overflow-hidden py-[50px] lg:py-[100px]">
+        <div className="container">
+          <div className="mb-[30px] flex items-center justify-between md:mb-10">
+            <h2
+              className="font-onest text-[30px] leading-[40px] md:text-[40px] md:leading-[50px] font-medium text-dark"
+              data-aos="fade-right"
+            >
+              {sectionTitle ? sectionTitle : "Recent Updates"}
+             
+            </h2>
+            <div className="hidden items-center justify-end gap-[10px] md:flex">
+              <div className="updates-pagination mr-5 !flex !w-auto !min-w-10 !items-center !gap-1 font-onest text-[20px] font-medium !leading-[30px] !text-dark/60"></div>
+              <SliderNavigationButton
+                onPrev={() => swiperRef.current?.slidePrev()}
+                onNext={() => swiperRef.current?.slideNext()}
+              />
+            </div>
+          </div>
+        </div>
+        <div className="container !pr-0 sm:!pr-[15px] md:!pr-[30px] lg:!pr-[45px]" data-aos="fade-left">
+          <Swiper
+            className="mb-[30px] h-full md:mb-10"
+            slidesPerGroup={1}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            slidesPerView={1.16}
+            breakpoints={{
+              425: {
+                slidesPerView: 1.2,
+              },
+              500: {
+                slidesPerView: 1.3,
+              },
+              640: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+            }}
+            loop={true}
+            pagination={{
+              clickable: true,
+              type: "fraction",
+              el: ".updates-pagination",
+            }}
+            navigation={false}
+            modules={[Pagination, Navigation, Autoplay, A11y]}
+            spaceBetween={20}
+            speed={600}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
+          >
+            {featureNews.map((singleNews) => (
+              <SwiperSlide key={singleNews.id}>
+                <div className="group flex cursor-pointer flex-col overflow-hidden rounded-md">
+                  <div className="mb-5 h-[175px] w-full overflow-hidden rounded-md md:h-[240px]">
+                    <Image
+                      src={`/${singleNews.image}`}
+                      alt={singleNews.title}
+                      width={800}
+                      height={750}
+                      className="h-full w-full object-cover transition-all duration-1000 group-hover:scale-110"
+                    />
+                  </div>
+                  <p className="mb-[10px] font-inter text-[14px] leading-[22px] font-normal uppercase text-dark/80">
+                    {singleNews.date}
+                  </p>
+                  <h4 className="font-onest text-[20px] font-medium leading-[30px] text-dark md:text-[24px] md:leading-[34px] line-clamp-2">
+                    {singleNews.title}
+                  </h4>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        <div
+          className="container flex items-center justify-center"
+          data-aos="fade-up"
+        >
+          <PrimaryButton border={true}>View all</PrimaryButton>
+        </div>
+      </section>
+      )
+    }
+
+ {/* For News Landing Page Banner Design  */}
   return (
     <section className="overflow-hidden ">
       <div className="container !pr-0 md:!pr-[30px]" data-aos="fade-left">

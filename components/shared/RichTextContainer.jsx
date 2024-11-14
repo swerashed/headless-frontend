@@ -3,7 +3,7 @@ import SocialShareBottom from "./SocialShareBottom";
 
 const RichTextContainer = () => {
   return (
-    <>
+    <div className="border-b border-dark/10">
       <div className="rich-text-container">
         <h1>Grand Opening of Two New Branches</h1>
         <p>
@@ -37,7 +37,7 @@ const RichTextContainer = () => {
       <div className="social-share-container">
         <SocialShareBottom />
       </div>
-    </>
+    </div>
   );
 };
 

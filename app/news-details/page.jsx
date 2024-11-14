@@ -1,4 +1,5 @@
 import HeroBannerSecondary from "@/components/heroBanners/HeroBannerSecondary";
+import NewsSlider from "@/components/news/NewsSlider";
 import RichTextContainer from "@/components/shared/RichTextContainer";
 import React from "react";
 
@@ -13,6 +14,7 @@ const NewsDetailsPage = () => {
         social={true}
       />
       <RichTextContainer/>
+      <NewsSlider designType="Main" sectionTitle="You may also like"/>
     </>
   );
 };

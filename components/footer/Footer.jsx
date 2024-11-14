@@ -84,9 +84,11 @@ function Footer() {
             </div>
           </div>
         </div>
-        <MenuAccordion heading="The Company" links={groupLinksOne} />
-        <MenuAccordion heading="Quick Links" links={groupLinksTwo} />
-        <MenuAccordion heading="AKS Group" links={groupLinksThree} />
+        <div className="border-t border-dark/10">
+          <MenuAccordion heading="The Company" links={groupLinksOne} />
+          <MenuAccordion heading="Quick Links" links={groupLinksTwo} />
+          <MenuAccordion heading="AKS Group" links={groupLinksThree} />
+        </div>
         <FooterBottom />
       </div>
     </footer>

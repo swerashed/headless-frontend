@@ -212,6 +212,7 @@ function DiagnosticsPage() {
             icon: "/dignostics-solutions/ecg.svg",
           },
         ]}
+        buttonDetails={{ title: "View all" }}
       />
       <AppDownloadSection className="bg-surface" />
       <NewsSliderSection

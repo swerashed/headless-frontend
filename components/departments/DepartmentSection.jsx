@@ -13,8 +13,9 @@ import "swiper/css/navigation";
 import SliderNavigationButton from "../buttons/SliderNavigationButton";
 import SectionHeading from "../headings/SectionHeading";
 import DepartmentCard from "./DepartmentCard";
+import PrimaryButton from "../buttons/PrimaryButton";
 
-function DepartmentSection({ className, sectionTitle, items }) {
+function DepartmentSection({ className, sectionTitle, items, buttonDetails }) {
   const swiperRef = useRef(null);
 
   return (
@@ -89,6 +90,14 @@ function DepartmentSection({ className, sectionTitle, items }) {
             <DepartmentCard key={department.id} item={department} />
           ))}
         </div>
+        {buttonDetails && (
+          <div
+            className="mt-[30px] flex items-center justify-center md:mt-10"
+            data-aos="fade-up"
+          >
+            <PrimaryButton border={true}>{buttonDetails.title}</PrimaryButton>
+          </div>
+        )}
       </div>
     </section>
   );

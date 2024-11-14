@@ -12,10 +12,10 @@ function DepartmentCard({ item }) {
         height={100}
         className="mb-10 h-20 w-20 origin-left object-contain transition-all duration-300 group-hover:scale-105 xl:h-[100px] xl:w-[100px]"
       />
-      <h3 className="mb-[15px] font-onest text-xl font-medium leading-[30px] text-dark sm:text-2xl sm:leading-[34px]">
+      <h3 className="mb-[15px] line-clamp-2 font-onest text-xl font-medium leading-[30px] text-dark sm:text-2xl sm:leading-[34px]">
         {item.title}
       </h3>
-      <p className="mb-10 grow font-inter text-sm font-normal leading-[22px] text-dark/80 sm:text-base sm:leading-[26px]">
+      <p className="mb-10 line-clamp-3 font-inter text-sm font-normal leading-[22px] text-dark/80 sm:text-base sm:leading-[26px]">
         {item.details}
       </p>
       <Link

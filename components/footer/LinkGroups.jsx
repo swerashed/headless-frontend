@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function LinkGroups({ heading, links }) {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col xl:max-w-[260px]">
       <h4 className="mb-4 font-onest text-xl font-medium text-dark">
         {heading}
       </h4>

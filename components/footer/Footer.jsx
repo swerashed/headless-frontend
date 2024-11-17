@@ -30,8 +30,8 @@ function Footer() {
   return (
     <footer className="bg-surface pb-5 pt-10">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-12">
-          <div className="flex max-w-80 flex-col px-3 md:col-span-5 lg:col-span-4">
+        <div className="grid grid-cols-1 md:grid-cols-12 lg:gap-x-10 xl:gap-x-[90px]">
+          <div className="flex flex-col px-3 md:col-span-5 lg:col-span-4 xl:max-w-[300px] xl:px-0">
             <Image
               src="/logo.png"
               alt="Company logo"
@@ -75,7 +75,7 @@ function Footer() {
               <SocialMediaIcons />
             </div>
           </div>
-          <div className="hidden md:col-span-6 md:col-start-7 md:grid md:grid-cols-2 md:gap-x-10 lg:col-span-8 lg:col-start-5 lg:grid-cols-3">
+          <div className="hidden md:col-span-6 md:col-start-7 md:grid md:grid-cols-2 md:gap-x-10 lg:col-span-8 lg:col-start-5 lg:grid-cols-3 xl:gap-x-[60px]">
             <LinkGroups heading="The Company" links={groupLinksOne} />
             <LinkGroups heading="Quick Links" links={groupLinksTwo} />
             <LinkGroups heading="AKS Group" links={groupLinksThree} />

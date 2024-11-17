@@ -137,6 +137,23 @@ html.lenis body {
   @apply mx-auto max-w-[1440px] px-[15px] md:px-[30px] lg:px-[75px];
 }
 
+.slider-container {
+  margin-top: 40px;
+  margin-left: 15px;
+
+  @media (min-width: 768px) {
+    margin-left: 30px;
+  }
+
+  @media (min-width: 1024px) {
+    margin-left: 75px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-left: calc((100vw - 1290px) / 2);
+  }
+}
+
 /* ------------------------------------- */
 /* App download section styles */
 /* ------------------------------------- */
@@ -296,6 +313,7 @@ html.lenis body {
 /* ------------------------------------- */
 /* Slider Pagination styles */
 /* ------------------------------------- */
+
 .updates-pagination .swiper-pagination-current {
   color: #162340;
 }

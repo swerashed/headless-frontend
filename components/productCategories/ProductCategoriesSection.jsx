@@ -40,7 +40,7 @@ function ProductCategoriesSection({ sectionTitle, productList }) {
         <div className="mt-10 hidden md:block" data-aos="fade-up">
           <Swiper
             className="h-full cursor-grabbing"
-            slidesPerView={6}
+            slidesPerView={5}
             grid={{
               rows: 2,
               fill: "row",
@@ -58,7 +58,7 @@ function ProductCategoriesSection({ sectionTitle, productList }) {
                 grid: { rows: 2, fill: "row" },
               },
               1280: {
-                slidesPerView: 6,
+                slidesPerView: 5,
                 grid: { rows: 2, fill: "row" },
               },
             }}

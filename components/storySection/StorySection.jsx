@@ -31,12 +31,14 @@ function StorySection({
             {heading}
           </h2>
 
-          <p
-            data-aos="fade-up"
-            className="font-inter text-base font-normal leading-[28px] text-dark md:leading-[26px] md:text-dark/80"
-          >
-            {details}
-          </p>
+          {details && (
+            <p
+              data-aos="fade-up"
+              className="font-inter text-base font-normal leading-[28px] text-dark md:leading-[26px] md:text-dark/80"
+            >
+              {details}
+            </p>
+          )}
           {buttonDetails && (
             <div data-aos="fade-up">
               <PrimaryButton className="hidden md:mt-10 md:flex">

@@ -57,7 +57,10 @@ export default function AboutUsPage() {
         ]}
         type="counter-3-and-2"
       />
-      <VideoShowcaseSection />
+      <VideoShowcaseSection
+        thumnailURL="/videos/thumbnails/about-us-video-thumnail.png"
+        videoURL="/videos/pharmaceutical-showcase.mp4"
+      />
       <MissionVissionSection />
       <CardGridSection
         className="lg:grid-cols-3"

@@ -3,9 +3,20 @@ import SectionHeading from "../headings/SectionHeading";
 import WhyCooseUsAccordion from "./WhyCooseUsAccordion";
 import { cn } from "@/lib/utils";
 
-function WhyChooseUsSection({ image, heading, bodyText, questionAndAnswers }) {
+function WhyChooseUsSection({
+  sectionClassName,
+  image,
+  heading,
+  bodyText,
+  questionAndAnswers,
+}) {
   return (
-    <section className={cn("overflow-hidden py-[50px] lg:py-[100px]")}>
+    <section
+      className={cn(
+        "overflow-hidden py-[50px] lg:py-[100px]",
+        sectionClassName,
+      )}
+    >
       <div className="container">
         <div className="flex flex-col gap-10 md:flex-row md:items-center md:gap-10 lg:flex-row lg:items-center lg:gap-10 xl:gap-10">
           <Image

@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -30,13 +30,8 @@ function CustomerReviewSection({ className, reviews }) {
           />
         </div>
       </div>
-      <div
-        className={cn(
-          "container",
-          "!pr-0 !pt-10 sm:!pr-[15px] md:!pr-0 xl:!pr-[75px]",
-        )}
-      >
-        <div data-aos="fade-left">
+      <div className={cn("slider-container")}>
+        <div data-aos="fade-left !ml-40">
           <Swiper
             className="cursor-grab"
             autoplay={{
@@ -45,16 +40,19 @@ function CustomerReviewSection({ className, reviews }) {
             }}
             breakpoints={{
               640: {
-                slidesPerView: 2,
+                slidesPerView: 2.14,
               },
               768: {
-                slidesPerView: 2.14,
+                slidesPerView: 2.1,
               },
               1024: {
-                slidesPerView: 2.14,
+                slidesPerView: 2.12,
               },
               1280: {
-                slidesPerView: 2,
+                slidesPerView: 2.1,
+              },
+              1920: {
+                slidesPerView: 2.6,
               },
             }}
             slidesPerView={1.14}

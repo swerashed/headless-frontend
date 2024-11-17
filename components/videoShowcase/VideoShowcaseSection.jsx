@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import VideoPlayer from "./VideoPlayer";
 
-function VideoShowcaseSection() {
+function VideoShowcaseSection({ thumnailURL, videoURL }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isClient, setIsClient] = useState(false);
 
@@ -26,7 +26,7 @@ function VideoShowcaseSection() {
           data-aos="zoom-in-up"
         >
           {isPlaying ? (
-            <VideoPlayer />
+            <VideoPlayer videoURL={videoURL} />
           ) : (
             <div
               className="relative flex h-full w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg border-none bg-black md:rounded-[20px]"
@@ -35,7 +35,7 @@ function VideoShowcaseSection() {
               <Image
                 width={1290}
                 height={712}
-                src="/videos/thumbnails/about-us-video-thumnail.png"
+                src={thumnailURL}
                 alt="Pharmaceutical Showcase video thumbnail"
                 className="absolute inset-0 h-full w-full rounded-lg object-cover md:rounded-[20px]"
               />

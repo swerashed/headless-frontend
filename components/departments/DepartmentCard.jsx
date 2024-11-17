@@ -15,7 +15,7 @@ function DepartmentCard({ item }) {
       <h3 className="mb-[15px] line-clamp-2 font-onest text-xl font-medium leading-[30px] text-dark sm:text-2xl sm:leading-[34px]">
         {item.title}
       </h3>
-      <p className="mb-10 line-clamp-3 font-inter text-sm font-normal leading-[22px] text-dark/80 sm:text-base sm:leading-[26px]">
+      <p className="mb-10 line-clamp-3 flex-grow font-inter text-sm font-normal leading-[22px] text-dark/80 sm:text-base sm:leading-[26px]">
         {item.details}
       </p>
       <Link

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function ProductCategoryCard({ product }) {
   return (
-    <div className="group flex items-center justify-start gap-2 overflow-hidden rounded-full bg-white p-[5px] pr-[10px] shadow-md shadow-dark/10 transition-all duration-300 hover:shadow-lg sm:gap-3 lg:mb-[30px]">
+    <div className="group flex items-center justify-start gap-2 overflow-hidden rounded-full bg-white p-2 pr-[10px] shadow-md shadow-dark/10 transition-all duration-300 hover:shadow-lg sm:gap-3 lg:mb-[15px]">
       <Image
         src={product.image}
         alt="Product image"

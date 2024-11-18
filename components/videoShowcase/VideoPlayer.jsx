@@ -6,7 +6,7 @@ function VideoPlayer({ videoURL }) {
       height="100%"
       src={videoURL}
       title="Pharmaceutical Showcase video"
-      controls={false}
+      controls={true}
       autoPlay
     ></video>
   );

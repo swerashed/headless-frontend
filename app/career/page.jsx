@@ -55,6 +55,9 @@ function page() {
         videoURL="/videos/pharmaceutical-showcase.mp4"
       />
       <AksStoriesSection
+        heading="We don't just work side by side; we collaborate. Our diverse
+          expertise, skills, and experiences allow us to learn from each other
+          and produce exceptional, effective results"
         cards={[
           {
             id: crypto.randomUUID(),

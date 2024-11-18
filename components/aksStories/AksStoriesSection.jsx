@@ -8,20 +8,18 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import AksStoryCard from "./AksStoryCard";
 
-function AksStoriesSection({ cards }) {
+function AksStoriesSection({ heading, cards }) {
   return (
-    <section className="mb-[100px] mt-[140px]">
+    <section className="mb-[50px] mt-[80px] overflow-hidden md:mb-[100px] md:mt-[140px]">
       <div className="container">
         <h2
           data-aos="fade-up"
           className="mb-[60px] max-w-[1070px] font-onest text-2xl font-medium leading-[34px] text-dark md:mb-[100px] md:text-[32px] md:leading-[44px]"
         >
-          We don't just work side by side; we collaborate. Our diverse
-          expertise, skills, and experiences allow us to learn from each other
-          and produce exceptional, effective results.
+          {heading}
         </h2>
       </div>
-      <div className="slider-container">
+      <div className="slider-container" data-aos="fade-left">
         <Swiper
           className="cursor-grab"
           autoplay={{

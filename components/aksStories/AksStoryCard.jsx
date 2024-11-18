@@ -8,7 +8,7 @@ function AksStoryCard({ card }) {
         alt="Story cover image"
         height={567}
         width={410}
-        className="absolute inset-0 h-full w-full object-cover transition-all duration-300 group-hover:scale-105"
+        className="absolute inset-0 h-full w-full object-cover transition-all duration-300 group-hover:scale-110"
       />
       <h4 className="absolute left-[10px] top-[10px] rounded-full bg-white px-3 py-2 font-inter text-sm font-normal capitalize leading-[22px] text-dark shadow-sm shadow-dark/10 md:text-base">
         {card.label}

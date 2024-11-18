@@ -1,13 +1,15 @@
 import { cn } from "@/lib/utils";
 import PeopleCard from "./PeopleCard";
 
-function PeopleCardSection({ peoples, className }) {
+function PeopleCardSection({ peoples, sectionClassName, className }) {
   return (
-    <section className="my-[50px] md:my-[100px] md:mb-[130px]">
+    <section
+      className={cn("my-[50px] md:my-[100px] md:mb-[134px]", sectionClassName)}
+    >
       <div className="container">
         <div
           className={cn(
-            "grid grid-cols-1 gap-x-[30px] gap-y-12 sm:grid-cols-2",
+            "grid w-full grid-cols-1 gap-[30px] sm:grid-cols-2 sm:gap-y-[94px]",
             className,
           )}
         >

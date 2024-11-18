@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import {
   Dialog,
@@ -13,49 +15,54 @@ function PeopleCard({ people }) {
   return (
     <Dialog>
       <DialogTrigger>
-        <div
-          data-aos="fade-up"
-          className="group flex cursor-pointer flex-col gap-5"
-        >
-          <div className="w-full overflow-hidden rounded-[10px] shadow-md shadow-dark/10">
+        <div className="group flex cursor-pointer flex-col gap-5">
+          <div
+            className="w-full overflow-hidden rounded-[10px] shadow-md shadow-dark/10"
+            data-aos="fade-up"
+          >
             <Image
               src={`/board-of-directors/${people.image}`}
               alt={people.name}
-              width={400}
-              height={439}
-              className="aspect-[11/12] w-full object-cover transition-all duration-300 group-hover:scale-105 md:aspect-[41/45]"
+              width={410}
+              height={450}
+              className="aspect-[33/36] w-full object-cover transition-all duration-300 group-hover:scale-110 xl:aspect-[410/450]"
             />
           </div>
-          <div className="flex min-h-10 flex-col items-start justify-start gap-1 text-left">
-            <h5 className="font-onest text-xl font-medium text-dark md:text-2xl">
+          <div
+            className="flex flex-col items-start justify-start gap-[5px] text-left"
+            data-aos="fade-up"
+          >
+            <h5 className="line-clamp-1 font-onest text-xl font-medium leading-[30px] text-dark md:text-2xl md:leading-[34px]">
               {people.name}
             </h5>
-            <p className="font-inter text-sm font-normal text-dark/80">
+            <p className="line-clamp-1 font-inter text-sm font-normal leading-[22px] text-dark/80">
               {people.designation}
             </p>
           </div>
         </div>
       </DialogTrigger>
-      <DialogOverlay className="bg-dark/90">
-        <DialogContent className="h-[75vh] max-w-[90%] rounded-md p-[15px] pr-0 pt-16 sm:max-w-[70%] md:max-w-[60%] lg:max-w-[90%] xl:max-w-[80%] xl:pr-10 2xl:h-[70vh] 2xl:max-w-[60%]">
-          <div className="flex h-full flex-col items-start justify-start gap-[30px] overflow-y-auto pr-2 sm:pr-4 lg:flex-row lg:pr-10 xl:justify-between xl:gap-[60px] xl:pr-0">
-            <Image
-              src={`/board-of-directors/${people.image}`}
-              alt={people.name}
-              width={400}
-              height={440}
-              className="aspect-[31/36] w-full rounded-[10px] object-cover shadow-sm shadow-dark/10 lg:h-full lg:w-[400px] xl:w-[470px]"
-            />
-            <div className="flex w-full flex-grow flex-col items-start lg:w-1/2">
-              <DialogHeader className="mb-5">
-                <DialogTitle className="mb-1 text-start font-onest text-3xl font-medium text-dark md:text-4xl">
+      <DialogOverlay className="bg-dark/70">
+        <DialogContent className="h-[90vh] min-w-[90vw] max-w-[90vw] rounded-[20px] p-[10px] pr-0 sm:min-w-[80vw] sm:max-w-[70vw] md:h-[80vh] xl:min-w-[90vw] xl:max-w-[90vw] xl:p-[30px] xl:pt-20 2xl:min-w-[70vw] 2xl:max-w-[70vw]">
+          <div className="flex h-full w-full flex-col gap-[30px] overflow-y-auto pr-[10px] md:flex-row md:overflow-hidden md:pr-0 xl:gap-[60px]">
+            <div className="min-h-[360px] w-full overflow-hidden rounded-[10px] shadow-sm shadow-dark/10 xl:min-w-[470px] xl:max-w-[470px]">
+              <Image
+                src={`/board-of-directors/${people.image}`}
+                alt={people.name}
+                width={400}
+                height={440}
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="flex w-full flex-col md:overflow-y-auto md:pr-[15px]">
+              <DialogHeader className="mb-10">
+                <DialogTitle className="mb-[5px] text-start font-onest text-[28px] font-medium leading-[38px] leading-[48px] text-dark xl:text-4xl">
                   {people.name}
                 </DialogTitle>
-                <DialogDescription className="text-start font-inter text-sm font-normal text-dark/80">
+                <DialogDescription className="text-start font-inter text-sm font-normal leading-[22px] text-dark/80">
                   {people.designation}
                 </DialogDescription>
               </DialogHeader>
-              <p className="text-start font-inter text-base font-normal text-dark/80">
+              <p className="text-start font-inter text-base font-normal leading-[26px] text-dark/80">
                 {people.details}
               </p>
             </div>

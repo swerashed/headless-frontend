@@ -1,22 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import VideoPlayer from "./VideoPlayer";
 
 function VideoShowcaseSection({ thumnailURL, videoURL }) {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   const handlePlayClick = () => {
     setIsPlaying(true);
   };
-
-  if (!isClient) return null;
 
   return (
     <section className="mb-[50px] mt-[35px] overflow-hidden md:mb-[100px] md:mt-20">

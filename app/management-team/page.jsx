@@ -10,7 +10,7 @@ function ManagementTeamPage() {
         heading="Meet the visionary Leaders of our Board"
       />
       <PeopleCardSection
-        className="md:grid-cols-3 lg:grid-cols-4"
+        className="gap-x-[30px] gap-y-[60px] sm:gap-y-[60px] md:grid-cols-3 lg:grid-cols-4"
         peoples={[
           {
             id: crypto.randomUUID(),

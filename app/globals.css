@@ -311,8 +311,14 @@ html.lenis body {
 }
 
 /* ------------------------------------- */
-/* Slider Pagination styles */
+/* Slider styles */
 /* ------------------------------------- */
+
+/* .swiper-slide.swiper-slide-prev {
+  opacity: 0;
+  animation: opacity 1s forwards;
+  pointer-events: none;
+} */
 
 .updates-pagination .swiper-pagination-current {
   color: #162340;

@@ -11,7 +11,7 @@ function LinkGroups({ heading, links }) {
           <Link
             key={link.id}
             href="/"
-            className="transition-all duration-300 hover:underline"
+            className="whitespace-nowrap transition-all duration-300 hover:underline"
           >
             {link.title}
           </Link>

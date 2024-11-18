@@ -1,3 +1,4 @@
+import AksStoriesSection from "@/components/aksStories/AksStoriesSection";
 import CustomerReviewSection from "@/components/customerReview/CustomerReviewSection";
 import HeroBannerSecondary from "@/components/heroBanners/HeroBannerSecondary";
 import StorySection from "@/components/storySection/StorySection";
@@ -52,6 +53,46 @@ function page() {
       <VideoShowcaseSection
         thumnailURL="/videos/thumbnails/career-video-thumnail.jpeg"
         videoURL="/videos/pharmaceutical-showcase.mp4"
+      />
+      <AksStoriesSection
+        cards={[
+          {
+            id: crypto.randomUUID(),
+            title: "AKS Pharmaceuticals team members fun activities",
+            label: "Team hangout",
+            image: "/aks-stories-cards/story-1.jpeg",
+          },
+          {
+            id: crypto.randomUUID(),
+            title: "Team-building event at AKS Pharmaceuticals",
+            label: "Team building",
+            image: "/aks-stories-cards/story-2.jpeg",
+          },
+          {
+            id: crypto.randomUUID(),
+            title: "Celebrating success at AKS Pharmaceuticals",
+            label: "Celebration",
+            image: "/aks-stories-cards/story-3.jpeg",
+          },
+          {
+            id: crypto.randomUUID(),
+            title: "AKS Pharmaceuticals annual team outing",
+            label: "Team outing",
+            image: "/aks-stories-cards/story-4.jpeg",
+          },
+          {
+            id: crypto.randomUUID(),
+            title: "Innovation workshop with AKS Pharmaceuticals team",
+            label: "Workshop",
+            image: "/aks-stories-cards/story-2.jpeg",
+          },
+          {
+            id: crypto.randomUUID(),
+            title: "AKS Pharmaceuticals holiday party",
+            label: "Holiday party",
+            image: "/aks-stories-cards/story-3.jpeg",
+          },
+        ]}
       />
       <CustomerReviewSection
         className="border-b border-b-dark/10 bg-surface"

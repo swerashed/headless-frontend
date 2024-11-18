@@ -2,7 +2,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { Grid, Autoplay } from "swiper/modules";
+import { Grid, Autoplay, e } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/grid";

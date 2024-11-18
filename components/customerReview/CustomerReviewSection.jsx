@@ -44,15 +44,19 @@ function CustomerReviewSection({ className, reviews }) {
               },
               768: {
                 slidesPerView: 2.1,
+                spaceBetween: 30,
               },
               1024: {
                 slidesPerView: 2.12,
+                spaceBetween: 30,
               },
               1280: {
-                slidesPerView: 2.1,
+                slidesPerView: 2.12,
+                spaceBetween: 30,
               },
               1920: {
                 slidesPerView: 2.6,
+                spaceBetween: 30,
               },
             }}
             slidesPerView={1.14}

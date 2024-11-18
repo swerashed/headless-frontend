@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import PrimaryButton from "../buttons/PrimaryButton";
+import SectionHeading from "../headings/SectionHeading";
 
 function StorySection({
   sectionTitle,
@@ -26,7 +27,7 @@ function StorySection({
         <div className="flex max-w-[782px] flex-col md:ml-auto">
           <h2
             data-aos="fade-up"
-            className="mb-[20px] text-2xl font-medium leading-[34px] text-dark md:mb-[30px] md:text-[32px] md:leading-[44px]"
+            className="mb-[20px] font-onest text-2xl font-medium leading-[34px] text-dark md:mb-[30px] md:text-[32px] md:leading-[44px]"
           >
             {heading}
           </h2>

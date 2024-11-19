@@ -10,12 +10,13 @@ function Map() {
   });
 
   useEffect(() => {
-    const handleBodyClick = (event) => {
+    const handleBodyClick = () => {
       setPopover((prevPopover) => ({
         ...prevPopover,
         isOpen: false,
       }));
     };
+
     document.body.addEventListener("click", handleBodyClick);
 
     return () => {

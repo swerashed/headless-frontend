@@ -1,4 +1,5 @@
 import AksStoriesSection from "@/components/aksStories/AksStoriesSection";
+import CoverageAreaSection from "@/components/coverageArea/CoverageAreaSection";
 import CustomerReviewSection from "@/components/customerReview/CustomerReviewSection";
 import HeroBannerSecondary from "@/components/heroBanners/HeroBannerSecondary";
 import OpenJobListSection from "@/components/openJobList/OpenJobListSection";
@@ -99,7 +100,7 @@ function page() {
         ]}
       />
       <CustomerReviewSection
-        className="border-b border-b-dark/10 bg-surface"
+        className="bg-surface"
         reviews={[
           {
             id: crypto.randomUUID(),
@@ -138,6 +139,7 @@ function page() {
           },
         ]}
       />
+      <CoverageAreaSection />
     </>
   );
 }

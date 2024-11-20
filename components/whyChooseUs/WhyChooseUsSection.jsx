@@ -29,7 +29,7 @@ function WhyChooseUsSection({
           />
           <div className="flex flex-col md:w-1/2">
             <div data-aos="fade-left">
-              <SectionHeading className="mb-5 xl:mb-10 xl:text-[40px]">
+              <SectionHeading className="transf mb-5 normal-case xl:mb-10 xl:text-[40px]">
                 {heading}
               </SectionHeading>
               {bodyText && (

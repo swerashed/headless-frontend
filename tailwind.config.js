@@ -17,8 +17,8 @@ module.exports = {
       },
       backgroundImage: {
         "hero-gradient": "linear-gradient(0deg, #162340 5%, #16234000 70%)",
-        "news-gradient": "linear-gradient(357.65deg, rgba(0, 5, 17, 0.8) 1.97%, rgba(0, 32, 104, 0) 75.74%)"
-
+        "news-gradient":
+          "linear-gradient(357.65deg, rgba(0, 5, 17, 0.8) 1.97%, rgba(0, 32, 104, 0) 75.74%)",
       },
       colors: {
         dark: "#162340",

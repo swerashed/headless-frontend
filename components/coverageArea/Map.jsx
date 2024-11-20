@@ -6,7 +6,7 @@ import MapPopover from "./MapPopover";
 function Map() {
   const [popover, setPopover] = useState({
     isOpen: false,
-    style: { left: "0px", top: "0px" },
+    style: "",
   });
 
   useEffect(() => {
@@ -24,12 +24,15 @@ function Map() {
     };
   }, []);
 
-  const handlePopOver = (position) => {
-    setPopover({ isOpen: true, style: position });
+  const handlePopOver = (event) => {
+    setPopover({
+      isOpen: true,
+      style: { top: `${event.clientY / 4}px` },
+    });
   };
 
   return (
-    <div className="relative">
+    <div className="relative z-40">
       {popover.isOpen && <MapPopover style={popover.style} />}
       <svg
         width={500}
@@ -40,7 +43,7 @@ function Map() {
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          onClick={() => handlePopOver({ left: "10px", top: "10px" })}
+          onClick={(event) => handlePopOver(event)}
           className="cursor-pointer"
           fillRule="evenodd"
           clipRule="evenodd"
@@ -56,7 +59,7 @@ function Map() {
           stroke="#A2B7B7"
         />
         <path
-          onClick={() => handlePopOver({ left: "10px", top: "20px" })}
+          onClick={(event) => handlePopOver(event)}
           className="cursor-pointer"
           fillRule="evenodd"
           clipRule="evenodd"
@@ -90,7 +93,7 @@ function Map() {
         <path
           fillRule="evenodd"
           clipRule="evenodd"
-          onClick={() => handlePopOver({ left: "10px", top: "10px" })}
+          onClick={(event) => handlePopOver(event)}
           className="cursor-pointer"
           d="M141.252 163.654V160.382L135.838 156.701L137.087 154.656L133.755 153.839V152.203L129.59 151.794L126.259 148.931L128.341 148.522L122.927 145.659L119.595 130.528L112.931 128.892L110.015 122.349L105.017 119.486L103.351 112.943L107.516 108.853L106.267 104.764L110.848 103.537L117.929 104.764L119.178 101.492L123.343 104.764L122.927 99.8562L127.091 95.7666L128.757 99.0383L133.755 91.677L140.003 95.7666H142.918V98.6293L147.5 100.265L149.166 103.946L155.829 108.035L156.662 106.399L161.66 108.853L162.91 110.08L162.493 111.307L166.242 112.125L167.491 113.761L163.743 115.397L167.075 116.623L168.324 118.259V121.122L167.075 121.94V123.985L169.574 125.212L169.99 126.438L168.324 127.665L164.992 130.119L166.242 132.164L164.159 133.391L162.91 131.346L160.411 130.528L159.994 131.755L156.662 131.346L154.996 133.391L159.161 137.071L158.745 139.934L161.244 141.57L158.328 145.25L155.413 145.659L152.498 148.931L148.333 156.701V157.519L149.582 159.564L147.5 160.382L152.081 163.654H141.252Z"
           fill="#B5F0B4"
@@ -104,7 +107,7 @@ function Map() {
           stroke="#A2B7B7"
         />
         <path
-          onClick={() => handlePopOver({ left: "10px", top: "10px" })}
+          onClick={(event) => handlePopOver(event)}
           className="cursor-pointer"
           fillRule="evenodd"
           clipRule="evenodd"
@@ -136,7 +139,7 @@ function Map() {
         <path
           fillRule="evenodd"
           clipRule="evenodd"
-          onClick={() => handlePopOver({ left: "10px", top: "20px" })}
+          onClick={(event) => handlePopOver(event)}
           className="cursor-pointer"
           d="M107.93 227.042L107.514 218.454L105.848 217.227L109.18 214.364H111.678L112.928 217.227L113.344 214.364H114.594V216.818L117.509 213.137L119.592 215.182L124.59 211.093L120.425 207.003L122.507 207.821L122.924 201.687L125.423 202.914L125.839 205.367L130.421 205.776V207.412H133.753L133.336 204.958L131.254 203.731V201.278L133.336 201.687L135.835 195.143L138.75 196.779L137.501 194.325H140.416L138.334 191.463L142.499 189.009L142.915 186.146L141.249 185.737L142.915 184.102L147.497 184.919L150.412 186.555L151.245 190.236L154.994 191.054L155.827 189.009L159.575 191.054L160.825 188.6L164.156 191.872L169.154 192.69L171.237 194.734H172.903L174.152 191.872L181.233 191.054L182.482 193.099L183.732 193.508L182.482 196.779H184.148L184.981 199.642L183.315 202.096L184.981 203.323L184.148 205.367L185.814 207.821L186.231 210.684L184.148 211.093V214.773L187.48 218.454H190.396L191.645 220.499L190.812 221.726H184.981L184.148 222.952V225.406H183.315V228.269L179.15 233.994L176.235 231.132L174.152 232.359L172.486 230.723V232.767L170.82 234.403L170.404 237.675L172.07 238.493L171.237 240.538L171.653 241.356L174.152 240.947L176.651 242.991L174.985 245.036L177.901 246.672L176.235 248.717H173.736L173.319 250.353L170.82 249.535L169.154 247.081L168.738 249.126H166.239L164.989 247.49L161.658 249.126L158.742 249.535L155.41 247.49L147.08 247.899V245.854L144.998 242.991H143.748L141.249 240.538L137.917 240.129L136.252 241.356L137.085 244.627L136.668 245.854L132.087 242.173V240.538L133.753 239.311L132.92 237.266L130.421 239.311L129.171 238.084L127.089 242.582L124.173 236.857L126.256 234.403L125.839 228.269L123.757 230.314L119.592 229.905L120.008 227.86L116.26 221.726L113.344 224.997L112.095 223.361L107.93 227.042Z"
           fill="#B5F0B4"
@@ -150,7 +153,7 @@ function Map() {
           stroke="#A2B7B7"
         />
         <path
-          onClick={() => handlePopOver({ left: "10px", top: "20px" })}
+          onClick={(event) => handlePopOver(event)}
           className="cursor-pointer"
           fillRule="evenodd"
           clipRule="evenodd"
@@ -194,7 +197,7 @@ function Map() {
           stroke="#A2B7B7"
         />
         <path
-          onClick={() => handlePopOver({ left: "10px", top: "10px" })}
+          onClick={(event) => handlePopOver(event)}
           className="cursor-pointer"
           fillRule="evenodd"
           clipRule="evenodd"
@@ -231,7 +234,7 @@ function Map() {
           stroke="#A2B7B7"
         />
         <path
-          onClick={() => handlePopOver({ left: "10px", bottom: "40px" })}
+          onClick={(event) => handlePopOver(event)}
           className="cursor-pointer"
           fillRule="evenodd"
           clipRule="evenodd"
@@ -268,7 +271,7 @@ function Map() {
           stroke="#A2B7B7"
         />
         <path
-          onClick={() => handlePopOver({ left: "10px", top: "30px" })}
+          onClick={(event) => handlePopOver(event)}
           className="cursor-pointer"
           fillRule="evenodd"
           clipRule="evenodd"
@@ -284,7 +287,7 @@ function Map() {
           stroke="#A2B7B7"
         />
         <path
-          onClick={() => handlePopOver({ right: "20px", top: "20px" })}
+          onClick={(event) => handlePopOver(event)}
           className="cursor-pointer"
           fillRule="evenodd"
           clipRule="evenodd"
@@ -307,7 +310,7 @@ function Map() {
           stroke="#A2B7B7"
         />
         <path
-          onClick={() => handlePopOver({ right: "10px", top: "10px" })}
+          onClick={(event) => handlePopOver(event)}
           className="cursor-pointer"
           fillRule="evenodd"
           clipRule="evenodd"
@@ -344,7 +347,7 @@ function Map() {
           stroke="#A2B7B7"
         />
         <path
-          onClick={() => handlePopOver({ right: "30px", top: "30px" })}
+          onClick={(event) => handlePopOver(event)}
           className="cursor-pointer"
           fillRule="evenodd"
           clipRule="evenodd"
@@ -353,7 +356,7 @@ function Map() {
           stroke="#A2B7B7"
         />
         <path
-          onClick={() => handlePopOver({ right: "10px", top: "30px" })}
+          onClick={(event) => handlePopOver(event)}
           className="cursor-pointer"
           fillRule="evenodd"
           clipRule="evenodd"
@@ -439,7 +442,7 @@ function Map() {
           stroke="#A2B7B7"
         />
         <path
-          onClick={() => handlePopOver({ left: "10px", bottom: "20px" })}
+          onClick={(event) => handlePopOver(event)}
           className="cursor-pointer"
           fillRule="evenodd"
           clipRule="evenodd"
@@ -483,7 +486,7 @@ function Map() {
           stroke="#A2B7B7"
         />
         <path
-          onClick={() => handlePopOver({ right: "10px", bottom: "30px" })}
+          onClick={(event) => handlePopOver(event)}
           className="cursor-pointer"
           fillRule="evenodd"
           clipRule="evenodd"

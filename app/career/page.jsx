@@ -1,8 +1,6 @@
 import AksStoriesSection from "@/components/aksStories/AksStoriesSection";
-import CoverageAreaSection from "@/components/coverageArea/CoverageAreaSection";
 import CustomerReviewSection from "@/components/customerReview/CustomerReviewSection";
 import HeroBannerSecondary from "@/components/heroBanners/HeroBannerSecondary";
-import OpenJobListSection from "@/components/openJobList/OpenJobListSection";
 import StorySection from "@/components/storySection/StorySection";
 import VideoShowcaseSection from "@/components/videoShowcase/VideoShowcaseSection";
 import WhyChooseUsSection from "@/components/whyChooseUs/WhyChooseUsSection";
@@ -139,7 +137,6 @@ function page() {
           },
         ]}
       />
-      <CoverageAreaSection />
     </>
   );
 }

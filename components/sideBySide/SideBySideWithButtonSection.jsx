@@ -1,10 +1,22 @@
 import Image from "next/image";
 import SectionHeading from "../headings/SectionHeading";
 import PrimaryButton from "../buttons/PrimaryButton";
+import { cn } from "@/lib/utils";
 
-function SideBySideWithButton({ bannerImage, heading, details, button }) {
+function SideBySideWithButton({
+  sectionClassName,
+  bannerImage,
+  heading,
+  details,
+  button,
+}) {
   return (
-    <section className="overflow-hidden border-t border-dark/10 py-[50px] lg:py-[100px]">
+    <section
+      className={cn(
+        "overflow-hidden border-t border-dark/10 py-[50px] lg:py-[100px]",
+        sectionClassName,
+      )}
+    >
       <div className="container">
         <div className="flex flex-col gap-10 md:gap-20 lg:flex-row-reverse lg:items-center lg:gap-10">
           <Image
@@ -23,7 +35,7 @@ function SideBySideWithButton({ bannerImage, heading, details, button }) {
             </div>
             <p
               data-aos="fade-right"
-              className="mb-10 font-inter text-base font-normal text-dark/80"
+              className="mb-10 font-inter text-base font-normal leading-[26px] text-dark/80"
             >
               {details}
             </p>

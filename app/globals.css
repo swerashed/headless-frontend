@@ -120,6 +120,12 @@ html.lenis body {
   background-color: #357690;
 }
 
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #357690 #fff;
+  border-radius: 10px;
+}
+
 /* ------------------------------------- */
 /* Hero animated progress bar */
 /* ------------------------------------- */
@@ -302,11 +308,11 @@ html.lenis body {
   @apply col-span-2 lg:col-span-1;
 }
 
-.counter-3-and-2 div:nth-child(-n + 3) {
+.counter-of-5 div:nth-child(-n + 3) {
   @apply md:col-span-2;
 }
 
-.counter-3-and-2 div:nth-last-child(-n + 2) {
+.counter-of-5 div:nth-last-child(-n + 2) {
   @apply md:col-span-3;
 }
 

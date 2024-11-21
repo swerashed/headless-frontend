@@ -33,7 +33,7 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 lg:gap-x-10 xl:gap-x-[90px]">
           <div className="flex flex-col px-3 md:col-span-5 lg:col-span-4 xl:max-w-[300px] xl:px-0">
             <Image
-              src="/logo.png"
+              src="/logo.svg"
               alt="Company logo"
               width={183}
               height={60}

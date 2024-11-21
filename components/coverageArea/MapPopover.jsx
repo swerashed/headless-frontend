@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 function MapPopover({ style }) {
   return (
     <div
+      data-lenis-prevent
       style={style}
       className={cn(
         "absolute left-[2%] z-50 flex w-[260px] flex-col rounded-[10px] bg-[#FBFCFD] shadow-md shadow-dark/10 sm:left-[20%] md:left-[10%] lg:left-[25%] xl:w-[293px]",

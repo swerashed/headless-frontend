@@ -4,8 +4,9 @@ import Image from "next/image";
 import NavbarRight from "./NavbarRight";
 import NavbarLinks from "./NavbarLinks";
 import { useState } from "react";
+import MobileMenu from "./MobileMenu";
 
-function Navbar({ isVisible }) {
+function Navbar({ isVisible, isMobileMenuOpen, onMobileMenuOpen }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const handleSearchOpen = () => {
@@ -14,33 +15,36 @@ function Navbar({ isVisible }) {
 
   return (
     <header
-      className={`fixed left-0 right-0 z-50 ${isVisible ? "top-[10px]" : "top-0"} transition-all duration-700 ease-in-out`}
+      className={`fixed left-0 right-0 z-50 ${isVisible ? "lg:top-[10px]" : "top-0"} pointer-events-none transition-all duration-700 ease-in-out`}
     >
-      <div className="mx-auto max-w-[1440px] bg-red-400 px-[15px] xl:px-[75px]">
+      <div className="mx-auto max-w-[1440px] lg:px-[15px] xl:px-[75px]">
         <div
           onClick={() => isSearchOpen && handleSearchOpen()}
-          className={`rounded-xl bg-white/90 px-4 py-[10px] backdrop-blur-xl transition-transform duration-300 xl:px-5 ${
+          className={`pointer-events-auto border-b border-dark/10 bg-white px-4 py-[10px] transition-transform duration-300 lg:rounded-xl lg:border-none lg:bg-white/90 lg:backdrop-blur-[36] xl:px-5 ${
             isVisible ? "transform-none shadow-2xl" : "-translate-y-full"
           }`}
         >
-          <div className="flex flex-row items-center justify-between gap-5 xl:gap-10">
-            <div className="flex min-w-[210px] items-center justify-start">
+          <div className="flex flex-row items-center justify-between gap-4 xl:gap-8">
+            <div className="flex items-center justify-start md:min-w-[170px] xl:min-w-[210px]">
               <Image
                 src="/logo.svg"
                 alt="Aks Pharmaceuticals logo"
                 width={185}
                 height={60}
-                className="max-w-[185px] object-contain"
+                className="h-auto max-w-[136px] object-contain md:max-w-[182px]"
               />
             </div>
             {!isSearchOpen && <NavbarLinks />}
             <NavbarRight
               isSearchOpen={isSearchOpen}
               onSearchOpen={handleSearchOpen}
+              isMobileMenuOpen={isMobileMenuOpen}
+              onMobileMenuOpen={onMobileMenuOpen}
             />
           </div>
         </div>
       </div>
+      {isMobileMenuOpen && <MobileMenu />}
     </header>
   );
 }

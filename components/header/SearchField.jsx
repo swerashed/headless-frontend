@@ -4,7 +4,9 @@ function SearchField({ onSearchOpen }) {
   return (
     <div
       onClick={(event) => event.stopPropagation()}
-      className="flex items-center justify-end gap-[10px] border-b border-dark/10"
+      className="hidden items-center justify-end gap-[10px] border-b border-dark/10 transition-all duration-700 md:flex"
+      data-aos="fade-right"
+      data-aos-duration="200"
     >
       <svg
         className="h-5 w-5 stroke-blue"
@@ -30,7 +32,7 @@ function SearchField({ onSearchOpen }) {
         />
       </svg>
       <Input
-        className="h-auto w-[542px] rounded-none border-none p-2 py-3 font-inter font-normal leading-[22px] text-dark shadow-none placeholder:text-sm placeholder:capitalize focus-visible:ring-0"
+        className="h-auto w-[300px] rounded-none border-none p-2 py-3 font-inter font-normal leading-[22px] text-dark shadow-none placeholder:text-sm placeholder:capitalize focus-visible:ring-0 lg:w-[542px]"
         placeholder="Search now"
       />
       <button
@@ -38,7 +40,6 @@ function SearchField({ onSearchOpen }) {
         className="flex h-8 w-8 items-center justify-center rounded-full bg-blue transition-all duration-300 hover:bg-dark"
       >
         <svg
-          className=""
           width={13}
           height={15}
           viewBox="0 0 13 15"

@@ -6,14 +6,19 @@ import Navbar from "./Navbar";
 function NavbarWrapper() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY > lastScrollY) {
+    if (window.scrollY > lastScrollY && !isMobileMenuOpen) {
       setIsVisible(false);
     } else {
       setIsVisible(true);
     }
     setLastScrollY(window.scrollY);
+  };
+
+  const handleMobileMenu = () => {
+    setIsMobileMenuOpen((prev) => !prev);
   };
 
   useEffect(() => {
@@ -25,7 +30,27 @@ function NavbarWrapper() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lastScrollY]);
 
-  return <Navbar isVisible={isVisible} />;
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.documentElement.style.overflow = "hidden";
+      document.documentElement.style.height = "100vh";
+    } else {
+      document.documentElement.style.overflow = "";
+      document.documentElement.style.height = "";
+    }
+    return () => {
+      document.documentElement.style.overflow = "auto";
+      document.documentElement.style.height = "100%";
+    };
+  }, [isMobileMenuOpen]);
+
+  return (
+    <Navbar
+      isVisible={isVisible}
+      isMobileMenuOpen={isMobileMenuOpen}
+      onMobileMenuOpen={handleMobileMenu}
+    />
+  );
 }
 
 export default NavbarWrapper;

@@ -1,40 +1,26 @@
-"use client";
-
-import { useState } from "react";
 import SectionHeading from "../headings/SectionHeading";
+import JobCard from "./JobCard";
 import JobFilterForm from "./JobFilterForm";
 
-function OpenJobListSection({ data }) {
-  const [filterData, setFilterData] = useState({
-    location: "all",
-    department: "all",
-  });
-
-  const handleFilterSubmit = (data) => {
-    setFilterData(data);
-  };
-
+function OpenJobListSection() {
   return (
     <section className="py-[100px]">
       <div className="container">
-        <div className="flex flex-col justify-between gap-5 md:gap-10 xl:flex-row xl:items-center">
+        <div className="flex flex-col justify-between gap-5 md:gap-10 lg:gap-6 xl:flex-row xl:items-center xl:gap-10">
           <div className="flex flex-col gap-[10px]">
             <SectionHeading>Current openings</SectionHeading>
             <p className="font-inter text-base font-normal leading-[26px] text-dark/80">
               4 open positions across all offices and all departments
             </p>
           </div>
-          <JobFilterForm data={data} onSubmit={handleFilterSubmit} />
+          <JobFilterForm />
         </div>
       </div>
       <div className="container">
-        <div className="flex flex-col gap-5">
-          <div className="flex items-center justify-between gap-10">
-            <h4 className="font-onest text-2xl font-medium leading-[34px] text-dark">
-              Pharmaceutical Sales Representative
-            </h4>
-            <div></div>
-          </div>
+        <div className="mt-10 grid w-full flex-col gap-5 sm:grid-cols-2 md:grid-cols-3 md:gap-4 lg:grid-cols-1 lg:gap-5">
+          <JobCard />
+          <JobCard />
+          <JobCard />
         </div>
       </div>
     </section>

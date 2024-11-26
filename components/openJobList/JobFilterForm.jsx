@@ -16,7 +16,7 @@ function JobFilterForm() {
           <SelectTrigger className="h-auto w-full rounded-[40px] border border-dark/10 bg-surface px-4 py-3 font-inter text-sm font-normal leading-[22px] text-dark focus-within:border-blue focus:border focus:border-blue focus:ring-0 sm:w-[292px]">
             <SelectValue placeholder="All Location" />
           </SelectTrigger>
-          <SelectContent className="w-full rounded-[5px] bg-white sm:w-[296px]">
+          <SelectContent className="w-full rounded-[5px] bg-white sm:w-[292px]">
             <SelectGroup>
               <SelectItem
                 className="h-auto px-5 py-[10px] font-inter text-sm font-normal leading-[22px]"
@@ -55,7 +55,7 @@ function JobFilterForm() {
           <SelectTrigger className="h-auto w-full rounded-[40px] border border-dark/10 bg-surface px-4 py-3 font-inter text-sm font-normal leading-[22px] text-dark focus-within:border-blue focus:border focus:border-blue focus:ring-0 sm:w-[292px]">
             <SelectValue placeholder="Departments" />
           </SelectTrigger>
-          <SelectContent className="w-full rounded-[5px] bg-white sm:w-[296px]">
+          <SelectContent className="w-full rounded-[5px] bg-white sm:w-[292px]">
             <SelectGroup>
               <SelectItem
                 className="h-auto px-5 py-[10px] font-inter text-sm font-normal leading-[22px]"

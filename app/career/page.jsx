@@ -138,7 +138,40 @@ function page() {
           },
         ]}
       />
-      <OpenJobListSection />
+      <OpenJobListSection
+        sectionTitle="Current openings"
+        sectionSubTitle="open positions across all offices and all departments"
+        jobPosts={[
+          {
+            id: crypto.randomUUID(),
+            title: "Pharmaceutical Sales Representative",
+            location: "Dhaka",
+            deadline: "20 Aug 2023",
+            vacancy: "1",
+          },
+          {
+            id: crypto.randomUUID(),
+            title: "Pharmaceutical Sales Representative",
+            location: "Dhaka",
+            deadline: "20 Aug 2023",
+            vacancy: "1",
+          },
+          {
+            id: crypto.randomUUID(),
+            title: "Pharmaceutical Sales Representative",
+            location: "Dhaka",
+            deadline: "20 Aug 2023",
+            vacancy: "1",
+          },
+          {
+            id: crypto.randomUUID(),
+            title: "Pharmaceutical Sales Representative",
+            location: "Dhaka",
+            deadline: "20 Aug 2023",
+            vacancy: "1",
+          },
+        ]}
+      />
     </>
   );
 }

@@ -20,33 +20,21 @@ function JobFilterForm() {
             <SelectGroup>
               <SelectItem
                 className="h-auto px-5 py-[10px] font-inter text-sm font-normal leading-[22px]"
-                value="apple"
+                value="dhaka"
               >
-                Apple
+                Dhaka
               </SelectItem>
               <SelectItem
                 className="h-auto px-5 py-[10px] font-inter text-sm font-normal leading-[22px]"
-                value="banana"
+                value="barishal"
               >
-                Banana
+                Barishal
               </SelectItem>
               <SelectItem
                 className="h-auto px-5 py-[10px] font-inter text-sm font-normal leading-[22px]"
-                value="blueberry"
+                value="rajshahi"
               >
-                Blueberry
-              </SelectItem>
-              <SelectItem
-                className="h-auto px-5 py-[10px] font-inter text-sm font-normal leading-[22px]"
-                value="grapes"
-              >
-                Grapes
-              </SelectItem>
-              <SelectItem
-                className="h-auto px-5 py-[10px] font-inter text-sm font-normal leading-[22px]"
-                value="pineapple"
-              >
-                Pineapple
+                Rajshahi
               </SelectItem>
             </SelectGroup>
           </SelectContent>
@@ -59,33 +47,21 @@ function JobFilterForm() {
             <SelectGroup>
               <SelectItem
                 className="h-auto px-5 py-[10px] font-inter text-sm font-normal leading-[22px]"
-                value="apple"
+                value="dhaka"
               >
-                Apple
+                Dhaka
               </SelectItem>
               <SelectItem
                 className="h-auto px-5 py-[10px] font-inter text-sm font-normal leading-[22px]"
-                value="banana"
+                value="barishal"
               >
-                Banana
+                Barishal
               </SelectItem>
               <SelectItem
                 className="h-auto px-5 py-[10px] font-inter text-sm font-normal leading-[22px]"
-                value="blueberry"
+                value="rajshahi"
               >
-                Blueberry
-              </SelectItem>
-              <SelectItem
-                className="h-auto px-5 py-[10px] font-inter text-sm font-normal leading-[22px]"
-                value="grapes"
-              >
-                Grapes
-              </SelectItem>
-              <SelectItem
-                className="h-auto px-5 py-[10px] font-inter text-sm font-normal leading-[22px]"
-                value="pineapple"
-              >
-                Pineapple
+                Rajshahi
               </SelectItem>
             </SelectGroup>
           </SelectContent>

@@ -19,21 +19,26 @@ function NavbarLinks() {
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <div className="flex w-[230px] flex-col gap-0.5 rounded-[10px] border-t border-dark/10 bg-white shadow-lg">
-                <Link href="/" className="w-full px-5 py-[10px]">
-                  <NavigationMenuLink className="w-full font-inter text-base font-normal leading-[26px] text-dark/80 transition-all duration-300 hover:text-blue">
-                    About Us
-                  </NavigationMenuLink>
-                </Link>
-                <Link href="/" className="w-full px-5 py-[10px]">
-                  <NavigationMenuLink className="w-full font-inter text-base font-normal leading-[26px] text-dark/80 transition-all duration-300 hover:text-blue">
-                    Boared of Directors
-                  </NavigationMenuLink>
-                </Link>
-                <Link href="/" className="w-full px-5 py-[10px]">
-                  <NavigationMenuLink className="w-full font-inter text-base font-normal leading-[26px] text-dark/80 transition-all duration-300 hover:text-blue">
-                    Management Team
-                  </NavigationMenuLink>
-                </Link>
+                <NavigationMenuLink
+                  href="/"
+                  className="w-full px-5 py-[10px] font-inter text-base font-normal leading-[26px] text-dark/80 transition-all duration-300 hover:text-blue"
+                >
+                  About Us
+                </NavigationMenuLink>
+
+                <NavigationMenuLink
+                  href="/"
+                  className="w-full px-5 py-[10px] font-inter text-base font-normal leading-[26px] text-dark/80 transition-all duration-300 hover:text-blue"
+                >
+                  Boared of Directors
+                </NavigationMenuLink>
+
+                <NavigationMenuLink
+                  href="/"
+                  className="w-full px-5 py-[10px] font-inter text-base font-normal leading-[26px] text-dark/80 transition-all duration-300 hover:text-blue"
+                >
+                  Management Team
+                </NavigationMenuLink>
               </div>
             </NavigationMenuContent>
           </NavigationMenuItem>

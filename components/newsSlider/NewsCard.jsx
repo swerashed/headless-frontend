@@ -2,7 +2,10 @@ import Image from "next/image";
 
 function NewsCard({ news }) {
   return (
-    <div className="group flex cursor-pointer flex-col overflow-hidden rounded-md">
+    <div
+      data-aos="fade-up"
+      className="group flex cursor-pointer flex-col overflow-hidden rounded-md"
+    >
       <div className="mb-5 w-full overflow-hidden rounded-md">
         <Image
           src={news.imageLink}

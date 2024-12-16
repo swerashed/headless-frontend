@@ -51,6 +51,7 @@ function TabList({ downloadableFiles }) {
   return (
     <Tabs defaultValue="2012" className="mt-10 w-full">
       <TabsList
+        data-aos="fade-up"
         ref={tabsListRef}
         className="m-0 mb-10 flex h-auto justify-start gap-0 overflow-x-auto scroll-smooth rounded-none bg-surface p-0"
         onMouseDown={handleMouseDown}

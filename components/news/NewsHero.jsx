@@ -1,16 +1,11 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import Swiper from "swiper";
-import { SwiperSlide } from "swiper/react";
-
-import { Pagination, Navigation, Autoplay, A11y } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import { useRef } from "react";
 import NewsSlider from "./NewsSlider";
 const FeatureNewsCard = ({ singleNews, index }) => {
   return (
@@ -24,7 +19,7 @@ const FeatureNewsCard = ({ singleNews, index }) => {
             alt=""
             width={150}
             height={135}
-            className="h-full w-full object-cover"
+            className="h-full w-[150px] w-full object-cover"
           />
         </div>
         <div className="text-content space-y-2.5">
@@ -82,7 +77,7 @@ const NewsHero = () => {
   return (
     <section className="bg-surface">
       {/* NEWS HERO SECTION - WILL BE HIDDEN ON MOBILE DEVICE  */}
-      <div className="container hidden gap-[30px] py-[100px] lg:flex">
+      <div className="container hidden gap-[30px] py-[100px] pt-[120px] lg:flex">
         <Link href={topNews.link}>
           <div
             className="left-part flex min-h-[505px] max-w-[850px] flex-col items-end justify-end overflow-hidden rounded-[20px] p-[40px]"

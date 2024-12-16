@@ -5,7 +5,9 @@ function ResourcesDownloadSection({ sectionTitle, downloadableFiles }) {
   return (
     <section className="py-[50px] md:py-20">
       <div className="container">
-        <SectionHeading>{sectionTitle}</SectionHeading>
+        <div data-aos="fade-up">
+          <SectionHeading>{sectionTitle}</SectionHeading>
+        </div>
         <TabList downloadableFiles={downloadableFiles} />
       </div>
     </section>

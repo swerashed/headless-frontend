@@ -343,3 +343,13 @@ html.lenis body {
 .updates-pagination .swiper-pagination-current {
   color: #162340;
 }
+
+.file-input {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+.file-input::file-selector-button {
+  display: none; /* Hides the default button */
+}

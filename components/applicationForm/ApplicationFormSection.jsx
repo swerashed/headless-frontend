@@ -4,7 +4,7 @@ import ApplicationFormHeading from "./ApplicationFormHeading";
 
 function ApplicationFormSection({ sectionTitle, sectionSubTitle }) {
   return (
-    <section className="bg-surface py-[100px] pb-16 md:pb-[100px] md:pt-[120px]">
+    <section className="border-b border-dark/10 bg-surface py-[100px] pb-16 md:pb-[100px] md:pt-[120px]">
       <div className="container">
         <BackButton />
         <ApplicationFormHeading

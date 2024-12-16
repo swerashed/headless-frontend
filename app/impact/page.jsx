@@ -93,7 +93,210 @@ function ImpactPage() {
           },
         ]}
       />
-      <ResourcesDownloadSection />
+      <ResourcesDownloadSection
+        sectionTitle="Resources Download"
+        downloadableFiles={[
+          {
+            id: crypto.randomUUID(),
+            year: "2011",
+            files: [
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+              {
+                id: crypto.randomUUID(),
+                fileTitle: "Leading with Impact Authenticity",
+              },
+              { id: crypto.randomUUID(), fileTitle: "Healthcare" },
+              { id: crypto.randomUUID(), fileTitle: "Financial" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+            ],
+          },
+          {
+            id: crypto.randomUUID(),
+            year: "2012",
+            files: [
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+              {
+                id: crypto.randomUUID(),
+                fileTitle: "Leading with Impact Authenticity",
+              },
+
+              { id: crypto.randomUUID(), fileTitle: "Financial" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+            ],
+          },
+          {
+            id: crypto.randomUUID(),
+            year: "2013",
+            files: [
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+              {
+                id: crypto.randomUUID(),
+                fileTitle: "Leading with Impact Authenticity",
+              },
+              { id: crypto.randomUUID(), fileTitle: "Healthcare" },
+              { id: crypto.randomUUID(), fileTitle: "Financial" },
+            ],
+          },
+          {
+            id: crypto.randomUUID(),
+            year: "2014",
+            files: [
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+
+              { id: crypto.randomUUID(), fileTitle: "Financial" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+            ],
+          },
+          {
+            id: crypto.randomUUID(),
+            year: "2015",
+            files: [
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+            ],
+          },
+          {
+            id: crypto.randomUUID(),
+            year: "2016",
+            files: [
+              {
+                id: crypto.randomUUID(),
+                fileTitle: "Leading with Impact Authenticity",
+              },
+              { id: crypto.randomUUID(), fileTitle: "Healthcare" },
+              { id: crypto.randomUUID(), fileTitle: "Financial" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+            ],
+          },
+          {
+            id: crypto.randomUUID(),
+            year: "2017",
+            files: [
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+              {
+                id: crypto.randomUUID(),
+                fileTitle: "Leading with Impact Authenticity",
+              },
+              { id: crypto.randomUUID(), fileTitle: "Healthcare" },
+              { id: crypto.randomUUID(), fileTitle: "Financial" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+            ],
+          },
+          {
+            id: crypto.randomUUID(),
+            year: "2018",
+            files: [
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+              {
+                id: crypto.randomUUID(),
+                fileTitle: "Leading with Impact Authenticity",
+              },
+              { id: crypto.randomUUID(), fileTitle: "Healthcare" },
+            ],
+          },
+          {
+            id: crypto.randomUUID(),
+            year: "2019",
+            files: [
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+              {
+                id: crypto.randomUUID(),
+                fileTitle: "Leading with Impact Authenticity",
+              },
+
+              { id: crypto.randomUUID(), fileTitle: "Financial" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+            ],
+          },
+          {
+            id: crypto.randomUUID(),
+            year: "2020",
+            files: [
+              {
+                id: crypto.randomUUID(),
+                fileTitle: "Leading with Impact Authenticity",
+              },
+              { id: crypto.randomUUID(), fileTitle: "Healthcare" },
+              { id: crypto.randomUUID(), fileTitle: "Financial" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+            ],
+          },
+          {
+            id: crypto.randomUUID(),
+            year: "2021",
+            files: [
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+            ],
+          },
+          {
+            id: crypto.randomUUID(),
+            year: "2022",
+            files: [
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+              {
+                id: crypto.randomUUID(),
+                fileTitle: "Leading with Impact Authenticity",
+              },
+              { id: crypto.randomUUID(), fileTitle: "Healthcare" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+            ],
+          },
+          {
+            id: crypto.randomUUID(),
+            year: "2023",
+            files: [
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+              {
+                id: crypto.randomUUID(),
+                fileTitle: "Leading with Impact Authenticity",
+              },
+              { id: crypto.randomUUID(), fileTitle: "Healthcare" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+            ],
+          },
+          {
+            id: crypto.randomUUID(),
+            year: "2024",
+            files: [
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+              {
+                id: crypto.randomUUID(),
+                fileTitle: "Leading with Impact Authenticity",
+              },
+              { id: crypto.randomUUID(), fileTitle: "Healthcare" },
+              { id: crypto.randomUUID(), fileTitle: "Financial" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+            ],
+          },
+          {
+            id: crypto.randomUUID(),
+            year: "2025",
+            files: [
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+              {
+                id: crypto.randomUUID(),
+                fileTitle: "Leading with Impact Authenticity",
+              },
+              { id: crypto.randomUUID(), fileTitle: "Healthcare" },
+              { id: crypto.randomUUID(), fileTitle: "Financial" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+              { id: crypto.randomUUID(), fileTitle: "Disciplined Growth" },
+            ],
+          },
+        ]}
+      />
     </>
   );
 }

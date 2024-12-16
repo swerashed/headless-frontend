@@ -3,13 +3,13 @@ import Image from "next/image";
 function NewsCard({ news }) {
   return (
     <div className="group flex cursor-pointer flex-col overflow-hidden rounded-md">
-      <div className="mb-5 h-[175px] w-full overflow-hidden rounded-md md:h-[240px]">
+      <div className="mb-5 w-full overflow-hidden rounded-md">
         <Image
-          src={news.image}
+          src={news.imageLink}
           alt={news.title}
           width={410}
           height={240}
-          className="h-full w-full object-cover transition-all duration-1000 group-hover:scale-110"
+          className="aspect-[330/175] w-full object-cover transition-all duration-1000 group-hover:scale-110 md:aspect-[410/240]"
         />
       </div>
       <p className="mb-[10px] font-inter text-[14px] font-normal uppercase leading-[22px] text-dark/80">

@@ -23,38 +23,38 @@ export default function AboutUsPage() {
         details="Innovative solutions are key to addressing the world’s toughest health challenges, from chronic diseases and pandemics to mental health crises. By leveraging advancements in technology, research, and collaboration, we can tackle complex problems and improve global health outcomes. These efforts aim to not only treat illnesses but also prevent them, ensuring healthier futures for communities worldwide."
       />
       <CountersSection
-        SectionClassName="pb-0 md:pb-0"
+        SectionClassName=""
         className="counter-of-5 md:grid-cols-6"
         counterDetails={[
           {
             id: crypto.randomUUID(),
             count: "99%",
             details: "Clients satisfaction score",
-            imageName: "client-happy",
+            imageLink: "/counter-icons/client-happy.svg",
           },
           {
             id: crypto.randomUUID(),
             count: "12",
             details: "Number of pharmacy locations or areas served",
-            imageName: "map-pointer",
+            imageLink: "/counter-icons/map-pointer.svg",
           },
           {
             id: crypto.randomUUID(),
             count: "10+",
             details: "Years in Operation",
-            imageName: "building",
+            imageLink: "/counter-icons/building.svg",
           },
           {
             id: crypto.randomUUID(),
             count: "100+",
             details: "Types or number of specialty medications available",
-            imageName: "medicine-available",
+            imageLink: "/counter-icons/medicine-available.svg",
           },
           {
             id: crypto.randomUUID(),
             count: "10+",
             details: "Number of health screenings or events held annually",
-            imageName: "loyalty-card",
+            imageLink: "/counter-icons/loyalty-card.svg",
           },
         ]}
       />

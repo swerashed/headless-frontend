@@ -13,7 +13,7 @@ function CounterCard({ counter }) {
         {counter.details}
       </p>
       <Image
-        src={`/counter-icons/${counter.imageName}.svg`}
+        src={counter.imageLink}
         alt="Card icon"
         width={80}
         height={80}

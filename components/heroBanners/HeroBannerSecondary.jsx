@@ -11,7 +11,7 @@ function HeroBannerSecondary({ bannerImage, pageTitle, heading, social }) {
         className="h-full w-full object-cover"
         priority
         as="image"
-        width={1331}
+        width={1440}
         height={550}
       />
       <div className="absolute inset-0 flex flex-col justify-end bg-dark/10 bg-gradient-to-t from-dark/50 to-dark/0">

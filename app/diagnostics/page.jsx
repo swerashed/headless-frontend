@@ -33,20 +33,20 @@ function DiagnosticsPage() {
             id: crypto.randomUUID(),
             count: "30+",
             details: "Convenient locations across the country",
-            imageName: "map-pointer",
+            imageLink: "/counter-icons/map-pointer.svg",
           },
           {
             id: crypto.randomUUID(),
             count: "1M+",
             details: "Tests performed each year for patients of all ages",
-            imageName: "patients",
+            imageLink: "/counter-icons/patients.svg",
           },
 
           {
             id: crypto.randomUUID(),
             count: "3,500+",
             details: "Lab tests available to help you find answers",
-            imageName: "tests",
+            imageLink: "/counter-icons/tests.svg",
           },
         ]}
       />
@@ -395,34 +395,34 @@ function DiagnosticsPage() {
             title:
               "AKS Healthcare launches state-of-the-Art Diagnostic center in Sylhet",
             date: "March 12, 2020",
-            image: "/recent-updates/recent-updates-1.png",
+            imageLink: "/recent-updates/recent-updates-1.png",
           },
           {
             id: crypto.randomUUID(),
             title:
               "AKS Khan Pharmaceuticals crosses major milestone with 500,000 patients Served",
             date: "March 12, 2020",
-            image: "/recent-updates/recent-updates-2.png",
+            imageLink: "/recent-updates/recent-updates-2.png",
           },
           {
             id: crypto.randomUUID(),
             title: "Three new locations in Khulna Division",
             date: "March 12, 2020",
-            image: "/recent-updates/recent-updates-3.png",
+            imageLink: "/recent-updates/recent-updates-3.png",
           },
           {
             id: crypto.randomUUID(),
             title:
               "AKS Healthcare launches state-of-the-Art Diagnostic center in Sylhet",
             date: "March 12, 2020",
-            image: "/recent-updates/recent-updates-1.png",
+            imageLink: "/recent-updates/recent-updates-1.png",
           },
           {
             id: crypto.randomUUID(),
             title:
               "AKS Healthcare launches state-of-the-Art Diagnostic center in Sylhet",
             date: "March 12, 2020",
-            image: "/recent-updates/recent-updates-2.png",
+            imageLink: "/recent-updates/recent-updates-2.png",
           },
         ]}
         buttonDetails={{ title: "View all" }}

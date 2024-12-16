@@ -99,6 +99,7 @@ function page() {
         ]}
       />
       <CustomerReviewSection
+        sectionTitle="Employee testimonials"
         className="bg-surface"
         reviews={[
           {

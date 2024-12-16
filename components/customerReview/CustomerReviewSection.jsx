@@ -14,7 +14,7 @@ import SliderNavigationButton from "../buttons/SliderNavigationButton";
 import SectionHeading from "../headings/SectionHeading";
 import CustomerReviewCard from "./CustomerReviewCard";
 
-function CustomerReviewSection({ className, reviews }) {
+function CustomerReviewSection({ sectionTitle, className, reviews }) {
   const swiperRef = useRef(null);
 
   return (
@@ -22,7 +22,7 @@ function CustomerReviewSection({ className, reviews }) {
       <div className="container">
         <div className="flex flex-row justify-between gap-5">
           <div data-aos="fade-right">
-            <SectionHeading>Customers words</SectionHeading>
+            <SectionHeading>{sectionTitle}</SectionHeading>
           </div>
           <SliderNavigationButton
             onPrev={() => swiperRef.current?.slidePrev()}

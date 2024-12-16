@@ -29,26 +29,26 @@ export default function ServicesPage() {
             id: crypto.randomUUID(),
             count: "99%",
             details: "Clients satisfaction score",
-            imageName: "client-happy",
+            imageLink: "/counter-icons/client-happy.svg",
           },
           {
             id: crypto.randomUUID(),
             count: "22",
             details: "Outlet all over the country",
-            imageName: "map-pointer",
+            imageLink: "/counter-icons/map-pointer.svg",
           },
 
           {
             id: crypto.randomUUID(),
             count: "100+",
             details: "Orders Per Day",
-            imageName: "medicine-available",
+            imageLink: "/counter-icons/medicine-available.svg",
           },
           {
             id: crypto.randomUUID(),
             count: "22,357",
             details: "Loyalty Card Users",
-            imageName: "loyalty-card",
+            imageLink: "/counter-icons/loyalty-card.svg",
           },
         ]}
       />

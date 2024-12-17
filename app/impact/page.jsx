@@ -1,6 +1,6 @@
 import CountersSection from "@/components/counters/CountersSection";
 import HeroBannerSecondary from "@/components/heroBanners/HeroBannerSecondary";
-import NewsCardContainer from "@/components/news/NewsCardContainer";
+import NewsCardContainer from "@/components/newsHero/NewsCardContainer";
 import ResourcesDownloadSection from "@/components/resourcesDownloadSection/ResourcesDownloadSection";
 
 function ImpactPage() {

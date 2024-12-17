@@ -8,6 +8,7 @@ import VideoFullWidthSection from "@/components/videoShowcase/VideoFullWidthSect
 import CustomerCareAboutSection from "@/components/customerCareAbout/CustomerCareAboutSection";
 import ProductCategoriesSection from "@/components/productCategories/ProductCategoriesSection";
 import AppDownloadSection from "@/components/callToAction/AppDownloadSection";
+import CoverageAreaSectionCenter from "@/components/coverageArea/CoverageAreaSectionCenter";
 
 export default function ServicesPage() {
   return (
@@ -53,6 +54,7 @@ export default function ServicesPage() {
         ]}
       />
       <CustomerReviewSection
+        sectionTitle="Customer words"
         className="border-b border-b-dark/10 bg-surface"
         reviews={[
           {
@@ -214,6 +216,75 @@ export default function ServicesPage() {
       />
       <AppDownloadSection />
       <CustomerCareAboutSection />
+      <CoverageAreaSectionCenter
+        sectionHeading="Our coverage area"
+        sectionDetails="AKS Pharmacy offers high-quality medicines, expert consultation, and personalized care from dedicated pharmacists, ensuring product safety."
+        outlets={[
+          {
+            id: crypto.randomUUID(),
+            outlet_name: "DMCH",
+            district: "Dhaka",
+            outlet_address:
+              "Opposite of Chankharpool Masjid Gate(Ground Floor, 14/2 Bakshibazar, Dhaka",
+            outlet_number: "1870787200",
+            map_link: "/",
+          },
+          {
+            id: crypto.randomUUID(),
+            outlet_name: "Lalbagh (Pharmacy and Clinic)",
+            district: "Dhaka",
+            outlet_address:
+              "Opposite of Chankharpool Masjid Gate(Ground Floor, 14/2 Bakshibazar, Dhaka",
+            outlet_number: "1870787200",
+            map_link: "/",
+          },
+          {
+            id: crypto.randomUUID(),
+            outlet_name: "Lalbagh (Pharmacy and Clinic)",
+            district: "Dhaka",
+            outlet_address:
+              "Opposite of Chankharpool Masjid Gate(Ground Floor, 14/2 Bakshibazar, Dhaka",
+            outlet_number: "1870787200",
+            map_link: "/",
+          },
+          {
+            id: crypto.randomUUID(),
+            outlet_name: "DMCH",
+            district: "Dhaka",
+            outlet_address:
+              "Opposite of Chankharpool Masjid Gate(Ground Floor, 14/2 Bakshibazar, Dhaka",
+            outlet_number: "1870787200",
+            map_link: "/",
+          },
+          {
+            id: crypto.randomUUID(),
+            outlet_name: "Lalbagh (Pharmacy and Clinic)",
+            district: "Dhaka",
+            outlet_address:
+              "Opposite of Chankharpool Masjid Gate(Ground Floor, 14/2 Bakshibazar, Dhaka",
+            outlet_number: "1870787200",
+            map_link: "/",
+          },
+          {
+            id: crypto.randomUUID(),
+            outlet_name: "Lalbagh (Pharmacy and Clinic)",
+            district: "Dhaka",
+            outlet_address:
+              "Opposite of Chankharpool Masjid Gate(Ground Floor, 14/2 Bakshibazar, Dhaka",
+            outlet_number: "1870787200",
+            map_link: "/",
+          },
+          {
+            id: crypto.randomUUID(),
+            outlet_name: "DMCH",
+            district: "Dhaka",
+            outlet_address:
+              "Opposite of Chankharpool Masjid Gate(Ground Floor, 14/2 Bakshibazar, Dhaka",
+            outlet_number: "1870787200",
+            map_link: "/",
+          },
+        ]}
+      />
       <CallToActionSection />
     </>
   );

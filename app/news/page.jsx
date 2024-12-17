@@ -36,7 +36,7 @@ const NewsPage = () => {
         ]}
       />
       <NewsCardContainer
-        sectionTitle="Impact News"
+        sectionTitle="Recent News"
         news={[
           {
             id: crypto.randomUUID(),

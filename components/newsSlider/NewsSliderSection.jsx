@@ -15,11 +15,21 @@ import SliderNavigationButton from "@/app/components/SliderNavigationButton";
 import NewsCard from "./NewsCard";
 import SectionHeading from "../headings/SectionHeading";
 
-function NewsSliderSection({ sectionHeading, newsItems, buttonDetails }) {
+function NewsSliderSection({
+  sectionHeading,
+  newsItems,
+  buttonDetails,
+  sectionClassName,
+}) {
   const swiperRef = useRef(null);
 
   return (
-    <section className="overflow-hidden bg-surface py-[50px] lg:py-[100px]">
+    <section
+      className={cn(
+        "overflow-hidden bg-surface py-[50px] lg:py-[100px]",
+        sectionClassName,
+      )}
+    >
       <div className="container">
         <div className="flex flex-row justify-between gap-5">
           <div data-aos="fade-right">

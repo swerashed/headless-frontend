@@ -51,6 +51,7 @@ function DiagnosticsPage() {
         ]}
       />
       <CustomerReviewSection
+        sectionTitle="Patient testimonials"
         className="border-b border-b-dark/10"
         reviews={[
           {
@@ -282,38 +283,6 @@ function DiagnosticsPage() {
             details:
               "Drives operational efficiency by refining workflows and ensuring smooth interdepartmental collaboration. Leads initiatives to optimize processes and enhance productivity. Lorem ipsum dolor sit amet consectetur. Turpis suspendisse justo imperdiet nibh ultrices tortor nibh. Tortor ultrices molestie lacinia tortor pharetra. Ut quam ullamcorper orci tincidunt aliquam adipiscing dui. Tincidunt donec fermentum blandit sagittis lorem feugiat mattis nunc. Ornare in adipiscing dictum vestibulum enim lobortis donec. Vulputate ut fermentum ornare ut dictum elementum in.",
             image: "director-2.png",
-          },
-          {
-            id: crypto.randomUUID(),
-            name: "Homer Lockman",
-            designation: "Chief Innovation Officer",
-            details:
-              "Champions technology-driven advancements and digital transformation initiatives. Identifies growth opportunities through innovation and keeps the organization at the cutting edge. Lorem ipsum dolor sit amet consectetur. Turpis suspendisse justo imperdiet nibh ultrices tortor nibh. Tortor ultrices molestie lacinia tortor pharetra. Ut quam ullamcorper orci tincidunt aliquam adipiscing dui. Tincidunt donec fermentum blandit sagittis lorem feugiat mattis nunc. Ornare in adipiscing dictum vestibulum enim lobortis donec.",
-            image: "director-3.png",
-          },
-          {
-            id: crypto.randomUUID(),
-            name: "Leigh Schowalter",
-            designation: "Global Marketing Strategist",
-            details:
-              "Expands brand reach and engagement by developing strategic marketing initiatives. Strengthens the company's market positioning through targeted campaigns. Lorem ipsum dolor sit amet consectetur. Turpis suspendisse justo imperdiet nibh ultrices tortor nibh. Tortor ultrices molestie lacinia tortor pharetra. Ut quam ullamcorper orci tincidunt aliquam adipiscing dui. Tincidunt donec fermentum blandit sagittis lorem feugiat mattis nunc. Ornare in adipiscing dictum vestibulum enim lobortis donec.",
-            image: "director-4.png",
-          },
-          {
-            id: crypto.randomUUID(),
-            name: "Sherri Baumbach",
-            designation: "Corporate Compliance Lead",
-            details:
-              "Ensures strict adherence to industry regulations and ethical standards. Proactively addresses potential compliance issues to mitigate risk. Lorem ipsum dolor sit amet consectetur. Turpis suspendisse justo imperdiet nibh ultrices tortor nibh. Tortor ultrices molestie lacinia tortor pharetra. Ut quam ullamcorper orci tincidunt aliquam adipiscing dui. Tincidunt donec fermentum blandit sagittis lorem feugiat mattis nunc. Ornare in adipiscing dictum vestibulum enim lobortis donec.",
-            image: "director-5.png",
-          },
-          {
-            id: crypto.randomUUID(),
-            name: "Irvin Schmidt",
-            designation: "Chairperson and CEO",
-            details:
-              "Guides strategic vision and ensures sustainable growth through innovative leadership. Fosters a culture of integrity and forward-thinking initiatives. Lorem ipsum dolor sit amet consectetur. Turpis suspendisse justo imperdiet nibh ultrices tortor nibh. Tortor ultrices molestie lacinia tortor pharetra. Ut quam ullamcorper orci tincidunt aliquam adipiscing dui. Tincidunt donec fermentum blandit sagittis lorem feugiat mattis nunc. Ornare in adipiscing dictum vestibulum enim lobortis donec.",
-            image: "director-6.png",
           },
         ]}
       />

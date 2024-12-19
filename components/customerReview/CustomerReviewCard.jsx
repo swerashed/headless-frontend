@@ -4,7 +4,7 @@ function CustomerReviewCard({ review }) {
   return (
     <div className="flex flex-col gap-10 rounded-[10px] border border-dark/10 bg-white from-[#36F1B91A] to-[#3484A41A] p-5 shadow-sm shadow-dark/10 transition-[bg-gradient-to-t] duration-300 hover:bg-gradient-to-tr md:p-10 lg:gap-[60px]">
       <p className="font-onest text-lg font-medium leading-[26px] text-dark lg:text-2xl lg:leading-[34px]">
-        "{review.customerReview}"
+        &quot;{review.customerReview}&quot;
       </p>
       <div className="flex items-center gap-5">
         <Image

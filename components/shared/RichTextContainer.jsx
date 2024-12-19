@@ -1,5 +1,6 @@
 import React from "react";
 import SocialShareBottom from "./SocialShareBottom";
+import Image from "next/image";
 
 const RichTextContainer = () => {
   return (
@@ -20,7 +21,7 @@ const RichTextContainer = () => {
           residents have access to essential products and services right in
           their neighborhoods.
         </p>
-        <img
+        <Image
           src="https://s3-alpha-sig.figma.com/img/f8df/05d7/d21e76da16f0dc03f88df7f821160548?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=U-d6N79p7nWdDrIDbU57PrnW9UpFcR~JYzdE4rHCs~3wQLoJr2Ls5aKF1ZhdD-0qQspp-OeSuFLCFW4Ja8DYXU5bjTSht1JP0skvF9JfcEoXtkqIej-ENVxsst3a8iMBh8SI08rESR16oDMCnjb9FQtMVmW45lDiPLNAHp4rIOAasYWrW0CjPEoOvkZWPDbjXKSU0SVjUmvqFGWCIJDO25~MEAuVuSR2u0651aUwBDw8M3OV3zXDl6MmK2dxtSVqHOFEJ7OuIO9tAizo~7KcTbUbfppBjNniI~oDjPwghv4eyqzo7zdzE4PfdyPbuYYrXiJiDWXHaznOqBC1H6kb3w__"
           alt=""
         />

@@ -32,7 +32,7 @@ function NewsSliderSection({
     >
       <div className="container">
         <div className="flex flex-row justify-between gap-5">
-          <div data-aos="fade-right">
+          <div data-aos="fade-up">
             <SectionHeading>{sectionHeading}</SectionHeading>
           </div>
           <div className="hidden sm:block">
@@ -49,7 +49,7 @@ function NewsSliderSection({
           "!pr-0 !pt-10 sm:!pr-[15px] md:!pr-0 xl:!pr-[75px]",
         )}
       >
-        <div data-aos="fade-left">
+        <div>
           <Swiper
             className="cursor-grab"
             autoplay={{

@@ -5,7 +5,6 @@ import SectionHeading from "../headings/SectionHeading";
 function CountersSection({
   sectionTitle,
   counterDetails,
-  type,
   className,
   SectionClassName,
 }) {

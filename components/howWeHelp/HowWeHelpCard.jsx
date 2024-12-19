@@ -17,7 +17,7 @@ function HowWeHelpCard({ card }) {
         <h4 className="mb-[10px] line-clamp-1 font-onest text-xl font-medium leading-[30px] md:text-2xl md:leading-[32px]">
           {card.title}
         </h4>
-        <p className="mb-4 line-clamp-3 font-inter text-base font-normal leading-[26px] text-dark/80">
+        <p className="mb-10 line-clamp-5 font-inter text-base font-normal leading-[26px] text-dark/80 md:line-clamp-3">
           {card.details}
         </p>
         <Link

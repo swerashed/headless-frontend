@@ -62,7 +62,7 @@ export default function HomePage() {
             id: crypto.randomUUID(),
             count: "227",
             details: "Loyalty Card Users",
-            imageLink: "/counter-icons/loyalty-card.svg",
+            imageLink: "/counter-icons/client-happy.svg",
           },
         ]}
       />

@@ -18,7 +18,7 @@ function OurInvestors({ investors }) {
 
   return (
     <section className="overflow-hidden bg-surface py-[50px] md:py-[100px]">
-      <div className="container">
+      <div data-aos="fade-up" className="container">
         <div className="mb-[30px] flex items-center justify-between md:mb-10">
           <SectionHeading>Our Investors</SectionHeading>
           <div className="hidden items-center justify-end gap-[10px] md:flex">

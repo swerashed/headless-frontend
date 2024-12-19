@@ -3,8 +3,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import VideoPlayer from "./VideoPlayer";
+import { cn } from "@/lib/utils";
 
-function VideoShowcaseSection({ thumnailURL, videoURL }) {
+function VideoShowcaseSection({ thumnailURL, videoURL, sectionClass }) {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlayClick = () => {
@@ -12,7 +13,12 @@ function VideoShowcaseSection({ thumnailURL, videoURL }) {
   };
 
   return (
-    <section className="mb-[50px] mt-[35px] overflow-hidden md:mb-[100px] md:mt-20">
+    <section
+      className={cn(
+        "mb-[50px] mt-[35px] overflow-hidden md:mb-[100px] md:mt-20",
+        sectionClass,
+      )}
+    >
       <div className="container">
         <div
           className="relative aspect-[165/91] w-full overflow-hidden rounded-[10px] border-none shadow-md shadow-dark/10 md:rounded-[20px] md:shadow-xl lg:shadow-2xl"

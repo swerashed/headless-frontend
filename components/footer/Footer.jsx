@@ -8,22 +8,39 @@ import MenuAccordion from "./MenuAccordion";
 import FooterBottom from "./FooterBottom";
 import SocialMediaIcons from "./SocialMediaIcons";
 import LinkGroups from "./LinkGroups";
+import Link from "next/link";
 
 const groupLinksOne = [
-  { title: "About Us", links: "/", id: crypto.randomUUID() },
-  { title: "Board of Directors", links: "/", id: crypto.randomUUID() },
-  { title: "Management Team", links: "/", id: crypto.randomUUID() },
+  { title: "About Us", link: "/about-us", id: crypto.randomUUID() },
+  {
+    title: "Board of Directors",
+    link: "/board-of-directors",
+    id: crypto.randomUUID(),
+  },
+  {
+    title: "Management Team",
+    link: "/management-team",
+    id: crypto.randomUUID(),
+  },
 ];
 
 const groupLinksTwo = [
-  { title: "Careers", links: "/", id: crypto.randomUUID() },
-  { title: "Impacts", links: "/", id: crypto.randomUUID() },
-  { title: "News", links: "/", id: crypto.randomUUID() },
-  { title: "Contact Us", links: "/", id: crypto.randomUUID() },
+  { title: "Careers", link: "/career", id: crypto.randomUUID() },
+  { title: "Impacts", link: "/impacts", id: crypto.randomUUID() },
+  { title: "News", link: "/news", id: crypto.randomUUID() },
+  { title: "Contact Us", link: "/contact-us", id: crypto.randomUUID() },
 ];
 const groupLinksThree = [
-  { title: "AKS Khan Pharmacy", links: "/", id: crypto.randomUUID() },
-  { title: "AKS Khan Diagnostics", links: "/", id: crypto.randomUUID() },
+  {
+    title: "AKS Khan Pharmacy",
+    link: "/aks-khan-pharmacy",
+    id: crypto.randomUUID(),
+  },
+  {
+    title: "AKS Khan Diagnostics",
+    link: "/aks-khan-diagnostics",
+    id: crypto.randomUUID(),
+  },
 ];
 
 function Footer() {
@@ -32,13 +49,15 @@ function Footer() {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-12 lg:gap-x-10 xl:gap-x-[90px]">
           <div className="flex flex-col px-3 md:col-span-5 lg:col-span-4 xl:max-w-[300px] xl:px-0">
-            <Image
-              src="/logo.svg"
-              alt="Company logo"
-              width={183}
-              height={60}
-              className="mb-8 object-contain"
-            />
+            <Link href="/">
+              <Image
+                src="/logo.svg"
+                alt="Company logo"
+                width={183}
+                height={60}
+                className="mb-8 object-contain"
+              />
+            </Link>
             <div className="mb-8 flex flex-col gap-4">
               <div className="flex items-center gap-2">
                 <Image

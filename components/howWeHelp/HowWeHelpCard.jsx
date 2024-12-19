@@ -4,7 +4,7 @@ import Link from "next/link";
 function HowWeHelpCard({ card }) {
   return (
     <div className="group flex cursor-pointer flex-col overflow-hidden rounded-xl border border-dark/10 shadow-sm shadow-white">
-      <div className="h-[240px] w-full overflow-hidden">
+      <div className="h-[240px] w-full overflow-hidden md:h-[273px]">
         <Image
           src={`/how-we-help/${card.imageTitle}.jpg`}
           alt={card.title}
@@ -14,10 +14,10 @@ function HowWeHelpCard({ card }) {
         />
       </div>
       <div className="flex flex-col bg-white px-4 pb-3 pt-6">
-        <h4 className="pb-[10px] font-onest text-2xl font-medium">
+        <h4 className="mb-[10px] line-clamp-1 font-onest text-xl font-medium leading-[30px] md:text-2xl md:leading-[32px]">
           {card.title}
         </h4>
-        <p className="mb-4 min-h-32 font-inter text-base font-normal text-dark/80">
+        <p className="mb-4 line-clamp-3 font-inter text-base font-normal leading-[26px] text-dark/80">
           {card.details}
         </p>
         <Link

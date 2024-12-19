@@ -5,6 +5,7 @@ import NavbarRight from "./NavbarRight";
 import NavbarLinks from "./NavbarLinks";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
+import Link from "next/link";
 
 function Navbar({ isVisible, isMobileMenuOpen, onMobileMenuOpen }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -26,13 +27,15 @@ function Navbar({ isVisible, isMobileMenuOpen, onMobileMenuOpen }) {
         >
           <div className="flex flex-row items-center justify-between gap-4 xl:gap-8">
             <div className="flex items-center justify-start md:min-w-[170px] xl:min-w-[210px]">
-              <Image
-                src="/logo.svg"
-                alt="Aks Pharmaceuticals logo"
-                width={185}
-                height={60}
-                className="h-auto max-w-[136px] object-contain md:max-w-[182px]"
-              />
+              <Link href="/">
+                <Image
+                  src="/logo.svg"
+                  alt="Aks Pharmaceuticals logo"
+                  width={185}
+                  height={60}
+                  className="h-auto max-w-[136px] object-contain md:max-w-[182px]"
+                />
+              </Link>
             </div>
             {!isSearchOpen && <NavbarLinks />}
             <NavbarRight
@@ -44,7 +47,7 @@ function Navbar({ isVisible, isMobileMenuOpen, onMobileMenuOpen }) {
           </div>
         </div>
       </div>
-      {isMobileMenuOpen && <MobileMenu />}
+      {isMobileMenuOpen && <MobileMenu onMobileMenuOpen={onMobileMenuOpen} />}
     </header>
   );
 }

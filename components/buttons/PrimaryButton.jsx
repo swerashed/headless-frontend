@@ -6,8 +6,8 @@ function PrimaryButton({ className, border = true, children }) {
     <Link
       href="/"
       className={cn(
-        "flex w-fit items-center justify-center gap-2 rounded-full bg-transparent stroke-blue py-3 pl-8 pr-5 font-inter text-base font-semibold capitalize leading-[24px] text-blue transition-all duration-300 hover:bg-blue hover:stroke-white hover:text-white focus:bg-blue focus:stroke-white focus:text-white focus:outline-none",
-        { "border border-blue": border },
+        "hover:bg-blue-dark focus:bg-blue-dark flex w-fit items-center justify-center gap-2 rounded-full bg-transparent stroke-blue py-[10px] pl-6 pr-3 font-inter text-base font-semibold capitalize leading-[24px] text-blue transition-all duration-300 hover:stroke-white hover:text-white focus:stroke-white focus:text-white focus:outline-none",
+        { "border-blue-dark border": border },
         className,
       )}
     >

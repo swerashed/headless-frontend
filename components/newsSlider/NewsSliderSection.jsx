@@ -11,9 +11,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import PrimaryButton from "../buttons/PrimaryButton";
-import SliderNavigationButton from "@/app/components/SliderNavigationButton";
 import NewsCard from "./NewsCard";
 import SectionHeading from "../headings/SectionHeading";
+import SliderNavigationButton from "../buttons/SliderNavigationButton";
 
 function NewsSliderSection({
   sectionHeading,

@@ -3,6 +3,7 @@ import Image from "next/image";
 function OurInvestorCard({ card }) {
   return (
     <div
+      data-aos="fade-up"
       key={card.id}
       className="flex items-center justify-center rounded-2xl bg-white p-[22px] shadow-sm hover:shadow-md"
     >

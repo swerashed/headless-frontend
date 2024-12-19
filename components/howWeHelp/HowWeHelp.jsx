@@ -2,51 +2,28 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { Pagination, Navigation, Autoplay, A11y } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import Image from "next/image";
 import { useRef } from "react";
 
-import Link from "next/link";
 import SliderNavigationButton from "../buttons/SliderNavigationButton";
 import PrimaryButton from "../buttons/PrimaryButton";
 import SectionHeading from "../headings/SectionHeading";
 import HowWeHelpCard from "./HowWeHelpCard";
 
-const howWeHelps = [
-  {
-    id: crypto.randomUUID(),
-    title: "AKS Khan Pharmacy",
-    imageTitle: "how-we-help-1",
-    details:
-      "AKS Pharmacy offers high-quality medicines, expert consultation, and personalized care from dedicated pharmacists, ensuring product safety.",
-  },
-  {
-    id: crypto.randomUUID(),
-    title: "AKS Khan Diagnostics",
-    imageTitle: "how-we-help-2",
-    details:
-      "AKS Healthcare provides walk-in clinics with expert consultations, advanced testing, and tech-enhanced care and support.",
-  },
-  {
-    id: crypto.randomUUID(),
-    title: "Impacts",
-    imageTitle: "how-we-help-3",
-    details:
-      "AKS Healthcare provides walk-in clinics with expert consultations, advanced testing, and tech-enhanced care and support.",
-  },
-];
-
-function HowWeHelp() {
+function HowWeHelp({ cards }) {
   const swiperRef = useRef(null);
 
   return (
     <section className="overflow-hidden bg-surface py-[50px] lg:py-[100px]">
       <div className="container">
-        <div className="mb-[30px] flex items-center justify-between md:mb-10">
+        <div
+          data-aos="fade-right"
+          className="mb-[30px] flex items-center justify-between md:mb-10"
+        >
           <SectionHeading>How we help</SectionHeading>
           <div className="flex items-center justify-end gap-[10px] md:hidden">
             <SliderNavigationButton
@@ -76,9 +53,9 @@ function HowWeHelp() {
           speed={600}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
-          {howWeHelps.map((howWeHelp) => (
-            <SwiperSlide key={howWeHelp.id}>
-              <HowWeHelpCard card={howWeHelp} />
+          {cards.map((card) => (
+            <SwiperSlide key={card.id}>
+              <HowWeHelpCard card={card} />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -88,8 +65,8 @@ function HowWeHelp() {
           className="mb-10 hidden grid-cols-2 gap-[30px] md:grid lg:grid-cols-3"
           data-aos="fade-left"
         >
-          {howWeHelps.map((howWeHelp) => (
-            <HowWeHelpCard key={howWeHelp.id} card={howWeHelp} />
+          {cards.map((card) => (
+            <HowWeHelpCard key={card.id} card={card} />
           ))}
         </div>
       </div>

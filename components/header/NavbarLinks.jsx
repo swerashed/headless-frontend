@@ -20,21 +20,21 @@ function NavbarLinks() {
             <NavigationMenuContent>
               <div className="flex w-[230px] flex-col gap-0.5 rounded-[10px] border-t border-dark/10 bg-white shadow-lg">
                 <NavigationMenuLink
-                  href="/"
+                  href="/about-us"
                   className="w-full px-5 py-[10px] font-inter text-base font-normal leading-[26px] text-dark/80 transition-all duration-300 hover:text-blue"
                 >
                   About Us
                 </NavigationMenuLink>
 
                 <NavigationMenuLink
-                  href="/"
+                  href="/board-of-directors"
                   className="w-full px-5 py-[10px] font-inter text-base font-normal leading-[26px] text-dark/80 transition-all duration-300 hover:text-blue"
                 >
-                  Boared of Directors
+                  Board of Directors
                 </NavigationMenuLink>
 
                 <NavigationMenuLink
-                  href="/"
+                  href="/management-team"
                   className="w-full px-5 py-[10px] font-inter text-base font-normal leading-[26px] text-dark/80 transition-all duration-300 hover:text-blue"
                 >
                   Management Team
@@ -46,31 +46,31 @@ function NavbarLinks() {
       </NavigationMenu>
       <Link
         className="px-[10px] transition-all duration-300 hover:text-blue xl:px-[12px]"
-        href="/"
+        href="/pharmacy"
       >
         Pharmacy
       </Link>
       <Link
         className="px-[10px] transition-all duration-300 hover:text-blue xl:px-[12px]"
-        href="/"
+        href="/diagnostics"
       >
         Diagonistics
       </Link>
       <Link
         className="px-[10px] transition-all duration-300 hover:text-blue xl:px-[12px]"
-        href="/"
+        href="/impacts"
       >
         Impacts
       </Link>
       <Link
         className="px-[10px] transition-all duration-300 hover:text-blue xl:px-[12px]"
-        href="/"
+        href="/career"
       >
         Career
       </Link>
       <Link
         className="px-[10px] transition-all duration-300 hover:text-blue xl:px-[12px]"
-        href="/"
+        href="/news"
       >
         News
       </Link>

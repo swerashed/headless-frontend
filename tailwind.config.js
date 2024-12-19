@@ -23,6 +23,7 @@ module.exports = {
       colors: {
         dark: "#162340",
         blue: "#357690",
+        "blue-dark": "#215B73",
         green: "#2E8168",
         surface: "#F0F7FF",
         background: "hsl(var(--background))",

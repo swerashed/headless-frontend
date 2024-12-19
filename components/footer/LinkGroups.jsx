@@ -10,7 +10,7 @@ function LinkGroups({ heading, links }) {
         {links.map((link) => (
           <Link
             key={link.id}
-            href="/"
+            href={link.link}
             className="whitespace-nowrap transition-all duration-300 hover:underline"
           >
             {link.title}

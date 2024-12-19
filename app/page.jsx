@@ -1,16 +1,3 @@
-// import AboutBanner from "./components/aboutBanner/AboutBanner";
-// import AtAGlance from "./components/atAGlance/AtAGlance";
-// import ContactUsBanner from "./components/ContactUsBanner";
-// import Counter from "./components/counter/Counter";
-// import CoverageArea from "./components/coverageArea/CoverageArea";
-// import Footer from "./components/footer/Footer";
-// import HeroSlider from "./components/heroSlider/HeroSlider";
-// import HowWeHelp from "./components/howWeHelp/HowWeHelp";
-// import OurInvestors from "./components/ourInvestors/OurInvestors";
-// import OurPartners from "./components/ourPartners/OurPartners";
-// import RecentUpdates from "./components/recentUpdates/RecentUpdates";
-// import VideoShowcase from "./components/videoShowcase/VideoShowcase";
-
 import AboutBanner from "@/components/aboutBanner/AboutBanner";
 import AtAGlanceSliderSection from "@/components/atAGlanceSliderSection/AtAGlanceSliderSection";
 import CallToActionSection from "@/components/callToAction/CallToActionSection";
@@ -73,7 +60,7 @@ export default function HomePage() {
           },
           {
             id: crypto.randomUUID(),
-            count: "22,357",
+            count: "227",
             details: "Loyalty Card Users",
             imageLink: "/counter-icons/loyalty-card.svg",
           },
@@ -115,10 +102,36 @@ export default function HomePage() {
         ]}
       />
       <VideoShowcaseSection
+        sectionClass="mb-[50px] mt-0 md:mb-[100px] md:mt-0"
         thumnailURL="/videos/thumbnails/about-us-video-thumnail.png"
         videoURL="/videos/pharmaceutical-showcase.mp4"
       />
-      <HowWeHelp />
+      <HowWeHelp
+        cards={[
+          {
+            id: crypto.randomUUID(),
+            title: "AKS Khan Pharmacy",
+            imageTitle: "how-we-help-1",
+            details:
+              "AKS Pharmacy offers high-quality medicines, expert consultation, and personalized care from dedicated pharmacists, ensuring product safety.",
+          },
+          {
+            id: crypto.randomUUID(),
+            title: "AKS Khan Diagnostics",
+            imageTitle: "how-we-help-2",
+            details:
+              "AKS Healthcare provides walk-in clinics with expert consultations, advanced testing, and tech-enhanced care and support.",
+          },
+          {
+            id: crypto.randomUUID(),
+            title: "Impacts",
+            imageTitle: "how-we-help-3",
+            details:
+              "AKS Healthcare provides walk-in clinics with expert consultations, advanced testing, and tech-enhanced care and support.",
+          },
+        ]}
+      />
+      <CoverageAreaSection />
       <OurPartners
         partners={[
           {
@@ -207,9 +220,8 @@ export default function HomePage() {
           },
         ]}
       />
-      <CoverageAreaSection />
       <NewsSliderSection
-        sectionClassName="bg-white"
+        sectionClassName="bg-white pb-0 lg:pb-0"
         sectionHeading="Recent updates"
         newsItems={[
           {

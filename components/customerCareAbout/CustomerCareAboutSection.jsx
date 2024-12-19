@@ -3,7 +3,7 @@ import SideBySideWithoutButton from "../sideBySide/SideBySideWithoutButton";
 
 function CustomerCareAboutSection() {
   return (
-    <section className="overflow-hidden bg-surface py-[50px]">
+    <section className="overflow-hidden bg-surface py-[50px] md:py-[100px]">
       <div className="container">
         <div
           className="mb-10 flex flex-col items-center justify-center gap-5 text-center"

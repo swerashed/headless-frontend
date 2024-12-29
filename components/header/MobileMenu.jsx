@@ -51,7 +51,7 @@ function MobileMenu({ onMobileMenuOpen }) {
         <Link
           className="border-b border-dark/10 py-[15px] font-onest text-lg font-medium leading-[26px] text-dark transition-all duration-300 hover:text-blue"
           onClick={onMobileMenuOpen}
-          href="/pharmacy"
+          href="/services"
         >
           Pharmacy
         </Link>
@@ -84,7 +84,7 @@ function MobileMenu({ onMobileMenuOpen }) {
           News
         </Link>
       </div>
-      <PrimaryButton className="hover:bg-blue-dark w-full bg-blue stroke-white font-inter text-base leading-[24px] text-white">
+      <PrimaryButton className="w-full bg-blue stroke-white font-inter text-base leading-[24px] text-white hover:bg-blue-dark">
         Contact us
       </PrimaryButton>
     </div>

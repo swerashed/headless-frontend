@@ -46,7 +46,7 @@ function NavbarLinks() {
       </NavigationMenu>
       <Link
         className="px-[10px] transition-all duration-300 hover:text-blue xl:px-[12px]"
-        href="/pharmacy"
+        href="/services"
       >
         Pharmacy
       </Link>

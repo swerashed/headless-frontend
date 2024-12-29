@@ -43,8 +43,9 @@ function NavbarRight({
             </svg>
           </button>
           <PrimaryButton
+            href="/contact-us"
             border="false"
-            className="hover:bg-blue-dark hidden gap-1 bg-blue stroke-white py-3 pl-6 pr-[14px] text-white transition-all duration-300 md:flex"
+            className="hidden gap-1 bg-blue stroke-white py-3 pl-6 pr-[14px] text-white transition-all duration-300 hover:bg-blue-dark md:flex"
           >
             Contact us
           </PrimaryButton>
@@ -52,7 +53,7 @@ function NavbarRight({
       )}
       <button
         onClick={onMobileMenuOpen}
-        className="hover:bg-blue-dark flex h-10 w-10 items-center justify-center rounded-full bg-blue stroke-white transition-all duration-300 lg:hidden"
+        className="flex h-10 w-10 items-center justify-center rounded-full bg-blue stroke-white transition-all duration-300 hover:bg-blue-dark lg:hidden"
       >
         {isMobileMenuOpen ? (
           <svg

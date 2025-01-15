@@ -9,8 +9,12 @@ import NewsSliderSection from "@/components/newsSlider/NewsSliderSection";
 import OurInvestors from "@/components/ourInvestors/OurInvestors";
 import OurPartners from "@/components/ourPartners/OurPartners";
 import VideoShowcaseSection from "@/components/videoShowcase/VideoShowcaseSection";
+import { fetchHome } from "@/graphql/pages/GET_HOME";
 
-export default function HomePage() {
+export default async function HomePage() {
+
+  const homeData = await fetchHome()
+  console.log(homeData)
   return (
     <>
       <HeroSlider

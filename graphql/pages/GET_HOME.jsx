@@ -5,12 +5,13 @@ import Page from '@/graphql/fragment/Page';
 export async function fetchHome() {
   const GET_HOME = gql`
     {
-      page(id: "/", idType: URI) {
+      page(id: "front-page=", idType: URI) {
         ...Page
       }
     }
     ${Page}
   `;
 
+  
   return getFetch(GET_HOME);
 }

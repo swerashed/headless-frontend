@@ -3,16 +3,17 @@
 import Image from "next/image";
 import NavbarRight from "./NavbarRight";
 import NavbarLinks from "./NavbarLinks";
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import MobileMenu from "./MobileMenu";
 import Link from "next/link";
 
-function Navbar({ isVisible, isMobileMenuOpen, onMobileMenuOpen }) {
+function Navbar({ isVisible, isMobileMenuOpen, onMobileMenuOpen, menuData }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const handleSearchOpen = () => {
     setIsSearchOpen((prev) => !prev);
   };
+
 
   return (
     <header
@@ -21,9 +22,8 @@ function Navbar({ isVisible, isMobileMenuOpen, onMobileMenuOpen }) {
       <div className="mx-auto max-w-[1440px] lg:px-[15px] xl:px-[75px]">
         <div
           onClick={() => isSearchOpen && handleSearchOpen()}
-          className={`pointer-events-auto border-b border-dark/10 bg-white px-4 py-[10px] transition-transform duration-300 lg:rounded-xl lg:border-none lg:bg-white/90 lg:backdrop-blur-[36] xl:px-5 ${
-            isVisible ? "transform-none shadow-2xl" : "-translate-y-full"
-          }`}
+          className={`pointer-events-auto border-b border-dark/10 bg-white px-4 py-[10px] transition-transform duration-300 lg:rounded-xl lg:border-none lg:bg-white/90 lg:backdrop-blur-[36] xl:px-5 ${isVisible ? "transform-none shadow-2xl" : "-translate-y-full"
+            }`}
         >
           <div className="flex flex-row items-center justify-between gap-4 xl:gap-8">
             <div className="flex items-center justify-start md:min-w-[170px] xl:min-w-[210px]">
@@ -37,7 +37,7 @@ function Navbar({ isVisible, isMobileMenuOpen, onMobileMenuOpen }) {
                 />
               </Link>
             </div>
-            {!isSearchOpen && <NavbarLinks />}
+            {!isSearchOpen && <NavbarLinks menuData={menuData} />}
             <NavbarRight
               isSearchOpen={isSearchOpen}
               onSearchOpen={handleSearchOpen}

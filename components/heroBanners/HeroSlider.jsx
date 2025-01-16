@@ -1,16 +1,14 @@
 "use client";
-
 import { useRef, useState } from "react";
 import Image from "next/image";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay, A11y } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-function HeroSlider({ sectionTitle, slides }) {
+function HeroSlider({data}) {
+  const slides = data?.hero_items || [];
   const swiperRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [activeIndex, setActiveIndex] = useState(-1);
@@ -53,9 +51,9 @@ function HeroSlider({ sectionTitle, slides }) {
         onSlideChange={updateActiveIndex}
       >
         {slides.map((slide) => (
-          <SwiperSlide key={slide.id} className="h-full">
+          <SwiperSlide key={slide._id} className="h-full">
             <Image
-              src={slide.imageLink}
+              src={slide.image}
               alt="Slider image"
               className="h-full w-full object-cover"
               priority
@@ -70,7 +68,9 @@ function HeroSlider({ sectionTitle, slides }) {
           data-aos="fade-down"
           className="mb-10 max-w-[740px] font-onest text-[34px] font-medium leading-[44px] text-white md:mb-[60px] md:text-5xl md:leading-[58px]"
         >
-          {sectionTitle}
+      {
+       slides[ activeIndex]?.title
+      }
         </h1>
         <div className="flex items-center">
           <button

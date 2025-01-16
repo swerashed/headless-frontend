@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 
-function NavbarWrapper() {
+function NavbarWrapper({menuData}) {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -49,6 +49,7 @@ function NavbarWrapper() {
       isVisible={isVisible}
       isMobileMenuOpen={isMobileMenuOpen}
       onMobileMenuOpen={handleMobileMenu}
+      menuData={menuData}
     />
   );
 }

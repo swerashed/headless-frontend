@@ -5,6 +5,23 @@ const Page = gql`
   fragment Page on Page {
     id
     title
+    blocks {
+      order
+      name
+      attributesJSON
+    }
+    seo {
+      canonical
+      cornerstone
+      metaDesc
+      metaKeywords
+      title
+      opengraphImage {
+        id
+        uri
+        sourceUrl
+      }
+    }
   }
 `;
 

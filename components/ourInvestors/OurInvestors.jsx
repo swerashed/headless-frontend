@@ -13,14 +13,15 @@ import SliderNavigationButton from "../buttons/SliderNavigationButton";
 import SectionHeading from "../headings/SectionHeading";
 import OurInvestorCard from "./OurInvestorCard";
 
-function OurInvestors({ investors }) {
+function OurInvestors({ data }) {
+  const {investors_items, title} = data;
   const swiperRef = useRef(null);
 
   return (
     <section className="overflow-hidden bg-surface py-[50px] md:py-[100px]">
       <div data-aos="fade-up" className="container">
         <div className="mb-[30px] flex items-center justify-between md:mb-10">
-          <SectionHeading>Our Investors</SectionHeading>
+          <SectionHeading>{title}</SectionHeading>
           <div className="hidden items-center justify-end gap-[10px] md:flex">
             <div className="investors-pagination mr-5 !flex !w-auto !min-w-10 !items-center !gap-1 font-onest text-xl font-medium !leading-none !text-red-900"></div>
             <SliderNavigationButton
@@ -62,9 +63,9 @@ function OurInvestors({ investors }) {
           speed={600}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
-          {investors.map((investor) => (
-            <SwiperSlide key={investor.id} className="rounded-2xl">
-              <OurInvestorCard key={investor.id} card={investor} />
+          {investors_items.map((investor) => (
+            <SwiperSlide key={investor._id} className="rounded-2xl">
+              <OurInvestorCard key={investor._id} card={investor} />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -73,8 +74,8 @@ function OurInvestors({ investors }) {
         className="container grid grid-cols-2 gap-5 md:hidden"
         data-aos="fade-up"
       >
-        {investors.map((investor) => (
-          <OurInvestorCard key={investor.id} card={investor} />
+        {investors_items.map((investor) => (
+          <OurInvestorCard key={investor._id} card={investor} />
         ))}
       </div>
     </section>

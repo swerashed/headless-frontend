@@ -23,7 +23,7 @@ export default function AboutUsPage() {
         details="Innovative solutions are key to addressing the world’s toughest health challenges, from chronic diseases and pandemics to mental health crises. By leveraging advancements in technology, research, and collaboration, we can tackle complex problems and improve global health outcomes. These efforts aim to not only treat illnesses but also prevent them, ensuring healthier futures for communities worldwide."
       />
       <CountersSection
-        SectionClassName=""
+
         className="counter-of-5 md:grid-cols-6"
         counterDetails={[
           {

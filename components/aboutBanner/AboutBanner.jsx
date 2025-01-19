@@ -2,7 +2,8 @@ import Image from "next/image";
 
 import PrimaryButton from "../buttons/PrimaryButton";
 
-function AboutBanner({ bodyText, yearOfExperience, buttonDetails }) {
+function AboutBanner({data}) {
+  const { counter_description, counter_prefix, counter_number, title, icon, button_title, button_url } = data;
   return (
     <section className="mb-[50px] mt-[60px] md:mb-[120px] md:mt-[100px]">
       <div className="container">
@@ -17,7 +18,7 @@ function AboutBanner({ bodyText, yearOfExperience, buttonDetails }) {
             className="flex items-center gap-[30px] md:min-w-[301px]"
             data-aos="fade-right"
           >
-            <svg
+            {/* <svg
               className="h-[100px] w-[100px] xl:h-[120px] xl:w-[120px]"
               width={120}
               height={120}
@@ -47,21 +48,23 @@ function AboutBanner({ bodyText, yearOfExperience, buttonDetails }) {
                   <stop offset={1} stopColor="#3484A4" />
                 </linearGradient>
               </defs>
-            </svg>
+            </svg> */}
+            <Image alt="icon" src={icon} className="h-[100px] w-[100px] xl:h-[120px] xl:w-[120px]" width={120}
+              height={120} ></Image>
             <div className="flex flex-col justify-center gap-[10px]">
               <h5 className="font-onest text-[60px] font-light leading-[70px] text-green md:text-[90px] md:leading-[90px]">
-                {yearOfExperience.year}
+                {counter_number}{counter_prefix}
               </h5>
               <p className="font-inter text-base font-normal leading-[26px] text-dark/80">
-                {yearOfExperience.label}
+                {counter_description}
               </p>
             </div>
           </div>
           <div className="flex flex-col" data-aos="fade-up">
             <h3 className="mb-10 font-onest text-2xl font-medium text-dark md:max-w-[782px] md:text-[32px] md:leading-snug">
-              {bodyText}
+              {title}
             </h3>
-            <PrimaryButton>{buttonDetails.title}</PrimaryButton>
+            <PrimaryButton href={button_url}>{button_title}</PrimaryButton>
           </div>
         </div>
       </div>

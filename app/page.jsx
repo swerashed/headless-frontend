@@ -4,7 +4,7 @@ import { fetchHome } from "@/graphql/pages/GET_HOME";
 export default async function HomePage() {
   const data = await fetchHome();
   const blocks = data?.page?.blocks || [];
-console.log(componentMap)
+  console.log(blocks)
   return (
     <div>
         {blocks &&

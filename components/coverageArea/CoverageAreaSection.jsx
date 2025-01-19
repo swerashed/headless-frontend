@@ -2,7 +2,8 @@ import CoverageFooter from "./CoverageFooter";
 import CoverageHeader from "./CoverageHeader";
 import CoverageMapContainer from "./CoverageMapContainer";
 
-function CoverageAreaSection() {
+function CoverageAreaSection({data}) {
+ const {title, description, districts, cta_description, cta_url } = data
   return (
     <section
       className="overflow-hidden py-[50px] lg:py-[100px]"
@@ -10,9 +11,9 @@ function CoverageAreaSection() {
     >
       <div className="container">
         <div className="grid grid-cols-1 justify-center md:grid-cols-2 md:grid-rows-2 md:gap-x-20 lg:gap-x-[100px]">
-          <CoverageHeader />
-          <CoverageMapContainer />
-          <CoverageFooter />
+          <CoverageHeader title={title} description={description} />
+          <CoverageMapContainer districts={districts}/>
+          <CoverageFooter cta_description={cta_description} cta_url={cta_url} />
         </div>
       </div>
     </section>

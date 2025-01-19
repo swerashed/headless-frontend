@@ -5,7 +5,8 @@ import Image from "next/image";
 import VideoPlayer from "./VideoPlayer";
 import { cn } from "@/lib/utils";
 
-function VideoShowcaseSection({ thumnailURL, videoURL, sectionClass }) {
+function VideoShowcaseSection({data}) {
+  const {video, section_classnames, image} = data
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlayClick = () => {
@@ -16,7 +17,7 @@ function VideoShowcaseSection({ thumnailURL, videoURL, sectionClass }) {
     <section
       className={cn(
         "mb-[50px] mt-[35px] overflow-hidden md:mb-[100px] md:mt-20",
-        sectionClass,
+        section_classnames,
       )}
     >
       <div className="container">
@@ -25,7 +26,7 @@ function VideoShowcaseSection({ thumnailURL, videoURL, sectionClass }) {
           data-aos="zoom-in-up"
         >
           {isPlaying ? (
-            <VideoPlayer videoURL={videoURL} />
+            <VideoPlayer videoURL={video} />
           ) : (
             <div
               className="relative flex h-full w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg border-none bg-black md:rounded-[20px]"
@@ -34,7 +35,7 @@ function VideoShowcaseSection({ thumnailURL, videoURL, sectionClass }) {
               <Image
                 width={1290}
                 height={712}
-                src={thumnailURL}
+                src={image}
                 alt="Pharmaceutical Showcase video thumbnail"
                 className="absolute inset-0 h-full w-full rounded-lg object-cover md:rounded-[20px]"
               />

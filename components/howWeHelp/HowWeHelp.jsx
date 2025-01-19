@@ -14,7 +14,8 @@ import PrimaryButton from "../buttons/PrimaryButton";
 import SectionHeading from "../headings/SectionHeading";
 import HowWeHelpCard from "./HowWeHelpCard";
 
-function HowWeHelp({ cards }) {
+function HowWeHelp({ data }) {
+  const {title, help_items} = data
   const swiperRef = useRef(null);
 
   return (
@@ -24,7 +25,7 @@ function HowWeHelp({ cards }) {
           data-aos="fade-right"
           className="mb-[30px] flex items-center justify-between md:mb-10"
         >
-          <SectionHeading>How we help</SectionHeading>
+          <SectionHeading>{title}</SectionHeading>
           <div className="flex items-center justify-end gap-[10px] md:hidden">
             <SliderNavigationButton
               onPrev={() => swiperRef.current?.slidePrev()}
@@ -53,9 +54,9 @@ function HowWeHelp({ cards }) {
           speed={600}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
-          {cards.map((card) => (
-            <SwiperSlide key={card.id}>
-              <HowWeHelpCard card={card} />
+          {help_items.map((item, index) => (
+            <SwiperSlide key={index}>
+              <HowWeHelpCard card={item} />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -65,8 +66,8 @@ function HowWeHelp({ cards }) {
           className="mb-10 hidden grid-cols-2 gap-[30px] md:grid lg:grid-cols-3"
           data-aos="fade-left"
         >
-          {cards.map((card) => (
-            <HowWeHelpCard key={card.id} card={card} />
+          {help_items.map((item, index) => (
+            <HowWeHelpCard key={index} card={item} />
           ))}
         </div>
       </div>

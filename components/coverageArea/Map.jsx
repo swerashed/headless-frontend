@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import MapPopover from "./MapPopover";
 
-function Map() {
+function Map({districts}) {
   const [popover, setPopover] = useState({
     isOpen: false,
     style: "",
@@ -33,7 +33,7 @@ function Map() {
 
   return (
     <div className="relative z-40">
-      {popover.isOpen && <MapPopover style={popover.style} />}
+      {popover.isOpen && <MapPopover districts={districts}  style={popover.style} />}
       <svg
         width={500}
         height={710}

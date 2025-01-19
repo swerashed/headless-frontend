@@ -3,6 +3,7 @@ import AboutBanner from './aboutBanner/AboutBanner';
 import CallToActionSection from './callToAction/CallToActionSection';
 import CountersSection from './counters/CountersSection';
 import CoverageAreaSection from './coverageArea/CoverageAreaSection';
+import HeroBannerSecondary from './heroBanners/HeroBannerSecondary';
 import HeroSlider from './heroBanners/HeroSlider';
 import HowWeHelp from './howWeHelp/HowWeHelp';
 import OurInvestors from './ourInvestors/OurInvestors';
@@ -21,6 +22,9 @@ const componentMap = {
   "carbon-fields/partners" : OurPartners,
   "carbon-fields/our-investors": OurInvestors,
   "carbon-fields/cta": CallToActionSection,
+
+  // ABOUT US PAGE COMPONETS 
+  "carbon-fields/secondary-hero": HeroBannerSecondary,
 
 };
 

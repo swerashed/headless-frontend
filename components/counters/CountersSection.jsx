@@ -16,7 +16,7 @@ function CountersSection({ data }) {
           {sectionTitle || ""}
         </SectionHeading>
         <div className={cn("grid grid-cols-2 gap-[15px] md:gap-5", inner_classnames || "")}>
-          {statistics_items.map((statistics, index) => (
+          {statistics_items?.map((statistics, index) => (
             <CounterCard key={index} data={statistics} />
           ))}
         </div>

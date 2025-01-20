@@ -7,7 +7,6 @@ import { cn } from "@/lib/utils";
 function MapPopover({ districts, selectedDistrict, style }) {
 const district = districts.find((district) => district.title === selectedDistrict);
 const offices = district?.offices || [];
-console.log(district)
   return (
     <div
       data-lenis-prevent

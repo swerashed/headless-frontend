@@ -2,12 +2,14 @@ import { cn } from "@/lib/utils";
 import SectionHeading from "../headings/SectionHeading";
 import IconCard from "./IconCard";
 
-function CardGridSection({
-  sectionHeading,
-  cardDetails,
-  sectionClassName,
-  className,
-}) {
+function CardGridSection({data}) {
+  console.log(data)
+  const {
+    sectionHeading,
+    cardDetails,
+    sectionClassName,
+    className,
+  } = data
   return (
     <section
       className={cn(

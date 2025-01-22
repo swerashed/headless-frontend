@@ -14,15 +14,16 @@ import SliderNavigationButton from "../buttons/SliderNavigationButton";
 import IconCard from "../cardGrid/IconCard";
 import SectionHeading from "../headings/SectionHeading";
 
-function AtAGlanceSliderSection({ sectionTitle, className, cardDetails }) {
+function AtAGlanceSliderSection({data}) {
+  const {glance_items, title, section_classnames} = data
   const swiperRef = useRef(null);
 
   return (
-    <section className={cn("overflow-hidden py-[50px] md:py-[120]", className)}>
+    <section className={cn("overflow-hidden py-[50px] md:py-[120]", section_classnames)}>
       <div className="container">
         <div className="flex flex-row justify-between gap-5">
           <div data-aos="fade-right">
-            <SectionHeading>{sectionTitle}</SectionHeading>
+            <SectionHeading>{title}</SectionHeading>
           </div>
           <div className="hidden lg:block">
             <SliderNavigationButton
@@ -66,8 +67,8 @@ function AtAGlanceSliderSection({ sectionTitle, className, cardDetails }) {
             speed={600}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
           >
-            {cardDetails.map((card) => (
-              <SwiperSlide key={card.id}>
+            {glance_items.map((card) => (
+              <SwiperSlide key={card._id}>
                 <IconCard card={card} />
               </SwiperSlide>
             ))}
@@ -76,8 +77,8 @@ function AtAGlanceSliderSection({ sectionTitle, className, cardDetails }) {
       </div>
       <div className="container lg:hidden">
         <div className="mt-[30px] grid grid-cols-2 gap-[15px] md:mt-10 md:gap-[30px]">
-          {cardDetails.map((card) => (
-            <IconCard key={card.id} card={card} />
+          {glance_items.map((card) => (
+            <IconCard key={card._id} card={card} />
           ))}
         </div>
       </div>

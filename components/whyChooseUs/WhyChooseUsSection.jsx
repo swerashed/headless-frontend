@@ -3,18 +3,19 @@ import SectionHeading from "../headings/SectionHeading";
 import WhyCooseUsAccordion from "./WhyCooseUsAccordion";
 import { cn } from "@/lib/utils";
 
-function WhyChooseUsSection({
-  sectionClassName,
-  image,
-  heading,
-  bodyText,
-  questionAndAnswers,
-}) {
+function WhyChooseUsSection({ data }) {
+  const {
+    section_classnames,
+    image,
+    title,
+    bodyText,
+    choose_us_items,
+  } = data;
   return (
     <section
       className={cn(
         "overflow-hidden py-[50px] lg:py-[100px]",
-        sectionClassName,
+        section_classnames,
       )}
     >
       <div className="container">
@@ -30,14 +31,14 @@ function WhyChooseUsSection({
           <div className="flex flex-col md:w-1/2">
             <div data-aos="fade-left">
               <SectionHeading className="transf mb-5 normal-case xl:mb-10 xl:text-[40px]">
-                {heading}
+                {title}
               </SectionHeading>
               {bodyText && (
                 <p className="mb-5 font-inter text-base font-normal leading-[26px] text-dark/80">
                   {bodyText}
                 </p>
               )}
-              <WhyCooseUsAccordion qsnAndAns={questionAndAnswers} />
+              <WhyCooseUsAccordion qsnAndAns={choose_us_items} />
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 
 import AboutBanner from './aboutBanner/AboutBanner';
+import AtAGlanceSliderSection from './atAGlanceSliderSection/AtAGlanceSliderSection';
 import CallToActionSection from './callToAction/CallToActionSection';
-import CardGridSection from './cardGrid/CardGridSection';
 import CountersSection from './counters/CountersSection';
 import CoverageAreaSection from './coverageArea/CoverageAreaSection';
 import HeroBannerSecondary from './heroBanners/HeroBannerSecondary';
@@ -10,8 +10,10 @@ import HowWeHelp from './howWeHelp/HowWeHelp';
 import MissionVissionSection from './missionVission/MissionVissionSection';
 import OurInvestors from './ourInvestors/OurInvestors';
 import OurPartners from './ourPartners/OurPartners';
+import SideBySideWithButton from './sideBySide/SideBySideWithButtonSection';
 import StorySection from './storySection/StorySection';
 import VideoShowcaseSection from './videoShowcase/VideoShowcaseSection';
+import WhyChooseUsSection from './whyChooseUs/WhyChooseUsSection';
 
 
 
@@ -30,7 +32,9 @@ const componentMap = {
   "carbon-fields/secondary-hero": HeroBannerSecondary,
   "carbon-fields/about-us-story": StorySection,
   "carbon-fields/mission-vision": MissionVissionSection,
-  "carbon-fields/at-a-glance": CardGridSection,
+  "carbon-fields/at-a-glance": AtAGlanceSliderSection,
+  "carbon-fields/side-by-side-cta": SideBySideWithButton,
+  "carbon-fields/why-choose-us": WhyChooseUsSection,
 
 
 };

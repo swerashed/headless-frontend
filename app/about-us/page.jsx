@@ -5,7 +5,6 @@ export default async function AboutUsPage() {
    const data = await fetchAbout();
    const blocks = data?.page?.blocks || [];
 
-  //  console.log(blocks);
   return (
     <div>
     {blocks &&

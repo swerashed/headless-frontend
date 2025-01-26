@@ -15,25 +15,21 @@ import NewsCard from "./NewsCard";
 import SectionHeading from "../headings/SectionHeading";
 import SliderNavigationButton from "../buttons/SliderNavigationButton";
 
-function NewsSliderSection({
-  sectionHeading,
-  newsItems,
-  buttonDetails,
-  sectionClassName,
-}) {
+function NewsSliderSection({data, blogs}) {
+ const { title, btn_title, btn_url, section_classname } = data;
   const swiperRef = useRef(null);
 
   return (
     <section
       className={cn(
         "overflow-hidden bg-surface py-[50px] lg:py-[100px]",
-        sectionClassName,
+        section_classname,
       )}
     >
       <div className="container">
         <div className="flex flex-row justify-between gap-5">
           <div data-aos="fade-up">
-            <SectionHeading>{sectionHeading}</SectionHeading>
+            <SectionHeading>{title}</SectionHeading>
           </div>
           <div className="hidden sm:block">
             <SliderNavigationButton
@@ -78,19 +74,19 @@ function NewsSliderSection({
             speed={600}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
           >
-            {newsItems.map((news) => (
-              <SwiperSlide key={news.id}>
-                <NewsCard news={news} />
+            {blogs?.map((blog, index) => (
+              <SwiperSlide key={index}>
+                <NewsCard blog={blog} />
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
-        {buttonDetails && (
+        {btn_url && (
           <div
             className="mt-[30px] flex items-center justify-center md:mt-10"
             data-aos="fade-up"
           >
-            <PrimaryButton border={true}>{buttonDetails.title}</PrimaryButton>
+            <PrimaryButton href={btn_url} border={true}>{btn_title}</PrimaryButton>
           </div>
         )}
       </div>

@@ -8,6 +8,8 @@ import HeroBannerSecondary from './heroBanners/HeroBannerSecondary';
 import HeroSlider from './heroBanners/HeroSlider';
 import HowWeHelp from './howWeHelp/HowWeHelp';
 import MissionVissionSection from './missionVission/MissionVissionSection';
+import NewsSliderSection from './newsSlider/NewsSliderSection';
+import NewsSliderWrapper from './newsSlider/NewsSliderWrapper';
 import OurInvestors from './ourInvestors/OurInvestors';
 import OurPartners from './ourPartners/OurPartners';
 import SideBySideWithButton from './sideBySide/SideBySideWithButtonSection';
@@ -35,6 +37,7 @@ const componentMap = {
   "carbon-fields/at-a-glance": AtAGlanceSliderSection,
   "carbon-fields/side-by-side-cta": SideBySideWithButton,
   "carbon-fields/why-choose-us": WhyChooseUsSection,
+  "carbon-fields/blog-items": NewsSliderWrapper
 
 
 };

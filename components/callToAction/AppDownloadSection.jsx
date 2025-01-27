@@ -1,20 +1,24 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 
-function AppDownloadSection({ className }) {
+function AppDownloadSection({data}) {
+  const { section_classnames, description, title, download_link } = data;
   return (
-    <section className={cn("py-[50px] md:py-[100px]", className)}>
+    <section className={cn("py-[50px] md:py-[100px]", section_classnames)}>
       <div className="container">
         <div
           className="app-container relative flex min-h-[500px] flex-col overflow-hidden rounded-[20px] px-[15px] py-[30px] text-white shadow-md shadow-dark/10 md:shadow-2xl"
           data-aos="fade-up"
         >
           <h2 className="mb-[10px] font-onest text-[30px] font-medium leading-[40px] md:text-[40px] md:leading-[50px]">
-            Download AKS Health App
+          {title}
           </h2>
           <p className="mb-[30px] font-inter text-base font-normal leading-[26px]">
-            Discount on all kinds of healthcare products
+          {description}
           </p>
+          <Link href={download_link}>
+          
           <Image
             src="/app-download/play-store.png"
             alt="App store icon"
@@ -22,6 +26,7 @@ function AppDownloadSection({ className }) {
             height={47}
             className="rounded-md"
           />
+          </Link>
           <Image
             src="/app-download/phone-mockup.png"
             alt="App store icon"

@@ -14,9 +14,9 @@ import ProductCategoryCard from "./ProductCategoryCard";
 import { useEffect, useRef, useState } from "react";
 import SliderNavigationButton from "../buttons/SliderNavigationButton";
 
-function ProductCategoriesSection({ sectionTitle, productList }) {
+function ProductCategoriesSection({data}) {
   const swiperRef = useRef(null);
-
+  const {title,section_classnames, category_items} = data;
   return (
     <section
       className={cn(
@@ -26,7 +26,7 @@ function ProductCategoriesSection({ sectionTitle, productList }) {
       <div className="container">
         <div className="flex flex-row justify-between gap-5">
           <div data-aos="fade-right">
-            <SectionHeading>{sectionTitle}</SectionHeading>
+            <SectionHeading>{title}</SectionHeading>
           </div>
           <div className="hidden md:block">
             <SliderNavigationButton
@@ -65,8 +65,8 @@ function ProductCategoriesSection({ sectionTitle, productList }) {
             speed={600}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
           >
-            {productList.map((product) => (
-              <SwiperSlide key={product.id}>
+            {category_items?.map((product) => (
+              <SwiperSlide key={product._id}>
                 <ProductCategoryCard product={product} />
               </SwiperSlide>
             ))}
@@ -78,8 +78,8 @@ function ProductCategoriesSection({ sectionTitle, productList }) {
           className="mt-[30px] grid grid-cols-2 gap-[15px] sm:grid-cols-3 sm:gap-5 md:hidden"
           data-aos="fade-up"
         >
-          {productList.map((product) => (
-            <ProductCategoryCard key={product.id} product={product} />
+          {category_items?.map((product) => (
+            <ProductCategoryCard key={product._id} product={product} />
           ))}
         </div>
       </div>

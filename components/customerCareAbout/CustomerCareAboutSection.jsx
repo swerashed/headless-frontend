@@ -1,7 +1,8 @@
 import SectionHeading from "../headings/SectionHeading";
 import SideBySideWithoutButton from "../sideBySide/SideBySideWithoutButton";
 
-function CustomerCareAboutSection() {
+function CustomerCareAboutSection({data}) {
+  const {  title, description, section_classnames, card_items } = data;
   return (
     <section className="overflow-hidden bg-surface py-[50px] md:py-[100px]">
       <div className="container">
@@ -9,34 +10,27 @@ function CustomerCareAboutSection() {
           className="mb-10 flex flex-col items-center justify-center gap-5 text-center"
           data-aos="fade-up"
         >
-          <SectionHeading>We care about our customers</SectionHeading>
+          <SectionHeading>{title}</SectionHeading>
           <p className="max-w-[872px] font-inter text-base font-normal leading-[26px] text-dark/80">
-            Our mission is to revolutionize health care by leveraging
-            innovation, technology, and patient-centered solutions, ensuring
-            accessible, high-quality care for all while promoting wellness
+            {description}
           </p>
         </div>
       </div>
       <div className="container">
         <div className="flex flex-col gap-10">
-          <SideBySideWithoutButton
-            heading="Personalized care"
-            details="Tailored medication management and expert guidance to fit your unique health needs"
-            bannerImage="/section-banners/about-us/akpl-banner.png"
-            reverse={true}
-          />
-          <SideBySideWithoutButton
-            heading="Convenience and accessibility"
-            details="Fast, easy prescription refills and free home delivery, ensuring your medications are always within reach."
-            bannerImage="/section-banners/about-us/akpl-banner.png"
-            reverse={false}
-          />
-          <SideBySideWithoutButton
-            heading="Trusted expertise"
-            details="Experienced pharmacists providing professional, reliable advice to help you make informed health decisions."
-            bannerImage="/section-banners/about-us/akpl-banner.png"
-            reverse={true}
-          />
+          {
+            card_items?.map((card) => (
+              <SideBySideWithoutButton
+              key={card._id}
+                heading={card.card_title}
+                details={card.card_details}
+                bannerImage={card.card_image}
+                reverse={card.reverse}
+              />
+            ))
+          }
+         
+        
         </div>
       </div>
     </section>

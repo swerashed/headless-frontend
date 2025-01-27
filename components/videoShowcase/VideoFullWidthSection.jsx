@@ -5,7 +5,9 @@ import Image from "next/image";
 import VideoPlayer from "./VideoPlayer";
 import { cn } from "@/lib/utils";
 
-function VideoFullWidthSection({ videoDetails }) {
+function VideoFullWidthSection({data}) {
+  const { video,  image} = data;
+
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlayClick = () => {
@@ -17,7 +19,7 @@ function VideoFullWidthSection({ videoDetails }) {
       <div className={cn("container", "md:mx-0 md:max-w-full md:px-0")}>
         <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[20px] border-none shadow-md shadow-dark/10 md:rounded-none md:shadow-lg lg:h-[712px] lg:shadow-xl">
           {isPlaying ? (
-            <VideoPlayer link={videoDetails.videoPath} />
+            <VideoPlayer link={video} />
           ) : (
             <div
               className="relative flex h-full w-full cursor-pointer items-center justify-center overflow-hidden border-none bg-black"
@@ -26,7 +28,7 @@ function VideoFullWidthSection({ videoDetails }) {
               <Image
                 width={1440}
                 height={712}
-                src={videoDetails.thumbnail}
+                src={image}
                 alt="Pharmaceutical Showcase video thumbnail"
                 className="absolute inset-0 h-full w-full object-cover"
               />

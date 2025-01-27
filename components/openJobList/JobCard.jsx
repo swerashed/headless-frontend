@@ -2,7 +2,6 @@ import Image from "next/image";
 import PrimaryButton from "../buttons/PrimaryButton";
 
 function JobCard({ job }) {
-  console.log(job);
   return (
     <div className="lg:p[30px] group relative flex min-h-[104px] cursor-pointer flex-col items-start justify-between overflow-hidden rounded-[20px] border border-dark/10 p-5 shadow-dark/10 transition-all duration-300 hover:shadow-sm lg:flex-row lg:items-center lg:justify-between">
       <h4 className="mb-[30px] line-clamp-2 text-left font-onest text-2xl font-medium leading-[34px] text-dark md:text-xl lg:mb-0 lg:w-[60%] lg:text-2xl">

@@ -1,13 +1,14 @@
 import { cn } from "@/lib/utils";
 import PrimaryButton from "../buttons/PrimaryButton";
-import SectionHeading from "../headings/SectionHeading";
+
 
 function StorySection({data}) {
   const {
     section_title,
     title,
     description,
-    buttonDetails,
+    btn_text,
+    btn_link,
     section_classname,
   } = data
   return (
@@ -41,10 +42,10 @@ function StorySection({data}) {
               {description}
             </p>
           )}
-          {buttonDetails && (
+          {btn_link && (
             <div data-aos="fade-up">
-              <PrimaryButton className="hidden md:mt-10 md:flex">
-                {buttonDetails.title}
+              <PrimaryButton href={btn_link}className="hidden md:mt-10 md:flex">
+                {btn_text}
               </PrimaryButton>
             </div>
           )}

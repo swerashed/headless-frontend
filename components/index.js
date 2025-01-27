@@ -12,6 +12,7 @@ import NewsSliderSection from './newsSlider/NewsSliderSection';
 import NewsSliderWrapper from './newsSlider/NewsSliderWrapper';
 import OurInvestors from './ourInvestors/OurInvestors';
 import OurPartners from './ourPartners/OurPartners';
+import PeopleCardSection from './peopleCards/PeopleCardSection';
 import SideBySideWithButton from './sideBySide/SideBySideWithButtonSection';
 import StorySection from './storySection/StorySection';
 import VideoShowcaseSection from './videoShowcase/VideoShowcaseSection';
@@ -37,8 +38,8 @@ const componentMap = {
   "carbon-fields/at-a-glance": AtAGlanceSliderSection,
   "carbon-fields/side-by-side-cta": SideBySideWithButton,
   "carbon-fields/why-choose-us": WhyChooseUsSection,
-  "carbon-fields/blog-items": NewsSliderWrapper
-
+  "carbon-fields/blog-items": NewsSliderWrapper,
+  "carbon-fields/members": PeopleCardSection
 
 };
 

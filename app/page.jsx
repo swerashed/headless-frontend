@@ -2,6 +2,7 @@
 import componentMap from "@/components/index";
 import { fetchPosts } from "@/graphql/GET_POSTS";
 import { fetchHome } from "@/graphql/pages/GET_HOME";
+import { fetchSelectedMembers } from "@/graphql/GET_MEMBERS";
 export default async function HomePage() {
   const data = await fetchHome();
   const blocks = data?.page?.blocks || [];

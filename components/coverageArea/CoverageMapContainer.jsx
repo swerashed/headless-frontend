@@ -1,10 +1,13 @@
 import Map from "./Map";
 
-function CoverageMapContainer({districts}) {
+function CoverageMapContainer({districts, page}) {
   return (
     <div className="md:col-span-1 md:row-span-2" data-aos="fade-left">
       <div className="col-start-2 flex items-center justify-center px-2 sm:p-8 md:row-end-7 md:max-h-[550px] lg:max-h-[650px] xl:pt-24">
-        <Map districts={districts} />
+      {page === "homepage" &&  <Map districts={districts} />}
+      {page === "service" &&  <div>Map for Service</div>}
+      {page === "diagnostics" &&  <div>Map for Diagnostics</div>}
+       
       </div>
       <div className="my-5 mb-[30px] flex items-center gap-[26px] sm:mx-auto sm:justify-center sm:gap-5 sm:p-[10px]">
         <div className="flex items-center gap-2">

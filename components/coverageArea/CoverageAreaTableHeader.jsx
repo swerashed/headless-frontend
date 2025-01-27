@@ -9,8 +9,8 @@ function CoverageAreaTableHeader() {
       <div className="flex w-full items-center gap-4 rounded-[40px] border border-dark/10 bg-surface px-4 py-[10px] font-inter text-sm font-normal leading-[22px] text-dark focus-within:border-blue focus:border focus:border-blue focus:ring-0 sm:w-[307px]">
         <Input
           className="focus-visible:ring-none h-auto border-none px-0 py-0 shadow-none file:border-0 focus-visible:ring-0"
-          type="email"
-          placeholder="Email"
+          type="text"
+          placeholder="Search..."
         />
         <svg
           width={18}

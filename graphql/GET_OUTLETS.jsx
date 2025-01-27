@@ -7,11 +7,14 @@ const Query = gql`
     edges {
       node {
         id
-        mapLink
-        outletId
-        outletAddress
-        district
-        outletNumber
+  
+        outlets {
+          map_link
+          outlet_address
+          outlet_name
+          outlet_number
+        }
+        title
       }
     }
   }

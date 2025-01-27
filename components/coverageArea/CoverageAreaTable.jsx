@@ -8,9 +8,9 @@ function CoverageAreaTable({ outlets }) {
     <div className="w-full">
       <CoverageAreaTableHeader />
       <div className="flex w-full flex-col focus-within:outline-0">
-        <Accordion type="single" collapsible className="g flex w-full flex-col">
-          {outlets.map((outlet) => (
-            <CoverageAreaTableRow key={outlet.id} outletDetails={outlet} />
+        <Accordion type="single" collapsible className="flex w-full flex-col">
+          {outlets?.map((outlet) => (
+            <CoverageAreaTableRow key={outlet._id} outletDetails={outlet} />
           ))}
         </Accordion>
       </div>

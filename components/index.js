@@ -12,7 +12,6 @@ import HeroBannerSecondary from './heroBanners/HeroBannerSecondary';
 import HeroSlider from './heroBanners/HeroSlider';
 import HowWeHelp from './howWeHelp/HowWeHelp';
 import MissionVissionSection from './missionVission/MissionVissionSection';
-import NewsSliderSection from './newsSlider/NewsSliderSection';
 import NewsSliderWrapper from './newsSlider/NewsSliderWrapper';
 import OurInvestors from './ourInvestors/OurInvestors';
 import OurPartners from './ourPartners/OurPartners';

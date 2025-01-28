@@ -8,6 +8,7 @@ import CountersSection from './counters/CountersSection';
 import CoverageAreaSection from './coverageArea/CoverageAreaSection';
 import CustomerCareAboutSection from './customerCareAbout/CustomerCareAboutSection';
 import CustomerReviewSection from './customerReview/CustomerReviewSection';
+import DepartmentSection from './departments/DepartmentSection';
 import HeroBannerSecondary from './heroBanners/HeroBannerSecondary';
 import HeroSlider from './heroBanners/HeroSlider';
 import HowWeHelp from './howWeHelp/HowWeHelp';
@@ -49,6 +50,7 @@ const componentMap = {
   "carbon-fields/card-grid-section": CardGridSection,
   "carbon-fields/app-download-section": AppDownloadSection,
   "carbon-fields/customer-care-about-section": CustomerCareAboutSection,
+  "carbon-fields/depertment-cards": DepartmentSection,
 
 };
 

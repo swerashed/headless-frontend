@@ -31,7 +31,7 @@ async function CoverageAreaSection({ data }) {
   }
 
   if (page === "service" || page === "diagnostics") {
-    return <CoverageAreaSectionCenter outlets={outlets} page={page} description={description} title={title} cta_url={cta_url} cta_description={cta_description}/>
+    return <CoverageAreaSectionCenter data={data} outlets={outlets} />
   }
 
 }

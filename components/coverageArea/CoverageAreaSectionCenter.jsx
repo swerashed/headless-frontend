@@ -3,8 +3,8 @@ import CoverageAreaHeaderCenter from "./CoverageAreaHeaderCenter";
 import CoverageAreaTable from "./CoverageAreaTable";
 import CoverageMapContainer from "./CoverageMapContainer";
 
-export function CoverageAreaSectionCenter({title, description, cta_description, cta_url, page, outlets}) {
-  console.log(title, description);
+export function CoverageAreaSectionCenter({data, outlets}) {
+  const { title, description, cta_description, cta_url, page } = data
   return (
     <section className="overflow-hidden py-[50px] md:py-[100px]">
       <div className="container">

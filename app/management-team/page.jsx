@@ -6,8 +6,6 @@ async function ManagementTeamPage() {
    const data = await fetchManagementPage()
    const blocks = data?.page?.blocks || [];
 
-   console.log(blocks)
-
   return (
     <div>
     {blocks &&

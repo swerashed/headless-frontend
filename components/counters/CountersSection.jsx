@@ -4,7 +4,6 @@ import SectionHeading from "../headings/SectionHeading";
 
 function CountersSection({ data }) {
   const { statistics_items, section_classnames, title, inner_classnames } = data
-  console.log(data) 
   return (
     <section
       className={cn(

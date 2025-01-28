@@ -18,7 +18,6 @@ import PrimaryButton from "../buttons/PrimaryButton";
 function DepartmentSection({data}) {
   const swiperRef = useRef(null);
 const { section_classname, title, card_items, section_button_url, section_button_title } = data;
-console.log(data)
   return (
     <section
       className={cn(
@@ -76,7 +75,7 @@ console.log(data)
           >
             {card_items.map((department) => (
               <SwiperSlide key={department._id}>
-                <DepartmentCard item={department} />
+                <DepartmentCard data={department} />
               </SwiperSlide>
             ))}
           </Swiper>
@@ -88,7 +87,7 @@ console.log(data)
           data-aos="fade-up"
         >
           {card_items.map((department) => (
-            <DepartmentCard key={department._id} item={department} />
+            <DepartmentCard key={department._id} data={department} />
           ))}
         </div>
         {section_button_url && (

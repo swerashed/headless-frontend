@@ -10,6 +10,8 @@ async function PeopleCardSection({data}) {
     member.categories.edges.some((edge) => edge.node.name === page)
   );
   return (
+    <div>
+
     <section
       className={cn("my-[50px] md:my-[100px] md:mb-[134px]", section_classnames)}
     >
@@ -26,6 +28,10 @@ async function PeopleCardSection({data}) {
         </div>
       </div>
     </section>
+
+
+
+    </div>
   );
 }
 

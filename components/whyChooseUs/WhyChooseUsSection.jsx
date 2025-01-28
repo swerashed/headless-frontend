@@ -8,7 +8,7 @@ function WhyChooseUsSection({ data }) {
     section_classnames,
     image,
     title,
-    bodyText,
+    body_text,
     choose_us_items,
   } = data;
   return (
@@ -33,9 +33,9 @@ function WhyChooseUsSection({ data }) {
               <SectionHeading className="transf mb-5 normal-case xl:mb-10 xl:text-[40px]">
                 {title}
               </SectionHeading>
-              {bodyText && (
+              {body_text && (
                 <p className="mb-5 font-inter text-base font-normal leading-[26px] text-dark/80">
-                  {bodyText}
+                  {body_text}
                 </p>
               )}
               <WhyCooseUsAccordion qsnAndAns={choose_us_items} />

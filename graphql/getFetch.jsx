@@ -1,12 +1,11 @@
 import createApolloClient from "../lib/apollo-client";
-
 export async function getFetch(graphqlQuery, { variables } = {}) {
   const client = createApolloClient();
 
   const { data, errors } = await client.query({
     query: graphqlQuery,
     variables,
-    fetchPolicy: "no-cache", // ✅ Ensures fresh data every request
+    fetchPolicy: "network-only", // Ensures fresh data
     context: {
       fetchOptions: {
         next: { revalidate: 10 }, // ✅ Revalidates data every 10 seconds

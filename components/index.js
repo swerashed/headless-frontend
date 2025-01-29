@@ -13,6 +13,8 @@ import HeroBannerSecondary from './heroBanners/HeroBannerSecondary';
 import HeroSlider from './heroBanners/HeroSlider';
 import HowWeHelp from './howWeHelp/HowWeHelp';
 import MissionVissionSection from './missionVission/MissionVissionSection';
+import NewsHero from './newsHero/NewsHero';
+import NewsCardContainer from './newsSlider/NewsCardContainer';
 import NewsSliderWrapper from './newsSlider/NewsSliderWrapper';
 import OurInvestors from './ourInvestors/OurInvestors';
 import OurPartners from './ourPartners/OurPartners';
@@ -51,6 +53,8 @@ const componentMap = {
   "carbon-fields/app-download-section": AppDownloadSection,
   "carbon-fields/customer-care-about-section": CustomerCareAboutSection,
   "carbon-fields/depertment-cards": DepartmentSection,
+  "carbon-fields/news-hero": NewsHero,
+  "carbon-fields/news-container": NewsCardContainer,
 
 };
 

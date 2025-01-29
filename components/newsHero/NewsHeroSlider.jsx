@@ -36,8 +36,8 @@ function NewsHeroSlider({ news }) {
       spaceBetween={20}
       speed={600}
     >
-      {news.map((newsSingle) => (
-        <SwiperSlide key={newsSingle.id}>
+      {news.map((newsSingle, index) => (
+        <SwiperSlide key={index}>
           <NewsHeroSliderCard news={newsSingle} />
         </SwiperSlide>
       ))}

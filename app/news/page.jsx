@@ -1,87 +1,27 @@
-import NewsHero from "@/components/newsHero/NewsHero";
-import NewsCardContainer from "@/components/newsSlider/NewsCardContainer";
 
-const NewsPage = () => {
+import componentMap from "@/components/index";
+import { fetchNewsPage } from "@/graphql/pages/GET_NEWS_PAGE";
+
+const NewsPage = async () => {
+  const data = await fetchNewsPage();
+  const blocks = data?.page?.blocks || [];
+
+  
   return (
-    <>
-      <NewsHero
-        news={[
-          {
-            id: crypto.randomUUID(),
-            title:
-              "AKS Healthcare launches state-of-the-Art Diagnostic center in Sylhet",
-            date: "March 12, 2020",
-            image: "/recent-updates/recent-updates-1.png",
-          },
-          {
-            id: crypto.randomUUID(),
-            title:
-              "AKS Khan Pharmaceuticals crosses major milestone with 500,000 patients Served",
-            date: "March 12, 2020",
-            image: "/recent-updates/recent-updates-2.png",
-          },
-          {
-            id: crypto.randomUUID(),
-            title: "Three new locations in Khulna Division",
-            date: "March 12, 2020",
-            image: "/recent-updates/recent-updates-3.png",
-          },
-          {
-            id: crypto.randomUUID(),
-            title:
-              "AKS Healthcare launches state-of-the-Art Diagnostic center in Sylhet",
-            date: "March 12, 2020",
-            image: "/recent-updates/recent-updates-1.png",
-          },
-        ]}
-      />
-      <NewsCardContainer
-        sectionTitle="Recent News"
-        news={[
-          {
-            id: crypto.randomUUID(),
-            title:
-              "AKS Healthcare launches state-of-the-Art Diagnostic center in Sylhet",
-            date: "March 12, 2020",
-            imageLink: "/recent-updates/recent-updates-1.png",
-          },
-          {
-            id: crypto.randomUUID(),
-            title:
-              "AKS Khan Pharmaceuticals crosses major milestone with 500,000 patients Served",
-            date: "March 12, 2020",
-            imageLink: "/recent-updates/recent-updates-1.png",
-          },
-          {
-            id: crypto.randomUUID(),
-            title: "Three new locations in Khulna Division",
-            date: "March 12, 2020",
-            imageLink: "/recent-updates/recent-updates-1.png",
-          },
-          {
-            id: crypto.randomUUID(),
-            title:
-              "AKS Healthcare launches state-of-the-Art Diagnostic center in Sylhet",
-            date: "March 12, 2020",
-            imageLink: "/recent-updates/recent-updates-1.png",
-          },
-          {
-            id: crypto.randomUUID(),
-            title:
-              "AKS Khan Pharmaceuticals crosses major milestone with 500,000 patients Served",
-            date: "March 12, 2020",
-            imageLink: "/recent-updates/recent-updates-1.png",
-          },
-          {
-            id: crypto.randomUUID(),
-            title: "Three new locations in Khulna Division",
-            date: "March 12, 2020",
-            imageLink: "/recent-updates/recent-updates-1.png",
-          },
-        ]}
-      />
-    </>
+    <div>
+    {blocks &&
+      blocks.map((block, index) => {
+        const Component = componentMap[block.name];
+        if (!Component) {
+          console.warn(`Component not found for block "${block.name}"`);
+          return null;
+        }
+        const data = JSON.parse(block.attributesJSON)?.data;
+        return <Component key={index} data={data} />;
+      })}
+  </div>
   );
 };
 
 export default NewsPage;
+

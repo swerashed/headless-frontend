@@ -2,7 +2,7 @@ import { getPost } from "@/graphql/blogs/GET_POST";
 import Image from "next/image";
 
 function NewsCard({blog}) {
-  const {title,date, content, featuredImage, slug, uri} = blog;
+  const {title, date, content, featuredImage, slug, uri} = blog;
 
 
   // Convert the string to a Date object

@@ -7,12 +7,10 @@ export async function getFetch(graphqlQuery, { variables } = {}) {
   const { data, loading, error } = await client.query({
     query,
     variables,
+    fetchPolicy: "network-only",
     context: {
       fetchOptions: {
-        next: {
-          tags: ['cms'],
-          revalidate: 10,
-        },
+        next: { revalidate: 10 },
       },
     },
   });
@@ -23,3 +21,4 @@ export async function getFetch(graphqlQuery, { variables } = {}) {
     error,
   };
 }
+

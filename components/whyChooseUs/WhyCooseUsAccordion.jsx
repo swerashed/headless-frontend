@@ -10,7 +10,7 @@ function WhyCooseUsAccordion({ qsnAndAns }) {
     <Accordion type="single" collapsible className="w-full px-[10px]">
       {qsnAndAns.map((item, index) => (
         <AccordionItem
-          key={item.id}
+          key={index}
           value={`item-${index + 1}`}
           className="border-none"
         >

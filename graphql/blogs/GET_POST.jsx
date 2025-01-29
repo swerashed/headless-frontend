@@ -3,12 +3,15 @@ import createApolloClient from '@/lib/apollo-client';
 
 // Get post by id, id type is database id
 const GET_POST = gql`
-  query ($id: ID!) {
-    post(id: $id, idType: DATABASE_ID) {
+  query ($slug: String!) {
+  posts(where: {name: $slug}) {
+    nodes {
       id
       title
       slug
       excerpt
+      content
+      date
       featuredImage {
         node {
           sourceUrl
@@ -22,13 +25,17 @@ const GET_POST = gql`
       }
     }
   }
+}
+
 `;
 
-export async function getPost(id) {
+
+export async function getPost(slug) {
   const client = createApolloClient();
+  const slugString = slug.toString()
   const data = await client.query({
     query: GET_POST,
-    variables: { id },
+    variables: { slug: slugString },
     context: {
       fetchOptions: {
         next: {
@@ -38,14 +45,15 @@ export async function getPost(id) {
       },
     },
   });
-
   return {
     post: {
-      title: data?.data?.post?.title ?? '',
-      slug: data?.data?.post?.slug ?? '',
-      excerpt: data?.data?.post?.excerpt ?? '',
-      featuredImage: data?.data?.post?.featuredImage?.node?.sourceUrl ?? '',
-      categories: data?.data?.post?.categories.nodes ?? [],
+      title: data?.data?.posts?.nodes[0]?.title ?? '',
+      slug: data?.data?.posts?.nodes[0]?.slug ?? '',
+      content: data?.data?.posts?.nodes[0]?.content ?? '',
+      excerpt: data?.data?.posts?.nodes[0]?.excerpt ?? '',
+      featuredImage: data?.data?.posts?.nodes[0]?.featuredImage?.node?.sourceUrl ?? '',
+      categories: data?.data?.posts?.nodes[0]?.categories.nodes ?? [],
+      date: data?.data?.posts?.nodes[0]?.date ?? [],
     },
     loading: data.loading,
     error: data.error,

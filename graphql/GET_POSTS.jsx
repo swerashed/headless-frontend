@@ -41,11 +41,11 @@ const Query = gql`
 
 `;
 
-export async function fetchSelectedBlogs(selectedBlogIds = [], after = null, allPosts = []) {
+export async function fetchSelectedBlogs(selectedBlogIds = [], after = null, postCount = 100) {
   return getFetch(Query, {
     variables: {
       ids: selectedBlogIds,
-      first: 100,
+      first: postCount,
       after: after,
     },
   });

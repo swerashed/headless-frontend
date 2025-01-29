@@ -7,7 +7,6 @@ async function PeopleCardSection({ data }) {
   const {title, section_classnames, inner_section_classnames, memebers_type } = data
   const membersData = await fetchSelectedMembers();
   const members = membersData?.members?.nodes || [];
-  console.log(section_classnames, inner_section_classnames)
   const boardMembers = members.filter((member) =>
     member.categories.edges.some((edge) => edge.node.name === memebers_type)
   );

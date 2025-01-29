@@ -3,12 +3,13 @@ import SocialIcons from "../shared/SocialIcons";
 import { cn } from "@/lib/utils";
 
 function HeroBannerSecondary({data}) {
+  if (!data) return null
   const {title, page, image, social} = data
   return (
     <section className="relative h-[480px] md:h-[550px]">
       <Image
         src={image}
-        alt={title}
+        alt={title || ""}
         className="h-full w-full object-cover"
         priority
         as="image"
@@ -27,11 +28,15 @@ function HeroBannerSecondary({data}) {
                 { social: "font-normal leading-[26px]" },
               )}
             >
-              { page}
+             {page}
             </h3>
-            <h1 className="max-w-4xl font-onest text-[34px] font-medium leading-[44px] text-white md:text-5xl md:leading-[58px]">
+
+            {
+              title &&  (<h1 className="max-w-4xl font-onest text-[34px] font-medium leading-[44px] text-white md:text-5xl md:leading-[58px]">
               {title}
-            </h1>
+            </h1>)
+            }
+           
 
             {social && <SocialIcons facebookLink="#" LinkedinLink="#" />}
           </div>

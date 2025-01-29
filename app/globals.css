@@ -294,12 +294,22 @@ html.lenis body {
   );
 }
 
-.rich-text-container h1 {
+.rich-text-container h1, h2, h3, h4, h5, h6 {
   @apply mb-[20px] font-onest text-[32px] font-medium leading-[44px] text-dark;
 }
 
 .rich-text-container p {
   @apply mb-[40px] font-inter text-[16px] font-normal leading-[26px] text-dark/80;
+}
+.rich-text-container ul li {
+  @apply font-inter text-[16px] font-normal leading-[26px] text-dark/80 list-inside list-disc;
+}
+.rich-text-container ul {
+  @apply mb-[20px];
+}
+
+.rich-text-container figure img{
+  @apply object-cover;
 }
 
 .rich-text-container img {

@@ -6,7 +6,13 @@ import ResourcesDownloadSection from "@/components/resourcesDownloadSection/Reso
 
 function ImpactPage() {
   return (
-    <>
+    <div>Upcomming</div>
+  
+  );
+}
+
+export default ImpactPage;
+  {/* <>
       <HeroBannerSecondary
         bannerImage="/hero-banners/impact.jpg"
         pageTitle="Impact"
@@ -298,8 +304,4 @@ function ImpactPage() {
           },
         ]}
       />
-    </>
-  );
-}
-
-export default ImpactPage;
+    </> */}

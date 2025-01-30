@@ -1,23 +1,29 @@
-import CountersSection from "@/components/counters/CountersSection";
-import HeroBannerSecondary from "@/components/heroBanners/HeroBannerSecondary";
-import NewsCardContainer from "@/components/newsSlider/NewsCardContainer";
+import componentMap from "@/components/index";
+import { fetchImpactsPage } from "@/graphql/pages/GET_IMPACTS_PAGE";
 
-import ResourcesDownloadSection from "@/components/resourcesDownloadSection/ResourcesDownloadSection";
-
-function ImpactPage() {
+async function ImpactPage() {
+  const data = await fetchImpactsPage();
+  const blocks = data?.page?.blocks || [];
   return (
-    <div>Upcomming</div>
-  
+    <div>
+      {blocks &&
+        blocks.map((block, index) => {
+          const Component = componentMap[block.name];
+          if (!Component) {
+            console.warn(`Component not found for block "${block.name}"`);
+            return null;
+          }
+          const data = JSON.parse(block.attributesJSON)?.data;
+          return <Component key={index} data={data} />;
+        })}
+    </div>
+
   );
 }
 
 export default ImpactPage;
-  {/* <>
-      <HeroBannerSecondary
-        bannerImage="/hero-banners/impact.jpg"
-        pageTitle="Impact"
-        heading="Essential Insights into our Pharmacy's Impact"
-      />
+{/* <>
+
       <CountersSection
         SectionClassName="pb-0 md:pb-0 py-[50px] bg-surface md:py-[100px]"
         sectionTitle="Impact in statistics"

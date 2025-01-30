@@ -1,6 +1,9 @@
+"use client";
+import Link from "next/link";
+
 function TabContentCard({ file }) {
   return (
-    <div className="flex items-center justify-between gap-[10px] rounded-[10px] border border-dark/10 px-[10px] py-5 pr-5">
+    <Link href={file.link} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between gap-[10px] rounded-[10px] border border-dark/10 px-[10px] py-5 pr-5">
       <svg
         width={56}
         height={56}
@@ -107,7 +110,7 @@ function TabContentCard({ file }) {
         </defs>
       </svg>
       <p className="line-clamp-1 flex-grow text-xl font-medium leading-[30px] text-dark">
-        {file.fileTitle}
+        {file.name || "File Name"}
       </p>
       <svg
         width={28}
@@ -121,7 +124,7 @@ function TabContentCard({ file }) {
           fill="#357691"
         />
       </svg>
-    </div>
+    </Link>
   );
 }
 

@@ -22,6 +22,7 @@ import OurInvestors from './ourInvestors/OurInvestors';
 import OurPartners from './ourPartners/OurPartners';
 import PeopleCardSection from './peopleCards/PeopleCardSection';
 import ProductCategoriesSection from './productCategories/ProductCategoriesSection';
+import ResourcesDownloadSection from './resourcesDownloadSection/ResourcesDownloadSection';
 import SideBySideWithButton from './sideBySide/SideBySideWithButtonSection';
 import StorySection from './storySection/StorySection';
 import VideoFullWidthSection from './videoShowcase/VideoFullWidthSection';
@@ -59,6 +60,7 @@ const componentMap = {
   "carbon-fields/news-container": NewsCardContainer,
   "carbon-fields/aks-story": AksStoriesSection,
   "carbon-fields/jobs-section": OpenJobListSection,
+  "carbon-fields/download-resource-section": ResourcesDownloadSection,
 
 };
 

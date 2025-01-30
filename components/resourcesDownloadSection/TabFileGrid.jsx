@@ -1,20 +1,21 @@
+"use client";
 import { TabsContent } from "@/components/ui/tabs";
 import TabContentCard from "./TabContentCard";
 
-function TabFileGrid({ downloadableFiles }) {
+function TabFileGrid({ result }) {
   return (
     <>
-      {downloadableFiles
-        .sort((a, b) => b.year - a.year)
-        .map((downloadableFile, index) => (
+      {result
+        .sort((a, b) => b.category - a.category)
+        .map((result, index) => (
           <TabsContent
             data-aos="fade-up"
-            value={downloadableFile.year}
-            key={downloadableFile.id}
+            value={result.category}
+            key={index}
             className="grid grid-cols-1 gap-[15px] md:grid-cols-2 md:gap-[30px]"
           >
-            {downloadableFile.files.map((file) => (
-              <TabContentCard key={file.id} file={file} />
+            {result?.files?.map((file, index) => (
+              <TabContentCard key={index} file={file} />
             ))}
           </TabsContent>
         ))}

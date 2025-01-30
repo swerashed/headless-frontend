@@ -8,7 +8,6 @@ function Dropzone({ className }) {
   const [file, setFile] = useState([]);
 
   const onDrop = useCallback((acceptedFiles) => {
-    console.log(acceptedFiles);
     if (acceptedFiles?.length) {
       setFile(acceptedFiles);
     }

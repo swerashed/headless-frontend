@@ -5,6 +5,7 @@ import AtAGlanceSliderSection from './atAGlanceSliderSection/AtAGlanceSliderSect
 import AppDownloadSection from './callToAction/AppDownloadSection';
 import CallToActionSection from './callToAction/CallToActionSection';
 import CardGridSection from './cardGrid/CardGridSection';
+import ContactUsSection from './contactUs/ContactUsSection';
 import CountersSection from './counters/CountersSection';
 import CoverageAreaSection from './coverageArea/CoverageAreaSection';
 import CustomerCareAboutSection from './customerCareAbout/CustomerCareAboutSection';
@@ -61,6 +62,7 @@ const componentMap = {
   "carbon-fields/aks-story": AksStoriesSection,
   "carbon-fields/jobs-section": OpenJobListSection,
   "carbon-fields/download-resource-section": ResourcesDownloadSection,
+  "carbon-fields/contact-us-section": ContactUsSection,
 
 };
 

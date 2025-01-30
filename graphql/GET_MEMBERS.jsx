@@ -17,6 +17,7 @@ const Query = gql`
           node {
             id
             name
+            slug
           }
         }
       }

@@ -1,5 +1,6 @@
 
 import AboutBanner from './aboutBanner/AboutBanner';
+import AksStoriesSection from './aksStories/AksStoriesSection';
 import AtAGlanceSliderSection from './atAGlanceSliderSection/AtAGlanceSliderSection';
 import AppDownloadSection from './callToAction/AppDownloadSection';
 import CallToActionSection from './callToAction/CallToActionSection';
@@ -16,6 +17,7 @@ import MissionVissionSection from './missionVission/MissionVissionSection';
 import NewsHero from './newsHero/NewsHero';
 import NewsCardContainer from './newsSlider/NewsCardContainer';
 import NewsSliderWrapper from './newsSlider/NewsSliderWrapper';
+import OpenJobListSection from './openJobList/OpenJobListSection';
 import OurInvestors from './ourInvestors/OurInvestors';
 import OurPartners from './ourPartners/OurPartners';
 import PeopleCardSection from './peopleCards/PeopleCardSection';
@@ -55,6 +57,8 @@ const componentMap = {
   "carbon-fields/depertment-cards": DepartmentSection,
   "carbon-fields/news-hero": NewsHero,
   "carbon-fields/news-container": NewsCardContainer,
+  "carbon-fields/aks-story": AksStoriesSection,
+  "carbon-fields/jobs-section": OpenJobListSection,
 
 };
 

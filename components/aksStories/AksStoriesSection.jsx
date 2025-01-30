@@ -8,7 +8,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import AksStoryCard from "./AksStoryCard";
 
-function AksStoriesSection({ heading, cards }) {
+function AksStoriesSection({data}) {
+ const {title,descripton,section_classnames, story_items} =data
   return (
     <section className="mb-[50px] mt-[80px] overflow-hidden md:mb-[100px] md:mt-[140px]">
       <div className="container">
@@ -16,7 +17,7 @@ function AksStoriesSection({ heading, cards }) {
           data-aos="fade-up"
           className="mb-[60px] max-w-[1070px] font-onest text-2xl font-medium leading-[34px] text-dark md:mb-[100px] md:text-[32px] md:leading-[44px]"
         >
-          {heading}
+          {title}
         </h2>
       </div>
       <div className="slider-container" data-aos="fade-left">
@@ -54,8 +55,8 @@ function AksStoriesSection({ heading, cards }) {
           spaceBetween={20}
           speed={600}
         >
-          {cards.map((card) => (
-            <SwiperSlide key={card.id}>
+          {story_items.map((card) => (
+            <SwiperSlide key={card._id}>
               <AksStoryCard card={card} />
             </SwiperSlide>
           ))}

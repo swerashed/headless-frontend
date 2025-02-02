@@ -1,6 +1,18 @@
 import componentMap from "@/components/index";
 import { fetchManagementPage } from "@/graphql/pages/GET_MANAGEMENT_PAGE";
 
+export async function generateMetadata({ params }) {
+  const data = (await fetchManagementPage()) || {};
+  const seo = data?.page?.seo || {};
+  return {
+    title: seo.title,
+    description: seo.metaDesc,
+    metaDesc: seo.metaDesc,
+    metaKeywords: seo.metaKeywords,
+    canonical: seo.canonical,
+  };
+}
+
 
 async function ManagementTeamPage() {
    const data = await fetchManagementPage()

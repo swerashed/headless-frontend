@@ -3,7 +3,7 @@ import SocialShareBottom from "./SocialShareBottom";
 import Image from "next/image";
 import PrimaryButton from "../buttons/PrimaryButton";
 
-const RichTextContainer = ({ page, content }) => {
+const RichTextContainer = ({ slug, page, content }) => {
   return (
     <div className="border-b border-dark/10 pb-[100px]">
       <div className="rich-text-container" >
@@ -17,7 +17,7 @@ const RichTextContainer = ({ page, content }) => {
         page !== "career" ? (<div className="social-share-container">
           <SocialShareBottom />
         </div>) : (<div className="container !max-w-[910px] !px-[30px] mx-auto">
-          <PrimaryButton className="bg-blue text-white mt-[30px] fill-white stroke-white" border={true}>
+          <PrimaryButton href={`/apply-now/${slug}`} className="bg-blue text-white mt-[30px] fill-white stroke-white" border={true}>
             Apply Now
           </PrimaryButton>
         </div>)

@@ -2,7 +2,7 @@ import BackButton from "../buttons/BackButton";
 import ApplicationForm from "./ApplicationForm";
 import ApplicationFormHeading from "./ApplicationFormHeading";
 
-function ApplicationFormSection({ sectionTitle, sectionSubTitle }) {
+function ApplicationFormSection({ data, sectionTitle, sectionSubTitle }) {
   return (
     <section className="border-b border-dark/10 bg-surface py-[100px] pb-16 md:pb-[100px] md:pt-[120px]">
       <div className="container">
@@ -13,7 +13,7 @@ function ApplicationFormSection({ sectionTitle, sectionSubTitle }) {
         />
       </div>
       <div className="container !max-w-[940px]">
-        <ApplicationForm />
+        <ApplicationForm data={data} />
       </div>
     </section>
   );

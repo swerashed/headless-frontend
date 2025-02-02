@@ -11,18 +11,19 @@ const JobDetailsPage = async ({ params }) => {
     const department = jobs.job.department.label
     const vacancies = jobs.job.vacancies
     const location = jobs.job.location.label
-
+    const slug = urlSlug
     const dateObject = new Date(date);
 // Format the date
 const options = { year: "numeric", month: "long", day: "numeric" };
 const deadline = new Intl.DateTimeFormat("en-US", options).format(dateObject);
+
     const data = {
-        jobTitle, deadline, department, vacancies, location
+        jobTitle, deadline, department, vacancies, location, slug
     }
     return (
         <div>
             <JobDetailsBanner data={data} />
-            <RichTextContainer page="career" content={content} />
+            <RichTextContainer page="career" slug={slug} content={content} />
         </div>
     )
 }

@@ -1,6 +1,19 @@
 import componentMap from "@/components/index";
 import { fetchImpactsPage } from "@/graphql/pages/GET_IMPACTS_PAGE";
 
+
+export async function generateMetadata({ params }) {
+  const data = (await fetchImpactsPage()) || {};
+  const seo = data?.page?.seo || {};
+  return {
+    title: seo.title,
+    description: seo.metaDesc,
+    metaDesc: seo.metaDesc,
+    metaKeywords: seo.metaKeywords,
+    canonical: seo.canonical,
+  };
+}
+
 async function ImpactPage() {
   const data = await fetchImpactsPage();
   const blocks = data?.page?.blocks || [];

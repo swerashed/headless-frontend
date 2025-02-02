@@ -3,7 +3,7 @@ import BackButton from "../buttons/BackButton"
 import PrimaryButton from "../buttons/PrimaryButton"
 
 const JobDetailsBanner = ({data}) => {
-    
+
 
     return (
         <div className="min-h-[400px] " style={{ background: "linear-gradient(46.58deg, rgba(54, 241, 185, 0.2) 0.3%, rgba(52, 132, 164, 0.2) 94.6%)" }}>
@@ -71,7 +71,7 @@ const JobDetailsBanner = ({data}) => {
                 </div>
 
                 <div data-aos="fade-up">
-                    <PrimaryButton  className="bg-blue text-white mt-[30px] fill-white stroke-white" border={true}>
+                    <PrimaryButton href={`/apply-now/${data?.slug}`}  className="bg-blue text-white mt-[30px] fill-white stroke-white" border={true}>
                         Apply Now
                     </PrimaryButton>
                 </div>

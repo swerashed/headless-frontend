@@ -15,13 +15,8 @@ export function CoverageAreaSectionCenter({data, outlets}) {
         <div className="mt-[30px] w-full sm:mt-[20px] md:mt-[100px] xl:mt-[60px]">
           <CoverageMapContainer page={page}/>
         </div>
-        <CoverageAreaTable outlets={outlets}/>
-        <div
-          className="mt-[30px] flex items-center justify-center md:mt-10"
-          data-aos="fade-up"
-        >
-          <PrimaryButton href={cta_url} border={true}>{cta_description}</PrimaryButton>
-        </div>
+        <CoverageAreaTable cta_description={cta_description}  cta_url={cta_url} outlets={outlets}/>
+       
       </div>
     </section>
   );

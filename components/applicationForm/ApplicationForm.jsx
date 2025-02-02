@@ -1,105 +1,159 @@
+"use client";
 import { Input } from "@/components/ui/input";
 import { Label } from "../ui/label";
 import DropZone from "../shared/DropZone";
 import { cn } from "@/lib/utils";
+import useSendMail from "@/hooks/useSendEmail";
+import { useState } from "react";
+import SubmitButton from "../buttons/SubmitButton";
 
-function ApplicationForm() {
+function ApplicationForm({ data }) {
+  const { sendMail, loading, message, error, setMessage, setError } = useSendMail();
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    phone: "",
+    email: "",
+    file: null, // Include file in state
+  });
+
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  // Handle file selection from DropZone
+  const handleFileUpload = (file) => {
+    setFormData((prev) => ({ ...prev, file }));
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setMessage(null);
+    setError(null);
+
+    // Validate fields
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.file) {
+      setError("All fields, including the file, are required.");
+      return;
+    }
+
+    const formDataToSend = new FormData();
+    formDataToSend.append("firstName", formData.firstName);
+    formDataToSend.append("lastName", formData.lastName);
+    formDataToSend.append("phone", formData.phone);
+    formDataToSend.append("email", formData.email);
+    formDataToSend.append("file", formData.file);
+
+    try {
+      await sendMail(formDataToSend);
+    } catch (err) {
+      setError("Failed to send email. Please try again.");
+      console.error("Mail send error:", err);
+    }
+  };
+
   return (
     <div data-aos="fade-up" className="flex w-full flex-col">
       <p className="mb-4 border-y border-dark/10 py-3 text-base font-normal leading-[26px] text-dark/80">
-        <span className="font-semibold text-dark">Position:</span> Customer
-        marketing Manager
+        <span className="font-semibold text-dark">Position:</span> {data?.title}
       </p>
-      <form className="grid grid-cols-1 gap-4 font-inter md:grid-cols-2 md:gap-5">
+
+      <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-4 font-inter md:grid-cols-2 md:gap-5">
+        {/* First Name */}
         <div className="flex flex-col gap-1">
-          <Label
-            htmlFor="first-name"
-            className="text-base font-normal capitalize leading-[26px] text-dark"
-          >
-            FIrst Name <span className="text-[#ED1B24]">*</span>
+          <Label htmlFor="firstName" className="text-base font-normal capitalize leading-[26px] text-dark">
+            First Name <span className="text-[#ED1B24]">*</span>
           </Label>
           <Input
+            value={formData.firstName}
+            onChange={handleChange}
             required
-            id="first-name"
+            id="firstName"
+            name="firstName"
             type="text"
             placeholder="First name"
             className="h-auto w-full rounded-[40px] border border-dark/10 bg-surface px-4 py-3 text-sm font-normal leading-[22px] text-dark placeholder:text-dark/80 focus-visible:border"
           />
         </div>
+
+        {/* Last Name */}
         <div className="flex flex-col gap-1">
-          <Label
-            htmlFor="last-name"
-            className="text-base font-normal capitalize leading-[26px] text-dark"
-          >
+          <Label htmlFor="lastName" className="text-base font-normal capitalize leading-[26px] text-dark">
             Last Name <span className="text-[#ED1B24]">*</span>
           </Label>
           <Input
+            value={formData.lastName}
+            onChange={handleChange}
             required
-            id="last-name"
+            id="lastName"
+            name="lastName"
             type="text"
             placeholder="Last name"
             className="h-auto w-full rounded-[40px] border border-dark/10 bg-surface px-4 py-3 text-sm font-normal leading-[22px] text-dark placeholder:text-dark/80 focus-visible:border"
           />
         </div>
+
+        {/* Phone */}
         <div className="flex flex-col gap-1">
-          <Label
-            htmlFor="Phone"
-            className="text-base font-normal capitalize leading-[26px] text-dark"
-          >
+          <Label htmlFor="phone" className="text-base font-normal capitalize leading-[26px] text-dark">
             Phone <span className="text-[#ED1B24]">*</span>
           </Label>
           <Input
+            value={formData.phone}
+            onChange={handleChange}
             required
             id="phone"
+            name="phone"
             type="text"
             placeholder="Phone"
             className="h-auto w-full rounded-[40px] border border-dark/10 bg-surface px-4 py-3 text-sm font-normal leading-[22px] text-dark placeholder:text-dark/80 focus-visible:border"
           />
         </div>
+
+        {/* Email */}
         <div className="flex flex-col gap-1">
-          <Label
-            htmlFor="email"
-            className="text-base font-normal capitalize leading-[26px] text-dark"
-          >
+          <Label htmlFor="email" className="text-base font-normal capitalize leading-[26px] text-dark">
             Email <span className="text-[#ED1B24]">*</span>
           </Label>
           <Input
+            value={formData.email}
+            onChange={handleChange}
             required
             id="email"
+            name="email"
             type="email"
             placeholder="Email"
             className="h-auto w-full rounded-[40px] border border-dark/10 bg-surface px-4 py-3 text-sm font-normal leading-[22px] text-dark placeholder:text-dark/80 focus-visible:border"
           />
         </div>
+
+        {/* File Upload */}
         <div className="mt-2 md:col-span-2 md:-mt-1">
-          <DropZone className="group flex h-[110px] cursor-pointer flex-col items-center justify-center rounded-[10px] border border-dashed border-dark/80 bg-gradient-to-t from-[#36F1B91A]/10 to-[#3484A41A]/10 transition-all duration-300 hover:border-green" />
+          <DropZone onFileSelect={handleFileUpload} className="group flex h-[110px] cursor-pointer flex-col items-center justify-center rounded-[10px] border border-dashed border-dark/80 bg-gradient-to-t from-[#36F1B91A]/10 to-[#3484A41A]/10 transition-all duration-300 hover:border-green" />
           <p className="mt-2 font-inter text-sm font-normal leading-[22px] text-dark/80">
             Upload file size max 5MB. Accept file (.pdf)
           </p>
         </div>
-        <button
+
+        {/* Submit Button */}
+        <SubmitButton
+          type="submit"
+          disabled={loading}
           className={cn(
-            "mt-2 flex w-full items-center justify-center gap-2 rounded-full bg-blue stroke-white py-3 pl-8 pr-5 font-inter text-base font-semibold capitalize leading-[24px] text-white transition-all duration-300 sm:w-fit md:-mt-1",
+            "mt-2 flex w-full items-center justify-center gap-2 rounded-full bg-blue py-3 text-base font-semibold text-white transition-all duration-300 sm:w-fit md:-mt-1",
+            loading ? "opacity-50 cursor-not-allowed" : ""
           )}
         >
-          <span>Submit Now</span>
-          <svg
-            width={24}
-            height={24}
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9.59961 16.7998L14.3996 11.9998L9.59961 7.19981"
-              stroke="current"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
+          {loading ? "Sending..." : "Submit Now"}
+        </SubmitButton>
       </form>
+
+      {/* Success/Error Messages */}
+      {message && <p className="mt-4 text-green-600">{message}</p>}
+      {error && <p className="mt-4 text-red-600">{error}</p>}
     </div>
   );
 }

@@ -1,6 +1,11 @@
 import { Input } from "../ui/input";
 
-function CoverageAreaTableHeader() {
+function CoverageAreaTableHeader({setSelectedDistricts}) {
+
+  const handleSearch = (event) => {
+    setSelectedDistricts(event.target.value.toLowerCase());
+  };
+
   return (
     <div className="flex flex-col gap-4 p-4 sm:mt-10 sm:flex-row sm:items-center sm:justify-between md:mt-20 md:px-0">
       <h3 className="font-onest text-2xl font-medium capitalize leading-[34px] text-dark md:text-[40px] md:leading-[50px]">
@@ -11,6 +16,7 @@ function CoverageAreaTableHeader() {
           className="focus-visible:ring-none h-auto border-none px-0 py-0 shadow-none file:border-0 focus-visible:ring-0"
           type="text"
           placeholder="Search..."
+          onChange={handleSearch}
         />
         <svg
           width={18}

@@ -22,11 +22,3 @@ async function ContactUsPage() {
 }
 
 export default ContactUsPage;
-// {
-//   <>
-//   <ContactUsSection
-//     sectionTitle="Contact us"
-//     sectionSubTitle="Send us a message"
-//   />
-// </>
-// }

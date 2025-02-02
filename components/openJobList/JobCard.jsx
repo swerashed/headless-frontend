@@ -46,7 +46,7 @@ function JobCard({ job }) {
           </div>
         </div>
         <PrimaryButton
-        href={slug}          border="false"
+        href={`/career/${slug}`}          border="false"
           className="w-full bg-white py-[11px] pl-6 pr-[14px] transition-all duration-500 sm:mt-5 lg:absolute lg:right-[-100px] lg:mt-0 lg:w-auto lg:opacity-0 lg:group-hover:right-[30px] lg:group-hover:opacity-100"
         >
           View Details

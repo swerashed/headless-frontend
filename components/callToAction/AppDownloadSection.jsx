@@ -11,7 +11,7 @@ function AppDownloadSection({data}) {
           className="app-container relative flex min-h-[500px] flex-col overflow-hidden rounded-[20px] px-[15px] py-[30px] text-white shadow-md shadow-dark/10 md:shadow-2xl"
           data-aos="fade-up"
         >
-          <h2 className="mb-[10px] font-onest text-[30px] font-medium leading-[40px] md:text-[40px] md:leading-[50px]">
+          <h2 className="mb-[10px] font-onest text-[30px] font-medium leading-[40px] md:text-[40px] md:leading-[50px] text-white">
           {title}
           </h2>
           <p className="mb-[30px] font-inter text-base font-normal leading-[26px]">

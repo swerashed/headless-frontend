@@ -3,9 +3,10 @@ import { fetchSelectedBlogs } from "@/graphql/GET_POSTS";
 import NewsWithPagination from "./NewsWithPagination";
 
 async function NewsCardContainer({data }) {
-  const { title, button_title, view_items } = data;
-    const newsData = await fetchSelectedBlogs();
+  const { title, button_title, view_items, news_type } = data;
+  const newsData = await fetchSelectedBlogs([], null, 100, news_type);
     const news = newsData?.posts?.nodes || [];
+
   return (
     <div className="container py-[50px] lg:py-[100px]">
       <div data-aos="fade-up">

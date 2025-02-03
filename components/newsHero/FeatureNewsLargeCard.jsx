@@ -23,7 +23,7 @@ function FeatureNewsLargeCard({ news }) {
       <div className="absolute inset-0 flex items-end bg-gradient-to-t from-[#000511CC] to-[#00206800]">
         <div className="flex flex-col p-10 font-inter text-white">
           <p className="mb-1 text-sm font-normal leading-[22px]">{formattedDate}</p>
-          <h3 className="line-clamp-2 font-onest text-[32px] font-medium leading-[44px]">
+          <h3 className="line-clamp-2 font-onest text-[32px] font-medium leading-[44px] text-white">
             {title}
           </h3>
         </div>

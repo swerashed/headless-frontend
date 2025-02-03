@@ -1,12 +1,15 @@
 import { gql } from '@apollo/client';
 import { getFetch } from '@/graphql/getFetch';
-
 const Query = gql`
  query GET_SELECTED_BLOGS($ids: [ID!], $first: Int, $after: String, $excludeIds: [ID], $category: String) {
   posts(
     first: $first
     after: $after
-    where: { notIn: $excludeIds, categoryName: $category, in: $ids }
+    where: { 
+      notIn: $excludeIds, 
+      categoryName: $category, 
+      in: $ids
+    } 
   ) {
     nodes {
       uri
@@ -14,8 +17,8 @@ const Query = gql`
       slug
       content
       date
-      id # Base64-encoded global ID
-      databaseId # Numeric WordPress Post ID (e.g., 1532)
+      id
+      databaseId
       featuredImage {
         node {
           id
@@ -38,15 +41,15 @@ const Query = gql`
     }
   }
 }
-
 `;
 
-export async function fetchSelectedBlogs(selectedBlogIds = [], after = null, postCount = 100) {
+export async function fetchSelectedBlogs(selectedBlogIds = [], after = null, postCount = 100, category = null) {
   return getFetch(Query, {
     variables: {
       ids: selectedBlogIds,
       first: postCount,
       after: after,
+      category: category,
     },
   });
 }

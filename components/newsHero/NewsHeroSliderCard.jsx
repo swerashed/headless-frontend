@@ -25,7 +25,7 @@ function NewsHeroSliderCard({ news }) {
           <p className="mb-1 font-inter text-xs font-normal leading-[18px]">
             {formattedDate}
           </p>
-          <h3 className="line-clamp-3 font-onest text-xl font-medium leading-[30px]">
+          <h3 className="line-clamp-3 font-onest text-xl font-medium leading-[30px] text-white">
             {title}
           </h3>
         </div>

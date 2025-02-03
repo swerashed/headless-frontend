@@ -3,65 +3,85 @@ import { Input } from "@/components/ui/input";
 import { Label } from "../ui/label";
 import DropZone from "../shared/DropZone";
 import { cn } from "@/lib/utils";
-import useSendMail from "@/hooks/useSendEmail";
 import { useState } from "react";
 import SubmitButton from "../buttons/SubmitButton";
+import useApplyJob from "@/hooks/useApplyJob";
 
 function ApplicationForm({ data }) {
-  const { sendMail, loading, message, error, setMessage, setError } = useSendMail();
+  const { sendMail, loading, message, error, setMessage, setError } = useApplyJob();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     phone: "",
     email: "",
-    file: null, // Include file in state
+    file: null, 
   });
-
+  
   // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
-
+  
   // Handle file selection from DropZone
   const handleFileUpload = (file) => {
-    setFormData((prev) => ({ ...prev, file }));
+    console.log("File selected:", file);
+    if (file && file instanceof File) {
+      setFormData((prev) => ({ ...prev, file }));
+    } else {
+      console.error("Invalid file selected:", file);
+    }
   };
-
-  // Handle form submission
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     setMessage(null);
     setError(null);
-
+  
     // Validate fields
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.file) {
       setError("All fields, including the file, are required.");
       return;
     }
-
+  
     const formDataToSend = new FormData();
     formDataToSend.append("firstName", formData.firstName);
     formDataToSend.append("lastName", formData.lastName);
     formDataToSend.append("phone", formData.phone);
     formDataToSend.append("email", formData.email);
-    formDataToSend.append("file", formData.file);
-
+  
+    // Append the file
+    if (formData.file && formData.file instanceof File) {
+      console.log("Appending file:", formData.file);
+      formDataToSend.append("file", formData.file);
+    } else {
+      console.error("File is missing or invalid");
+      setError("The file is missing or invalid.");
+      return;
+    }
+  
     try {
+      // Log the FormData entries for debugging
+      for (let [key, value] of formDataToSend.entries()) {
+        console.log(`${key}: ${value}`);
+      }
+  
+      console.log("Sending formDataToSend:", formDataToSend);
       await sendMail(formDataToSend);
     } catch (err) {
       setError("Failed to send email. Please try again.");
       console.error("Mail send error:", err);
     }
   };
-
+  
+  
   return (
     <div data-aos="fade-up" className="flex w-full flex-col">
       <p className="mb-4 border-y border-dark/10 py-3 text-base font-normal leading-[26px] text-dark/80">
         <span className="font-semibold text-dark">Position:</span> {data?.title}
       </p>
 
-      <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-4 font-inter md:grid-cols-2 md:gap-5">
+      <form onSubmit={handleSubmit} method="POST" encType="multipart/form-data" className="grid grid-cols-1 gap-4 font-inter md:grid-cols-2 md:gap-5">
         {/* First Name */}
         <div className="flex flex-col gap-1">
           <Label htmlFor="firstName" className="text-base font-normal capitalize leading-[26px] text-dark">

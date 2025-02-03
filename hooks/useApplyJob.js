@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 
-const useSendMail = () => {
+const useApplyJob = () => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState(null);
   const [error, setError] = useState(null);
@@ -13,7 +13,7 @@ const useSendMail = () => {
 
     try {
       const response = await axios.post(
-        `${domain}/wp-json/nh/v1/cform/`,
+        `${domain}/wp-json/nh/v1/job-apply/`,
         formData,
         {
           headers: {
@@ -34,4 +34,4 @@ const useSendMail = () => {
   return { sendMail, loading, message, error, setMessage, setError };
 };
 
-export default useSendMail;
+export default useApplyJob;

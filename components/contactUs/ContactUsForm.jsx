@@ -42,9 +42,17 @@ function ContactUsForm() {
     e.preventDefault();
     setMessage(null);
     setError(null);
-
+    console.log(formData)
     try {
       await sendMail(formData);
+      setFormData({
+      firstName: "",
+      lastName: "",
+      phone: "",
+      email: "",
+      inquiry: "",
+      message: "",
+    });
     } catch (err) {
       console.error("Mail send error:", err);
     }

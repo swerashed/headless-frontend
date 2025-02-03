@@ -13,11 +13,11 @@ const useApplyJob = () => {
 
     try {
       const response = await axios.post(
-        `${domain}/wp-json/nh/v1/job-apply/`,
+        `${domain}/wp-json/nh/v1/apply/`,
         formData,
         {
           headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'multipart/form-data',
           },
         }
       );

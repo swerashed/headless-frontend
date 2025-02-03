@@ -32,13 +32,11 @@ function ApplicationForm({ data }) {
       console.error("Invalid file selected:", file);
     }
   };
-  
   const handleSubmit = async (e) => {
     e.preventDefault();
     setMessage(null);
     setError(null);
   
-    // Validate fields
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.file) {
       setError("All fields, including the file, are required.");
       return;
@@ -49,24 +47,10 @@ function ApplicationForm({ data }) {
     formDataToSend.append("lastName", formData.lastName);
     formDataToSend.append("phone", formData.phone);
     formDataToSend.append("email", formData.email);
-  
-    // Append the file
-    if (formData.file && formData.file instanceof File) {
-      console.log("Appending file:", formData.file);
-      formDataToSend.append("file", formData.file);
-    } else {
-      console.error("File is missing or invalid");
-      setError("The file is missing or invalid.");
-      return;
-    }
+    formDataToSend.append("job_title", data?.title || "");
+    formDataToSend.append("resume", formData.file); // Fix: Match backend key
   
     try {
-      // Log the FormData entries for debugging
-      for (let [key, value] of formDataToSend.entries()) {
-        console.log(`${key}: ${value}`);
-      }
-  
-      console.log("Sending formDataToSend:", formDataToSend);
       await sendMail(formDataToSend);
     } catch (err) {
       setError("Failed to send email. Please try again.");

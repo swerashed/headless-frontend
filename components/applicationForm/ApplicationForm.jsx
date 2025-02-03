@@ -25,7 +25,6 @@ function ApplicationForm({ data }) {
   
   // Handle file selection from DropZone
   const handleFileUpload = (file) => {
-    console.log("File selected:", file);
     if (file && file instanceof File) {
       setFormData((prev) => ({ ...prev, file }));
     } else {

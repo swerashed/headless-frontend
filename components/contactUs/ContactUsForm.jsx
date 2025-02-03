@@ -42,7 +42,6 @@ function ContactUsForm() {
     e.preventDefault();
     setMessage(null);
     setError(null);
-    console.log(formData)
     try {
       await sendMail(formData);
       setFormData({

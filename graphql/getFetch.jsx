@@ -8,6 +8,7 @@ export async function getFetch(graphqlQuery, { variables } = {}) {
     query,
     variables,
     context: {
+      fetchPolicy: "network-only",
       fetchOptions: {
         next: {
           tags: ['cms'],

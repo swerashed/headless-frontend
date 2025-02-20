@@ -1,15 +1,15 @@
 function ContactUsHeading({ sectionTitle, sectionSubTitle }) {
   return (
-    <div className="mb-10 mt-[30px] flex w-full flex-col md:mb-[70px]">
+    <div className="mb-10 flex w-full flex-col gap-[10px]">
       <p
         data-aos="fade-up"
-        className="text-left font-inter text-base font-normal leading-[26px] text-dark/80"
+        className="text-left font-inter text-base font-normal uppercase leading-[26px] text-dark/80"
       >
         {sectionTitle}
       </p>
       <h1
         data-aos="fade-up"
-        className="mb-[10px] text-left font-onest text-5xl font-medium capitalize leading-[58px] tracking-[-1.5%] text-dark"
+        className="text-left font-onest text-3xl font-medium capitalize tracking-[-1.5%] text-dark sm:text-4xl md:text-5xl md:leading-[58px]"
       >
         {sectionSubTitle}
       </h1>

@@ -14,7 +14,7 @@ function IconCard({ card }) {
         height={100}
         className="h-[50px] w-[50px] transition-all duration-300 group-hover:scale-105 md:h-[100px] md:w-[100px]"
       />
-      <p className="text-center font-inter text-sm font-medium leading-[22px] text-dark md:min-h-14 md:text-xl md:leading-[30px]">
+      <p className="text-center font-inter text-sm font-medium leading-[22px] text-dark md:min-h-14 md:text-xl md:leading-[30px] line-clamp-2">
         {card_details || details}
       </p>
     </div>

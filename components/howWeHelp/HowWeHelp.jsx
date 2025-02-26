@@ -72,12 +72,12 @@ function HowWeHelp({ data }) {
         </div>
       </div>
 
-      <div
+      {/* <div
         className="container flex items-center justify-center"
         data-aos="fade-up"
       >
         <PrimaryButton border={true}>View all services</PrimaryButton>
-      </div>
+      </div> */}
     </section>
   );
 }

@@ -28,6 +28,10 @@ export default async function HomePage() {
             console.warn(`Component not found for block "${block.name}"`);
             return null;
           }
+          if (Component) {
+            console.log(`Component block "${block.name}"`);
+            
+          }
           const data = JSON.parse(block.attributesJSON)?.data;
           return <Component key={index} data={data} />;
         })}

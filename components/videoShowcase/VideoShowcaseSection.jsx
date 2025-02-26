@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 function VideoShowcaseSection({data}) {
   const {video, section_classnames, image} = data
   const [isPlaying, setIsPlaying] = useState(false);
-
+console.log(video)
   const handlePlayClick = () => {
     setIsPlaying(true);
   };
@@ -26,7 +26,7 @@ function VideoShowcaseSection({data}) {
           data-aos="zoom-in-up"
         >
           {isPlaying ? (
-            <VideoPlayer videoURL={video} />
+            <VideoPlayer link={video} />
           ) : (
             <div
               className="relative flex h-full w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg border-none bg-black md:rounded-[20px]"

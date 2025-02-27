@@ -31,10 +31,11 @@ function VideoShowcaseSection({data}) {
               className="relative flex h-full w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg border-none bg-black md:rounded-[20px]"
               onClick={handlePlayClick}
             >
+              
               <Image
                 width={1290}
                 height={712}
-                src={image}
+                src={image || "/aks-thumbnail.png"}
                 alt="Pharmaceutical Showcase video thumbnail"
                 className="absolute inset-0 h-full w-full rounded-lg object-cover md:rounded-[20px]"
               />

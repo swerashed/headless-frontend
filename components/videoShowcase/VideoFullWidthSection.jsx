@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import VideoPlayer from "./VideoPlayer";
 import { cn } from "@/lib/utils";
@@ -28,7 +28,7 @@ function VideoFullWidthSection({data}) {
               <Image
                 width={1440}
                 height={712}
-                src={image}
+                src={image || "/aks-thumbnail.png"}
                 alt="Pharmaceutical Showcase video thumbnail"
                 className="absolute inset-0 h-full w-full object-cover"
               />

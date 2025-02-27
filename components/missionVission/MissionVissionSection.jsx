@@ -2,13 +2,13 @@ import Image from "next/image";
 import SectionHeading from "../headings/SectionHeading";
 
 function MissionVissionSection({data}) {
-  const {section_title,mission_title,  mission_description, vision_title, vision_description, image} = data
+  const {section_title, image, mission_vision_items} = data
   return (
     <section className="overflow-hidden bg-surface py-[50px] lg:py-[100px]">
       <div className="container">
         <div className="flex flex-col gap-10 md:gap-20 lg:flex-row-reverse lg:items-center lg:gap-10">
           <Image
-            src={image}
+            src={image || "/aks-thumbnail.png"}
             width={625}
             height={625}
             alt={section_title}
@@ -26,24 +26,18 @@ function MissionVissionSection({data}) {
                 data-aos="fade-right"
                 className="flex flex-col border-t border-dark/10 pt-[20px]"
               >
-                <h3 className="mb-5 font-onest text-lg font-medium leading-[26px] text-dark md:left-[30px] md:text-xl">
-                 {mission_title}
-                </h3>
-                <p className="font-inter text-base font-normal leading-[26px] text-dark/80">
-               {mission_description}
-                </p>
+               
+                <ul className="list-disc">
+                  {mission_vision_items.map((item, index) => (
+                    <li key={index} className="ml-[20px] mb-5 font-onest text-lg font-medium leading-[26px] text-dark md:left-[30px] md:text-xl">
+                       {item.mission_vision_item}
+                    </li>
+                  ))}
+                 
+                </ul>
+               
               </div>
-              <div
-                data-aos="fade-right"
-                className="flex flex-col border-t border-dark/10 pt-[20px]"
-              >
-                <h3 className="mb-5 font-onest text-lg font-medium leading-[26px] text-dark md:left-[30px] md:text-xl">
-                {vision_title}
-                </h3>
-                <p className="font-inter text-base font-normal leading-[26px] text-dark/80">
-                 {vision_description}
-                </p>
-              </div>
+
             </div>
           </div>
         </div>

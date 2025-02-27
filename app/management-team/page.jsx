@@ -1,7 +1,7 @@
-import componentMap from "@/components/index";
 import { fetchManagementPage } from "@/graphql/pages/GET_MANAGEMENT_PAGE";
+import RenderBlocksHelper from "@/utils/RenderBlocksHelper";
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata() {
   const data = (await fetchManagementPage()) || {};
   const seo = data?.page?.seo || {};
   return {
@@ -13,25 +13,9 @@ export async function generateMetadata({ params }) {
   };
 }
 
-
-async function ManagementTeamPage() {
-   const data = await fetchManagementPage()
-   const blocks = data?.page?.blocks || [];
-
-  return (
-    <div>
-    {blocks &&
-      blocks.map((block, index) => {
-        const Component = componentMap[block.name];
-        if (!Component) {
-          console.warn(`Component not found for block "${block.name}"`);
-          return null;
-        }
-        const data = JSON.parse(block.attributesJSON)?.data;
-        return <Component key={index} data={data} />;
-      })}
-  </div>
-  );
-}
+const ManagementTeamPage = async () => {
+  const data = await fetchManagementPage();
+  return <RenderBlocksHelper data={data} />;
+};
 
 export default ManagementTeamPage;

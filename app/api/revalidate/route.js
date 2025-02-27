@@ -15,7 +15,6 @@ export async function POST(request) {
 
     // Revalidate the 'cms' tag
     revalidateTag('cms');
-    console.log('Revalidated cms tag');
 
     return new Response(JSON.stringify({ revalidated: true, now: Date.now() }), {
       status: 200,

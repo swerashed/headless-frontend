@@ -12,7 +12,6 @@ function NewsCard({blog}) {
   // Format the date
   const options = { year: "numeric", month: "long", day: "numeric" };
   const formattedDate = new Intl.DateTimeFormat("en-US", options).format(dateObject);
-console.log(slug)
 
   return (
     <div

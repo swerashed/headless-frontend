@@ -6,6 +6,10 @@ const nextConfig = {
             protocol: 'https',
             hostname: 'staging.notionhive.com',
           },
+          {
+            protocol: 'https',
+            hostname: 'dashboard.akskhanpharma.com',
+          },
          
         ],
       },

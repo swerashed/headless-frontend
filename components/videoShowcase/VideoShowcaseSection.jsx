@@ -8,7 +8,6 @@ import { cn } from "@/lib/utils";
 function VideoShowcaseSection({data}) {
   const {video, section_classnames, image} = data
   const [isPlaying, setIsPlaying] = useState(false);
-console.log(video)
   const handlePlayClick = () => {
     setIsPlaying(true);
   };

@@ -14,7 +14,7 @@ function FeatureNewsSmallCard({ news }) {
       <div className="aspect-[150/135] w-[150px] flex-shrink-0 overflow-hidden rounded-[8px] rounded-br-none">
       <Link href={`/news/${news?.slug}`}>
         <Image
-          src={featuredImage?.node?.sourceUrl}
+          src={featuredImage?.node?.sourceUrl || "/aks-thumbnail.png"}
           alt={title}
           width={150}
           height={135}

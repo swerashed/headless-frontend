@@ -16,7 +16,7 @@ function FeatureNewsLargeCard({ news }) {
         <Link href={`/news/${news?.slug}`}>
 
           <Image
-            src={featuredImage?.node?.sourceUrl}
+            src={featuredImage?.node?.sourceUrl || "/aks-thumbnail.png"}
             width={850}
             height={505}
             alt={title}

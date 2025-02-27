@@ -21,7 +21,7 @@ function NewsCard({blog}) {
       <div className="mb-5 w-full overflow-hidden rounded-md">
         <Link href={`/news/${slug}`}>
         <Image
-          src={featuredImage?.node?.sourceUrl}
+          src={featuredImage?.node?.sourceUrl || "/aks-thumbnail.png"}
           width={410}
           height={240}
           alt={title}

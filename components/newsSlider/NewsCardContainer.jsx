@@ -14,10 +14,7 @@ async function NewsCardContainer({data }) {
           {title}
         </SectionHeading>
       </div>
-
         <NewsWithPagination button_title={button_title} news={news} view_items={view_items} />
-
-
     </div>
   );
 }

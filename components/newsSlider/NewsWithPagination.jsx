@@ -27,7 +27,7 @@ const NewsWithPagination = ({ button_title, news, view_items }) => {
         <div data-aos="fade-up" className="text-center">
         <LoadMoreButton as="button" className="mx-auto mt-[30px] lg:mt-[60px]" onClick={handleLoadMore}>
         {button_title}
-      </LoadMoreButton>
+        </LoadMoreButton>
         </div>
       )}
     </section>

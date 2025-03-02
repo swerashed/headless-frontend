@@ -11,7 +11,7 @@ function CoverageAreaTable({ cta_url, cta_description, outlets }) {
 
   // Filter outlets based on search input
   const filteredOutlets = outlets?.filter((outlet) =>
-    outlet.node.title.toLowerCase().includes(selectedDistricts)
+    outlet?.node?.title?.toLowerCase()?.includes(selectedDistricts)
   ) || [];
 
   // Slice the array to show only the required number of outlets

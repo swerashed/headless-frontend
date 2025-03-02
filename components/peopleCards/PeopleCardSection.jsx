@@ -8,7 +8,7 @@ async function PeopleCardSection({ data }) {
   const membersData = await fetchSelectedMembers();
   const allMembers = membersData?.members?.nodes || [];
   const membersArray = members?.map(item => item.id);
-  const finalMembersData = allMembers?.filter(item => membersArray.includes(item.databaseId));
+  const finalMembersData = allMembers?.filter(item => membersArray?.includes(item.databaseId));
   return (
     <div>
       <section

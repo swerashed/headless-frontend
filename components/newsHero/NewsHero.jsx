@@ -7,7 +7,7 @@ const NewsHero = async ({ data }) => {
   const selectedBlogIds = data.items.map(item => item.selected_blogs);
   const newsData = await fetchSelectedBlogs();
   const news = newsData?.posts?.nodes || [];
-  const featuredNews = news.filter(item => selectedBlogIds.includes(String(item.databaseId)));
+  const featuredNews = news.filter(item => selectedBlogIds?.includes(String(item.databaseId)));
 
   const topNews = featuredNews[0];
   const otherTopNews = featuredNews.slice(1);

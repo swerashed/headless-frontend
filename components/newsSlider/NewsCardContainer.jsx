@@ -4,7 +4,6 @@ import NewsWithPagination from "./NewsWithPagination";
 
 async function NewsCardContainer({data }) {
   const { title, button_title, view_items, news_type } = data;
-  console.log(data);
   const newsData = await fetchSelectedBlogs([], null, 100, news_type);
     const news = newsData?.posts?.nodes || [];
 

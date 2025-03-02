@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import SectionHeading from "../headings/SectionHeading";
 import ContactUsCardContainer from "./ContactUsCardContainer";
 
-function ContactUsCardSection() {
+function ContactUsCardSection({sectionTitle, cards}) {
   return (
     <section
       className={cn(
@@ -12,11 +12,11 @@ function ContactUsCardSection() {
       <div className="container">
         <div data-aos="fade-up">
           <SectionHeading className="mx-auto mb-0 max-w-[800px] text-center">
-            Contact us via email or call in case of any emergency.
+           {sectionTitle}
           </SectionHeading>
         </div>
         <div data-aos="fade-up">
-          <ContactUsCardContainer />
+          <ContactUsCardContainer cards={cards} />
         </div>
       </div>
     </section>

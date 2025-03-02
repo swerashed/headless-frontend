@@ -30,7 +30,6 @@ async function ContactUsPage() {
           return (
             <>
               <Component key={index} data={data} />
-              <ContactUsCardSection />
             </>
           );
         })}

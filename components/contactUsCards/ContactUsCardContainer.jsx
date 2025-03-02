@@ -1,11 +1,15 @@
 import ContactUsCard from "./ContactUsCard";
 
-function ContactUsCardContainer() {
+function ContactUsCardContainer({cards}) {
   return (
     <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3 xl:gap-[30px]">
-      <ContactUsCard />
-      <ContactUsCard />
-      <ContactUsCard />
+      {
+        cards?.map((card, index) => {
+          return (
+            <ContactUsCard key={index} card={card} />
+          )
+        })
+      }
     </div>
   );
 }

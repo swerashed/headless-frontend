@@ -19,10 +19,7 @@ async function PeopleCardSection({ data }) {
             <SectionHeading>{title}</SectionHeading>
           </div>)}
           <div
-            className={cn(
-              "grid w-full grid-cols-1 gap-[30px] sm:grid-cols-2 sm:gap-y-[94px]",
-              inner_section_classnames,
-            )}
+            className={`grid w-full grid-cols-1 gap-[30px] sm:grid-cols-2 sm:gap-y-[94px] ${inner_section_classnames}`}
           >
             {finalMembersData?.map((member, index) => (
               <PeopleCard member={member} key={index} />

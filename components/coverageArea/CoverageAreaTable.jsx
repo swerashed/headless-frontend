@@ -21,11 +21,17 @@ function CoverageAreaTable({ cta_url, cta_description, outlets }) {
     <div className="w-full">
       <CoverageAreaTableHeader setSelectedDistricts={setSelectedDistricts} />
       <div className="flex w-full flex-col focus-within:outline-0">
-        <Accordion type="single" collapsible className="flex w-full flex-col">
-          {visibleOutlets.map((outlet, index) => (
-            <CoverageAreaTableRow key={index} outletDetails={outlet} />
-          ))}
-        </Accordion>
+        {filteredOutlets.length > 0 ? (
+          <Accordion type="single" collapsible className="flex w-full flex-col">
+            {visibleOutlets.map((outlet, index) => (
+              <CoverageAreaTableRow key={index} outletDetails={outlet} />
+            ))}
+          </Accordion>
+        ) : (
+          <div className="flex items-center justify-center py-8">
+            <p className="text-lg text-gray-500">No outlets found</p>
+          </div>
+        )}
       </div>
 
       {/* Load More Button */}
@@ -39,7 +45,6 @@ function CoverageAreaTable({ cta_url, cta_description, outlets }) {
           </LoadMoreButton>
         </div>
       )}
-
     </div>
   );
 }

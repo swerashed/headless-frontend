@@ -6,6 +6,7 @@ const Query = gql`
     members(where: { in: $ids }) {
       nodes {
         content
+         databaseId
         featuredImage {
           node {
             sourceUrl

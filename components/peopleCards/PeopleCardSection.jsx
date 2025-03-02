@@ -4,16 +4,13 @@ import { fetchSelectedMembers } from "@/graphql/GET_MEMBERS";
 import SectionHeading from "../headings/SectionHeading";
 
 async function PeopleCardSection({ data }) {
-  const {title, section_classnames, inner_section_classnames, memebers_type } = data
+  const {title, section_classnames, inner_section_classnames, members } = data
   const membersData = await fetchSelectedMembers();
-  const members = membersData?.members?.nodes || [];
-
-  const boardMembers = members.filter((member) =>
-    member.categories.edges.some((edge) => edge.node.slug === memebers_type)
-  );
+  const allMembers = membersData?.members?.nodes || [];
+  const membersArray = members.map(item => item.id);
+  const finalMembersData = allMembers.filter(item => membersArray.includes(item.databaseId));
   return (
     <div>
-
       <section
         className={cn("my-[50px] md:my-[100px] md:mb-[134px]", section_classnames)}
       >
@@ -27,15 +24,12 @@ async function PeopleCardSection({ data }) {
               inner_section_classnames,
             )}
           >
-            {boardMembers.map((member, index) => (
+            {finalMembersData?.map((member, index) => (
               <PeopleCard member={member} key={index} />
             ))}
           </div>
         </div>
       </section>
-
-
-
     </div>
   );
 }

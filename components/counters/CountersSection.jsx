@@ -1,10 +1,32 @@
 import { cn } from "@/lib/utils";
 import CounterCard from "./CounterCard";
 import SectionHeading from "../headings/SectionHeading";
-
+// five-card-style
+// four-card-style
 function CountersSection({ data }) {
   const { statistics_items, section_classnames, title, inner_classnames } = data
-  console.log(inner_classnames)
+
+  const FiveCardsSection = () => {
+    return (<div className="grid grid-cols-2 gap-[15px] md:gap-5 counter-of-5 md:grid-cols-6">
+      {statistics_items?.map((statistics, index) => (
+        <CounterCard key={index} data={statistics} />
+      ))}
+    </div>)
+  }
+  const FourCardsSection = () => {
+    return (<div className="grid grid-cols-2 gap-[15px] md:gap-5 lg:grid-cols-4 lg:gap-5">
+      {statistics_items?.map((statistics, index) => (
+        <CounterCard key={index} data={statistics} />
+      ))}
+    </div>)
+  }
+  const DefaultCardsSection = () => {
+    return (<div className={`grid grid-cols-2 gap-[15px] md:gap-5`}>
+      {statistics_items?.map((statistics, index) => (
+        <CounterCard key={index} data={statistics} />
+      ))}
+    </div>)
+  }
   return (
     <section
       className={cn(
@@ -16,11 +38,15 @@ function CountersSection({ data }) {
         <SectionHeading className="mb-[30px] md:mb-10">
           {title}
         </SectionHeading>
-        <div className={cn(`grid grid-cols-2 gap-[15px] md:gap-5 ${inner_classnames}`, inner_classnames)}>
-          {statistics_items?.map((statistics, index) => (
-            <CounterCard key={index} data={statistics} />
-          ))}
-        </div>
+        {
+          inner_classnames === "five-card-style" && <FiveCardsSection />
+        }
+        {
+          inner_classnames === "four-card-style" && <FourCardsSection />
+        }
+        {
+          !inner_classnames && <DefaultCardsSection />
+        }
       </div>
     </section>
   );

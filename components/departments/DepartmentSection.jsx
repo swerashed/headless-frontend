@@ -14,10 +14,15 @@ import SliderNavigationButton from "../buttons/SliderNavigationButton";
 import SectionHeading from "../headings/SectionHeading";
 import DepartmentCard from "./DepartmentCard";
 import PrimaryButton from "../buttons/PrimaryButton";
+import LoadMoreButton from "../buttons/LoadMoreButton";
 
 function DepartmentSection({data}) {
   const swiperRef = useRef(null);
-const { section_classname, title, card_items, section_button_url, section_button_title } = data;
+  const [displayCount, setDisplayCount] = useState(9); // Add this state
+  const { section_classname, title, card_items, section_button_url, section_button_title } = data;
+  // Get visible items
+  const visibleItems = card_items.slice(0, displayCount);
+
   return (
     <section
       className={cn(
@@ -86,10 +91,21 @@ const { section_classname, title, card_items, section_button_url, section_button
           className="hidden grid-cols-2 gap-[30px] pt-10 md:grid lg:grid-cols-3"
           data-aos="fade-up"
         >
-          {card_items.map((department) => (
+          {visibleItems.map((department) => (
             <DepartmentCard key={department._id} data={department} />
           ))}
         </div>
+        {/* Add Load More Button */}
+        {card_items.length > displayCount && (
+          <div className="mt-[30px] flex items-center justify-center md:mt-10" data-aos="fade-up">
+            <LoadMoreButton 
+              border={true} 
+              onClick={() => setDisplayCount(prev => prev + 9)}
+            >
+              Load More
+            </LoadMoreButton>
+          </div>
+        )}
         {section_button_url && (
           <div
             className="mt-[30px] flex items-center justify-center md:mt-10"

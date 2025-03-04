@@ -8,13 +8,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useRef } from "react";
-
 import SliderNavigationButton from "../buttons/SliderNavigationButton";
-import SectionHeading from "../headings/SectionHeading";
-import HowWeHelpCard from "./HowWeHelpCard";
+import SectionHeading from "../headings/SectionHeading"
+import DiagnosticsCard from "./DiagnosticsCard";
 
-function HowWeHelp({ data }) {
-  const {title, help_items} = data
+const DiagnosticWrapper = ({data}) => {
   const swiperRef = useRef(null);
 
   return (
@@ -24,7 +22,7 @@ function HowWeHelp({ data }) {
           data-aos="fade-right"
           className="mb-[30px] flex items-center justify-between md:mb-10"
         >
-          <SectionHeading>{title}</SectionHeading>
+          <SectionHeading>{data?.section_title}</SectionHeading>
           <div className="flex items-center justify-end gap-[10px] md:hidden">
             <SliderNavigationButton
               onPrev={() => swiperRef.current?.slidePrev()}
@@ -53,9 +51,9 @@ function HowWeHelp({ data }) {
           speed={600}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
-          {help_items.map((item, index) => (
+          {data?.diagnostics_items?.map((item, index) => (
             <SwiperSlide key={index}>
-              <HowWeHelpCard card={item} />
+              <DiagnosticsCard card={item} />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -65,20 +63,13 @@ function HowWeHelp({ data }) {
           className="mb-10 hidden grid-cols-2 gap-[30px] md:grid lg:grid-cols-3"
           data-aos="fade-left"
         >
-          {help_items.map((item, index) => (
-            <HowWeHelpCard key={index} card={item} />
+          {data?.diagnostics_items?.map((item, index) => (
+            <DiagnosticsCard key={index} card={item} />
           ))}
         </div>
       </div>
-
-      {/* <div
-        className="container flex items-center justify-center"
-        data-aos="fade-up"
-      >
-        <PrimaryButton border={true}>View all services</PrimaryButton>
-      </div> */}
     </section>
-  );
+  )
 }
 
-export default HowWeHelp;
+export default DiagnosticWrapper

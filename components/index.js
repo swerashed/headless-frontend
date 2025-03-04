@@ -11,6 +11,7 @@ import CoverageAreaSection from './coverageArea/CoverageAreaSection';
 import CustomerCareAboutSection from './customerCareAbout/CustomerCareAboutSection';
 import CustomerReviewSection from './customerReview/CustomerReviewSection';
 import DepartmentSection from './departments/DepartmentSection';
+import DiagnosticWrapper from './diagnostic/DiagnosticWrapper';
 import HeroBannerSecondary from './heroBanners/HeroBannerSecondary';
 import HeroSlider from './heroBanners/HeroSlider';
 import HowWeHelp from './howWeHelp/HowWeHelp';
@@ -63,6 +64,7 @@ const componentMap = {
   "carbon-fields/jobs-section": OpenJobListSection,
   "carbon-fields/download-resource-section": ResourcesDownloadSection,
   "carbon-fields/contact-us-section": ContactUsSection,
+  "carbon-fields/diagnostics-cards-section": DiagnosticWrapper,
 
 };
 

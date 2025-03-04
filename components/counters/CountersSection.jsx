@@ -5,7 +5,6 @@ import SectionHeading from "../headings/SectionHeading";
 function CountersSection({ data }) {
   const { statistics_items, section_classnames, title, inner_classnames } = data
 
-console.log(title)
   const FiveCardsSection = () => {
     return (<div className="grid grid-cols-2 gap-[15px] md:gap-5 counter-of-5 md:grid-cols-6">
       {statistics_items?.map((statistics, index) => (

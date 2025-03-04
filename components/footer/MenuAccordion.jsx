@@ -5,7 +5,6 @@ import { useState } from "react";
 
 function MenuAccordion({ heading, links }) {
   const [isOpen, setIsOpen] = useState(false);
-
   return (
     <div className="block w-full border-b border-dark/10 md:hidden">
       <button
@@ -48,7 +47,7 @@ function MenuAccordion({ heading, links }) {
         {links.map((link) => (
           <Link
             key={link.id}
-            href="/"
+            href={link.link}
             className="font-inter text-base leading-[26px] transition-all duration-300 hover:underline"
           >
             {link.title}

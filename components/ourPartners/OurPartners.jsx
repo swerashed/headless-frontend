@@ -11,37 +11,14 @@ function OurPartners({ data }) {
       <div data-aos="fade-up" className="container">
         <SectionHeading className="text-center">{title}</SectionHeading>
       </div>
-      <div className="mt-10 hidden sm:block">
-        <Slider
-          width="190px"
-          duration={40}
-          pauseOnHover={true}
-          blurBorders={false}
-          blurBorderColor={"#fff"}
-        >
-          {partners_items.map((partner) => (
-            <Slider.Slide
-              key={partner._id}
-              className="flex items-center justify-center px-6 py-3"
-            >
-              <Image
-                src={partner.image}
-                alt={partner.title}
-                width={145}
-                height={80}
-                className="object-contain"
-              />
-            </Slider.Slide>
-          ))}
-        </Slider>
-      </div>
-      <div className="container block sm:hidden">
-        <div className="mt-[30px] grid grid-cols-2 gap-5">
+
+      <div className="container">
+        <div className="mt-[30px] flex gap-[30px] justify-center">
           {partners_items.map((partner) => (
             <div
               data-aos="fade-up"
               key={partner._id}
-              className="flex items-center justify-center px-[18px] py-3 sm:px-6 sm:py-3"
+              className="flex items-center justify-center px-[18px] py-3 sm:px-6 sm:py-3 border border-gray-200 rounded-2xl"
             >
               <Image
                 src={partner.image}

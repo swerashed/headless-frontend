@@ -1,11 +1,11 @@
 import { cn } from "@/lib/utils";
 import CounterCard from "./CounterCard";
 import SectionHeading from "../headings/SectionHeading";
-// five-card-style
 // four-card-style
 function CountersSection({ data }) {
   const { statistics_items, section_classnames, title, inner_classnames } = data
 
+console.log(title)
   const FiveCardsSection = () => {
     return (<div className="grid grid-cols-2 gap-[15px] md:gap-5 counter-of-5 md:grid-cols-6">
       {statistics_items?.map((statistics, index) => (
@@ -21,7 +21,7 @@ function CountersSection({ data }) {
     </div>)
   }
   const DefaultCardsSection = () => {
-    return (<div className={`grid grid-cols-2 gap-[15px] md:gap-5`}>
+    return (<div className={`grid grid-cols-2 gap-[15px] md:gap-5 md:grid-cols-3`}>
       {statistics_items?.map((statistics, index) => (
         <CounterCard key={index} data={statistics} />
       ))}
@@ -39,14 +39,15 @@ function CountersSection({ data }) {
           {title}
         </SectionHeading>
         {
-          inner_classnames === "five-card-style" && <FiveCardsSection />
+          inner_classnames === "five-card-style" && <FiveCardsSection /> 
         }
         {
           inner_classnames === "four-card-style" && <FourCardsSection />
         }
         {
-          !inner_classnames && <DefaultCardsSection />
+          inner_classnames === "default-cards" && <DefaultCardsSection />
         }
+
       </div>
     </section>
   );

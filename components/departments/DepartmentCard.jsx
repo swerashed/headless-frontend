@@ -19,7 +19,7 @@ function DepartmentCard( {data} ) {
       <p className="mb-10 line-clamp-3 flex-grow font-inter text-sm font-normal leading-[22px] text-dark/80 sm:text-base sm:leading-[26px]">
         {description}
       </p>
-      <Link
+      {/* <Link
         href={button_url}
         className="group flex flex-row items-center justify-between gap-2 border-t border-dark/10 fill-dark stroke-dark pb-3 pt-5 font-inter text-base font-semibold leading-[24px] text-dark"
       >
@@ -40,7 +40,7 @@ function DepartmentCard( {data} ) {
             strokeLinejoin="round"
           />
         </svg>
-      </Link>
+      </Link> */}
     </div>
   );
 }

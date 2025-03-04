@@ -3,25 +3,25 @@ import { getFetch } from '@/graphql/getFetch';
 
 const Query = gql`
   query getAboutMembers($ids: [ID!]) {
-    members(where: { in: $ids }) {
+    members(first: 100, where: { in: $ids }) {
       nodes {
         content
-         databaseId
+        databaseId
         featuredImage {
           node {
             sourceUrl
           }
         }
         title
-         categories {
-        edges {
-          node {
-            id
-            name
-            slug
+        categories {
+          edges {
+            node {
+              id
+              name
+              slug
+            }
           }
         }
-      }
         position
       }
     }

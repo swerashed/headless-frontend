@@ -65,5 +65,4 @@ function MobileMenu({ onMobileMenuOpen, menuData }) {
     </div>
   );
 }
-
 export default MobileMenu;

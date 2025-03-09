@@ -1,4 +1,4 @@
-import { fetchOutltes } from "@/graphql/GET_OUTLETS";
+import { fetchOutlets } from "@/graphql/GET_OUTLETS";
 import CoverageAreaSectionCenter from "./CoverageAreaSectionCenter";
 import CoverageFooter from "./CoverageFooter";
 import CoverageHeader from "./CoverageHeader";
@@ -6,10 +6,12 @@ import CoverageMapContainer from "./CoverageMapContainer";
 
 async function CoverageAreaSection({ data }) {
   const { title, description, districts, cta_description, cta_url, page, image} = data;
-  console.log(image);
 
-  const allOutlets = await fetchOutltes()
-  const outlets = allOutlets?.outlets?.edges || [];
+  const pharmacyData = await fetchOutlets("pharmacy")
+  const pharmacyOutlets = pharmacyData?.outlets?.edges || [];
+
+  const diagnosticsData = await fetchOutlets("diagnostics")
+  const diagnosticsOutlets = pharmacyData?.outlets?.edges || [];
 
   if (!page) {
     return null;
@@ -32,8 +34,11 @@ async function CoverageAreaSection({ data }) {
     );
   }
 
-  if (page === "service" || page === "diagnostics") {
-    return <CoverageAreaSectionCenter data={data} outlets={outlets} />
+  if (page === "service") {
+    return <CoverageAreaSectionCenter data={data} outlets={pharmacyOutlets} />
+  }
+  if(page === "diagnostics"){
+    return <CoverageAreaSectionCenter data={data} outlets={diagnosticsOutlets} />
   }
 
 }

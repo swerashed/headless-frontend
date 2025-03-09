@@ -15,8 +15,7 @@ async function Footer() {
   const footerMenuData = await fetchMenus("Footer Menu");
 
 const menuItems = footerMenuData?.menu?.menuItems?.nodes || []; 
-// console.log(menuItems);
-// Function to group menu items
+
 const groupMenuItems = (menuItems, groupLabel) => {
   const parentGroup = menuItems.find((item) => item.label === groupLabel);
 
@@ -38,8 +37,6 @@ const groupLinksThree = groupMenuItems(menuItems, "Footer Group Three");
 const groupLinksFour = groupMenuItems(menuItems, "Footer Group Four");
 const socialLinks = groupMenuItems(menuItems, "Social Media Links");
 
-// Console output for debugging
-// console.log(socialLinks[0] );
 
   
   return (

@@ -47,7 +47,7 @@ function Navbar({ isVisible, isMobileMenuOpen, onMobileMenuOpen, menuData }) {
           </div>
         </div>
       </div>
-      {isMobileMenuOpen && <MobileMenu onMobileMenuOpen={onMobileMenuOpen} />}
+      {isMobileMenuOpen && <MobileMenu menuData={menuData} onMobileMenuOpen={onMobileMenuOpen} />}
     </header>
   );
 }

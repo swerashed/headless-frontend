@@ -1,5 +1,3 @@
-import ContactUsCardSection from "@/components/contactUsCards/ContactUsCardSection";
-import componentMap from "@/components/index";
 import { fetchContacPage } from "@/graphql/pages/GET_CONTACT";
 import RenderBlocksHelper from "@/utils/RenderBlocksHelper";
 

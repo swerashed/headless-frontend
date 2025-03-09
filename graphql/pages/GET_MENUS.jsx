@@ -8,7 +8,7 @@ export async function fetchMenus(NAME) {
 				menuId
 				name
 				slug
-				  menuItems {
+				  menuItems(first: 100)  {
 		nodes {
 		  id
 		  label

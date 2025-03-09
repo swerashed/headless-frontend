@@ -9,41 +9,39 @@ import FooterBottom from "./FooterBottom";
 import SocialMediaIcons from "./SocialMediaIcons";
 import LinkGroups from "./LinkGroups";
 import Link from "next/link";
+import { fetchMenus } from "@/graphql/pages/GET_MENUS";
 
-const groupLinksOne = [
-  { title: "About Us", link: "/about-us", id: crypto.randomUUID() },
-  {
-    title: "Board of Directors",
-    link: "/board-of-directors",
-    id: crypto.randomUUID(),
-  },
-  {
-    title: "Management Team",
-    link: "/management-team",
-    id: crypto.randomUUID(),
-  },
-];
+async function Footer() {
+  const footerMenuData = await fetchMenus("Footer Menu");
 
-const groupLinksTwo = [
-  { title: "Careers", link: "/career", id: crypto.randomUUID() },
-  { title: "Impacts", link: "/impacts", id: crypto.randomUUID() },
-  { title: "News", link: "/news", id: crypto.randomUUID() },
-  { title: "Contact Us", link: "/contact-us", id: crypto.randomUUID() },
-];
-const groupLinksThree = [
-  {
-    title: "AKS Khan Pharmacy",
-    link: "/aks-khan-pharmacy",
-    id: crypto.randomUUID(),
-  },
-  {
-    title: "AKS Khan Diagnostics",
-    link: "/aks-khan-diagnostics",
-    id: crypto.randomUUID(),
-  },
-];
+const menuItems = footerMenuData?.menu?.menuItems?.nodes || []; 
+// console.log(menuItems);
+// Function to group menu items
+const groupMenuItems = (menuItems, groupLabel) => {
+  const parentGroup = menuItems.find((item) => item.label === groupLabel);
 
-function Footer() {
+  if (!parentGroup) return [];
+
+  return menuItems
+    .filter((item) => item.parentId === parentGroup.id)
+    .map((item) => ({
+      title: item.label,
+      link: item.url,
+      id: crypto.randomUUID(),
+    }));
+};
+
+// Storing menus in separate variables dynamically
+const groupLinksOne = groupMenuItems(menuItems, "Footer Group One");
+const groupLinksTwo = groupMenuItems(menuItems, "Footer Group Two");
+const groupLinksThree = groupMenuItems(menuItems, "Footer Group Three");
+const groupLinksFour = groupMenuItems(menuItems, "Footer Group Four");
+const socialLinks = groupMenuItems(menuItems, "Social Media Links");
+
+// Console output for debugging
+// console.log(socialLinks[0] );
+
+  
   return (
     <footer className="bg-surface pb-5 pt-10">
       <div className="container">
@@ -66,7 +64,7 @@ function Footer() {
                   className="\\ h-8 w-8 rounded-full border border-dark/10 p-2"
                 />
                 <p className="font-inter font-normal leading-[26px] text-dark/80">
-                  Rupayan Prime, Plot 02, Road 07, Dhanmondi, Dhaka – 1205
+                 {groupLinksOne[0].title}
                 </p>
               </div>
               <div className="flex items-center gap-2">
@@ -76,7 +74,7 @@ function Footer() {
                   className="h-8 w-8 rounded-full border border-dark/10 p-2"
                 />
                 <p className="font-inter font-normal leading-[26px] text-dark/80">
-                  info@akskhanpharma.com
+                 {groupLinksOne[1].title}
                 </p>
               </div>
               <div className="flex items-center gap-2">
@@ -86,27 +84,27 @@ function Footer() {
                   className="h-8 w-8 rounded-full border border-dark/10 p-2"
                 />
                 <p className="font-inter font-normal leading-[26px] text-dark/80">
-                  Tel:- +8801847360360
+                  Tel: {groupLinksOne[2].title}
                 </p>
               </div>
             </div>
             <div className="lg:hidden">
-              <SocialMediaIcons />
+              <SocialMediaIcons socialLinks={socialLinks}/>
             </div>
           </div>
           <div className="hidden md:col-span-6 md:col-start-7 md:grid md:grid-cols-2 md:gap-x-10 lg:col-span-8 lg:col-start-5 lg:grid-cols-3 xl:gap-x-[60px]">
-            <LinkGroups heading="The Company" links={groupLinksOne} />
-            <LinkGroups heading="Quick Links" links={groupLinksTwo} />
-            <LinkGroups heading="AKS Group" links={groupLinksThree} />
+            <LinkGroups heading="The Company" links={groupLinksTwo} />
+            <LinkGroups heading="Quick Links" links={groupLinksThree} />
+            <LinkGroups heading="AKS Group" links={groupLinksFour} />
             <div className="hidden lg:block">
-              <SocialMediaIcons />
+              <SocialMediaIcons socialLinks={socialLinks}/>
             </div>
           </div>
         </div>
         <div className="border-t border-dark/10">
-          <MenuAccordion heading="The Company" links={groupLinksOne} />
-          <MenuAccordion heading="Quick Links" links={groupLinksTwo} />
-          <MenuAccordion heading="AKS Group" links={groupLinksThree} />
+          <MenuAccordion heading="The Company" links={groupLinksTwo} />
+          <MenuAccordion heading="Quick Links" links={groupLinksThree} />
+          <MenuAccordion heading="AKS Group" links={groupLinksFour} />
         </div>
         <FooterBottom />
       </div>

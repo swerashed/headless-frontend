@@ -5,7 +5,9 @@ import CoverageHeader from "./CoverageHeader";
 import CoverageMapContainer from "./CoverageMapContainer";
 
 async function CoverageAreaSection({ data }) {
-  const { title, description, districts, cta_description, cta_url, page } = data;
+  const { title, description, districts, cta_description, cta_url, page, image} = data;
+  console.log(image);
+
   const allOutlets = await fetchOutltes()
   const outlets = allOutlets?.outlets?.edges || [];
 
@@ -22,7 +24,7 @@ async function CoverageAreaSection({ data }) {
         <div className="container">
           <div className="grid grid-cols-1 justify-center md:grid-cols-2 md:grid-rows-2 md:gap-x-20 lg:gap-x-[100px]">
             <CoverageHeader title={title} description={description} />
-            <CoverageMapContainer page={page} districts={districts} />
+            <CoverageMapContainer image={image} page={page} districts={districts} />
             <CoverageFooter cta_description={cta_description} cta_url={cta_url} />
           </div>
         </div>

@@ -13,7 +13,7 @@ export function CoverageAreaSectionCenter({data, outlets}) {
           sectionDetails={description}
         />
         <div className="mt-[30px] w-full sm:mt-[20px] md:mt-[100px] xl:mt-[60px]">
-          <CoverageMapContainer page={page}/>
+          <CoverageMapContainer imageData={data.image || null} page={page}/>
         </div>
         <CoverageAreaTable cta_description={cta_description}  cta_url={cta_url} outlets={outlets}/>
        

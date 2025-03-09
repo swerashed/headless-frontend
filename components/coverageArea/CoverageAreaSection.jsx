@@ -11,7 +11,7 @@ async function CoverageAreaSection({ data }) {
   const pharmacyOutlets = pharmacyData?.outlets?.edges || [];
 
   const diagnosticsData = await fetchOutlets("diagnostics")
-  const diagnosticsOutlets = pharmacyData?.outlets?.edges || [];
+  const diagnosticsOutlets = diagnosticsData?.outlets?.edges || [];
 
   if (!page) {
     return null;
@@ -26,7 +26,7 @@ async function CoverageAreaSection({ data }) {
         <div className="container">
           <div className="grid grid-cols-1 justify-center md:grid-cols-2 md:grid-rows-2 md:gap-x-20 lg:gap-x-[100px]">
             <CoverageHeader title={title} description={description} />
-            <CoverageMapContainer image={image} page={page} districts={districts} />
+            <CoverageMapContainer imageData={data.image || null} page={page} districts={districts} />
             <CoverageFooter cta_description={cta_description} cta_url={cta_url} />
           </div>
         </div>

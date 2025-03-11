@@ -7,14 +7,13 @@ import { Pagination, Navigation, Autoplay, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import Image from "next/image";
 import { useRef } from "react";
 import SliderNavigationButton from "../buttons/SliderNavigationButton";
 import SectionHeading from "../headings/SectionHeading";
 import OurInvestorCard from "./OurInvestorCard";
 
 function OurInvestors({ data }) {
-  const {investors_items, title} = data;
+  const { investors_items, title } = data;
   const swiperRef = useRef(null);
 
   return (
@@ -23,7 +22,6 @@ function OurInvestors({ data }) {
         <div className="mb-[30px] flex items-center justify-between md:mb-10">
           <SectionHeading>{title}</SectionHeading>
           <div className="hidden items-center justify-end gap-[10px] md:flex">
-            <div className="investors-pagination mr-5 !flex !w-auto !min-w-10 !items-center !gap-1 font-onest text-xl font-medium !leading-none !text-red-900"></div>
             <SliderNavigationButton
               onPrev={() => swiperRef.current?.slidePrev()}
               onNext={() => swiperRef.current?.slideNext()}

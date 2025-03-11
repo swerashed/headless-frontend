@@ -3,7 +3,7 @@ function SliderNavigationButton({ onPrev, onNext }) {
     <div className="flex items-center gap-[10px]">
       <button
         onClick={onPrev}
-        className="hover:fill-blue-dark focus:fill-blue-dark flex h-8 w-8 items-center justify-center rounded-full fill-transparent stroke-blue transition-all duration-300 hover:stroke-white focus:stroke-white focus:outline-none"
+        className="flex h-8 w-8 items-center justify-center rounded-full fill-transparent stroke-blue transition-all duration-300 hover:fill-blue-dark hover:stroke-white"
       >
         <svg
           width={32}
@@ -31,7 +31,7 @@ function SliderNavigationButton({ onPrev, onNext }) {
       </button>
       <button
         onClick={onNext}
-        className="hover:fill-blue-dark focus:fill-blue-dark flex h-8 w-8 items-center justify-center rounded-full fill-transparent stroke-blue transition-all duration-300 hover:stroke-white focus:stroke-white focus:outline-none"
+        className="flex h-8 w-8 items-center justify-center rounded-full fill-transparent stroke-blue transition-all duration-300 hover:fill-blue-dark hover:stroke-white"
       >
         <svg
           width={32}

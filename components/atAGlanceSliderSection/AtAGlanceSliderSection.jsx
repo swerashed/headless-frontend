@@ -14,12 +14,17 @@ import SliderNavigationButton from "../buttons/SliderNavigationButton";
 import IconCard from "../cardGrid/IconCard";
 import SectionHeading from "../headings/SectionHeading";
 
-function AtAGlanceSliderSection({data}) {
-  const {glance_items, title, section_classnames} = data
+function AtAGlanceSliderSection({ data }) {
+  const { glance_items, title, section_classnames } = data;
   const swiperRef = useRef(null);
 
   return (
-    <section className={cn("overflow-hidden py-[50px] md:py-[120]", section_classnames)}>
+    <section
+      className={cn(
+        "my-[50px] overflow-hidden md:my-[120]",
+        section_classnames,
+      )}
+    >
       <div className="container">
         <div className="flex flex-row justify-between gap-5">
           <div data-aos="fade-right">

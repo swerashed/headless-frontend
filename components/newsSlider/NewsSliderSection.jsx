@@ -15,7 +15,13 @@ import NewsCard from "./NewsCard";
 import SectionHeading from "../headings/SectionHeading";
 import SliderNavigationButton from "../buttons/SliderNavigationButton";
 
-function NewsSliderSection({data, blogs, sectionHeading, newsItems, sectionClassName}) {
+function NewsSliderSection({
+  data,
+  blogs,
+  sectionHeading,
+  newsItems,
+  sectionClassName,
+}) {
   const title = data?.title || sectionHeading;
   const btn_url = data?.btn_url || null;
   const btn_title = data?.btn_title || "";
@@ -26,7 +32,7 @@ function NewsSliderSection({data, blogs, sectionHeading, newsItems, sectionClass
   return (
     <section
       className={cn(
-        "overflow-hidden bg-surface py-[50px] lg:py-[100px]",
+        "my-[50px] overflow-hidden bg-surface lg:my-[100px]",
         section_classname || sectionClassName,
       )}
     >
@@ -90,7 +96,9 @@ function NewsSliderSection({data, blogs, sectionHeading, newsItems, sectionClass
             className="mt-[30px] flex items-center justify-center md:mt-10"
             data-aos="fade-up"
           >
-            <PrimaryButton href={btn_url} border={true}>{btn_title}</PrimaryButton>
+            <PrimaryButton href={btn_url} border={true}>
+              {btn_title}
+            </PrimaryButton>
           </div>
         )}
       </div>

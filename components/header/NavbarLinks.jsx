@@ -25,7 +25,7 @@ function NavbarLinks({ menuData }) {
               if (hasChildItems) {
                 return (
                   <NavigationMenuItem key={item.id}>
-                    <NavigationMenuTrigger className="h-auto bg-transparent px-[10px] py-0 font-inter font-normal leading-[24px] transition-all duration-300 focus-within:outline-none hover:bg-transparent hover:text-blue md:text-sm xl:px-[12px] xl:text-base">
+                    <NavigationMenuTrigger className="h-auto bg-transparent px-[10px] py-0 font-inter font-normal leading-[24px] text-dark transition-all duration-300 focus-within:outline-none hover:bg-transparent hover:text-blue md:text-sm xl:px-[12px] xl:text-base">
                       {item.label}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
@@ -34,7 +34,7 @@ function NavbarLinks({ menuData }) {
                           <NavigationMenuLink
                             key={child.id}
                             href={child.url}
-                            className="w-full px-5 py-[10px] font-inter text-base font-normal leading-[26px] text-dark/80 transition-all duration-300 hover:text-blue"
+                            className="w-full px-5 py-[10px] font-inter text-base font-normal leading-[26px] text-dark transition-all duration-300 hover:text-blue"
                           >
                             {child.label}
                           </NavigationMenuLink>
@@ -48,7 +48,7 @@ function NavbarLinks({ menuData }) {
                   <NavigationMenuItem key={item.id}>
                     <Link
                       href={item.url}
-                      className="px-[10px] transition-all duration-300 hover:text-blue xl:px-[12px]"
+                      className="px-[10px] text-dark transition-all duration-300 hover:text-blue xl:px-[12px]"
                     >
                       {item.label}
                     </Link>
@@ -63,7 +63,6 @@ function NavbarLinks({ menuData }) {
 }
 
 export default NavbarLinks;
-
 
 // import Link from "next/link";
 // import {
@@ -85,13 +84,9 @@ export default NavbarLinks;
 //   // Filter out any null or undefined items
 //   const childItems = childItemsArray.filter((item) => item !== null && item !== undefined);
 
-
 //   return (
 
-
 //     <nav className="hidden items-center justify-center font-inter font-normal leading-[24px] md:text-sm lg:flex xl:text-base">
-
-
 
 //       <NavigationMenu>
 //         <NavigationMenuList>
@@ -115,13 +110,11 @@ export default NavbarLinks;
 //                   ))
 //                 }
 
-
 //               </div>
 //             </NavigationMenuContent>
 //           </NavigationMenuItem>
 //         </NavigationMenuList>
 //       </NavigationMenu>
-
 
 //       {
 //         menuItems.filter((item) => item.parentId === null).map((item) => (

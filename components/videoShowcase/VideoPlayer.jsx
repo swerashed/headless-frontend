@@ -1,7 +1,7 @@
 function VideoPlayer({ link }) {
   return (
     <video
-      className="block border-none"
+      className="block h-full w-full border-none"
       width="100%"
       height="100%"
       src={link}

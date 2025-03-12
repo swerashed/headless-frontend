@@ -5,7 +5,7 @@ function SectionHeading({ children, className }) {
   return (
     <h2
       className={cn(
-        "font-onest text-[30px] font-medium capitalize leading-[40px] text-dark lg:text-[40px] lg:leading-[50px]",
+        "font-onest text-[30px] font-medium leading-[40px] text-dark lg:text-[40px] lg:leading-[50px]",
         className,
       )}
     >

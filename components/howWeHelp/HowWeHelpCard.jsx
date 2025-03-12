@@ -14,11 +14,11 @@ function HowWeHelpCard({ card }) {
           className="h-full w-full object-cover transition-all duration-1000 group-hover:scale-110"
         />
       </div>
-      <div className="flex flex-col bg-white px-4 pb-3 pt-6">
+      <div className="flex min-h-[269px] flex-col bg-white px-4 pb-3 pt-6 lg:min-h-[297px] xl:min-h-[245px]">
         <h4 className="mb-[10px] line-clamp-1 font-onest text-xl font-medium leading-[30px] text-dark md:text-2xl md:leading-[32px]">
           {title}
         </h4>
-        <p className="mb-10 line-clamp-5 font-inter text-base font-normal leading-[26px] text-dark/80 md:line-clamp-2">
+        <p className="mb-10 flex-grow font-inter text-base font-normal leading-[26px] text-dark/80">
           {description}
         </p>
         <Link

@@ -3,8 +3,9 @@ import SectionHeading from "../headings/SectionHeading";
 import PrimaryButton from "../buttons/PrimaryButton";
 import { cn } from "@/lib/utils";
 
-function SideBySideWithButton({data}) {
-  const { image, title, details, section_classnames, btn_title, btn_url } = data
+function SideBySideWithButton({ data }) {
+  const { image, title, details, section_classnames, btn_title, btn_url } =
+    data;
   return (
     <section
       className={cn(
@@ -13,16 +14,16 @@ function SideBySideWithButton({data}) {
       )}
     >
       <div className="container">
-        <div className="flex flex-col gap-10 md:gap-20 lg:flex-row-reverse lg:items-center lg:gap-10">
+        <div className="flex flex-col gap-10 md:gap-20 xl:flex-row-reverse xl:items-center xl:gap-10">
           <Image
             src={image}
             alt="Section banner"
             width={625}
             height={625}
-            className="h-auto w-full rounded-[20px] object-cover shadow-md shadow-dark/10 lg:w-1/2"
+            className="h-auto w-full rounded-[20px] object-cover shadow-md shadow-dark/10 xl:w-1/2"
             data-aos="fade-left"
           />
-          <div className="flex flex-col lg:w-1/2">
+          <div className="flex flex-col xl:w-1/2">
             <div data-aos="fade-right">
               <SectionHeading className="mb-5 xl:mb-10 xl:text-[40px]">
                 {title}
@@ -36,7 +37,8 @@ function SideBySideWithButton({data}) {
             </p>
             <div data-aos="fade-up">
               <PrimaryButton
-              href={btn_url}                border={true}
+                href={btn_url}
+                border={true}
                 className="gap-2 py-3 pl-6 pr-4 text-base"
               >
                 {btn_title}

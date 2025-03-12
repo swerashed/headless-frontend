@@ -1,10 +1,10 @@
 import Image from "next/image";
 import PrimaryButton from "../buttons/PrimaryButton";
 
-function CallToActionSection({data}) {
-  const {title, button_title, button_url, image } = data
+function CallToActionSection({ data }) {
+  const { title, button_title, button_url, image } = data;
   return (
-    <section className="my-[30px] overflow-hidden md:my-[100px]">
+    <section className="my-[30px] mt-20 overflow-hidden md:my-[100px]">
       <div className="container" data-aos="fade-up">
         <div className="group relative flex flex-col items-center justify-center overflow-hidden rounded-xl bg-gradient-to-tr from-[#2AA781CC] to-[#20637DCC] px-[15px] py-[50px] shadow-md shadow-dark/10 md:shadow-xl lg:py-20">
           <Image
@@ -15,10 +15,14 @@ function CallToActionSection({data}) {
             className="absolute inset-0 -z-10 h-full w-full object-cover object-[20%_30%] transition-all duration-300 group-hover:scale-[1.05]"
           />
           <h2 className="mb-[30px] max-w-[550px] text-center font-onest text-[28px] font-medium leading-[38px] text-white lg:mb-10 lg:max-w-[850px] lg:text-[40px] lg:leading-[50px]">
-          {title}
+            {title}
           </h2>
-          <PrimaryButton href={button_url} className="bg-white" border={false}>
-           {button_title}
+          <PrimaryButton
+            href={button_url}
+            className="bg-white text-dark"
+            border={false}
+          >
+            {button_title}
           </PrimaryButton>
         </div>
       </div>

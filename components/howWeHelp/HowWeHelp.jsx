@@ -14,7 +14,7 @@ import SectionHeading from "../headings/SectionHeading";
 import HowWeHelpCard from "./HowWeHelpCard";
 
 function HowWeHelp({ data }) {
-  const {title, help_items} = data
+  const { title, help_items } = data;
   const swiperRef = useRef(null);
 
   return (
@@ -70,13 +70,6 @@ function HowWeHelp({ data }) {
           ))}
         </div>
       </div>
-
-      {/* <div
-        className="container flex items-center justify-center"
-        data-aos="fade-up"
-      >
-        <PrimaryButton border={true}>View all services</PrimaryButton>
-      </div> */}
     </section>
   );
 }

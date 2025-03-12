@@ -11,6 +11,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        "1.5xl": "1320px",
+      },
       fontFamily: {
         inter: ["var(--font-inter)"],
         onest: ["var(--font-onest)"],

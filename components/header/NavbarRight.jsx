@@ -1,26 +1,19 @@
 import PrimaryButton from "../buttons/PrimaryButton";
-import SearchField from "./SearchField";
 
-function NavbarRight({
-  isSearchOpen,
-  onSearchOpen,
-  isMobileMenuOpen,
-  onMobileMenuOpen,
-}) {
+function NavbarRight({ isMobileMenuOpen, onMobileMenuOpen }) {
   return (
     <div
       className={`flex items-center justify-end gap-5 md:min-w-[170px] lg:gap-[10px] xl:min-w-[210px] xl:gap-[30px]`}
     >
       <>
- 
-          <PrimaryButton
-            href="/contact-us"
-            border="false"
-            className="hidden gap-1 bg-blue stroke-white py-3 pl-6 pr-[14px] text-white transition-all duration-300 hover:bg-blue-dark md:flex"
-          >
-            Contact us
-          </PrimaryButton>
-        </>
+        <PrimaryButton
+          href="/contact-us"
+          border="false"
+          className="hidden gap-1 bg-blue stroke-white py-3 pl-6 pr-[14px] text-white transition-all duration-300 hover:bg-blue-dark lg:flex"
+        >
+          Contact us
+        </PrimaryButton>
+      </>
       <button
         onClick={onMobileMenuOpen}
         className="flex h-10 w-10 items-center justify-center rounded-full bg-blue stroke-white transition-all duration-300 hover:bg-blue-dark lg:hidden"

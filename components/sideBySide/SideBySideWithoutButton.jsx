@@ -16,11 +16,11 @@ function SideBySideWithoutButton({ bannerImage, heading, details, reverse }) {
         alt="Section banner"
         width={625}
         height={625}
-        className="h-auto w-full rounded-[20px] object-cover shadow-md shadow-dark/10 md:w-1/2"
+        className="aspect-[625/445] w-full rounded-[20px] object-cover shadow-md shadow-dark/10 md:w-1/2"
       />
       <div className="flex flex-col md:w-1/2">
         <div data-aos="fade-up">
-          <SectionHeading className="mb-[10px] text-[28px] leading-[38px] md:mb-5 md:text-[36px] md:leading-[48px]">
+          <SectionHeading className="mb-[10px] text-[28px] leading-[38px] md:mb-5 md:text-[36px] md:leading-[48px] lg:text-[36px] lg:leading-[48px] xl:text-[36px] xl:leading-[48px]">
             {heading}
           </SectionHeading>
         </div>

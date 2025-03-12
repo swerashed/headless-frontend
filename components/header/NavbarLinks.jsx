@@ -7,9 +7,12 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 function NavbarLinks({ menuData }) {
   const menuItems = menuData?.menu?.menuItems?.nodes || [];
+  const pathname = usePathname();
 
   return (
     <nav className="hidden items-center justify-center font-inter font-normal leading-[24px] md:text-sm lg:flex xl:text-base">
@@ -25,20 +28,25 @@ function NavbarLinks({ menuData }) {
               if (hasChildItems) {
                 return (
                   <NavigationMenuItem key={item.id}>
-                    <NavigationMenuTrigger className="h-auto bg-transparent px-[10px] py-0 font-inter font-normal leading-[24px] text-dark transition-all duration-300 focus-within:outline-none hover:bg-transparent hover:text-blue md:text-sm xl:px-[12px] xl:text-base">
+                    <NavigationMenuTrigger className="h-auto bg-transparent px-[10px] py-0 font-inter font-normal leading-[24px] text-dark transition-all duration-300 focus-within:outline-none hover:bg-transparent hover:text-blue focus:bg-transparent focus:outline-0 md:text-sm xl:px-[12px] xl:text-base">
                       {item.label}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <div className="flex w-[230px] flex-col gap-0.5 rounded-[10px] border-t border-dark/10 bg-white shadow-lg">
-                        {childItems.map((child) => (
-                          <NavigationMenuLink
-                            key={child.id}
-                            href={child.url}
-                            className="w-full px-5 py-[10px] font-inter text-base font-normal leading-[26px] text-dark transition-all duration-300 hover:text-blue"
-                          >
-                            {child.label}
-                          </NavigationMenuLink>
-                        ))}
+                        {childItems.map((child) => {
+                          return (
+                            <NavigationMenuLink
+                              key={child.id}
+                              href={child.url}
+                              className={cn(
+                                "w-full px-5 py-[10px] font-inter text-base font-normal leading-[26px] text-dark transition-all duration-300 hover:text-blue",
+                                pathname === child.url ? "text-bluegit add" : "",
+                              )}
+                            >
+                              {child.label}
+                            </NavigationMenuLink>
+                          );
+                        })}
                       </div>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
@@ -48,7 +56,10 @@ function NavbarLinks({ menuData }) {
                   <NavigationMenuItem key={item.id}>
                     <Link
                       href={item.url}
-                      className="px-[10px] text-dark transition-all duration-300 hover:text-blue xl:px-[12px]"
+                      className={cn(
+                        "px-[10px] text-dark transition-all duration-300 hover:text-blue xl:px-[12px]",
+                        pathname === item.url ? "text-blue" : "",
+                      )}
                     >
                       {item.label}
                     </Link>

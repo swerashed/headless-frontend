@@ -14,11 +14,11 @@ function DiagnosticsCard({ card }) {
           className="h-full w-full object-cover transition-all duration-1000 group-hover:scale-110"
         />
       </div>
-      <div className="flex flex-col bg-white px-4 pb-3 pt-6">
-        <h4 className="mb-[10px] line-clamp-1 font-onest text-xl font-medium leading-[30px] md:text-2xl md:leading-[32px]">
+      <div className="flex flex-grow flex-col bg-white px-4 pb-3 pt-6">
+        <h4 className="mb-[10px] font-onest text-xl font-medium leading-[30px] md:text-2xl md:leading-[32px]">
           {card_title}
         </h4>
-        <p className="mb-10 line-clamp-5 font-inter text-base font-normal leading-[26px] text-dark/80 md:line-clamp-2">
+        <p className="mb-10 min-h-[110px] font-inter text-base font-normal leading-[26px] text-dark/80">
           {card_sub_title}
         </p>
         <Link

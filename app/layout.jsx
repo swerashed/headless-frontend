@@ -5,7 +5,7 @@ import AOSWrapper from "@/utils/AOSWrapper";
 import Footer from "@/components/footer/Footer";
 import NavbarWrapper from "@/components/header/NavbarWrapper";
 import { fetchMenus } from "@/graphql/pages/GET_MENUS";
-
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const onest = Onest({ subsets: ["latin"], variable: "--font-onest" });
@@ -28,7 +28,7 @@ export default async function RootLayout({ children }) {
             {children}
             <Footer />
           </AOSWrapper>
-
+          <Toaster />
         </body>
       </ReactLenis>
     </html>

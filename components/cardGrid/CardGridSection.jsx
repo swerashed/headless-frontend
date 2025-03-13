@@ -17,7 +17,7 @@ function CardGridSection({ data }) {
         </div>
         <div
           className={cn(
-            "mt-[30px] grid grid-cols-2 gap-[15px] bg-red-600 md:mt-10 md:gap-[30px] lg:grid-cols-3",
+            "mt-[30px] grid grid-cols-2 gap-[15px] md:mt-10 md:gap-[30px] lg:grid-cols-3",
             inner_classnames,
           )}
         >

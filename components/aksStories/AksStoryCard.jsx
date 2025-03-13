@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 function AksStoryCard({ card }) {
-  const {title,label, image } =card
+  const { title, label, image } = card;
   return (
-    <div className="group relative flex h-[400px] cursor-pointer flex-col overflow-hidden rounded-[20px] shadow-md shadow-dark/10 transition-all duration-300 hover:shadow-lg lg:h-[567px]">
+    <div className="group relative flex h-[400px] flex-col overflow-hidden rounded-[20px] transition-all duration-300 lg:h-[567px]">
       <Image
         src={image}
         alt={title}

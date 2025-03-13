@@ -1,13 +1,26 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const SocialShareBottom = () => {
+  const domain = "https://staging.akskhanpharma.com"; // Change this to your actual domain
+  const pathName = usePathname();
+
+  // Construct the full URL and encode the pathname part.
+  const pageLink = encodeURIComponent(domain + pathName);
+
   return (
     <div className="social-icon-container mx-auto flex max-w-[950px] gap-5 border-t border-border pt-5">
       <span className="font-onest text-[20px] font-medium leading-[30px] text-dark">
         Share:
       </span>
       <div className="icon-groups flex gap-4">
-        <Link className="transition-all duration-300 hover:scale-105" href="#">
+        <Link
+          className="transition-all duration-300 hover:scale-105"
+          target="_blank"
+          href={`https://www.facebook.com/sharer/sharer.php?u=${pageLink}`}
+        >
           <svg
             width="32"
             height="32"
@@ -31,7 +44,11 @@ const SocialShareBottom = () => {
           </svg>
         </Link>
 
-        <Link className="transition-all duration-300 hover:scale-105" href="#">
+        <Link
+          className="transition-all duration-300 hover:scale-105"
+          target="_blank"
+          href={`https://www.linkedin.com/sharing/share-offsite/?url=${pageLink}`}
+        >
           <svg
             width="32"
             height="32"
@@ -55,7 +72,11 @@ const SocialShareBottom = () => {
           </svg>
         </Link>
 
-        <Link className="transition-all duration-300 hover:scale-105" href="#">
+        <Link
+          className="transition-all duration-300 hover:scale-105"
+          target="_blank"
+          href={`mailto:?subject=<Subject>&body=<Body> ${pageLink}`}
+        >
           <svg
             width="32"
             height="32"

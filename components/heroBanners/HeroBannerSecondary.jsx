@@ -2,9 +2,9 @@ import Image from "next/image";
 import SocialIcons from "../shared/SocialIcons";
 import { cn } from "@/lib/utils";
 
-function HeroBannerSecondary({data}) {
-  if (!data) return null
-  const {title, page, image, social} = data
+function HeroBannerSecondary({ data }) {
+  if (!data) return null;
+  const { title, page, image, social } = data;
   return (
     <section className="relative h-[480px] md:h-[550px]">
       <Image
@@ -25,18 +25,18 @@ function HeroBannerSecondary({data}) {
             <h3
               className={cn(
                 "font-inter text-[14px] font-medium uppercase leading-[20px] text-white md:text-[16px] md:leading-[22px]",
-                { social: "font-normal leading-[26px]" },
+                social &&
+                  "text-base font-normal capitalize leading-[26px] md:leading-[26px]",
               )}
             >
-             {page}
+              {page}
             </h3>
 
-            {
-              title &&  (<h1 className="max-w-4xl font-onest text-[34px] font-medium leading-[44px] text-white md:text-5xl md:leading-[58px]">
-              {title}
-            </h1>)
-            }
-           
+            {title && (
+              <h1 className="max-w-4xl font-onest text-[34px] font-medium leading-[44px] text-white md:text-5xl md:leading-[58px]">
+                {title}
+              </h1>
+            )}
 
             {social && <SocialIcons facebookLink="#" LinkedinLink="#" />}
           </div>

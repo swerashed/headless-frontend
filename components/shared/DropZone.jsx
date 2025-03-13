@@ -1,23 +1,24 @@
 "use client";
 
 import { Upload } from "lucide-react";
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 
-function Dropzone({ className, onFileSelect }) {
-  const [file, setFile] = useState(null);
-
-  const onDrop = useCallback((acceptedFiles) => {
-    if (acceptedFiles?.length) {
-      setFile(acceptedFiles[0]); // Store only the first file
-      onFileSelect(acceptedFiles[0]); // Pass the file to parent
-    }
-  }, [onFileSelect]);
+function Dropzone({ file, setFile, className, onFileSelect }) {
+  const onDrop = useCallback(
+    (acceptedFiles) => {
+      if (acceptedFiles?.length) {
+        setFile(acceptedFiles[0]); // Store only the first file
+        onFileSelect(acceptedFiles[0]); // Pass the file to parent
+      }
+    },
+    [onFileSelect, setFile],
+  );
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
     accept: { "application/pdf": [".pdf"] },
-    maxSize: 6000000,
+    maxSize: 5000000,
     maxFiles: 1,
     multiple: false,
   });

@@ -1,7 +1,6 @@
 import { fetchImpactsPage } from "@/graphql/pages/GET_IMPACTS_PAGE";
 import RenderBlocksHelper from "@/utils/RenderBlocksHelper";
 
-
 export async function generateMetadata() {
   const data = (await fetchImpactsPage()) || {};
   const seo = data?.page?.seo || {};
@@ -16,7 +15,7 @@ export async function generateMetadata() {
 
 async function ImpactPage() {
   const data = await fetchImpactsPage();
-  return (<RenderBlocksHelper data={data}/>);
+  return <RenderBlocksHelper data={data} />;
 }
 
 export default ImpactPage;

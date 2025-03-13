@@ -6,23 +6,26 @@ import { cn } from "@/lib/utils";
 import { useState } from "react";
 import SubmitButton from "../buttons/SubmitButton";
 import useApplyJob from "@/hooks/useApplyJob";
+import { toast } from "sonner";
 
 function ApplicationForm({ data }) {
-  const { sendMail, loading, message, error, setMessage, setError } = useApplyJob();
+  const { sendMail, loading, message, error, setMessage, setError } =
+    useApplyJob();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     phone: "",
     email: "",
-    file: null, 
+    file: null,
   });
-  
+  const [file, setFile] = useState(null);
+
   // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
-  
+
   // Handle file selection from DropZone
   const handleFileUpload = (file) => {
     if (file && file instanceof File) {
@@ -35,12 +38,19 @@ function ApplicationForm({ data }) {
     e.preventDefault();
     setMessage(null);
     setError(null);
-  
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.file) {
+
+    if (
+      !formData.firstName ||
+      !formData.lastName ||
+      !formData.email ||
+      !formData.phone ||
+      !formData.file
+    ) {
       setError("All fields, including the file, are required.");
+      toast("All fields, including the file, are required.");
       return;
     }
-  
+
     const formDataToSend = new FormData();
     formDataToSend.append("firstName", formData.firstName);
     formDataToSend.append("lastName", formData.lastName);
@@ -48,26 +58,43 @@ function ApplicationForm({ data }) {
     formDataToSend.append("email", formData.email);
     formDataToSend.append("job_title", data?.title || "");
     formDataToSend.append("resume", formData.file); // Fix: Match backend key
-  
+
     try {
       await sendMail(formDataToSend);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        phone: "",
+        email: "",
+        file: null,
+      });
+      setFile(null);
+      toast("Application successfully Send. Thank you!");
     } catch (err) {
       setError("Failed to send email. Please try again.");
       console.error("Mail send error:", err);
+      toast("Something went wrong. Try again!");
     }
   };
-  
-  
+
   return (
     <div data-aos="fade-up" className="flex w-full flex-col">
       <p className="mb-4 border-y border-dark/10 py-3 text-base font-normal leading-[26px] text-dark/80">
         <span className="font-semibold text-dark">Position:</span> {data?.title}
       </p>
 
-      <form onSubmit={handleSubmit} method="POST" encType="multipart/form-data" className="grid grid-cols-1 gap-4 font-inter md:grid-cols-2 md:gap-5">
+      <form
+        onSubmit={handleSubmit}
+        method="POST"
+        encType="multipart/form-data"
+        className="grid grid-cols-1 gap-4 font-inter md:grid-cols-2 md:gap-5"
+      >
         {/* First Name */}
         <div className="flex flex-col gap-1">
-          <Label htmlFor="firstName" className="text-base font-normal capitalize leading-[26px] text-dark">
+          <Label
+            htmlFor="firstName"
+            className="text-base font-normal capitalize leading-[26px] text-dark"
+          >
             First Name <span className="text-[#ED1B24]">*</span>
           </Label>
           <Input
@@ -84,7 +111,10 @@ function ApplicationForm({ data }) {
 
         {/* Last Name */}
         <div className="flex flex-col gap-1">
-          <Label htmlFor="lastName" className="text-base font-normal capitalize leading-[26px] text-dark">
+          <Label
+            htmlFor="lastName"
+            className="text-base font-normal capitalize leading-[26px] text-dark"
+          >
             Last Name <span className="text-[#ED1B24]">*</span>
           </Label>
           <Input
@@ -101,7 +131,10 @@ function ApplicationForm({ data }) {
 
         {/* Phone */}
         <div className="flex flex-col gap-1">
-          <Label htmlFor="phone" className="text-base font-normal capitalize leading-[26px] text-dark">
+          <Label
+            htmlFor="phone"
+            className="text-base font-normal capitalize leading-[26px] text-dark"
+          >
             Phone <span className="text-[#ED1B24]">*</span>
           </Label>
           <Input
@@ -110,7 +143,8 @@ function ApplicationForm({ data }) {
             required
             id="phone"
             name="phone"
-            type="text"
+            type="tel"
+            pattern="[0-9]*"
             placeholder="Phone"
             className="h-auto w-full rounded-[40px] border border-dark/10 bg-surface px-4 py-3 text-sm font-normal leading-[22px] text-dark placeholder:text-dark/80 focus-visible:border"
           />
@@ -118,7 +152,10 @@ function ApplicationForm({ data }) {
 
         {/* Email */}
         <div className="flex flex-col gap-1">
-          <Label htmlFor="email" className="text-base font-normal capitalize leading-[26px] text-dark">
+          <Label
+            htmlFor="email"
+            className="text-base font-normal capitalize leading-[26px] text-dark"
+          >
             Email <span className="text-[#ED1B24]">*</span>
           </Label>
           <Input
@@ -135,7 +172,12 @@ function ApplicationForm({ data }) {
 
         {/* File Upload */}
         <div className="mt-2 md:col-span-2 md:-mt-1">
-          <DropZone onFileSelect={handleFileUpload} className="group flex h-[110px] cursor-pointer flex-col items-center justify-center rounded-[10px] border border-dashed border-dark/80 bg-gradient-to-t from-[#36F1B91A]/10 to-[#3484A41A]/10 transition-all duration-300 hover:border-green" />
+          <DropZone
+            file={file}
+            setFile={setFile}
+            onFileSelect={handleFileUpload}
+            className="group flex h-[110px] cursor-pointer flex-col items-center justify-center rounded-[10px] border border-dashed border-dark/80 bg-gradient-to-t from-[#36F1B91A]/10 to-[#3484A41A]/10 transition-all duration-300 hover:border-green"
+          />
           <p className="mt-2 font-inter text-sm font-normal leading-[22px] text-dark/80">
             Upload file size max 5MB. Accept file (.pdf)
           </p>
@@ -146,17 +188,13 @@ function ApplicationForm({ data }) {
           type="submit"
           disabled={loading}
           className={cn(
-            "mt-2 flex w-full items-center justify-center gap-2 rounded-full bg-blue py-3 text-base font-semibold text-white transition-all duration-300 sm:w-fit md:-mt-1",
-            loading ? "opacity-50 cursor-not-allowed" : ""
+            "mt-2 flex w-full items-center justify-center gap-2 rounded-full bg-blue stroke-white py-3 text-base font-semibold text-white transition-all duration-300 sm:w-fit md:-mt-1",
+            loading ? "cursor-not-allowed opacity-50" : "",
           )}
         >
           {loading ? "Sending..." : "Submit Now"}
         </SubmitButton>
       </form>
-
-      {/* Success/Error Messages */}
-      {message && <p className="mt-4 text-green-600">{message}</p>}
-      {error && <p className="mt-4 text-red-600">{error}</p>}
     </div>
   );
 }

@@ -1,8 +1,7 @@
 import { cn } from "@/lib/utils";
 import PrimaryButton from "../buttons/PrimaryButton";
 
-
-function StorySection({data}) {
+function StorySection({ data }) {
   const {
     section_title,
     title,
@@ -10,7 +9,7 @@ function StorySection({data}) {
     btn_text,
     btn_link,
     section_classname,
-  } = data
+  } = data;
   return (
     <section
       className={cn(
@@ -44,7 +43,7 @@ function StorySection({data}) {
           )}
           {btn_link && (
             <div data-aos="fade-up">
-              <PrimaryButton href={btn_link}className="hidden md:mt-10 md:flex">
+              <PrimaryButton href={btn_link} className="mt-10 flex">
                 {btn_text}
               </PrimaryButton>
             </div>

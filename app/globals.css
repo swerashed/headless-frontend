@@ -146,7 +146,7 @@ html.lenis body {
 
 .animate-progress {
   width: 100%;
-  transition: width 8s linear;
+  transition: width 6s linear;
 }
 
 /* ------------------------------------- */
@@ -259,7 +259,7 @@ html.lenis body {
 }
 
 .social-share-container {
-  max-width: 910px;
+  max-width: 1080px;
   width: 100%;
   margin: 0 auto;
   padding-inline: clamp(
@@ -363,4 +363,32 @@ html.lenis body {
   -webkit-transition-timing-function: linear !important;
   -o-transition-timing-function: linear !important;
   transition-timing-function: linear !important;
+}
+
+.diagnostics__statistics__section {
+  @apply bg-surface pb-[50px] md:pb-[100px];
+}
+
+.diagnostics__recent-updates__section {
+  @apply bg-surface py-[50px] md:py-[100px];
+}
+
+.career__video__section {
+  @apply !mt-0 mb-[50px] md:!mb-[100px] md:!mt-0;
+}
+
+.career__about-us-story__section {
+  @apply !py-[50px] md:!py-[100px];
+}
+
+.career__aks-story-block__section {
+  @apply !mt-0 mb-[50px] md:!mt-0 md:mb-[100px];
+}
+
+.about-us__statistics__section {
+  @apply !pb-[50px] md:!pb-20;
+}
+
+.pharmacy__statistics__section {
+  @apply !pb-[50px] md:!pb-[100px];
 }

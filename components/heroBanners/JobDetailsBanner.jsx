@@ -2,6 +2,18 @@ import Image from "next/image";
 import BackButton from "../buttons/BackButton";
 import PrimaryButton from "../buttons/PrimaryButton";
 
+function formatDate(dateStr) {
+  const date = new Date(dateStr);
+
+  return date
+    .toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    })
+    .replace(",", "");
+}
+
 const JobDetailsBanner = ({ data }) => {
   return (
     <div
@@ -34,7 +46,7 @@ const JobDetailsBanner = ({ data }) => {
               alt="Vacancy icon"
               className="h-5 w-5 object-contain"
             />
-            <p className="font-inter text-sm font-normal leading-[22px]">
+            <p className="font-inter text-sm font-normal leading-[22px] text-dark/80">
               {data?.location}
             </p>
           </div>
@@ -46,7 +58,7 @@ const JobDetailsBanner = ({ data }) => {
               alt="department icon"
               className="h-5 w-5 object-contain"
             />
-            <p className="font-inter text-sm font-normal leading-[22px]">
+            <p className="font-inter text-sm font-normal leading-[22px] text-dark/80">
               {data?.department}
             </p>
           </div>
@@ -59,8 +71,8 @@ const JobDetailsBanner = ({ data }) => {
               className="h-5 w-5 object-contain"
             />
 
-            <p className="font-inter text-sm font-normal leading-[22px]">
-              Deadline: {data?.deadline}
+            <p className="font-inter text-sm font-normal leading-[22px] text-dark/80">
+              Deadline: {formatDate(data?.deadline)}
             </p>
           </div>
           <div className="flex flex-row items-center justify-center gap-3">
@@ -71,7 +83,7 @@ const JobDetailsBanner = ({ data }) => {
               alt="Vacancy icon"
               className="h-5 w-5 object-contain"
             />
-            <p className="font-inter text-sm font-normal leading-[22px]">
+            <p className="font-inter text-sm font-normal leading-[22px] text-dark/80">
               Vacancies: {data?.vacancies}
             </p>
           </div>

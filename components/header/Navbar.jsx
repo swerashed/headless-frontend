@@ -6,6 +6,10 @@ import NavbarLinks from "./NavbarLinks";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
+import BlogNotification from "../shared/BlogNotification";
+
+const blogNotification = false;
 
 function Navbar({ isVisible, isMobileMenuOpen, onMobileMenuOpen, menuData }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -16,16 +20,19 @@ function Navbar({ isVisible, isMobileMenuOpen, onMobileMenuOpen, menuData }) {
 
   return (
     <header
-      className={`fixed left-0 right-0 z-50 ${isVisible ? "lg:top-[10px]" : "top-0"} pointer-events-none transition-all duration-700 ease-in-out`}
+      className={`pointer-events-none fixed left-0 right-0 z-50 transition-all duration-700 ease-in-out ${!blogNotification && isVisible ? "lg:top-[10px]" : "top-0"}`}
     >
-      <div className="mx-auto max-w-[1440px] lg:px-[15px] xl:px-[75px]">
+      {blogNotification && <BlogNotification isVisible={isVisible} />}
+      <div className={cn("mx-auto max-w-[1440px] lg:px-[15px] xl:px-[75px]")}>
         <div
           onClick={() => isSearchOpen && handleSearchOpen()}
           className={`pointer-events-auto border-b border-dark/10 bg-white px-4 py-[10px] transition-transform duration-300 lg:rounded-xl lg:border-none lg:bg-white/90 lg:backdrop-blur-[36] xl:px-5 ${
-            isVisible ? "transform-none shadow-2xl" : "-translate-y-full"
+            isVisible
+              ? "transform-none shadow-2xl"
+              : "-translate-y-full lg:-translate-y-[180%]"
           }`}
         >
-          <div className="1.5xl:gap-8 flex flex-row items-center justify-between gap-4">
+          <div className="flex flex-row items-center justify-between gap-4 1.5xl:gap-8">
             <div className="flex items-center justify-start md:min-w-[170px] xl:min-w-[210px]">
               <Link href="/">
                 <Image

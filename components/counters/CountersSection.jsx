@@ -34,12 +34,7 @@ function CountersSection({ data }) {
     );
   };
   return (
-    <section
-      className={cn(
-        "mb-[50px] overflow-hidden md:mb-[100px]",
-        section_classnames,
-      )}
-    >
+    <section className={cn("overflow-hidedn", section_classnames)}>
       <div className="container">
         {title && (
           <SectionHeading className="mb-[30px] md:mb-10">

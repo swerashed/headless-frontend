@@ -1,12 +1,21 @@
-import Link from "next/link";
-import React from "react";
+"use client";
 
-const SocialIcons = ({ facebookLink, LinkedinLink }) => {
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const SocialIcons = ({}) => {
+  const domain = "https://staging.akskhanpharma.com"; // Change this to your actual domain
+  const pathName = usePathname();
+
+  // Construct the full URL and encode the pathname part.
+  const pageLink = encodeURIComponent(domain + pathName);
+
   return (
     <div className="mt-2.5 flex gap-[16px] lg:mt-[30px]">
       <Link
+        target="_blank"
+        href={`https://www.facebook.com/sharer/sharer.php?u=${pageLink}`}
         className="transition-all duration-300 hover:scale-105"
-        href={facebookLink}
       >
         <svg
           width="32"
@@ -32,8 +41,9 @@ const SocialIcons = ({ facebookLink, LinkedinLink }) => {
       </Link>
 
       <Link
+        target="_blank"
         className="transition-all duration-300 hover:scale-105"
-        href={LinkedinLink}
+        href={`https://www.linkedin.com/sharing/share-offsite/?url=${pageLink}`}
       >
         <svg
           width="32"
@@ -53,6 +63,34 @@ const SocialIcons = ({ facebookLink, LinkedinLink }) => {
           <defs>
             <clipPath id="clip0_1134_29332">
               <rect width="32" height="32" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+      </Link>
+
+      <Link
+        className="transition-all duration-300 hover:scale-105"
+        target="_blank"
+        href={`mailto:?subject=<Subject>&body=<Body> ${pageLink}`}
+      >
+        <svg
+          width={32}
+          height={32}
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clipPath="url(#clip0_789_14431)">
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M31.7771 15.9716C31.7771 7.24239 24.7008 0.166016 15.9716 0.166016C7.24239 0.166016 0.166016 7.24239 0.166016 15.9716C0.166016 24.7008 7.24239 31.7771 15.9716 31.7771C24.7008 31.7771 31.7771 24.7008 31.7771 15.9716ZM25.3346 12.7709C25.3346 12.6442 25.3208 12.5221 25.3026 12.4L25.3023 12.3998L25.3069 12.3951L17.9898 16.6244L17.9685 16.5983L15.9793 17.7584L6.70921 12.3528C6.68169 12.489 6.66797 12.63 6.66797 12.7708V20.4636C6.66797 20.5085 6.66948 20.5531 6.67212 20.5974L6.66797 20.5998L6.67427 20.6324C6.68751 20.8073 6.72102 20.9766 6.77239 21.1379L6.8284 21.4264L7.2086 21.99L7.82239 22.4456L8.0247 22.5068C8.14588 22.5563 8.2724 22.5947 8.40291 22.6209L8.49122 22.6476H8.57116C8.65029 22.6569 8.73063 22.6617 8.81192 22.6617H8.81543L8.81192 22.6663L12.3917 22.6617H19.5514L23.1313 22.6663L23.1278 22.6617H23.1908C23.2722 22.6617 23.3525 22.6569 23.4316 22.6476H23.452L23.4655 22.6434C23.6898 22.6136 23.9036 22.5476 24.1011 22.4516L24.1208 22.4456L24.1366 22.4339C24.3513 22.3245 24.5461 22.1793 24.7132 22.006L24.7345 21.99L24.751 21.9656C25.1123 21.5716 25.3346 21.0425 25.3346 20.4637V12.7709ZM23.1908 9.33309H8.81192V9.33775C7.77221 9.33775 6.89724 10.108 6.70482 11.1177L15.9991 16.5374L25.3026 11.16C25.1284 10.1269 24.2444 9.33309 23.1908 9.33309Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_789_14431">
+              <rect width={32} height={32} fill="white" />
             </clipPath>
           </defs>
         </svg>

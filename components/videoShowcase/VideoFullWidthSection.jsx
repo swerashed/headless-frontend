@@ -4,9 +4,10 @@ import { useState } from "react";
 import Image from "next/image";
 import VideoPlayer from "./VideoPlayer";
 import { cn } from "@/lib/utils";
+import { Play } from "lucide-react";
 
-function VideoFullWidthSection({data}) {
-  const { video,  image} = data;
+function VideoFullWidthSection({ data }) {
+  const { video, image } = data;
 
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -17,7 +18,7 @@ function VideoFullWidthSection({data}) {
   return (
     <section className="pb-10 pt-[60px] md:p-0">
       <div className={cn("container", "md:mx-0 md:max-w-full md:px-0")}>
-        <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[20px] border-none shadow-md shadow-dark/10 md:rounded-none md:shadow-lg lg:h-[712px] lg:shadow-xl">
+        <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[20px] border-none bg-black shadow-md shadow-dark/10 md:rounded-none md:shadow-lg lg:h-[712px] lg:shadow-xl">
           {isPlaying ? (
             <VideoPlayer link={video} />
           ) : (
@@ -33,16 +34,11 @@ function VideoFullWidthSection({data}) {
                 className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="group absolute flex h-[42px] w-[42px] items-center justify-center rounded-full bg-white fill-green shadow-md shadow-dark/10 md:h-20 md:w-20 md:shadow-xl lg:h-[120px] lg:w-[120px] lg:shadow-2xl">
-                <svg
-                  viewBox="0 0 36 36"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="transition-all duration-300 group-hover:scale-105"
-                >
-                  <path
-                    d="M24.3187 17.3271C24.634 17.5226 24.634 17.9814 24.3187 18.177L15.6398 23.5589C15.3067 23.7655 14.8763 23.5259 14.8763 23.134L14.8763 12.3701C14.8763 11.9782 15.3067 11.7386 15.6398 11.9452L24.3187 17.3271Z"
-                    fill="current"
-                  />
-                </svg>
+                <Play
+                  fill="#2E8168"
+                  size={27}
+                  className="h-3 w-3 text-[#2E8168] md:h-[27px] md:w-[27px]"
+                />
               </div>
             </div>
           )}

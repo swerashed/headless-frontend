@@ -3,13 +3,19 @@ import Link from "next/link";
 
 function TabContentCard({ file }) {
   return (
-    <Link href={file.link} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between gap-[10px] rounded-[10px] border border-dark/10 px-[10px] py-5 pr-5">
+    <Link
+      href={file.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center justify-between gap-[10px] rounded-[10px] border border-dark/10 px-[10px] py-5 pr-5"
+    >
       <svg
         width={56}
         height={56}
         viewBox="0 0 56 56"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className="flex-shrink-0"
       >
         <path
           d="M43.75 45.5C43.75 47.425 42.175 49 40.25 49H15.75C13.825 49 12.25 47.425 12.25 45.5V14.875L20.125 7H40.25C42.175 7 43.75 8.575 43.75 10.5V45.5Z"
@@ -109,7 +115,7 @@ function TabContentCard({ file }) {
           </linearGradient>
         </defs>
       </svg>
-      <p className="line-clamp-1 flex-grow text-xl font-medium leading-[30px] text-dark">
+      <p className="flex-grow text-xl font-medium leading-[30px] text-dark">
         {file.name || "File Name"}
       </p>
       <svg
@@ -118,6 +124,7 @@ function TabContentCard({ file }) {
         viewBox="0 0 28 28"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className="flex-shrink-0"
       >
         <path
           d="M1.16797 24.5V26.8334H26.8346V24.5H1.16797ZM22.168 14L20.5346 12.3667L15.168 17.7334V1.16669H12.8346V17.7322L7.46797 12.3655L5.83464 14L14.0013 22.1667L22.168 14Z"

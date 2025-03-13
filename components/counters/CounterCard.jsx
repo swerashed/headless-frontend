@@ -7,7 +7,7 @@ function CounterCard({ data }) {
       data-aos="fade-up"
       className="group relative flex flex-col justify-between gap-16 rounded-[10px] border border-dark/10 bg-white p-[15px] shadow-sm shadow-dark/10 transition-all duration-300 hover:shadow-md md:gap-[66px] md:p-[30px]"
     >
-      <h4 className="font-onest text-[30px] font-medium leading-[40px] text-blue md:leading-none xl:text-[55px]">
+      <h4 className="font-onest text-xl font-medium leading-[40px] text-blue md:text-[30px] md:leading-none xl:text-[55px]">
         {number}
         {prefix || ""}
       </h4>

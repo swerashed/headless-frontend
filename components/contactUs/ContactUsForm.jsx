@@ -15,6 +15,7 @@ import {
 import { Textarea } from "../ui/textarea";
 import useSendMail from "@/hooks/useSendEmail";
 import SubmitButton from "../buttons/SubmitButton";
+import { toast } from "sonner";
 
 function ContactUsForm() {
   const { sendMail, loading, message, error, setMessage, setError } =
@@ -52,8 +53,10 @@ function ContactUsForm() {
         inquiry: "",
         message: "",
       });
+      toast("Mail send successfully. Thank you!");
     } catch (err) {
       console.error("Mail send error:", err);
+      toast("Mail send failed. Try again!");
     }
   };
 
@@ -109,7 +112,8 @@ function ContactUsForm() {
           <Input
             required
             id="phone"
-            type="text"
+            type="tel"
+            pattern="[0-9]*"
             placeholder="Phone"
             value={formData.phone}
             onChange={handleChange}
@@ -197,9 +201,6 @@ function ContactUsForm() {
           {loading ? "Sending..." : "Submit Now"}
         </SubmitButton>
       </form>
-
-      {message && <p className="text-green-600 mt-4">{message}</p>}
-      {error && <p className="mt-4 text-red-600">{error}</p>}
     </div>
   );
 }

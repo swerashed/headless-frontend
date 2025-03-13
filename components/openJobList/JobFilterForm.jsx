@@ -1,20 +1,20 @@
-import { 
-  Select, 
-  SelectContent, 
-  SelectGroup, 
-  SelectItem, 
-  SelectTrigger, 
-  SelectValue 
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
 } from "../ui/select";
 
 function JobFilterForm({ filterProps }) {
-  const { 
-    districts, 
-    departments, 
-    selectedDistrict, 
-    setSelectedDistrict, 
-    selectedDepartment, 
-    setSelectedDepartment 
+  const {
+    districts,
+    departments,
+    selectedDistrict,
+    setSelectedDistrict,
+    selectedDepartment,
+    setSelectedDepartment,
   } = filterProps;
 
   return (

@@ -1,46 +1,43 @@
-
-import AboutBanner from './aboutBanner/AboutBanner';
-import AksStoriesSection from './aksStories/AksStoriesSection';
-import AtAGlanceSliderSection from './atAGlanceSliderSection/AtAGlanceSliderSection';
-import AppDownloadSection from './callToAction/AppDownloadSection';
-import CallToActionSection from './callToAction/CallToActionSection';
-import CardGridSection from './cardGrid/CardGridSection';
-import ContactUsSection from './contactUs/ContactUsSection';
-import CountersSection from './counters/CountersSection';
-import CoverageAreaSection from './coverageArea/CoverageAreaSection';
-import CustomerCareAboutSection from './customerCareAbout/CustomerCareAboutSection';
-import CustomerReviewSection from './customerReview/CustomerReviewSection';
-import DepartmentSection from './departments/DepartmentSection';
-import DiagnosticWrapper from './diagnostic/DiagnosticWrapper';
-import HeroBannerSecondary from './heroBanners/HeroBannerSecondary';
-import HeroSlider from './heroBanners/HeroSlider';
-import HowWeHelp from './howWeHelp/HowWeHelp';
-import MissionVissionSection from './missionVission/MissionVissionSection';
-import NewsHero from './newsHero/NewsHero';
-import NewsCardContainer from './newsSlider/NewsCardContainer';
-import NewsSliderWrapper from './newsSlider/NewsSliderWrapper';
-import OpenJobListSection from './openJobList/OpenJobListSection';
-import OurInvestors from './ourInvestors/OurInvestors';
-import OurPartners from './ourPartners/OurPartners';
-import PeopleCardSection from './peopleCards/PeopleCardSection';
-import ProductCategoriesSection from './productCategories/ProductCategoriesSection';
-import ResourcesDownloadSection from './resourcesDownloadSection/ResourcesDownloadSection';
-import SideBySideWithButton from './sideBySide/SideBySideWithButtonSection';
-import StorySection from './storySection/StorySection';
-import VideoFullWidthSection from './videoShowcase/VideoFullWidthSection';
-import VideoShowcaseSection from './videoShowcase/VideoShowcaseSection';
-import WhyChooseUsSection from './whyChooseUs/WhyChooseUsSection';
-
-
+import AboutBanner from "./aboutBanner/AboutBanner";
+import AksStoriesSection from "./aksStories/AksStoriesSection";
+import AtAGlanceSliderSection from "./atAGlanceSliderSection/AtAGlanceSliderSection";
+import AppDownloadSection from "./callToAction/AppDownloadSection";
+import CallToActionSection from "./callToAction/CallToActionSection";
+import CardGridSection from "./cardGrid/CardGridSection";
+import ContactUsSection from "./contactUs/ContactUsSection";
+import CountersSection from "./counters/CountersSection";
+import CoverageAreaSection from "./coverageArea/CoverageAreaSection";
+import CustomerCareAboutSection from "./customerCareAbout/CustomerCareAboutSection";
+import CustomerReviewSection from "./customerReview/CustomerReviewSection";
+import DepartmentSection from "./departments/DepartmentSection";
+import DiagnosticWrapper from "./diagnostic/DiagnosticWrapper";
+import HeroBannerSecondary from "./heroBanners/HeroBannerSecondary";
+import HeroSlider from "./heroBanners/HeroSlider";
+import HowWeHelp from "./howWeHelp/HowWeHelp";
+import MissionVissionSection from "./missionVission/MissionVissionSection";
+import NewsHero from "./newsHero/NewsHero";
+import NewsCardContainer from "./newsSlider/NewsCardContainer";
+import NewsSliderWrapper from "./newsSlider/NewsSliderWrapper";
+import OpenJobListSection from "./openJobList/OpenJobListSection";
+import OurInvestors from "./ourInvestors/OurInvestors";
+import OurPartners from "./ourPartners/OurPartners";
+import PeopleCardSection from "./peopleCards/PeopleCardSection";
+import ProductCategoriesSection from "./productCategories/ProductCategoriesSection";
+import ResourcesDownloadSection from "./resourcesDownloadSection/ResourcesDownloadSection";
+import SideBySideWithButton from "./sideBySide/SideBySideWithButtonSection";
+import StorySection from "./storySection/StorySection";
+import VideoFullWidthSection from "./videoShowcase/VideoFullWidthSection";
+import VideoShowcaseSection from "./videoShowcase/VideoShowcaseSection";
+import WhyChooseUsSection from "./whyChooseUs/WhyChooseUsSection";
 
 const componentMap = {
-  'carbon-fields/hero': HeroSlider,
-  "carbon-fields/about-us" : AboutBanner,
+  "carbon-fields/hero": HeroSlider,
+  "carbon-fields/about-us": AboutBanner,
   "carbon-fields/statistics": CountersSection,
   "carbon-fields/video": VideoShowcaseSection,
   "carbon-fields/how-we-help": HowWeHelp,
-  "carbon-fields/coverge" : CoverageAreaSection,
-  "carbon-fields/partners" : OurPartners,
+  "carbon-fields/coverge": CoverageAreaSection,
+  "carbon-fields/partners": OurPartners,
   "carbon-fields/our-investors": OurInvestors,
   "carbon-fields/cta": CallToActionSection,
   "carbon-fields/secondary-hero": HeroBannerSecondary,
@@ -65,7 +62,6 @@ const componentMap = {
   "carbon-fields/download-resource-section": ResourcesDownloadSection,
   "carbon-fields/contact-us-section": ContactUsSection,
   "carbon-fields/diagnostics-cards-section": DiagnosticWrapper,
-
 };
 
 export default componentMap;

@@ -12,7 +12,7 @@ function TabFileGrid({ result }) {
             data-aos="fade-up"
             value={result.category}
             key={index}
-            className="grid grid-cols-1 gap-[15px] md:grid-cols-2 md:gap-[30px]"
+            className="grid auto-rows-fr grid-cols-1 gap-[15px] md:grid-cols-2 md:gap-[30px]"
           >
             {result?.files?.map((file, index) => (
               <TabContentCard key={index} file={file} />

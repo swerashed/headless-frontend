@@ -7,20 +7,26 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import AksStoryCard from "./AksStoryCard";
+import { cn } from "@/lib/utils";
 
-function AksStoriesSection({data}) {
- const {title,descripton,section_classnames, story_items} =data
+function AksStoriesSection({ data }) {
+  const { title, descripton, section_classnames, story_items } = data;
   return (
-    <section className="mb-[50px] mt-[80px] overflow-hidden md:mb-[100px] md:mt-[140px]">
+    <section
+      className={cn(
+        "mb-[50px] mt-[80px] overflow-hidden md:mb-[100px] md:mt-[140px]",
+        section_classnames,
+      )}
+    >
       <div className="container">
         <h2
           data-aos="fade-up"
           className="mb-[60px] max-w-[1070px] font-onest text-2xl font-medium leading-[34px] text-dark md:mb-[100px] md:text-[32px] md:leading-[44px]"
         >
-          {title}
+          {descripton}
         </h2>
       </div>
-      <div className="slider-container" data-aos="fade-left">
+      <div className="slider-container !mt-0" data-aos="fade-left">
         <Swiper
           className="cursor-grab"
           autoplay={{

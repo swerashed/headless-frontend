@@ -10,7 +10,7 @@ import PrimaryButton from "../buttons/PrimaryButton";
 function MobileMenu({ onMobileMenuOpen, menuData }) {
   return (
     <div
-      className="pointer-events-auto fixed flex min-h-[calc(100dvh-65.58px)] w-full flex-col bg-white p-5 pr-3 pt-[30px] lg:hidden"
+      className="pointer-events-auto fixed flex min-h-[calc(100dvh-65.58px)] w-full flex-col bg-red-400 p-5 pr-3 pt-[30px] lg:hidden"
       data-aos="fade-right"
       data-aos-duration="300"
     >

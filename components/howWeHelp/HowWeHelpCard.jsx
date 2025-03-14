@@ -16,14 +16,14 @@ function HowWeHelpCard({ card }) {
       </div>
       <div className="flex flex-grow flex-col bg-white px-4 pb-3 pt-6">
         <h4 className="mb-[10px] font-onest text-xl font-medium leading-[30px] text-dark md:text-2xl md:leading-[32px]">
-          {title} AKS Khan Diagnostics
+          {title}
         </h4>
         <p className="mb-10 flex-grow font-inter text-base font-normal leading-[26px] text-dark/80">
           {description}
         </p>
         <Link
           href={button_url}
-          className="flex items-center justify-between border-t border-dark/10 stroke-dark pb-2 pt-4 font-inter font-semibold text-dark transition-all duration-300 hover:stroke-blue/90 hover:text-blue/90"
+          className="flex items-center justify-between justify-self-end border-t border-dark/10 stroke-dark pb-2 pt-4 font-inter font-semibold text-dark transition-all duration-300 hover:stroke-blue/90 hover:text-blue/90"
         >
           <span>{button_title}</span>
           <svg

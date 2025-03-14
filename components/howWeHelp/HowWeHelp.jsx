@@ -54,7 +54,7 @@ function HowWeHelp({ data }) {
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
           {help_items.map((item, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className="!flex !h-auto">
               <HowWeHelpCard card={item} />
             </SwiperSlide>
           ))}

@@ -42,10 +42,10 @@ function AtAGlanceSliderSection({ data }) {
         <div data-aos="fade-left !ml-40">
           <Swiper
             className="cursor-grab"
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
+            // autoplay={{
+            //   delay: 3000,
+            //   disableOnInteraction: false,
+            // }}
             breakpoints={{
               1024: {
                 slidesPerView: 2.5,
@@ -73,7 +73,7 @@ function AtAGlanceSliderSection({ data }) {
             onSwiper={(swiper) => (swiperRef.current = swiper)}
           >
             {glance_items.map((card) => (
-              <SwiperSlide key={card._id}>
+              <SwiperSlide key={card._id} className="!flex !h-auto">
                 <IconCard card={card} />
               </SwiperSlide>
             ))}

@@ -14,12 +14,17 @@ import SliderNavigationButton from "../buttons/SliderNavigationButton";
 import SectionHeading from "../headings/SectionHeading";
 import CustomerReviewCard from "./CustomerReviewCard";
 
-function CustomerReviewSection({data}) {
+function CustomerReviewSection({ data }) {
   const swiperRef = useRef(null);
-  const {title, section_classnames, review_items} = data;
+  const { title, section_classnames, review_items } = data;
 
   return (
-    <section className={cn("overflow-hidden py-[50px] md:py-[100]", section_classnames)}>
+    <section
+      className={cn(
+        "overflow-hidden py-[50px] md:py-[100]",
+        section_classnames,
+      )}
+    >
       <div className="container">
         <div className="flex flex-row justify-between gap-5">
           <div data-aos="fade-right">
@@ -69,7 +74,7 @@ function CustomerReviewSection({data}) {
             onSwiper={(swiper) => (swiperRef.current = swiper)}
           >
             {review_items.map((review) => (
-              <SwiperSlide key={review._id}>
+              <SwiperSlide key={review._id} className="!flex !h-auto">
                 <CustomerReviewCard review={review} />
               </SwiperSlide>
             ))}

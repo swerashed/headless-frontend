@@ -9,7 +9,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import BlogNotification from "../shared/BlogNotification";
 
-const blogNotification = false;
+const blogNotification = true;
 
 function Navbar({ isVisible, isMobileMenuOpen, onMobileMenuOpen, menuData }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);

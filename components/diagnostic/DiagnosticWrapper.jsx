@@ -9,10 +9,10 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useRef } from "react";
 import SliderNavigationButton from "../buttons/SliderNavigationButton";
-import SectionHeading from "../headings/SectionHeading"
+import SectionHeading from "../headings/SectionHeading";
 import DiagnosticsCard from "./DiagnosticsCard";
 
-const DiagnosticWrapper = ({data}) => {
+const DiagnosticWrapper = ({ data }) => {
   const swiperRef = useRef(null);
 
   return (
@@ -52,7 +52,7 @@ const DiagnosticWrapper = ({data}) => {
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
           {data?.diagnostics_items?.map((item, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide className="!flex !h-auto" key={index}>
               <DiagnosticsCard card={item} />
             </SwiperSlide>
           ))}
@@ -69,7 +69,7 @@ const DiagnosticWrapper = ({data}) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default DiagnosticWrapper
+export default DiagnosticWrapper;

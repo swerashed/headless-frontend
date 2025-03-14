@@ -16,10 +16,16 @@ import DepartmentCard from "./DepartmentCard";
 import PrimaryButton from "../buttons/PrimaryButton";
 import LoadMoreButton from "../buttons/LoadMoreButton";
 
-function DepartmentSection({data}) {
+function DepartmentSection({ data }) {
   const swiperRef = useRef(null);
   const [displayCount, setDisplayCount] = useState(9); // Add this state
-  const { section_classname, title, card_items, section_button_url, section_button_title } = data;
+  const {
+    section_classname,
+    title,
+    card_items,
+    section_button_url,
+    section_button_title,
+  } = data;
   // Get visible items
   const visibleItems = card_items.slice(0, displayCount);
 
@@ -79,7 +85,7 @@ function DepartmentSection({data}) {
             onSwiper={(swiper) => (swiperRef.current = swiper)}
           >
             {card_items.map((department) => (
-              <SwiperSlide key={department._id}>
+              <SwiperSlide key={department._id} className="!flex !h-auto">
                 <DepartmentCard data={department} />
               </SwiperSlide>
             ))}
@@ -97,10 +103,13 @@ function DepartmentSection({data}) {
         </div>
         {/* Add Load More Button */}
         {card_items.length > displayCount && (
-          <div className="mt-[30px] flex items-center justify-center md:mt-10" data-aos="fade-up">
-            <LoadMoreButton 
-              border={true} 
-              onClick={() => setDisplayCount(prev => prev + 9)}
+          <div
+            className="mt-[30px] flex items-center justify-center md:mt-10"
+            data-aos="fade-up"
+          >
+            <LoadMoreButton
+              border={true}
+              onClick={() => setDisplayCount((prev) => prev + 9)}
             >
               Load More
             </LoadMoreButton>
@@ -111,7 +120,9 @@ function DepartmentSection({data}) {
             className="mt-[30px] flex items-center justify-center md:mt-10"
             data-aos="fade-up"
           >
-            <PrimaryButton border={true} href={section_button_url}>{section_button_title}</PrimaryButton>
+            <PrimaryButton border={true} href={section_button_url}>
+              {section_button_title}
+            </PrimaryButton>
           </div>
         )}
       </div>

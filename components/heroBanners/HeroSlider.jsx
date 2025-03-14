@@ -19,6 +19,7 @@ function HeroSlider({ data }) {
         swiperRef.current.autoplay.stop();
       } else {
         swiperRef.current.autoplay.start();
+        swiperRef.current.slideNext();
       }
       setIsPlaying(!isPlaying);
     }

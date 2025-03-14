@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import NewsCard from "./NewsCard";
 import LoadMoreButton from "../buttons/LoadMoreButton";
@@ -25,9 +25,13 @@ const NewsWithPagination = ({ button_title, news, view_items }) => {
 
       {displayedNews.length < totalPosts && (
         <div data-aos="fade-up" className="text-center">
-        <LoadMoreButton as="button" className="mx-auto mt-[30px] lg:mt-[60px]" onClick={handleLoadMore}>
-        {button_title}
-        </LoadMoreButton>
+          <LoadMoreButton
+            as="button"
+            className="mx-auto mt-[30px] lg:mt-[60px]"
+            onClick={handleLoadMore}
+          >
+            {button_title}
+          </LoadMoreButton>
         </div>
       )}
     </section>

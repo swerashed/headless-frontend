@@ -4,7 +4,7 @@ import Link from "next/link";
 function HowWeHelpCard({ card }) {
   const { title, description, image, button_title, button_url } = card;
   return (
-    <div className="group flex cursor-pointer flex-col overflow-hidden rounded-xl border border-dark/10">
+    <div className="group flex h-full flex-grow flex-col overflow-hidden rounded-xl border border-dark/10">
       <div className="h-[240px] w-full overflow-hidden md:h-[273px]">
         <Image
           src={image}
@@ -16,14 +16,14 @@ function HowWeHelpCard({ card }) {
       </div>
       <div className="flex flex-grow flex-col bg-white px-4 pb-3 pt-6">
         <h4 className="mb-[10px] font-onest text-xl font-medium leading-[30px] text-dark md:text-2xl md:leading-[32px]">
-          {title}
+          {title} AKS Khan Diagnostics
         </h4>
-        <p className="mb-10 min-h-[130px] flex-grow font-inter text-base font-normal leading-[26px] text-dark/80">
+        <p className="mb-10 flex-grow font-inter text-base font-normal leading-[26px] text-dark/80">
           {description}
         </p>
         <Link
           href={button_url}
-          className="flex items-center justify-between border-t border-dark/10 stroke-dark pb-2 pt-4 font-inter font-semibold text-dark transition-all duration-300 hover:stroke-blue/90 hover:text-blue/90 focus:stroke-blue/90 focus:text-blue/90 focus:outline-none"
+          className="flex items-center justify-between border-t border-dark/10 stroke-dark pb-2 pt-4 font-inter font-semibold text-dark transition-all duration-300 hover:stroke-blue/90 hover:text-blue/90"
         >
           <span>{button_title}</span>
           <svg

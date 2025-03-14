@@ -4,7 +4,7 @@ import Link from "next/link";
 function DiagnosticsCard({ card }) {
   const { card_title, card_sub_title, image, card_url } = card;
   return (
-    <div className="group flex cursor-pointer flex-col overflow-hidden rounded-xl border border-dark/10 shadow-sm shadow-white">
+    <div className="group flex h-full flex-grow cursor-pointer flex-col overflow-hidden rounded-xl border border-dark/10 shadow-sm shadow-white">
       <div className="h-[240px] w-full overflow-hidden md:h-[273px]">
         <Image
           src={image}
@@ -18,7 +18,7 @@ function DiagnosticsCard({ card }) {
         <h4 className="mb-[10px] font-onest text-xl font-medium leading-[30px] md:text-2xl md:leading-[32px]">
           {card_title}
         </h4>
-        <p className="mb-10 min-h-[110px] font-inter text-base font-normal leading-[26px] text-dark/80">
+        <p className="mb-10 flex-grow font-inter text-base font-normal leading-[26px] text-dark/80">
           {card_sub_title}
         </p>
         <Link

@@ -30,7 +30,7 @@ function HeroSlider({ data }) {
   };
 
   return (
-    <section className="relative flex h-[90vh] items-end justify-center">
+    <section className="relative flex h-[90dvh] items-end justify-center">
       <Swiper
         className="h-full cursor-grabbing"
         autoplay={{

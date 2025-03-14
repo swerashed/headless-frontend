@@ -45,7 +45,7 @@ function PeopleCard({ member }) {
       <DialogOverlay className="bg-dark/70">
         <DialogContent
           data-lenis-prevent
-          className="h-[90vh] min-w-[90vw] max-w-[90vw] rounded-[20px] p-[10px] pr-0 sm:min-w-[80vw] sm:max-w-[70vw] md:h-[80vh] xl:min-w-[90vw] xl:max-w-[90vw] xl:p-[30px] xl:pt-20 2xl:min-w-[70vw] 2xl:max-w-[70vw]"
+          className="h-[90dvh] min-w-[90vw] max-w-[90vw] rounded-[20px] p-[10px] pr-0 sm:min-w-[80vw] sm:max-w-[70vw] md:h-[80dvh] xl:min-w-[90vw] xl:max-w-[90vw] xl:p-[30px] xl:pt-20 2xl:min-w-[70vw] 2xl:max-w-[70vw]"
         >
           <div className="flex h-full w-full flex-col gap-[30px] overflow-y-auto pr-[10px] md:flex-row md:overflow-hidden md:pr-0 xl:gap-[60px]">
             <div className="min-h-[400px] w-full overflow-hidden rounded-[10px] shadow-sm shadow-dark/10 xl:min-w-[470px] xl:max-w-[470px]">

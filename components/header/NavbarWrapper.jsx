@@ -34,7 +34,7 @@ function NavbarWrapper({ menuData }) {
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.documentElement.style.overflow = "hidden";
-      document.documentElement.style.height = "100vh";
+      document.documentElement.style.height = "100dvh";
     } else {
       document.documentElement.style.overflow = "";
       document.documentElement.style.height = "";

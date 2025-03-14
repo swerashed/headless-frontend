@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 function ContactUsCard({ index, card }) {
-  console.log(card);
   return (
     <div className="flex aspect-[410/336] h-auto w-auto flex-col items-center justify-center rounded-[10px] border border-[#1623401A] bg-white backdrop-blur-sm md:py-5 lg:py-0">
       <Image

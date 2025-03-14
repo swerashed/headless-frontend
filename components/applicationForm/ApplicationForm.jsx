@@ -11,6 +11,7 @@ import { toast } from "sonner";
 function ApplicationForm({ data }) {
   const { sendMail, loading, message, error, setMessage, setError } =
     useApplyJob();
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -18,6 +19,7 @@ function ApplicationForm({ data }) {
     email: "",
     file: null,
   });
+
   const [file, setFile] = useState(null);
 
   // Handle input changes
@@ -34,11 +36,13 @@ function ApplicationForm({ data }) {
       console.error("Invalid file selected:", file);
     }
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setMessage(null);
     setError(null);
 
+    // Check if all required fields are filled
     if (
       !formData.firstName ||
       !formData.lastName ||
@@ -47,7 +51,7 @@ function ApplicationForm({ data }) {
       !formData.file
     ) {
       setError("All fields, including the file, are required.");
-      toast("All fields, including the file, are required.");
+      toast.error("All fields, including the file, are required."); // Show error toast
       return;
     }
 
@@ -57,10 +61,13 @@ function ApplicationForm({ data }) {
     formDataToSend.append("phone", formData.phone);
     formDataToSend.append("email", formData.email);
     formDataToSend.append("job_title", data?.title || "");
-    formDataToSend.append("resume", formData.file); // Fix: Match backend key
+    formDataToSend.append("resume", formData.file); // Match backend key
 
     try {
+      // Call the sendMail function
       await sendMail(formDataToSend);
+
+      // Clear form fields upon success
       setFormData({
         firstName: "",
         lastName: "",
@@ -69,11 +76,23 @@ function ApplicationForm({ data }) {
         file: null,
       });
       setFile(null);
-      toast("Application successfully Send. Thank you!");
+
+      // Show success toast using message from useApplyJob
+      if (message) {
+        toast.success(message); // Use the message from useApplyJob
+      } else {
+        toast.success("Application successfully sent. Thank you!"); // Fallback message
+      }
     } catch (err) {
       setError("Failed to send email. Please try again.");
       console.error("Mail send error:", err);
-      toast("Something went wrong. Try again!");
+
+      // Show error toast using error from useApplyJob
+      if (error) {
+        toast.error(error); // Use the error message from useApplyJob
+      } else {
+        toast.error("Something went wrong. Try again!"); // Fallback error message
+      }
     }
   };
 
@@ -100,7 +119,6 @@ function ApplicationForm({ data }) {
           <Input
             value={formData.firstName}
             onChange={handleChange}
-            required
             id="firstName"
             name="firstName"
             type="text"
@@ -120,7 +138,6 @@ function ApplicationForm({ data }) {
           <Input
             value={formData.lastName}
             onChange={handleChange}
-            required
             id="lastName"
             name="lastName"
             type="text"
@@ -140,7 +157,6 @@ function ApplicationForm({ data }) {
           <Input
             value={formData.phone}
             onChange={handleChange}
-            required
             id="phone"
             name="phone"
             type="tel"
@@ -161,7 +177,6 @@ function ApplicationForm({ data }) {
           <Input
             value={formData.email}
             onChange={handleChange}
-            required
             id="email"
             name="email"
             type="email"

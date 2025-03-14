@@ -19,8 +19,6 @@ function CoverageAreaTableRow({ outletDetails }) {
   const outlets = outletDetails?.node?.outlets;
   const title = outletDetails?.node?.title;
 
-  console.log(outlets);
-
   return (
     <>
       {outlets.map((outlet, index) => (

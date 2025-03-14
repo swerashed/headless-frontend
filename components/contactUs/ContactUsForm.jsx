@@ -53,10 +53,14 @@ function ContactUsForm() {
         inquiry: "",
         message: "",
       });
-      toast("Mail send successfully. Thank you!");
+      toast.success(
+        "Your message has been sent successfully! We will get back to you shortly. Thank you!",
+      );
     } catch (err) {
       console.error("Mail send error:", err);
-      toast("Mail send failed. Try again!");
+      toast.error(
+        "Oops! Something went wrong while sending your message. Please try again later.",
+      );
     }
   };
 

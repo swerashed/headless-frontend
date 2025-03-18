@@ -28,7 +28,7 @@ function Navbar({ isVisible, isMobileMenuOpen, onMobileMenuOpen, menuData, theme
 
   return (
     <header
-      className={`pointer-events-auto  fixed left-0 right-0 z-50 transition-all duration-700 ease-in-out ${!isBlogNotificationVisible && isVisible ? "lg:top-[10px]" : "top-0"}`}
+      className={`pointer-events-none  fixed left-0 right-0 z-50 transition-all duration-700 ease-in-out ${!isBlogNotificationVisible && isVisible ? "lg:top-[10px]" : "top-0"}`}
     >
      {isBlogNotificationVisible && (
         <BlogNotification

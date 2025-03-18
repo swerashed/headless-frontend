@@ -11,7 +11,7 @@ function BlogNotification({ isVisible, themeOptions, setIsBlogNotificationVisibl
   return (
     <div
       className={cn(
-        "mb-[10px] hidden relative flex-row items-center z-[20000000] justify-center gap-5 bg-blue py-3 font-inter text-base font-normal leading-[26px] text-white lg:flex",
+        "mb-[10px] pointer-events-auto hidden relative flex-row items-center z-[20000000] justify-center gap-5 bg-blue py-3 font-inter text-base font-normal leading-[26px] text-white lg:flex",
         `transition-transform duration-300 ${isVisible ? "transform-none" : "-translate-y-full"
         }`,
       )}

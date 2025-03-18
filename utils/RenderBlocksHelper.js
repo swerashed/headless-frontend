@@ -15,11 +15,11 @@ const RenderBlocksHelper = ({ data }) => {
                         return null;
                     }
 
-                    if (Component) {
-                        if (process.env.NODE_ENV === 'development') {
-                            console.log(`Rendered Components "${block.name}"`);
-                        }
-                    }
+                    // if (Component) {
+                    //     if (process.env.NODE_ENV === 'development') {
+                    //         console.log(`Rendered Components "${block.name}"`);
+                    //     }
+                    // }
 
                     const data = JSON.parse(block.attributesJSON)?.data;
                     return <Component key={index} data={data} />;

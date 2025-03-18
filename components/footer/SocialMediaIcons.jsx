@@ -34,7 +34,9 @@ function SocialMediaIcons({ socialLinks }) {
             className="h-8 w-8 rounded-full transition-all duration-300 hover:scale-105 hover:opacity-90 hover:shadow-md focus:scale-105 focus:opacity-90 focus:shadow-md focus:outline-none"
           />
         </Link>
-        <Link href={`mailto:${socialLinks[3]?.link}` || "#"} target="_blank">
+        <Link href={socialLinks[3]?.link && socialLinks[3]?.link.startsWith('http')
+          ? `mailto:${socialLinks[3]?.link.replace(/^https?:\/\//, '')}`
+          : `mailto:${socialLinks[3]?.link}`} target="_blank">
           <Image
             src={gmailIcon}
             alt="Social Icon"

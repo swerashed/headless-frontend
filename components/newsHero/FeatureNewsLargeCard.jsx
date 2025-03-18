@@ -22,7 +22,7 @@ function FeatureNewsLargeCard({ news }) {
           <Image
             src={featuredImage?.node?.sourceUrl || "/aks-thumbnail.png"}
             width={850}
-            height={505}
+            height={305}
             alt={title}
             className="absolute inset-0 h-full w-full object-cover transition-all duration-700 group-hover:scale-105"
           />

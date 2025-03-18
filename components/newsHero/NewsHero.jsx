@@ -13,7 +13,7 @@ const NewsHero = async ({ data }) => {
   const otherTopNews = featuredNews.slice(1);
 
   return (
-    <section className="bg-surface pb-[30px] pt-[95px] lg:pb-[60px] lg:pt-[120px]">
+    <section className="bg-surface pb-[30px] pt-[95px] lg:pb-[60px] lg:pt-[150px]">
       <div className="container">
         <div className="hidden grid-cols-6 gap-[30px] lg:grid">
           <FeatureNewsLargeCard news={topNews} />

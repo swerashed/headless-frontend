@@ -21,7 +21,7 @@ function Navbar({ isVisible, isMobileMenuOpen, onMobileMenuOpen, menuData, theme
     }else{
       setIsBlogNotificationVisible(themeOptions?.displayPopup);
     }
-  }, []);
+  }, [themeOptions]);
   const handleSearchOpen = () => {
     setIsSearchOpen((prev) => !prev);
   };

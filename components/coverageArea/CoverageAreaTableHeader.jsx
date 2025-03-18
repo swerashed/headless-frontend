@@ -1,6 +1,6 @@
 import { Input } from "../ui/input";
 
-function CoverageAreaTableHeader({setSelectedDistricts}) {
+function CoverageAreaTableHeader({setSelectedDistricts, outlet_section_title}) {
 
   const handleSearch = (event) => {
     setSelectedDistricts(event.target.value.toLowerCase());
@@ -9,7 +9,7 @@ function CoverageAreaTableHeader({setSelectedDistricts}) {
   return (
     <div className="flex flex-col gap-4 p-4 sm:mt-10 sm:flex-row sm:items-center sm:justify-between md:mt-20 md:px-0">
       <h3 className="font-onest text-2xl font-medium capitalize leading-[34px] text-dark md:text-[40px] md:leading-[50px]">
-        Outlet Information
+        {outlet_section_title || "Branches information"}
       </h3>
       <div className="flex w-full items-center gap-4 rounded-[40px] border border-dark/10 bg-surface px-4 py-[10px] font-inter text-sm font-normal leading-[22px] text-dark focus-within:border-blue focus:border focus:border-blue focus:ring-0 sm:w-[307px]">
         <Input

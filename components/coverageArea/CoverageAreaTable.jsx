@@ -5,7 +5,7 @@ import CoverageAreaTableRow from "./CoverageAreaTableRow";
 import { useState } from "react";
 import LoadMoreButton from "../buttons/LoadMoreButton";
 
-function CoverageAreaTable({ cta_url, cta_description, outlets }) {
+function CoverageAreaTable({ cta_url, cta_description, outlets, outlet_section_title}) {
   const [selectedDistricts, setSelectedDistricts] = useState("");
   const [displayCount, setDisplayCount] = useState(3); // Start with 3 items
 
@@ -19,7 +19,7 @@ function CoverageAreaTable({ cta_url, cta_description, outlets }) {
 
   return (
     <div className="w-full">
-      <CoverageAreaTableHeader setSelectedDistricts={setSelectedDistricts} />
+      <CoverageAreaTableHeader outlet_section_title={outlet_section_title} setSelectedDistricts={setSelectedDistricts} />
       <div className="flex w-full flex-col focus-within:outline-0">
         {filteredOutlets.length > 0 ? (
           <Accordion type="single" collapsible className="flex w-full flex-col">

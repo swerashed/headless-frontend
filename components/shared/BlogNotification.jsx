@@ -1,20 +1,24 @@
+"use client"
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 
-function BlogNotification({ isVisible, themeOptions }) {
+function BlogNotification({ isVisible, themeOptions, setIsBlogNotificationVisible }) {
+  const handleCloseNotification = () => {
+    localStorage.setItem("isBlogNotificationVisible", "false");
+    setIsBlogNotificationVisible(false);
+  };
   return (
     <div
       className={cn(
-        "mb-[10px] hidden flex-row items-center justify-center gap-5 bg-blue py-3 font-inter text-base font-normal leading-[26px] text-white lg:flex",
-        `transition-transform duration-300 ${
-          isVisible ? "transform-none" : "-translate-y-full"
+        "mb-[10px] hidden relative flex-row items-center z-[20000000] justify-center gap-5 bg-blue py-3 font-inter text-base font-normal leading-[26px] text-white lg:flex",
+        `transition-transform duration-300 ${isVisible ? "transform-none" : "-translate-y-full"
         }`,
       )}
     >
       <p>{themeOptions?.title}</p>
       <Link
-        href={themeOptions?.url || "#" }
+        href={themeOptions?.url || "#"}
         className="flex flex-row items-center justify-center gap-[5px] font-semibold"
       >
         <span>Read Post</span>
@@ -31,6 +35,13 @@ function BlogNotification({ isVisible, themeOptions }) {
           />
         </svg>
       </Link>
+
+      <button onClick={handleCloseNotification} className="bg-transparent border-none outline-none flex justify-center items-center absolute top-0 right-10 translate-y-full cursor-pointer">
+        <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.743652 2L12.0574 13.3137" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M0.743652 13L12.0574 1.68629" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+      </button>
     </div>
   );
 }

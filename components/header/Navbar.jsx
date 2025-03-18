@@ -3,7 +3,7 @@
 import Image from "next/image";
 import NavbarRight from "./NavbarRight";
 import NavbarLinks from "./NavbarLinks";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MobileMenu from "./MobileMenu";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -13,16 +13,30 @@ import BlogNotification from "../shared/BlogNotification";
 
 function Navbar({ isVisible, isMobileMenuOpen, onMobileMenuOpen, menuData, themeOptions }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const blogNotification = themeOptions?.displayPopup;
+  const [isBlogNotificationVisible, setIsBlogNotificationVisible] = useState(false);
+  useEffect(() => {
+    const isNotificationVisable = localStorage.getItem("isBlogNotificationVisible");
+    if (isNotificationVisable === "false") {
+      setIsBlogNotificationVisible(false);
+    }else{
+      setIsBlogNotificationVisible(themeOptions?.displayPopup);
+    }
+  }, []);
   const handleSearchOpen = () => {
     setIsSearchOpen((prev) => !prev);
   };
 
   return (
     <header
-      className={`pointer-events-none fixed left-0 right-0 z-50 transition-all duration-700 ease-in-out ${!blogNotification && isVisible ? "lg:top-[10px]" : "top-0"}`}
+      className={`pointer-events-auto  fixed left-0 right-0 z-50 transition-all duration-700 ease-in-out ${!isBlogNotificationVisible && isVisible ? "lg:top-[10px]" : "top-0"}`}
     >
-      {blogNotification && <BlogNotification themeOptions={themeOptions} isVisible={isVisible} />}
+     {isBlogNotificationVisible && (
+        <BlogNotification
+          themeOptions={themeOptions}
+          isVisible={isVisible}
+          setIsBlogNotificationVisible={setIsBlogNotificationVisible}
+        />
+      )}
       <div className={cn("mx-auto max-w-[1440px] lg:px-[15px] xl:px-[75px]")}>
         <div
           onClick={() => isSearchOpen && handleSearchOpen()}

@@ -1,75 +1,16 @@
-"use client";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import { Pagination, Navigation, Autoplay, A11y } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { useRef } from "react";
-import SliderNavigationButton from "../buttons/SliderNavigationButton";
 import SectionHeading from "../headings/SectionHeading";
 import OurInvestorCard from "./OurInvestorCard";
 
 function OurInvestors({ data }) {
   const { investors_items, title } = data;
-  const swiperRef = useRef(null);
 
   return (
     <section className="overflow-hidden bg-surface py-[50px] md:py-[100px]">
-      <div data-aos="fade-up" className="container">
-        <div className="mb-[30px] flex items-center justify-between md:mb-10">
-          <SectionHeading>{title}</SectionHeading>
-          <div className="hidden items-center justify-end gap-[10px] md:flex">
-            <SliderNavigationButton
-              onPrev={() => swiperRef.current?.slidePrev()}
-              onNext={() => swiperRef.current?.slideNext()}
-            />
-          </div>
-        </div>
-      </div>
-      <div className="slider-container hidden md:block" data-aos="fade-up">
-        <Swiper
-          className="h-full cursor-grabbing"
-          slidesPerGroup={1}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          slidesPerView={5}
-          breakpoints={{
-            768: {
-              slidesPerView: 3.3,
-            },
-            1024: {
-              slidesPerView: 4.3,
-            },
-            1440: {
-              slidesPerView: 5.15,
-            },
-          }}
-          loop={true}
-          pagination={{
-            clickable: true,
-            type: "fraction",
-            el: ".investors-pagination",
-          }}
-          navigation={false}
-          modules={[Pagination, Navigation, Autoplay, A11y]}
-          spaceBetween={20}
-          speed={600}
-          onSwiper={(swiper) => (swiperRef.current = swiper)}
-        >
-          {investors_items.map((investor) => (
-            <SwiperSlide key={investor._id} className="rounded-2xl">
-              <OurInvestorCard key={investor._id} card={investor} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+       <div data-aos="fade-up" className="container">
+        <SectionHeading className="text-center">{title}</SectionHeading>
       </div>
       <div
-        className="container grid grid-cols-2 gap-5 md:hidden"
+        className="container mt-[30px] flex gap-5 w-full justify-center"
         data-aos="fade-up"
       >
         {investors_items.map((investor) => (

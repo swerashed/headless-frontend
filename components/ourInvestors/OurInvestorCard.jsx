@@ -6,7 +6,7 @@ function OurInvestorCard({ card }) {
     <div
       data-aos="fade-up"
       key={_id}
-      className="flex items-center justify-center rounded-2xl bg-white p-[22px] shadow-sm hover:shadow-md"
+      className="flex basis-1/2 items-center justify-center rounded-2xl bg-white p-[22px] shadow-sm hover:shadow-md max-w-[280px]"
     >
       <Image
         src={image}

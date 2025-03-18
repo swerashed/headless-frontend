@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 
-function BlogNotification({ isVisible }) {
+function BlogNotification({ isVisible, themeOptions }) {
   return (
     <div
       className={cn(
@@ -12,9 +12,9 @@ function BlogNotification({ isVisible }) {
         }`,
       )}
     >
-      <p>Discover our upcoming launch at Diagnostic center in Sylhet</p>
+      <p>{themeOptions?.title}</p>
       <Link
-        href="/"
+        href={themeOptions?.url || "#" }
         className="flex flex-row items-center justify-center gap-[5px] font-semibold"
       >
         <span>Read Post</span>

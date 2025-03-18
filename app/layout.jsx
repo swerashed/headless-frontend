@@ -6,6 +6,7 @@ import Footer from "@/components/footer/Footer";
 import NavbarWrapper from "@/components/header/NavbarWrapper";
 import { fetchMenus } from "@/graphql/pages/GET_MENUS";
 import { Toaster } from "@/components/ui/sonner";
+import { getThemeOptions } from "@/graphql/GET_THEME_OPTIONS";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const onest = Onest({ subsets: ["latin"], variable: "--font-onest" });
@@ -17,6 +18,7 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
   const menuData = await fetchMenus("Primary Menu");
+  const themeOptions = await getThemeOptions()
   return (
     <html lang="en">
       <ReactLenis root>
@@ -24,7 +26,7 @@ export default async function RootLayout({ children }) {
           className={`${inter.variable} ${onest.variable} relative font-inter antialiased`}
         >
           <AOSWrapper>
-            <NavbarWrapper menuData={menuData} />
+            <NavbarWrapper themeOptions={themeOptions} menuData={menuData} />
             {children}
             <Footer />
           </AOSWrapper>

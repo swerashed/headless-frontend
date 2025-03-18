@@ -9,11 +9,11 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import BlogNotification from "../shared/BlogNotification";
 
-const blogNotification = true;
 
-function Navbar({ isVisible, isMobileMenuOpen, onMobileMenuOpen, menuData }) {
+
+function Navbar({ isVisible, isMobileMenuOpen, onMobileMenuOpen, menuData, themeOptions }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-
+  const blogNotification = themeOptions?.displayPopup;
   const handleSearchOpen = () => {
     setIsSearchOpen((prev) => !prev);
   };
@@ -22,7 +22,7 @@ function Navbar({ isVisible, isMobileMenuOpen, onMobileMenuOpen, menuData }) {
     <header
       className={`pointer-events-none fixed left-0 right-0 z-50 transition-all duration-700 ease-in-out ${!blogNotification && isVisible ? "lg:top-[10px]" : "top-0"}`}
     >
-      {blogNotification && <BlogNotification isVisible={isVisible} />}
+      {blogNotification && <BlogNotification themeOptions={themeOptions} isVisible={isVisible} />}
       <div className={cn("mx-auto max-w-[1440px] lg:px-[15px] xl:px-[75px]")}>
         <div
           onClick={() => isSearchOpen && handleSearchOpen()}

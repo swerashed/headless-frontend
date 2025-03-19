@@ -96,7 +96,7 @@ async function Footer() {
           <div className="hidden md:col-span-6 md:col-start-7 md:grid md:grid-cols-2 md:gap-x-10 lg:col-span-8 lg:col-start-5 lg:grid-cols-3 xl:gap-x-[60px]">
             <LinkGroups heading="The Company" links={groupLinksTwo} />
             <LinkGroups heading="Quick Links" links={groupLinksThree} />
-            <LinkGroups heading="AKPL Group" links={groupLinksFour} />
+            <LinkGroups heading="AKHL Group" links={groupLinksFour} />
             <div className="hidden lg:block">
               <SocialMediaIcons socialLinks={socialLinks} />
             </div>
@@ -105,7 +105,7 @@ async function Footer() {
         <div className="border-t border-dark/10">
           <MenuAccordion heading="The Company" links={groupLinksTwo} />
           <MenuAccordion heading="Quick Links" links={groupLinksThree} />
-          <MenuAccordion heading="AKPL Group" links={groupLinksFour} />
+          <MenuAccordion heading="AKHL Group" links={groupLinksFour} />
         </div>
         <FooterBottom />
       </div>

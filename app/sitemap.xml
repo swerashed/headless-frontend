@@ -1,4 +1,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+ <url>
+    <loc>https://akskhanpharma.com</loc>
+    <changefreq>weekly</changefreq>
+  </url>
   <url>
     <loc>https://akskhanpharma.com/about-us</loc>
     <changefreq>weekly</changefreq>

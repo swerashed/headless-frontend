@@ -1,4 +1,5 @@
 import { Inter, Onest } from "next/font/google";
+import { GoogleAnalytics } from '@next/third-parties/google'
 import "./globals.css";
 import { ReactLenis } from "@/utils/lenis";
 import AOSWrapper from "@/utils/AOSWrapper";
@@ -21,6 +22,7 @@ export default async function RootLayout({ children }) {
   const themeOptions = await getThemeOptions()
   return (
     <html lang="en">
+        <GoogleAnalytics gaId="G-CW1EK18P52" />
       <ReactLenis root>
         <body
           className={`${inter.variable} ${onest.variable} relative font-inter antialiased`}

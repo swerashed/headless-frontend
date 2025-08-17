@@ -34,9 +34,9 @@ function FeatureNewsLargeCard({ news }) {
             {formattedDate}
           </p>
           <div>
-            <h3 className="line-clamp-2 font-onest text-[32px] font-medium leading-[44px] text-white">
+            <h1 className="line-clamp-2 font-onest text-[32px] font-medium leading-[44px] text-white">
               {title}
-            </h3>
+            </h1>
           </div>
         </div>
       </div>

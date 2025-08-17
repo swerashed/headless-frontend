@@ -15,12 +15,12 @@ function AboutBanner({ data }) {
   return (
     <section className="mb-[50px] mt-[60px] md:mb-[120px] md:mt-[100px]">
       <div className="container">
-        <h3
+        <h4
           className="mb-[20px] font-inter text-base font-medium uppercase leading-[22px] text-dark md:mb-6"
           data-aos="fade-right"
         >
           About Us
-        </h3>
+        </h4>
         <div className="flex flex-col gap-[60px] border-t border-dark/10 pt-[30px] md:justify-between md:gap-[30px] md:pt-10 lg:flex-row">
           <div
             className="flex items-center gap-[30px] md:min-w-[301px]"
@@ -44,9 +44,9 @@ function AboutBanner({ data }) {
             </div>
           </div>
           <div className="flex flex-col" data-aos="fade-up">
-            <h3 className="mb-10 font-onest text-2xl font-medium text-dark md:max-w-[782px] md:text-[32px] md:leading-snug">
+            <h2 className="mb-10 font-onest text-2xl font-medium text-dark md:max-w-[782px] md:text-[32px] md:leading-snug">
               {title}
-            </h3>
+            </h2>
             <PrimaryButton href={button_url}>{button_title}</PrimaryButton>
           </div>
         </div>

@@ -9,16 +9,23 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import BlogNotification from "../shared/BlogNotification";
 
-
-
-function Navbar({ isVisible, isMobileMenuOpen, onMobileMenuOpen, menuData, themeOptions }) {
+function Navbar({
+  isVisible,
+  isMobileMenuOpen,
+  onMobileMenuOpen,
+  menuData,
+  themeOptions,
+}) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isBlogNotificationVisible, setIsBlogNotificationVisible] = useState(false);
+  const [isBlogNotificationVisible, setIsBlogNotificationVisible] =
+    useState(false);
   useEffect(() => {
-    const isNotificationVisable = localStorage.getItem("isBlogNotificationVisible");
+    const isNotificationVisable = localStorage.getItem(
+      "isBlogNotificationVisible",
+    );
     if (isNotificationVisable === "false") {
       setIsBlogNotificationVisible(false);
-    }else{
+    } else {
       setIsBlogNotificationVisible(themeOptions?.displayPopup);
     }
   }, [themeOptions]);
@@ -28,9 +35,9 @@ function Navbar({ isVisible, isMobileMenuOpen, onMobileMenuOpen, menuData, theme
 
   return (
     <header
-      className={`pointer-events-none  fixed left-0 right-0 z-50 transition-all duration-700 ease-in-out ${!isBlogNotificationVisible && isVisible ? "lg:top-[10px]" : "top-0"}`}
+      className={`pointer-events-none fixed left-0 right-0 z-50 transition-all duration-700 ease-in-out ${!isBlogNotificationVisible && isVisible ? "lg:top-[10px]" : "top-0"}`}
     >
-     {isBlogNotificationVisible && (
+      {isBlogNotificationVisible && (
         <BlogNotification
           themeOptions={themeOptions}
           isVisible={isVisible}
@@ -54,7 +61,7 @@ function Navbar({ isVisible, isMobileMenuOpen, onMobileMenuOpen, menuData, theme
                   alt="Aks Pharmaceuticals logo"
                   width={185}
                   height={60}
-                  className="h-auto max-w-[136px] object-contain md:max-w-[182px]"
+                  className="h-auto max-w-[180px] object-contain"
                 />
               </Link>
             </div>
